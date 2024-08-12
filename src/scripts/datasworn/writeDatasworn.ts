@@ -25,6 +25,7 @@ import {
 } from '../utils/readWrite.js'
 import AJV from '../validation/ajv.js'
 import { idLike, needsIdValidation } from '../../pkg-core/Validators/Text.js'
+import { sortJson } from '../../pkg-core/Utils/Sort.js'
 
 Log.info('📖 Reading schema...')
 // flush any old schema...
@@ -111,7 +112,7 @@ async function buildRulesPackages(pkgs: Record<string, RulesPackageConfig>) {
 			const json = builder.toJSON()
 
 			writeOps.push(
-				writeJSON(writeDestinations, json).then(() => {
+				writeJSON(writeDestinations, json, {replacer: sortJson}).then(() => {
 					Log.info(
 						[
 							`✏️  Wrote JSON for ${builder.packageType} "${builder.id}" to:`,

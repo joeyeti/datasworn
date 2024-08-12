@@ -3,7 +3,7 @@ import {
 	compareObjectKeys,
 	dataswornKeyOrder,
 	sortDataswornKeys,
-	sortObjectKeys,
+	sortObjectKeys
 } from '../../pkg-core/Utils/Sort.js'
 import { Keywords } from '../augmentations.js'
 import { DefsKey } from '../const.js'
@@ -62,10 +62,10 @@ const schemaKeyOrder = [
 	'if',
 	'then',
 	'else',
-	DefsKey,
+	DefsKey
 ] as const
 
-export function sortSchemaKeys<T extends JSONSchema>(schema: T) {
+export function sortSchemaKeys<T extends JSONSchema7>(schema: T) {
 	const sortedSchema = sortObjectKeys(schema, schemaKeyOrder)
 	if (sortedSchema.properties != null)
 		sortedSchema.properties = sortDataswornKeys(sortedSchema.properties)

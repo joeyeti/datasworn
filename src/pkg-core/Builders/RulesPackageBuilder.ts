@@ -1,7 +1,11 @@
 import { IdKey, PrefixSep } from '../IdElements/CONST.js'
 import type TypeId from '../IdElements/TypeId.js'
 import type TypeNode from '../TypeNode.js'
-import { dataswornKeyOrder, sortObjectKeys } from '../Utils/Sort.js'
+import {
+	dataswornKeyOrder,
+	sortDataswornKeys,
+	sortObjectKeys
+} from '../Utils/Sort.js'
 import { forEachIdRef } from '../Validators/Text.js'
 import Validators from '../Validators/index.js'
 import { IdParser, type Datasworn, type DataswornSource } from '../index.js'
@@ -121,7 +125,12 @@ export class RulesPackageBuilder<
 	#build(force = false) {
 		this.mergeFiles(force)
 		this.#isValidated = false
-		this.#sortKeys(force)
+
+    if (!this.#isSorted || force) {
+					this.#result = sortDataswornKeys(this.#result)
+					this.#isSorted = true
+				}
+
 		return this.#result
 	}
 
@@ -212,14 +221,6 @@ export class RulesPackageBuilder<
 		} catch (e) {
 			throw new Error(`Couldn't build "${this.id}". ${String(e)}`)
 		}
-	}
-
-	#sortKeys(force = false) {
-		if (this.#isSorted && !force) return this
-
-		this.#result = sortObjectKeys(this.#result, dataswornKeyOrder)
-		this.#isSorted = true
-		return this
 	}
 
 	/** Top-level RulesPackage properties to omit from key sorting. */

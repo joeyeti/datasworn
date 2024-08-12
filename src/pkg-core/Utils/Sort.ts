@@ -3,8 +3,9 @@ import {
 	CollectionsKey,
 	IdKey,
 	ReplacesKey,
-	EnhancesKey,
+	EnhancesKey
 } from '../IdElements/CONST.js'
+import Pattern from '../IdElements/Pattern.js'
 import type { Datasworn } from '../index.js'
 
 export const unsortableKeys = [
@@ -13,8 +14,9 @@ export const unsortableKeys = [
 	ContentsKey,
 	'options',
 	CollectionsKey,
-	'choices',
+	'choices'
 ] as const
+
 export const idKeys = [IdKey, '_key', '_index'] as const
 
 export const relationshipKeys = [
@@ -27,7 +29,7 @@ export const relationshipKeys = [
 	'domain',
 	'name_oracle',
 	'npc',
-	'extra_card',
+	'extra_card'
 ] as const
 
 // TODO: this could be done programmatically by looking at the appropriate symbol key on DiscriminatedUnion schemas
@@ -39,7 +41,7 @@ export const discriminatorKeys = [
 	'choice_type',
 	'oracle_type',
 	'value_type',
-	'using',
+	'using'
 ] as const
 
 export const usageKeys = [
@@ -52,7 +54,7 @@ export const usageKeys = [
 	'ally',
 	'player',
 	'is_impact',
-	'disables_asset',
+	'disables_asset'
 ] as const
 
 export const shortDescriptionKeys = [
@@ -63,20 +65,20 @@ export const shortDescriptionKeys = [
 	'features',
 	'dangers',
 	'drives',
-	'tactics',
+	'tactics'
 ] as const
 export const longDescriptionKeys = [
 	'text',
 	'text2',
 	'text3',
 	'description',
-	'your_character',
+	'your_character'
 ] as const
 export const longArrayKeys = [
 	'denizens',
 	'enhance_moves',
 	'rows',
-	'table',
+	'table'
 ] as const
 export const numericKeys = ['min', 'max', 'value', 'rank'] as const
 export const rulesKeys = [
@@ -101,7 +103,7 @@ export const rulesKeys = [
 	'recover',
 	'suffer',
 	'choices',
-	'xp_cost',
+	'xp_cost'
 ] as const
 export const sourceMetadataKeys = [
 	'email',
@@ -110,7 +112,7 @@ export const sourceMetadataKeys = [
 	'license',
 	'page',
 	'title',
-	'url',
+	'url'
 ] as const satisfies (
 	| keyof Datasworn.SourceInfo
 	| keyof Omit<Datasworn.AuthorInfo, 'name'>
@@ -219,18 +221,82 @@ export function compareObjectKeys(
 
 	return indexA - indexB
 }
-export function sortDataswornKeys<T extends object>(
-	object: T,
-	sortOrder = dataswornKeyOrder
-) {
-	return sortObjectKeys(object, sortOrder)
+export function sortDataswornKeys(value: Record<string, unknown>) {
+	return sortObjectKeys(value, dataswornKeyOrder)
 }
 
-export function sortObjectKeys<T extends object>(
+function _isPOJO(value: unknown): value is Record<string, unknown> {
+	if (typeof value !== 'object') return false
+	if (value === null) return false
+	if (Array.isArray(value)) return false
+	return true
+}
+
+type IdNode = { _id: string } & Record<string, unknown>
+
+function _isIdNode(value: unknown): value is IdNode {
+	if (!_isPOJO(value)) return false
+	if (!(IdKey in value)) return false
+
+	const id = value[IdKey]
+
+	return typeof id === 'string'
+}
+
+function _isDictionaryOfPOJOs(
+	value: unknown
+): value is Record<string, Record<string, unknown>> {
+	if (!_isPOJO(value)) return false
+
+	for (const k in value) {
+		if (!Pattern.DictKey.test(k)) return false
+		const dict_entry = value[k]
+		if (!_isPOJO(dict_entry)) return false
+	}
+	return true
+}
+
+function _isDictionaryOfIdNodes(
+	value: unknown
+): value is Record<string, IdNode> {
+	if (!_isPOJO(value)) return false
+
+	for (const k in value) {
+		if (!Pattern.DictKey.test(k)) return false
+		const dict_entry = value[k]
+		if (!_isIdNode(dict_entry)) return false
+	}
+
+	return true
+}
+
+function _sortObject(key: string | number, value: Record<string, unknown>) {
+	if (_isDictionaryOfPOJOs(value)) return value
+}
+
+const sortBlacklist = [
+	'options',
+	'controls',
+	'contents',
+	'collections',
+	'oracles',
+	'assets',
+	'moves',
+	'variants'
+]
+
+export function sortJson(key: string | number, value: unknown) {
+	if (sortBlacklist.includes(key as string)) return value
+	if (!_isPOJO(value)) return value
+	if (_isDictionaryOfIdNodes(value)) return value
+
+	return sortDataswornKeys(value)
+}
+
+export function sortObjectKeys<T extends Record<string, unknown>>(
 	object: T,
-	keyOrder: Readonly<string[]> = []
+	keyOrder: Readonly<string[]>
 ) {
-	if (Array.isArray(object)) return object
 	const entries = Object.entries(object).sort(([a], [b]) =>
 		compareObjectKeys(a, b, keyOrder)
 	)
