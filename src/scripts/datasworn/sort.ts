@@ -11,9 +11,11 @@ import { DefsKey } from '../const.js'
 const keywordKeys = [...Object.keys(Keywords)]
 
 export function isSortableObjectSchema(schema: JSONSchema7) {
+
+
 	switch (true) {
 		// skip non-object schema or dictionary-like object
-		case schema.type !== 'object':
+
 		case schema.patternProperties != null:
 			// console.log('SKIP', schema.title ?? schema)
 			return false

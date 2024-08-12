@@ -1249,7 +1249,7 @@ export interface DelveSiteDomain {
 }
 
 /**
- * Represents a single Danger entry from a delve site Domain card.
+ * Represents a row in an oracle table, with a single text cell.
  */
 export interface DelveSiteDomainDanger {
 	/**
@@ -1301,7 +1301,7 @@ export type DelveSiteDomainDangerId = string
 export type DelveSiteDomainDangerIdWildcard = string
 
 /**
- * Represents a single Feature entry from a delve site Domain card.
+ * Represents a row in an oracle table, with a single text cell.
  */
 export interface DelveSiteDomainFeature {
 	/**
@@ -1533,7 +1533,7 @@ export interface DelveSiteTheme {
 }
 
 /**
- * Represents a single Danger entry from a delve site Theme card.
+ * Represents a row in an oracle table, with a single text cell.
  */
 export interface DelveSiteThemeDanger {
 	/**
@@ -1585,7 +1585,7 @@ export type DelveSiteThemeDangerId = string
 export type DelveSiteThemeDangerIdWildcard = string
 
 /**
- * Represents a single Feature entry from a delve site Theme card.
+ * Represents a row in an oracle table, with a single text cell.
  */
 export interface DelveSiteThemeFeature {
 	/**
@@ -3707,7 +3707,8 @@ export interface OracleTableSharedRolls {
 	 * @default 
 	 * ```javascript
 	 * 	{
-	 * 		roll: "Roll"
+	 * 		roll: "Roll",
+	 * 		text: "Result"
 	 * 	}
 	 * ```
 	 */
@@ -3778,6 +3779,7 @@ export interface OracleTableSharedText {
 	 * @default 
 	 * ```javascript
 	 * 	{
+	 * 		roll: "Roll",
 	 * 		text: "Result"
 	 * 	}
 	 * ```
@@ -3849,6 +3851,7 @@ export interface OracleTableSharedText2 {
 	 * @default 
 	 * ```javascript
 	 * 	{
+	 * 		roll: "Roll",
 	 * 		text: "Result",
 	 * 		text2: "Details"
 	 * 	}

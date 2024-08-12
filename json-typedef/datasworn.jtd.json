@@ -2534,7 +2534,7 @@
 				}
 			},
 			"metadata": {
-				"description": "Represents a single Danger entry from a delve site Domain card."
+				"description": "Represents a row in an oracle table, with a single text cell."
 			}
 		},
 		"DelveSiteDomainDangerId": {
@@ -2598,7 +2598,7 @@
 				}
 			},
 			"metadata": {
-				"description": "Represents a single Feature entry from a delve site Domain card."
+				"description": "Represents a row in an oracle table, with a single text cell."
 			}
 		},
 		"DelveSiteDomainFeatureId": {
@@ -2776,7 +2776,7 @@
 				}
 			},
 			"metadata": {
-				"description": "Represents a single Danger entry from a delve site Theme card."
+				"description": "Represents a row in an oracle table, with a single text cell."
 			}
 		},
 		"DelveSiteThemeDangerId": {
@@ -2840,7 +2840,7 @@
 				}
 			},
 			"metadata": {
-				"description": "Represents a single Feature entry from a delve site Theme card."
+				"description": "Represents a row in an oracle table, with a single text cell."
 			}
 		},
 		"DelveSiteThemeFeatureId": {

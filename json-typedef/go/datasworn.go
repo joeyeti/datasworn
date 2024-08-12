@@ -1798,7 +1798,7 @@ type DelveSiteDomain struct {
 	Tags *Tags `json:"tags,omitempty"`
 }
 
-// Represents a single Danger entry from a delve site Domain card.
+// Represents a row in an oracle table, with a single text cell.
 type DelveSiteDomainDanger struct {
 	ID DelveSiteDomainDangerID `json:"_id"`
 
@@ -1831,7 +1831,7 @@ type DelveSiteDomainDangerID = string
 // DelveSiteDomainDanger objects.
 type DelveSiteDomainDangerIDWildcard = string
 
-// Represents a single Feature entry from a delve site Domain card.
+// Represents a row in an oracle table, with a single text cell.
 type DelveSiteDomainFeature struct {
 	ID DelveSiteDomainFeatureID `json:"_id"`
 
@@ -1927,7 +1927,7 @@ type DelveSiteTheme struct {
 	Tags *Tags `json:"tags,omitempty"`
 }
 
-// Represents a single Danger entry from a delve site Theme card.
+// Represents a row in an oracle table, with a single text cell.
 type DelveSiteThemeDanger struct {
 	ID DelveSiteThemeDangerID `json:"_id"`
 
@@ -1960,7 +1960,7 @@ type DelveSiteThemeDangerID = string
 // DelveSiteThemeDanger objects.
 type DelveSiteThemeDangerIDWildcard = string
 
-// Represents a single Feature entry from a delve site Theme card.
+// Represents a row in an oracle table, with a single text cell.
 type DelveSiteThemeFeature struct {
 	ID DelveSiteThemeFeatureID `json:"_id"`
 

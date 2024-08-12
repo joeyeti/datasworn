@@ -6,7 +6,7 @@ using System.Text.Json.Serialization;
 namespace Datasworn
 {
     /// <summary>
-    /// Represents a single Feature entry from a delve site Domain card.
+    /// Represents a row in an oracle table, with a single text cell.
     /// </summary>
     public class DelveSiteDomainFeature
     {

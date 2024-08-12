@@ -171,7 +171,6 @@ export const dataswornKeyOrder = [
 	'embed_table',
 	'match',
 	'recommended_rolls',
-	'column_labels',
 	// relationships
 	'oracles',
 	'suggestions',
@@ -180,7 +179,8 @@ export const dataswornKeyOrder = [
 	'tags',
 
 	'_comment',
-
+	// so it appears immediately above rows
+	'column_labels',
 	// very long content
 	...longArrayKeys,
 

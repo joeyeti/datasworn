@@ -69,6 +69,7 @@ const schemaOptions: SchemaOptions[] = [
 
 const metadataKeys: string[] = []
 
+
 function replacer(k: string, v: unknown) {
 	if (metadataKeys.includes(k)) return undefined
 
@@ -98,11 +99,10 @@ for (const { rootSchema, name, paths, messages } of schemaOptions) {
 	try {
 		Log.info(messages.writeStart)
 
-		draft7.eachSchema((schema, hashPointer) => {
-			const pointer = hashPointer.replace(/^#/, '/')
+		draft7.eachSchema((schema, pointer) => {
 			const newSchema = sortSchemaKeys(JSON.parse(JSON.stringify(schema)))
 
-			if (pointer === '/') sortedSchema = newSchema
+			if (pointer === '') sortedSchema = newSchema
 			else JsonPointer.set(sortedSchema, pointer, newSchema)
 		}, rootSchema)
 

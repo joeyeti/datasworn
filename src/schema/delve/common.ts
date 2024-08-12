@@ -22,11 +22,11 @@ export function EmbeddedType<
 	const schemaName = pascalCase(parentTypeId) + pascalCase(embeddedTypeId)
 	const idSchemaName = schemaName + 'Id'
 
-	const schema = CloneType(base, {
-		$id: schemaName,
-		...options
-	})
+	const schema = CloneType(base, options)
+
+	schema.$id = schemaName
 	schema.properties._id = Computed(Type.Ref<TString>(idSchemaName))
+
 
 	// @ts-expect-error
 	return schema as TObject<TBase['properties'] & { _id: TString }>

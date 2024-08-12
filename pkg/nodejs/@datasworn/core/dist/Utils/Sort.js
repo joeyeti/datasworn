@@ -162,7 +162,6 @@ exports.dataswornKeyOrder = [
     'embed_table',
     'match',
     'recommended_rolls',
-    'column_labels',
     // relationships
     'oracles',
     'suggestions',
@@ -170,6 +169,8 @@ exports.dataswornKeyOrder = [
     'oracle_rolls',
     'tags',
     '_comment',
+    // so it appears immediately above rows
+    'column_labels',
     // very long content
     ...exports.longArrayKeys,
     'assets',

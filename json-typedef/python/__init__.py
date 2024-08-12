@@ -3660,7 +3660,7 @@ class DelveSiteDomain:
 @dataclass
 class DelveSiteDomainDanger:
     """
-    Represents a single Danger entry from a delve site Domain card.
+    Represents a row in an oracle table, with a single text cell.
     """
 
     id: 'DelveSiteDomainDangerID'
@@ -3756,7 +3756,7 @@ class DelveSiteDomainDangerIDWildcard:
 @dataclass
 class DelveSiteDomainFeature:
     """
-    Represents a single Feature entry from a delve site Domain card.
+    Represents a row in an oracle table, with a single text cell.
     """
 
     id: 'DelveSiteDomainFeatureID'
@@ -4025,7 +4025,7 @@ class DelveSiteTheme:
 @dataclass
 class DelveSiteThemeDanger:
     """
-    Represents a single Danger entry from a delve site Theme card.
+    Represents a row in an oracle table, with a single text cell.
     """
 
     id: 'DelveSiteThemeDangerID'
@@ -4121,7 +4121,7 @@ class DelveSiteThemeDangerIDWildcard:
 @dataclass
 class DelveSiteThemeFeature:
     """
-    Represents a single Feature entry from a delve site Theme card.
+    Represents a row in an oracle table, with a single text cell.
     """
 
     id: 'DelveSiteThemeFeatureID'

@@ -3143,7 +3143,7 @@ module Datasworn
     end
   end
 
-  # Represents a single Danger entry from a delve site Domain card.
+  # Represents a row in an oracle table, with a single text cell.
   class DelveSiteDomainDanger
     attr_accessor :id
     attr_accessor :roll
@@ -3224,7 +3224,7 @@ module Datasworn
     end
   end
 
-  # Represents a single Feature entry from a delve site Domain card.
+  # Represents a row in an oracle table, with a single text cell.
   class DelveSiteDomainFeature
     attr_accessor :id
     attr_accessor :roll
@@ -3464,7 +3464,7 @@ module Datasworn
     end
   end
 
-  # Represents a single Danger entry from a delve site Theme card.
+  # Represents a row in an oracle table, with a single text cell.
   class DelveSiteThemeDanger
     attr_accessor :id
     attr_accessor :roll
@@ -3545,7 +3545,7 @@ module Datasworn
     end
   end
 
-  # Represents a single Feature entry from a delve site Theme card.
+  # Represents a row in an oracle table, with a single text cell.
   class DelveSiteThemeFeature
     attr_accessor :id
     attr_accessor :roll

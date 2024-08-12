@@ -8,7 +8,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import java.util.List;
 
 /**
- * Represents a single Danger entry from a delve site Theme card.
+ * Represents a row in an oracle table, with a single text cell.
  */
 @JsonSerialize
 public class DelveSiteThemeDanger {

@@ -32,14 +32,14 @@
 									]
 								}
 							},
-							"additionalProperties": true,
+							"additionalProperties": {},
 							"allOf": [
 								{
 									"if": {
 										"properties": {
 											"type": {
-												"const": "asset",
-												"type": "string"
+												"type": "string",
+												"const": "asset"
 											}
 										}
 									},
@@ -51,8 +51,8 @@
 									"if": {
 										"properties": {
 											"type": {
-												"const": "npc",
-												"type": "string"
+												"type": "string",
+												"const": "npc"
 											}
 										}
 									},
@@ -64,8 +64,8 @@
 									"if": {
 										"properties": {
 											"type": {
-												"const": "move",
-												"type": "string"
+												"type": "string",
+												"const": "move"
 											}
 										}
 									},
@@ -77,8 +77,8 @@
 									"if": {
 										"properties": {
 											"type": {
-												"const": "oracle_rollable",
-												"type": "string"
+												"type": "string",
+												"const": "oracle_rollable"
 											}
 										}
 									},
@@ -90,8 +90,8 @@
 									"if": {
 										"properties": {
 											"type": {
-												"const": "delve_site",
-												"type": "string"
+												"type": "string",
+												"const": "delve_site"
 											}
 										}
 									},
@@ -103,8 +103,8 @@
 									"if": {
 										"properties": {
 											"type": {
-												"const": "delve_site_theme",
-												"type": "string"
+												"type": "string",
+												"const": "delve_site_theme"
 											}
 										}
 									},
@@ -116,8 +116,8 @@
 									"if": {
 										"properties": {
 											"type": {
-												"const": "delve_site_domain",
-												"type": "string"
+												"type": "string",
+												"const": "delve_site_domain"
 											}
 										}
 									},
@@ -129,8 +129,8 @@
 									"if": {
 										"properties": {
 											"type": {
-												"const": "rarity",
-												"type": "string"
+												"type": "string",
+												"const": "rarity"
 											}
 										}
 									},
@@ -154,7 +154,7 @@
 									"$ref": "#/definitions/RulesetId"
 								}
 							},
-							"additionalProperties": true
+							"additionalProperties": {}
 						}
 					]
 				}
@@ -601,7 +601,7 @@
 					"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
 				}
 			},
-			"additionalProperties": true
+			"additionalProperties": {}
 		},
 		"AssetAbility": {
 			"title": "AssetAbility",
@@ -692,7 +692,7 @@
 					}
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"AssetAbilityControlField": {
 			"title": "AssetAbilityControlField",
@@ -704,14 +704,14 @@
 					"enum": ["clock", "counter", "checkbox", "text"]
 				}
 			},
-			"additionalProperties": true,
+			"additionalProperties": {},
 			"allOf": [
 				{
 					"if": {
 						"properties": {
 							"field_type": {
-								"const": "clock",
-								"type": "string"
+								"type": "string",
+								"const": "clock"
 							}
 						}
 					},
@@ -723,8 +723,8 @@
 					"if": {
 						"properties": {
 							"field_type": {
-								"const": "counter",
-								"type": "string"
+								"type": "string",
+								"const": "counter"
 							}
 						}
 					},
@@ -736,8 +736,8 @@
 					"if": {
 						"properties": {
 							"field_type": {
-								"const": "checkbox",
-								"type": "string"
+								"type": "string",
+								"const": "checkbox"
 							}
 						}
 					},
@@ -749,8 +749,8 @@
 					"if": {
 						"properties": {
 							"field_type": {
-								"const": "text",
-								"type": "string"
+								"type": "string",
+								"const": "text"
 							}
 						}
 					},
@@ -794,14 +794,14 @@
 					"enum": ["text"]
 				}
 			},
-			"additionalProperties": true,
+			"additionalProperties": {},
 			"allOf": [
 				{
 					"if": {
 						"properties": {
 							"field_type": {
-								"const": "text",
-								"type": "string"
+								"type": "string",
+								"const": "text"
 							}
 						}
 					},
@@ -862,7 +862,7 @@
 					}
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"AssetCardFlipField": {
 			"title": "AssetCardFlipField",
@@ -896,7 +896,7 @@
 					"default": false
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"AssetCheckboxField": {
 			"title": "AssetCheckboxField",
@@ -930,7 +930,7 @@
 					"default": false
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"AssetCollection": {
 			"title": "AssetCollection",
@@ -1025,7 +1025,7 @@
 					"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"AssetCollectionId": {
 			"title": "AssetCollectionId",
@@ -1121,7 +1121,7 @@
 					}
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"AssetConditionMeterControlField": {
 			"title": "AssetConditionMeterControlField",
@@ -1134,14 +1134,14 @@
 					"enum": ["checkbox", "card_flip"]
 				}
 			},
-			"additionalProperties": true,
+			"additionalProperties": {},
 			"allOf": [
 				{
 					"if": {
 						"properties": {
 							"field_type": {
-								"const": "checkbox",
-								"type": "string"
+								"type": "string",
+								"const": "checkbox"
 							}
 						}
 					},
@@ -1153,8 +1153,8 @@
 					"if": {
 						"properties": {
 							"field_type": {
-								"const": "card_flip",
-								"type": "string"
+								"type": "string",
+								"const": "card_flip"
 							}
 						}
 					},
@@ -1179,7 +1179,7 @@
 					"description": "The maximum value of this meter."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"AssetControlField": {
 			"title": "AssetControlField",
@@ -1196,14 +1196,14 @@
 					]
 				}
 			},
-			"additionalProperties": true,
+			"additionalProperties": {},
 			"allOf": [
 				{
 					"if": {
 						"properties": {
 							"field_type": {
-								"const": "condition_meter",
-								"type": "string"
+								"type": "string",
+								"const": "condition_meter"
 							}
 						}
 					},
@@ -1215,8 +1215,8 @@
 					"if": {
 						"properties": {
 							"field_type": {
-								"const": "select_enhancement",
-								"type": "string"
+								"type": "string",
+								"const": "select_enhancement"
 							}
 						}
 					},
@@ -1228,8 +1228,8 @@
 					"if": {
 						"properties": {
 							"field_type": {
-								"const": "checkbox",
-								"type": "string"
+								"type": "string",
+								"const": "checkbox"
 							}
 						}
 					},
@@ -1241,8 +1241,8 @@
 					"if": {
 						"properties": {
 							"field_type": {
-								"const": "card_flip",
-								"type": "string"
+								"type": "string",
+								"const": "card_flip"
 							}
 						}
 					},
@@ -1262,14 +1262,14 @@
 					"enum": ["condition_meter"]
 				}
 			},
-			"additionalProperties": true,
+			"additionalProperties": {},
 			"allOf": [
 				{
 					"if": {
 						"properties": {
 							"field_type": {
-								"const": "condition_meter",
-								"type": "string"
+								"type": "string",
+								"const": "condition_meter"
 							}
 						}
 					},
@@ -1312,7 +1312,7 @@
 					]
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"AssetEnhancement": {
 			"title": "AssetEnhancement",
@@ -1344,7 +1344,7 @@
 					"$ref": "#/definitions/Suggestions"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"AssetId": {
 			"title": "AssetId",
@@ -1369,14 +1369,14 @@
 					"enum": ["select_value", "select_enhancement", "text"]
 				}
 			},
-			"additionalProperties": true,
+			"additionalProperties": {},
 			"allOf": [
 				{
 					"if": {
 						"properties": {
 							"field_type": {
-								"const": "select_value",
-								"type": "string"
+								"type": "string",
+								"const": "select_value"
 							}
 						}
 					},
@@ -1388,8 +1388,8 @@
 					"if": {
 						"properties": {
 							"field_type": {
-								"const": "select_enhancement",
-								"type": "string"
+								"type": "string",
+								"const": "select_enhancement"
 							}
 						}
 					},
@@ -1401,8 +1401,8 @@
 					"if": {
 						"properties": {
 							"field_type": {
-								"const": "text",
-								"type": "string"
+								"type": "string",
+								"const": "text"
 							}
 						}
 					},
@@ -1443,7 +1443,7 @@
 					]
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"AtlasCollection": {
 			"title": "AtlasCollection",
@@ -1538,7 +1538,7 @@
 					"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"AtlasCollectionId": {
 			"title": "AtlasCollectionId",
@@ -1628,7 +1628,7 @@
 					"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
 				}
 			},
-			"additionalProperties": true
+			"additionalProperties": {}
 		},
 		"AtlasEntryId": {
 			"title": "AtlasEntryId",
@@ -1659,7 +1659,7 @@
 					"examples": ["health", "integrity"]
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"AttachedAssetOptionValueRef": {
 			"title": "AttachedAssetOptionValueRef",
@@ -1677,7 +1677,7 @@
 					"description": "The dictionary key of the asset option field."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"AuthorInfo": {
 			"title": "AuthorInfo",
@@ -1705,7 +1705,7 @@
 					"description": "An optional URL for the author's website."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"ChallengeRank": {
 			"title": "ChallengeRank",
@@ -1754,7 +1754,7 @@
 					"description": "An icon associated with this input."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"CollectableType": {
 			"title": "CollectableType",
@@ -1808,7 +1808,7 @@
 					"description": "An icon associated with this input."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"ConditionMeterKey": {
 			"$ref": "#/definitions/DictKey",
@@ -1855,7 +1855,7 @@
 					"description": "A description of this condition meter."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"ConditionMeterValueRef": {
 			"title": "ConditionMeterValueRef",
@@ -1872,7 +1872,7 @@
 					"$ref": "#/definitions/ConditionMeterKey"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"CounterField": {
 			"title": "CounterField",
@@ -1920,7 +1920,7 @@
 					"description": "An icon associated with this input."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"CssColor": {
 			"title": "CssColor",
@@ -1946,7 +1946,7 @@
 					"type": "integer"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"DelveSite": {
 			"title": "DelveSite",
@@ -2078,7 +2078,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"title": "DelveSiteDenizenStatic",
@@ -2105,7 +2105,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"title": "DelveSiteDenizenStatic",
@@ -2132,7 +2132,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"title": "DelveSiteDenizenStatic",
@@ -2159,7 +2159,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"title": "DelveSiteDenizenStatic",
@@ -2186,7 +2186,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"title": "DelveSiteDenizenStatic",
@@ -2213,7 +2213,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"title": "DelveSiteDenizenStatic",
@@ -2240,7 +2240,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"title": "DelveSiteDenizenStatic",
@@ -2267,7 +2267,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"title": "DelveSiteDenizenStatic",
@@ -2294,7 +2294,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"title": "DelveSiteDenizenStatic",
@@ -2321,7 +2321,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"title": "DelveSiteDenizenStatic",
@@ -2348,7 +2348,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"title": "DelveSiteDenizenStatic",
@@ -2375,12 +2375,12 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								}
 							],
 							"minItems": 12,
 							"maxItems": 12,
-							"additionalItems": false
+							"additionalItems": {}
 						}
 					]
 				},
@@ -2389,7 +2389,7 @@
 					"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
 				}
 			},
-			"additionalProperties": true
+			"additionalProperties": {}
 		},
 		"DelveSiteDenizen": {
 			"title": "DelveSiteDenizen",
@@ -2415,7 +2415,7 @@
 					"$ref": "#/definitions/DiceRange"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"DelveSiteDenizenFrequency": {
 			"title": "DelveSiteDenizenFrequency",
@@ -2512,7 +2512,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -2534,7 +2534,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -2556,7 +2556,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -2578,7 +2578,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -2600,7 +2600,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -2622,7 +2622,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -2644,7 +2644,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -2666,7 +2666,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -2688,7 +2688,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -2710,7 +2710,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -2732,7 +2732,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -2754,12 +2754,12 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								}
 							],
 							"minItems": 12,
 							"maxItems": 12,
-							"additionalItems": false
+							"additionalItems": {}
 						}
 					]
 				},
@@ -2794,7 +2794,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -2816,7 +2816,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -2838,7 +2838,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -2860,7 +2860,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -2882,12 +2882,12 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								}
 							],
 							"minItems": 5,
 							"maxItems": 5,
-							"additionalItems": false
+							"additionalItems": {}
 						}
 					]
 				},
@@ -2906,12 +2906,12 @@
 					"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
 				}
 			},
-			"additionalProperties": true
+			"additionalProperties": {}
 		},
 		"DelveSiteDomainDanger": {
 			"title": "DelveSiteDomainDanger",
 			"type": "object",
-			"description": "Represents a single Danger entry from a delve site Domain card.",
+			"description": "Represents a row in an oracle table, with a single text cell.",
 			"required": ["text"],
 			"properties": {
 				"_id": {
@@ -2963,7 +2963,7 @@
 					"releaseStage": "experimental"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"DelveSiteDomainDangerId": {
 			"title": "DelveSiteDomainDangerId",
@@ -2980,7 +2980,7 @@
 		"DelveSiteDomainFeature": {
 			"title": "DelveSiteDomainFeature",
 			"type": "object",
-			"description": "Represents a single Feature entry from a delve site Domain card.",
+			"description": "Represents a row in an oracle table, with a single text cell.",
 			"required": ["text"],
 			"properties": {
 				"_id": {
@@ -3032,7 +3032,7 @@
 					"releaseStage": "experimental"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"DelveSiteDomainFeatureId": {
 			"title": "DelveSiteDomainFeatureId",
@@ -3145,7 +3145,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -3167,7 +3167,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -3189,7 +3189,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -3211,7 +3211,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -3233,12 +3233,12 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								}
 							],
 							"minItems": 5,
 							"maxItems": 5,
-							"additionalItems": false
+							"additionalItems": {}
 						}
 					]
 				},
@@ -3273,7 +3273,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -3295,7 +3295,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -3317,7 +3317,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -3339,7 +3339,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -3361,7 +3361,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -3383,7 +3383,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -3405,7 +3405,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -3427,7 +3427,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -3449,7 +3449,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -3471,7 +3471,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -3493,7 +3493,7 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								},
 								{
 									"type": "object",
@@ -3515,12 +3515,12 @@
 											}
 										}
 									},
-									"additionalProperties": true
+									"additionalProperties": {}
 								}
 							],
 							"minItems": 12,
 							"maxItems": 12,
-							"additionalItems": false
+							"additionalItems": {}
 						}
 					]
 				},
@@ -3539,12 +3539,12 @@
 					"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
 				}
 			},
-			"additionalProperties": true
+			"additionalProperties": {}
 		},
 		"DelveSiteThemeDanger": {
 			"title": "DelveSiteThemeDanger",
 			"type": "object",
-			"description": "Represents a single Danger entry from a delve site Theme card.",
+			"description": "Represents a row in an oracle table, with a single text cell.",
 			"required": ["text"],
 			"properties": {
 				"_id": {
@@ -3596,7 +3596,7 @@
 					"releaseStage": "experimental"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"DelveSiteThemeDangerId": {
 			"title": "DelveSiteThemeDangerId",
@@ -3613,7 +3613,7 @@
 		"DelveSiteThemeFeature": {
 			"title": "DelveSiteThemeFeature",
 			"type": "object",
-			"description": "Represents a single Feature entry from a delve site Theme card.",
+			"description": "Represents a row in an oracle table, with a single text cell.",
 			"required": ["text"],
 			"properties": {
 				"_id": {
@@ -3665,7 +3665,7 @@
 					"releaseStage": "experimental"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"DelveSiteThemeFeatureId": {
 			"title": "DelveSiteThemeFeatureId",
@@ -3713,7 +3713,7 @@
 					"description": "High end of the dice range."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"DictKey": {
 			"title": "DictKey",
@@ -3796,7 +3796,7 @@
 					"default": true
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"EmbeddedMove": {
 			"title": "EmbeddedMove",
@@ -3808,14 +3808,14 @@
 					"enum": ["action_roll", "no_roll", "progress_roll", "special_track"]
 				}
 			},
-			"additionalProperties": true,
+			"additionalProperties": {},
 			"allOf": [
 				{
 					"if": {
 						"properties": {
 							"roll_type": {
-								"const": "action_roll",
-								"type": "string"
+								"type": "string",
+								"const": "action_roll"
 							}
 						}
 					},
@@ -3827,8 +3827,8 @@
 					"if": {
 						"properties": {
 							"roll_type": {
-								"const": "no_roll",
-								"type": "string"
+								"type": "string",
+								"const": "no_roll"
 							}
 						}
 					},
@@ -3840,8 +3840,8 @@
 					"if": {
 						"properties": {
 							"roll_type": {
-								"const": "progress_roll",
-								"type": "string"
+								"type": "string",
+								"const": "progress_roll"
 							}
 						}
 					},
@@ -3853,8 +3853,8 @@
 					"if": {
 						"properties": {
 							"roll_type": {
-								"const": "special_track",
-								"type": "string"
+								"type": "string",
+								"const": "special_track"
 							}
 						}
 					},
@@ -3942,7 +3942,7 @@
 					"const": false
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"EmbeddedOracleColumnText": {
 			"title": "EmbeddedOracleColumnText",
@@ -4025,7 +4025,7 @@
 					}
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"EmbeddedOracleColumnText2": {
 			"title": "EmbeddedOracleColumnText2",
@@ -4108,7 +4108,7 @@
 					}
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"EmbeddedOracleColumnText3": {
 			"title": "EmbeddedOracleColumnText3",
@@ -4191,7 +4191,7 @@
 					}
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"EmbeddedOracleRollable": {
 			"title": "EmbeddedOracleRollable",
@@ -4210,14 +4210,14 @@
 					]
 				}
 			},
-			"additionalProperties": true,
+			"additionalProperties": {},
 			"allOf": [
 				{
 					"if": {
 						"properties": {
 							"oracle_type": {
-								"const": "table_text",
-								"type": "string"
+								"type": "string",
+								"const": "table_text"
 							}
 						}
 					},
@@ -4229,8 +4229,8 @@
 					"if": {
 						"properties": {
 							"oracle_type": {
-								"const": "table_text2",
-								"type": "string"
+								"type": "string",
+								"const": "table_text2"
 							}
 						}
 					},
@@ -4242,8 +4242,8 @@
 					"if": {
 						"properties": {
 							"oracle_type": {
-								"const": "table_text3",
-								"type": "string"
+								"type": "string",
+								"const": "table_text3"
 							}
 						}
 					},
@@ -4255,8 +4255,8 @@
 					"if": {
 						"properties": {
 							"oracle_type": {
-								"const": "column_text",
-								"type": "string"
+								"type": "string",
+								"const": "column_text"
 							}
 						}
 					},
@@ -4268,8 +4268,8 @@
 					"if": {
 						"properties": {
 							"oracle_type": {
-								"const": "column_text2",
-								"type": "string"
+								"type": "string",
+								"const": "column_text2"
 							}
 						}
 					},
@@ -4281,8 +4281,8 @@
 					"if": {
 						"properties": {
 							"oracle_type": {
-								"const": "column_text3",
-								"type": "string"
+								"type": "string",
+								"const": "column_text3"
 							}
 						}
 					},
@@ -4382,6 +4382,16 @@
 						}
 					}
 				},
+				"suggestions": {
+					"$ref": "#/definitions/Suggestions"
+				},
+				"tags": {
+					"$ref": "#/definitions/Tags"
+				},
+				"_comment": {
+					"type": "string",
+					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+				},
 				"column_labels": {
 					"title": "TextColumnLabels",
 					"type": "object",
@@ -4399,16 +4409,6 @@
 						}
 					}
 				},
-				"suggestions": {
-					"$ref": "#/definitions/Suggestions"
-				},
-				"tags": {
-					"$ref": "#/definitions/Tags"
-				},
-				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-				},
 				"rows": {
 					"type": "array",
 					"description": "An array of objects, each representing a single row of the table.",
@@ -4418,7 +4418,7 @@
 					}
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"EmbeddedOracleTableText2": {
 			"title": "EmbeddedOracleTableText2",
@@ -4482,6 +4482,16 @@
 						}
 					}
 				},
+				"suggestions": {
+					"$ref": "#/definitions/Suggestions"
+				},
+				"tags": {
+					"$ref": "#/definitions/Tags"
+				},
+				"_comment": {
+					"type": "string",
+					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+				},
 				"column_labels": {
 					"title": "Text2ColumnLabels",
 					"type": "object",
@@ -4503,16 +4513,6 @@
 						}
 					}
 				},
-				"suggestions": {
-					"$ref": "#/definitions/Suggestions"
-				},
-				"tags": {
-					"$ref": "#/definitions/Tags"
-				},
-				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-				},
 				"rows": {
 					"type": "array",
 					"description": "An array of objects, each representing a single row of the table.",
@@ -4522,7 +4522,7 @@
 					}
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"EmbeddedOracleTableText3": {
 			"title": "EmbeddedOracleTableText3",
@@ -4586,6 +4586,16 @@
 						}
 					}
 				},
+				"suggestions": {
+					"$ref": "#/definitions/Suggestions"
+				},
+				"tags": {
+					"$ref": "#/definitions/Tags"
+				},
+				"_comment": {
+					"type": "string",
+					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+				},
 				"column_labels": {
 					"title": "Text3ColumnLabels",
 					"type": "object",
@@ -4605,16 +4615,6 @@
 						}
 					}
 				},
-				"suggestions": {
-					"$ref": "#/definitions/Suggestions"
-				},
-				"tags": {
-					"$ref": "#/definitions/Tags"
-				},
-				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-				},
 				"rows": {
 					"type": "array",
 					"description": "An array of objects, each representing a single row of the table.",
@@ -4624,7 +4624,7 @@
 					}
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"EmbeddedProgressRollMove": {
 			"title": "EmbeddedProgressRollMove",
@@ -4707,7 +4707,7 @@
 					"const": false
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"EmbeddedSpecialTrackMove": {
 			"title": "EmbeddedSpecialTrackMove",
@@ -4778,7 +4778,7 @@
 					"const": false
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"EmbedOnlyType": {
 			"title": "EmbedOnlyType",
@@ -4803,7 +4803,7 @@
 					"$ref": "#/definitions/MarkdownString"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"Expansion": {
 			"title": "Expansion",
@@ -4991,7 +4991,7 @@
 					}
 				}
 			},
-			"additionalProperties": true
+			"additionalProperties": {}
 		},
 		"ExpansionId": {
 			"title": "ExpansionId",
@@ -5010,7 +5010,7 @@
 					"description": "The part of speech for this string."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"I18nHints": {
 			"title": "I18nHints",
@@ -5042,7 +5042,7 @@
 					}
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"ImpactCategory": {
 			"title": "ImpactCategory",
@@ -5070,7 +5070,7 @@
 					}
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"ImpactRule": {
 			"title": "ImpactRule",
@@ -5105,7 +5105,7 @@
 					"description": "A description of this impact."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"Label": {
 			"title": "Label",
@@ -5138,14 +5138,14 @@
 					"enum": ["action_roll", "no_roll", "progress_roll", "special_track"]
 				}
 			},
-			"additionalProperties": true,
+			"additionalProperties": {},
 			"allOf": [
 				{
 					"if": {
 						"properties": {
 							"roll_type": {
-								"const": "action_roll",
-								"type": "string"
+								"type": "string",
+								"const": "action_roll"
 							}
 						}
 					},
@@ -5157,8 +5157,8 @@
 					"if": {
 						"properties": {
 							"roll_type": {
-								"const": "no_roll",
-								"type": "string"
+								"type": "string",
+								"const": "no_roll"
 							}
 						}
 					},
@@ -5170,8 +5170,8 @@
 					"if": {
 						"properties": {
 							"roll_type": {
-								"const": "progress_roll",
-								"type": "string"
+								"type": "string",
+								"const": "progress_roll"
 							}
 						}
 					},
@@ -5183,8 +5183,8 @@
 					"if": {
 						"properties": {
 							"roll_type": {
-								"const": "special_track",
-								"type": "string"
+								"type": "string",
+								"const": "special_track"
 							}
 						}
 					},
@@ -5195,7 +5195,7 @@
 			]
 		},
 		"MoveActionRoll": {
-			"title": "MoveActionRoll",
+			"title": "Move (action roll)",
 			"type": "object",
 			"description": "A move that makes an action roll.",
 			"required": [
@@ -5295,7 +5295,7 @@
 					"default": true
 				}
 			},
-			"additionalProperties": true
+			"additionalProperties": {}
 		},
 		"MoveActionRollEnhancement": {
 			"title": "MoveActionRollEnhancement",
@@ -5327,7 +5327,7 @@
 					"$ref": "#/definitions/TriggerActionRollEnhancement"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"MoveCategory": {
 			"title": "MoveCategory",
@@ -5422,7 +5422,7 @@
 					"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"MoveCategoryId": {
 			"title": "MoveCategoryId",
@@ -5446,14 +5446,14 @@
 					"enum": ["action_roll", "no_roll", "progress_roll", "special_track"]
 				}
 			},
-			"additionalProperties": true,
+			"additionalProperties": {},
 			"allOf": [
 				{
 					"if": {
 						"properties": {
 							"roll_type": {
-								"const": "action_roll",
-								"type": "string"
+								"type": "string",
+								"const": "action_roll"
 							}
 						}
 					},
@@ -5465,8 +5465,8 @@
 					"if": {
 						"properties": {
 							"roll_type": {
-								"const": "no_roll",
-								"type": "string"
+								"type": "string",
+								"const": "no_roll"
 							}
 						}
 					},
@@ -5478,8 +5478,8 @@
 					"if": {
 						"properties": {
 							"roll_type": {
-								"const": "progress_roll",
-								"type": "string"
+								"type": "string",
+								"const": "progress_roll"
 							}
 						}
 					},
@@ -5491,8 +5491,8 @@
 					"if": {
 						"properties": {
 							"roll_type": {
-								"const": "special_track",
-								"type": "string"
+								"type": "string",
+								"const": "special_track"
 							}
 						}
 					},
@@ -5609,7 +5609,7 @@
 					"const": false
 				}
 			},
-			"additionalProperties": true
+			"additionalProperties": {}
 		},
 		"MoveNoRollEnhancement": {
 			"title": "MoveNoRollEnhancement",
@@ -5641,7 +5641,7 @@
 					"$ref": "#/definitions/TriggerNoRollEnhancement"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"MoveOracleRollableId": {
 			"title": "MoveOracleRollableId",
@@ -5684,7 +5684,7 @@
 					}
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"MoveOutcomes": {
 			"title": "MoveOutcomes",
@@ -5702,10 +5702,10 @@
 					"$ref": "#/definitions/MoveOutcome"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"MoveProgressRoll": {
-			"title": "MoveProgressRoll",
+			"title": "Progress Move",
 			"type": "object",
 			"description": "A progress move that rolls on a standard progress track type (whose features are defined by this move object). For progress rolls that use special tracks, see MoveSpecialTrack.",
 			"required": [
@@ -5811,7 +5811,7 @@
 					"const": false
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"MoveProgressRollEnhancement": {
 			"title": "MoveProgressRollEnhancement",
@@ -5843,7 +5843,7 @@
 					"$ref": "#/definitions/TriggerProgressRollEnhancement"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"MoveRollType": {
 			"title": "MoveRollType",
@@ -5851,7 +5851,7 @@
 			"enum": ["no_roll", "action_roll", "progress_roll", "special_track"]
 		},
 		"MoveSpecialTrack": {
-			"title": "MoveSpecialTrack",
+			"title": "Progress Move (special track roll)",
 			"type": "object",
 			"description": "A progress move that rolls on a special track, such as Legacies (Starforged) or Bonds (classic Ironsworn). For progress moves that use standard progress tracks, see MoveProgressRoll instead.",
 			"required": [
@@ -5952,7 +5952,7 @@
 					"const": false
 				}
 			},
-			"additionalProperties": true
+			"additionalProperties": {}
 		},
 		"MoveSpecialTrackEnhancement": {
 			"title": "MoveSpecialTrackEnhancement",
@@ -5984,7 +5984,7 @@
 					"$ref": "#/definitions/TriggerSpecialTrackEnhancement"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"NonCollectableType": {
 			"title": "NonCollectableType",
@@ -6111,7 +6111,7 @@
 					"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
 				}
 			},
-			"additionalProperties": true
+			"additionalProperties": {}
 		},
 		"NpcCollection": {
 			"title": "NpcCollection",
@@ -6206,7 +6206,7 @@
 					"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"NpcCollectionId": {
 			"title": "NpcCollectionId",
@@ -6280,7 +6280,7 @@
 					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"NpcVariantId": {
 			"title": "NpcVariantId",
@@ -6310,14 +6310,14 @@
 					]
 				}
 			},
-			"additionalProperties": true,
+			"additionalProperties": {},
 			"allOf": [
 				{
 					"if": {
 						"properties": {
 							"oracle_type": {
-								"const": "tables",
-								"type": "string"
+								"type": "string",
+								"const": "tables"
 							}
 						}
 					},
@@ -6329,8 +6329,8 @@
 					"if": {
 						"properties": {
 							"oracle_type": {
-								"const": "table_shared_rolls",
-								"type": "string"
+								"type": "string",
+								"const": "table_shared_rolls"
 							}
 						}
 					},
@@ -6342,8 +6342,8 @@
 					"if": {
 						"properties": {
 							"oracle_type": {
-								"const": "table_shared_text",
-								"type": "string"
+								"type": "string",
+								"const": "table_shared_text"
 							}
 						}
 					},
@@ -6355,8 +6355,8 @@
 					"if": {
 						"properties": {
 							"oracle_type": {
-								"const": "table_shared_text2",
-								"type": "string"
+								"type": "string",
+								"const": "table_shared_text2"
 							}
 						}
 					},
@@ -6368,8 +6368,8 @@
 					"if": {
 						"properties": {
 							"oracle_type": {
-								"const": "table_shared_text3",
-								"type": "string"
+								"type": "string",
+								"const": "table_shared_text3"
 							}
 						}
 					},
@@ -6481,7 +6481,7 @@
 					}
 				}
 			},
-			"additionalProperties": true
+			"additionalProperties": {}
 		},
 		"OracleColumnText2": {
 			"title": "OracleColumnText2",
@@ -6572,7 +6572,7 @@
 					}
 				}
 			},
-			"additionalProperties": true
+			"additionalProperties": {}
 		},
 		"OracleColumnText3": {
 			"title": "OracleColumnText3",
@@ -6663,7 +6663,7 @@
 					}
 				}
 			},
-			"additionalProperties": true
+			"additionalProperties": {}
 		},
 		"OracleDuplicateBehavior": {
 			"title": "OracleDuplicateBehavior",
@@ -6679,7 +6679,7 @@
 					"$ref": "#/definitions/MarkdownString"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"OracleRoll": {
 			"title": "OracleRoll",
@@ -6726,7 +6726,7 @@
 					"minimum": 1
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"OracleRollable": {
 			"title": "OracleRollable",
@@ -6746,14 +6746,14 @@
 					]
 				}
 			},
-			"additionalProperties": true,
+			"additionalProperties": {},
 			"allOf": [
 				{
 					"if": {
 						"properties": {
 							"oracle_type": {
-								"const": "table_text",
-								"type": "string"
+								"type": "string",
+								"const": "table_text"
 							}
 						}
 					},
@@ -6765,8 +6765,8 @@
 					"if": {
 						"properties": {
 							"oracle_type": {
-								"const": "table_text2",
-								"type": "string"
+								"type": "string",
+								"const": "table_text2"
 							}
 						}
 					},
@@ -6778,8 +6778,8 @@
 					"if": {
 						"properties": {
 							"oracle_type": {
-								"const": "table_text3",
-								"type": "string"
+								"type": "string",
+								"const": "table_text3"
 							}
 						}
 					},
@@ -6791,8 +6791,8 @@
 					"if": {
 						"properties": {
 							"oracle_type": {
-								"const": "column_text",
-								"type": "string"
+								"type": "string",
+								"const": "column_text"
 							}
 						}
 					},
@@ -6804,8 +6804,8 @@
 					"if": {
 						"properties": {
 							"oracle_type": {
-								"const": "column_text2",
-								"type": "string"
+								"type": "string",
+								"const": "column_text2"
 							}
 						}
 					},
@@ -6817,8 +6817,8 @@
 					"if": {
 						"properties": {
 							"oracle_type": {
-								"const": "column_text3",
-								"type": "string"
+								"type": "string",
+								"const": "column_text3"
 							}
 						}
 					},
@@ -6921,7 +6921,7 @@
 					"releaseStage": "experimental"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"OracleRollableRowText2": {
 			"title": "OracleRollableRowText2",
@@ -6989,7 +6989,7 @@
 					"releaseStage": "experimental"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"OracleRollableRowText3": {
 			"title": "OracleRollableRowText3",
@@ -7068,7 +7068,7 @@
 					"releaseStage": "experimental"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"OracleRollableTable": {
 			"title": "OracleRollableTable",
@@ -7080,14 +7080,14 @@
 					"enum": ["table_text", "table_text2", "table_text3"]
 				}
 			},
-			"additionalProperties": true,
+			"additionalProperties": {},
 			"allOf": [
 				{
 					"if": {
 						"properties": {
 							"oracle_type": {
-								"const": "table_text",
-								"type": "string"
+								"type": "string",
+								"const": "table_text"
 							}
 						}
 					},
@@ -7099,8 +7099,8 @@
 					"if": {
 						"properties": {
 							"oracle_type": {
-								"const": "table_text2",
-								"type": "string"
+								"type": "string",
+								"const": "table_text2"
 							}
 						}
 					},
@@ -7112,8 +7112,8 @@
 					"if": {
 						"properties": {
 							"oracle_type": {
-								"const": "table_text3",
-								"type": "string"
+								"type": "string",
+								"const": "table_text3"
 							}
 						}
 					},
@@ -7145,7 +7145,7 @@
 					"description": "A string template that may be used in place of OracleRollableRow#text3."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"OracleTablesCollection": {
 			"title": "OracleTablesCollection",
@@ -7245,7 +7245,7 @@
 					"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"OracleTableSharedRolls": {
 			"title": "OracleTableSharedRolls",
@@ -7320,20 +7320,6 @@
 						}
 					}
 				},
-				"column_labels": {
-					"title": "SharedRollsLabels",
-					"type": "object",
-					"description": "Provides column labels for this table. The `roll` key refers to the roll column showing the dice range (`min` and `max` on each table row). For all other column labels, see the `name` property of each child `OracleColumn`.",
-					"default": {
-						"roll": "Roll"
-					},
-					"required": ["roll"],
-					"properties": {
-						"roll": {
-							"$ref": "#/definitions/Label"
-						}
-					}
-				},
 				"suggestions": {
 					"$ref": "#/definitions/Suggestions"
 				},
@@ -7344,12 +7330,27 @@
 					"type": "string",
 					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
 				},
+				"column_labels": {
+					"title": "TextColumnLabels",
+					"type": "object",
+					"description": "Provides column labels for this table. The `roll` key refers to the roll column showing the dice range (`min` and `max` on each table row). For all other column labels, see the `name` property of each child `OracleColumn`.",
+					"default": {
+						"roll": "Roll",
+						"text": "Result"
+					},
+					"required": ["roll"],
+					"properties": {
+						"roll": {
+							"$ref": "#/definitions/Label"
+						}
+					}
+				},
 				"_source": {
 					"$ref": "#/definitions/SourceInfo",
 					"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"OracleTableSharedText": {
 			"title": "OracleTableSharedText",
@@ -7424,19 +7425,6 @@
 						}
 					}
 				},
-				"column_labels": {
-					"title": "SharedTextLabels",
-					"type": "object",
-					"default": {
-						"text": "Result"
-					},
-					"required": ["text"],
-					"properties": {
-						"text": {
-							"$ref": "#/definitions/Label"
-						}
-					}
-				},
 				"suggestions": {
 					"$ref": "#/definitions/Suggestions"
 				},
@@ -7447,12 +7435,26 @@
 					"type": "string",
 					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
 				},
+				"column_labels": {
+					"title": "TextColumnLabels",
+					"type": "object",
+					"default": {
+						"roll": "Roll",
+						"text": "Result"
+					},
+					"required": ["text"],
+					"properties": {
+						"text": {
+							"$ref": "#/definitions/Label"
+						}
+					}
+				},
 				"_source": {
 					"$ref": "#/definitions/SourceInfo",
 					"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"OracleTableSharedText2": {
 			"title": "OracleTableSharedText2",
@@ -7527,10 +7529,21 @@
 						}
 					}
 				},
+				"suggestions": {
+					"$ref": "#/definitions/Suggestions"
+				},
+				"tags": {
+					"$ref": "#/definitions/Tags"
+				},
+				"_comment": {
+					"type": "string",
+					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+				},
 				"column_labels": {
-					"title": "SharedText2Labels",
+					"title": "Text2ColumnLabels",
 					"type": "object",
 					"default": {
+						"roll": "Roll",
 						"text": "Result",
 						"text2": "Details"
 					},
@@ -7544,22 +7557,12 @@
 						}
 					}
 				},
-				"suggestions": {
-					"$ref": "#/definitions/Suggestions"
-				},
-				"tags": {
-					"$ref": "#/definitions/Tags"
-				},
-				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-				},
 				"_source": {
 					"$ref": "#/definitions/SourceInfo",
 					"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"OracleTableSharedText3": {
 			"title": "OracleTableSharedText3",
@@ -7634,8 +7637,18 @@
 						}
 					}
 				},
+				"suggestions": {
+					"$ref": "#/definitions/Suggestions"
+				},
+				"tags": {
+					"$ref": "#/definitions/Tags"
+				},
+				"_comment": {
+					"type": "string",
+					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+				},
 				"column_labels": {
-					"title": "SharedText3Labels",
+					"title": "Text3ColumnLabels",
 					"type": "object",
 					"default": {},
 					"required": ["text", "text2", "text3"],
@@ -7651,22 +7664,12 @@
 						}
 					}
 				},
-				"suggestions": {
-					"$ref": "#/definitions/Suggestions"
-				},
-				"tags": {
-					"$ref": "#/definitions/Tags"
-				},
-				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-				},
 				"_source": {
 					"$ref": "#/definitions/SourceInfo",
 					"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"OracleTableText": {
 			"title": "OracleTableText",
@@ -7739,6 +7742,16 @@
 						}
 					}
 				},
+				"suggestions": {
+					"$ref": "#/definitions/Suggestions"
+				},
+				"tags": {
+					"$ref": "#/definitions/Tags"
+				},
+				"_comment": {
+					"type": "string",
+					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+				},
 				"column_labels": {
 					"title": "TextColumnLabels",
 					"type": "object",
@@ -7756,16 +7769,6 @@
 						}
 					}
 				},
-				"suggestions": {
-					"$ref": "#/definitions/Suggestions"
-				},
-				"tags": {
-					"$ref": "#/definitions/Tags"
-				},
-				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-				},
 				"rows": {
 					"type": "array",
 					"description": "An array of objects, each representing a single row of the table.",
@@ -7779,7 +7782,7 @@
 					"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
 				}
 			},
-			"additionalProperties": true
+			"additionalProperties": {}
 		},
 		"OracleTableText2": {
 			"title": "OracleTableText2",
@@ -7852,6 +7855,16 @@
 						}
 					}
 				},
+				"suggestions": {
+					"$ref": "#/definitions/Suggestions"
+				},
+				"tags": {
+					"$ref": "#/definitions/Tags"
+				},
+				"_comment": {
+					"type": "string",
+					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+				},
 				"column_labels": {
 					"title": "Text2ColumnLabels",
 					"type": "object",
@@ -7873,16 +7886,6 @@
 						}
 					}
 				},
-				"suggestions": {
-					"$ref": "#/definitions/Suggestions"
-				},
-				"tags": {
-					"$ref": "#/definitions/Tags"
-				},
-				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-				},
 				"rows": {
 					"type": "array",
 					"description": "An array of objects, each representing a single row of the table.",
@@ -7896,7 +7899,7 @@
 					"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
 				}
 			},
-			"additionalProperties": true
+			"additionalProperties": {}
 		},
 		"OracleTableText3": {
 			"title": "OracleTableText3",
@@ -7976,6 +7979,16 @@
 						}
 					}
 				},
+				"suggestions": {
+					"$ref": "#/definitions/Suggestions"
+				},
+				"tags": {
+					"$ref": "#/definitions/Tags"
+				},
+				"_comment": {
+					"type": "string",
+					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+				},
 				"column_labels": {
 					"title": "Text3ColumnLabels",
 					"type": "object",
@@ -7995,16 +8008,6 @@
 						}
 					}
 				},
-				"suggestions": {
-					"$ref": "#/definitions/Suggestions"
-				},
-				"tags": {
-					"$ref": "#/definitions/Tags"
-				},
-				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-				},
 				"rows": {
 					"type": "array",
 					"description": "An array of objects, each representing a single row of the table.",
@@ -8018,7 +8021,7 @@
 					"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
 				}
 			},
-			"additionalProperties": true
+			"additionalProperties": {}
 		},
 		"PageNumber": {
 			"title": "PageNumber",
@@ -8058,7 +8061,7 @@
 					"const": "progress_track"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"ProgressTrackTypeInfo": {
 			"title": "ProgressTrackTypeInfo",
@@ -8091,7 +8094,7 @@
 					}
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"Rarity": {
 			"title": "Rarity",
@@ -8163,7 +8166,7 @@
 					"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
 				}
 			},
-			"additionalProperties": true
+			"additionalProperties": {}
 		},
 		"RarityId": {
 			"title": "RarityId",
@@ -8196,14 +8199,14 @@
 					]
 				}
 			},
-			"additionalProperties": true,
+			"additionalProperties": {},
 			"allOf": [
 				{
 					"if": {
 						"properties": {
 							"using": {
-								"const": "stat",
-								"type": "string"
+								"type": "string",
+								"const": "stat"
 							}
 						}
 					},
@@ -8215,8 +8218,8 @@
 					"if": {
 						"properties": {
 							"using": {
-								"const": "condition_meter",
-								"type": "string"
+								"type": "string",
+								"const": "condition_meter"
 							}
 						}
 					},
@@ -8228,8 +8231,8 @@
 					"if": {
 						"properties": {
 							"using": {
-								"const": "asset_control",
-								"type": "string"
+								"type": "string",
+								"const": "asset_control"
 							}
 						}
 					},
@@ -8241,8 +8244,8 @@
 					"if": {
 						"properties": {
 							"using": {
-								"const": "asset_option",
-								"type": "string"
+								"type": "string",
+								"const": "asset_option"
 							}
 						}
 					},
@@ -8254,8 +8257,8 @@
 					"if": {
 						"properties": {
 							"using": {
-								"const": "attached_asset_control",
-								"type": "string"
+								"type": "string",
+								"const": "attached_asset_control"
 							}
 						}
 					},
@@ -8267,8 +8270,8 @@
 					"if": {
 						"properties": {
 							"using": {
-								"const": "attached_asset_option",
-								"type": "string"
+								"type": "string",
+								"const": "attached_asset_option"
 							}
 						}
 					},
@@ -8280,8 +8283,8 @@
 					"if": {
 						"properties": {
 							"using": {
-								"const": "custom",
-								"type": "string"
+								"type": "string",
+								"const": "custom"
 							}
 						}
 					},
@@ -8353,7 +8356,7 @@
 					}
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"Ruleset": {
 			"title": "Ruleset",
@@ -8538,7 +8541,7 @@
 					}
 				}
 			},
-			"additionalProperties": true
+			"additionalProperties": {}
 		},
 		"RulesetId": {
 			"title": "RulesetId",
@@ -8609,7 +8612,7 @@
 					}
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"RulesPackage": {
 			"title": "RulesPackage",
@@ -8622,14 +8625,14 @@
 					"enum": ["ruleset", "expansion"]
 				}
 			},
-			"additionalProperties": true,
+			"additionalProperties": {},
 			"allOf": [
 				{
 					"if": {
 						"properties": {
 							"type": {
-								"const": "ruleset",
-								"type": "string"
+								"type": "string",
+								"const": "ruleset"
 							}
 						}
 					},
@@ -8641,8 +8644,8 @@
 					"if": {
 						"properties": {
 							"type": {
-								"const": "expansion",
-								"type": "string"
+								"type": "string",
+								"const": "expansion"
 							}
 						}
 					},
@@ -8691,14 +8694,14 @@
 									"enum": ["choice", "choice_group"]
 								}
 							},
-							"additionalProperties": true,
+							"additionalProperties": {},
 							"allOf": [
 								{
 									"if": {
 										"properties": {
 											"choice_type": {
-												"const": "choice",
-												"type": "string"
+												"type": "string",
+												"const": "choice"
 											}
 										}
 									},
@@ -8710,8 +8713,8 @@
 									"if": {
 										"properties": {
 											"choice_type": {
-												"const": "choice_group",
-												"type": "string"
+												"type": "string",
+												"const": "choice_group"
 											}
 										}
 									},
@@ -8740,7 +8743,7 @@
 					"description": "An icon associated with this input."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"SelectEnhancementFieldChoice": {
 			"title": "SelectEnhancementFieldChoice",
@@ -8766,10 +8769,9 @@
 					}
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"SelectEnhancementFieldChoiceGroup": {
-			"title": "SelectEnhancementFieldChoiceGroup",
 			"type": "object",
 			"description": "Represents a grouping of options in a list of choices.",
 			"remarks": "Semantics are similar to the HTML `<optgroup>` element.",
@@ -8794,7 +8796,7 @@
 					}
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"SelectValueField": {
 			"title": "SelectValueField",
@@ -8837,7 +8839,7 @@
 					"description": "An icon associated with this input."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"SelectValueFieldChoice": {
 			"title": "SelectValueFieldChoice",
@@ -8857,152 +8859,162 @@
 					]
 				}
 			},
-			"additionalProperties": true,
+			"additionalProperties": {},
 			"allOf": [
 				{
 					"if": {
 						"properties": {
 							"using": {
-								"const": "stat",
-								"type": "string"
+								"type": "string",
+								"const": "stat"
 							}
 						}
 					},
 					"then": {
+						"type": "object",
 						"description": "Represents an option in a list of choices.",
 						"remarks": "Semantics are similar to the HTML `<option>` element.",
-						"type": "object",
+						"required": ["label", "choice_type", "using", "stat"],
 						"properties": {
 							"label": {
 								"$ref": "#/definitions/Label"
 							},
 							"choice_type": {
-								"const": "choice",
-								"type": "string"
+								"type": "string",
+								"const": "choice"
+							},
+							"using": {
+								"type": "string",
+								"description": "A reference to the value of a standard player character stat.",
+								"const": "stat"
 							},
 							"stat": {
 								"$ref": "#/definitions/StatKey"
-							},
-							"using": {
-								"description": "A reference to the value of a standard player character stat.",
-								"const": "stat",
-								"type": "string"
 							}
 						},
-						"required": ["label", "choice_type", "stat", "using"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				},
 				{
 					"if": {
 						"properties": {
 							"using": {
-								"const": "condition_meter",
-								"type": "string"
+								"type": "string",
+								"const": "condition_meter"
 							}
 						}
 					},
 					"then": {
+						"type": "object",
 						"description": "Represents an option in a list of choices.",
 						"remarks": "Semantics are similar to the HTML `<option>` element.",
-						"type": "object",
+						"required": ["label", "choice_type", "using", "condition_meter"],
 						"properties": {
 							"label": {
 								"$ref": "#/definitions/Label"
 							},
 							"choice_type": {
-								"const": "choice",
-								"type": "string"
+								"type": "string",
+								"const": "choice"
+							},
+							"using": {
+								"type": "string",
+								"description": "A reference to the value of a standard player condition meter.",
+								"const": "condition_meter"
 							},
 							"condition_meter": {
 								"$ref": "#/definitions/ConditionMeterKey"
-							},
-							"using": {
-								"description": "A reference to the value of a standard player condition meter.",
-								"const": "condition_meter",
-								"type": "string"
 							}
 						},
-						"required": ["label", "choice_type", "condition_meter", "using"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				},
 				{
 					"if": {
 						"properties": {
 							"using": {
-								"const": "asset_control",
-								"type": "string"
+								"type": "string",
+								"const": "asset_control"
 							}
 						}
 					},
 					"then": {
+						"type": "object",
 						"description": "Represents an option in a list of choices.",
 						"remarks": "Semantics are similar to the HTML `<option>` element.",
-						"type": "object",
+						"required": ["label", "choice_type", "using", "control"],
 						"properties": {
 							"label": {
 								"$ref": "#/definitions/Label"
 							},
 							"choice_type": {
-								"const": "choice",
-								"type": "string"
-							},
-							"assets": {
-								"default": null,
-								"description": "Asset IDs (which may be wildcarded) that may provide the control field. For asset ability enhancements, `null` is used to represent the asset's own control fields.",
-								"anyOf": [
-									{
-										"default": null,
-										"type": "array",
-										"items": {
-											"$ref": "#/definitions/AssetIdWildcard"
-										}
-									},
-									{
-										"type": "null"
-									}
-								]
-							},
-							"control": {
-								"description": "The dictionary key of the asset control field.",
-								"examples": ["health", "integrity"],
-								"$ref": "#/definitions/DictKey"
+								"type": "string",
+								"const": "choice"
 							},
 							"using": {
+								"type": "string",
 								"description": "A reference to the value of an asset control.",
-								"const": "asset_control",
-								"type": "string"
+								"const": "asset_control"
+							},
+							"control": {
+								"$ref": "#/definitions/DictKey",
+								"description": "The dictionary key of the asset control field.",
+								"examples": ["health", "integrity"]
+							},
+							"assets": {
+								"description": "Asset IDs (which may be wildcarded) that may provide the control field. For asset ability enhancements, `null` is used to represent the asset's own control fields.",
+								"default": null,
+								"anyOf": [
+									{
+										"type": "array",
+										"default": null,
+										"items": {
+											"$ref": "#/definitions/AssetIdWildcard"
+										}
+									},
+									{
+										"type": "null"
+									}
+								]
 							}
 						},
-						"required": ["label", "choice_type", "control", "using"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				},
 				{
 					"if": {
 						"properties": {
 							"using": {
-								"const": "asset_option",
-								"type": "string"
+								"type": "string",
+								"const": "asset_option"
 							}
 						}
 					},
 					"then": {
+						"type": "object",
 						"description": "Represents an option in a list of choices.",
 						"remarks": "Semantics are similar to the HTML `<option>` element.",
-						"type": "object",
+						"required": ["label", "choice_type", "using", "option"],
 						"properties": {
 							"label": {
 								"$ref": "#/definitions/Label"
 							},
 							"choice_type": {
-								"const": "choice",
-								"type": "string"
+								"type": "string",
+								"const": "choice"
+							},
+							"using": {
+								"type": "string",
+								"description": "A reference to the value of an asset option.",
+								"const": "asset_option"
+							},
+							"option": {
+								"$ref": "#/definitions/DictKey",
+								"description": "The dictionary key of the asset option field."
 							},
 							"assets": {
-								"default": null,
 								"description": "Asset IDs (which may be wildcarded) that may provide the option field. For asset ability enhancements, `null` is used to represent the asset's own option fields.",
+								"default": null,
 								"anyOf": [
 									{
 										"type": "array",
@@ -9014,124 +9026,114 @@
 										"type": "null"
 									}
 								]
-							},
-							"option": {
-								"description": "The dictionary key of the asset option field.",
-								"$ref": "#/definitions/DictKey"
-							},
-							"using": {
-								"description": "A reference to the value of an asset option.",
-								"const": "asset_option",
-								"type": "string"
 							}
 						},
-						"required": ["label", "choice_type", "option", "using"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				},
 				{
 					"if": {
 						"properties": {
 							"using": {
-								"const": "attached_asset_control",
-								"type": "string"
+								"type": "string",
+								"const": "attached_asset_control"
 							}
 						}
 					},
 					"then": {
+						"type": "object",
 						"description": "Represents an option in a list of choices.",
 						"remarks": "Semantics are similar to the HTML `<option>` element.",
-						"type": "object",
+						"required": ["label", "choice_type", "using", "control"],
 						"properties": {
 							"label": {
 								"$ref": "#/definitions/Label"
 							},
 							"choice_type": {
-								"const": "choice",
-								"type": "string"
+								"type": "string",
+								"const": "choice"
+							},
+							"using": {
+								"type": "string",
+								"description": "A reference to the value of an attached asset control. For example, a Module asset could use this to roll using the `integrity` control of an attached Vehicle.",
+								"const": "attached_asset_control"
 							},
 							"control": {
+								"$ref": "#/definitions/DictKey",
 								"description": "The dictionary key of the asset control field.",
-								"examples": ["health", "integrity"],
-								"$ref": "#/definitions/DictKey"
-							},
-							"using": {
-								"description": "A reference to the value of an attached asset control. For example, a Module asset could use this to roll using the `integrity` control of an attached Vehicle.",
-								"const": "attached_asset_control",
-								"type": "string"
+								"examples": ["health", "integrity"]
 							}
 						},
-						"required": ["label", "choice_type", "control", "using"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				},
 				{
 					"if": {
 						"properties": {
 							"using": {
-								"const": "attached_asset_option",
-								"type": "string"
+								"type": "string",
+								"const": "attached_asset_option"
 							}
 						}
 					},
 					"then": {
+						"type": "object",
 						"description": "Represents an option in a list of choices.",
 						"remarks": "Semantics are similar to the HTML `<option>` element.",
-						"type": "object",
+						"required": ["label", "choice_type", "using", "option"],
 						"properties": {
 							"label": {
 								"$ref": "#/definitions/Label"
 							},
 							"choice_type": {
-								"const": "choice",
-								"type": "string"
+								"type": "string",
+								"const": "choice"
+							},
+							"using": {
+								"type": "string",
+								"description": "A reference to the value of an attached asset option.",
+								"const": "attached_asset_option"
 							},
 							"option": {
-								"description": "The dictionary key of the asset option field.",
-								"$ref": "#/definitions/DictKey"
-							},
-							"using": {
-								"description": "A reference to the value of an attached asset option.",
-								"const": "attached_asset_option",
-								"type": "string"
+								"$ref": "#/definitions/DictKey",
+								"description": "The dictionary key of the asset option field."
 							}
 						},
-						"required": ["label", "choice_type", "option", "using"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				},
 				{
 					"if": {
 						"properties": {
 							"using": {
-								"const": "custom",
-								"type": "string"
+								"type": "string",
+								"const": "custom"
 							}
 						}
 					},
 					"then": {
+						"type": "object",
 						"description": "Represents an option in a list of choices.",
 						"remarks": "Semantics are similar to the HTML `<option>` element.",
-						"type": "object",
+						"required": ["label", "choice_type", "using", "value"],
 						"properties": {
 							"label": {
 								"$ref": "#/definitions/Label"
 							},
 							"choice_type": {
-								"const": "choice",
-								"type": "string"
+								"type": "string",
+								"const": "choice"
+							},
+							"using": {
+								"type": "string",
+								"description": "An arbitrary static integer value with a label.",
+								"const": "custom"
 							},
 							"value": {
 								"type": "integer"
-							},
-							"using": {
-								"description": "An arbitrary static integer value with a label.",
-								"const": "custom",
-								"type": "string"
 							}
 						},
-						"required": ["label", "choice_type", "value", "using"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				}
 			]
@@ -9199,7 +9201,7 @@
 					"examples": ["https://ironswornrpg.com"]
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"SpecialTrackRollMethod": {
 			"title": "SpecialTrackRollMethod",
@@ -9239,7 +9241,7 @@
 					"description": "A description of this special track."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"SpecialTrackType": {
 			"$ref": "#/definitions/DictKey",
@@ -9278,7 +9280,7 @@
 					]
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"StatValueRef": {
 			"title": "StatValueRef",
@@ -9295,7 +9297,7 @@
 					"$ref": "#/definitions/StatKey"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"Suggestions": {
 			"title": "Suggestions",
@@ -9472,21 +9474,29 @@
 					]
 				}
 			},
-			"additionalProperties": true,
+			"additionalProperties": {},
 			"allOf": [
 				{
 					"if": {
 						"properties": {
 							"value_type": {
-								"const": "boolean",
-								"type": "string"
+								"type": "string",
+								"const": "boolean"
 							}
 						}
 					},
 					"then": {
-						"type": "object",
 						"title": "TagRuleBoolean",
+						"type": "object",
+						"required": ["value_type", "description"],
 						"properties": {
+							"value_type": {
+								"type": "string",
+								"const": "boolean"
+							},
+							"description": {
+								"$ref": "#/definitions/MarkdownString"
+							},
 							"applies_to": {
 								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
 								"default": null,
@@ -9502,35 +9512,35 @@
 									}
 								]
 							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
 							"array": {
-								"default": false,
-								"type": "boolean"
-							},
-							"value_type": {
-								"const": "boolean",
-								"type": "string"
+								"type": "boolean",
+								"default": false
 							}
 						},
-						"required": ["description", "value_type"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				},
 				{
 					"if": {
 						"properties": {
 							"value_type": {
-								"const": "integer",
-								"type": "string"
+								"type": "string",
+								"const": "integer"
 							}
 						}
 					},
 					"then": {
-						"type": "object",
 						"title": "TagRuleInteger",
+						"type": "object",
+						"required": ["value_type", "description"],
 						"properties": {
+							"value_type": {
+								"type": "string",
+								"const": "integer"
+							},
+							"description": {
+								"$ref": "#/definitions/MarkdownString"
+							},
 							"applies_to": {
 								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
 								"default": null,
@@ -9546,35 +9556,35 @@
 									}
 								]
 							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
 							"array": {
-								"default": false,
-								"type": "boolean"
-							},
-							"value_type": {
-								"const": "integer",
-								"type": "string"
+								"type": "boolean",
+								"default": false
 							}
 						},
-						"required": ["description", "value_type"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				},
 				{
 					"if": {
 						"properties": {
 							"value_type": {
-								"const": "atlas_entry",
-								"type": "string"
+								"type": "string",
+								"const": "atlas_entry"
 							}
 						}
 					},
 					"then": {
-						"type": "object",
 						"title": "TagRuleAtlasEntry",
+						"type": "object",
+						"required": ["value_type", "description"],
 						"properties": {
+							"value_type": {
+								"type": "string",
+								"const": "atlas_entry"
+							},
+							"description": {
+								"$ref": "#/definitions/MarkdownString"
+							},
 							"applies_to": {
 								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
 								"default": null,
@@ -9590,36 +9600,36 @@
 									}
 								]
 							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
 							"wildcard": {
-								"default": false,
+								"type": "boolean",
 								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"type": "boolean"
-							},
-							"value_type": {
-								"const": "atlas_entry",
-								"type": "string"
+								"default": false
 							}
 						},
-						"required": ["description", "value_type"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				},
 				{
 					"if": {
 						"properties": {
 							"value_type": {
-								"const": "npc",
-								"type": "string"
+								"type": "string",
+								"const": "npc"
 							}
 						}
 					},
 					"then": {
-						"type": "object",
 						"title": "TagRuleNpc",
+						"type": "object",
+						"required": ["value_type", "description"],
 						"properties": {
+							"value_type": {
+								"type": "string",
+								"const": "npc"
+							},
+							"description": {
+								"$ref": "#/definitions/MarkdownString"
+							},
 							"applies_to": {
 								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
 								"default": null,
@@ -9635,36 +9645,36 @@
 									}
 								]
 							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
 							"wildcard": {
-								"default": false,
+								"type": "boolean",
 								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"type": "boolean"
-							},
-							"value_type": {
-								"const": "npc",
-								"type": "string"
+								"default": false
 							}
 						},
-						"required": ["description", "value_type"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				},
 				{
 					"if": {
 						"properties": {
 							"value_type": {
-								"const": "oracle_rollable",
-								"type": "string"
+								"type": "string",
+								"const": "oracle_rollable"
 							}
 						}
 					},
 					"then": {
-						"type": "object",
 						"title": "TagRuleOracleRollable",
+						"type": "object",
+						"required": ["value_type", "description"],
 						"properties": {
+							"value_type": {
+								"type": "string",
+								"const": "oracle_rollable"
+							},
+							"description": {
+								"$ref": "#/definitions/MarkdownString"
+							},
 							"applies_to": {
 								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
 								"default": null,
@@ -9680,36 +9690,36 @@
 									}
 								]
 							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
 							"wildcard": {
-								"default": false,
+								"type": "boolean",
 								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"type": "boolean"
-							},
-							"value_type": {
-								"const": "oracle_rollable",
-								"type": "string"
+								"default": false
 							}
 						},
-						"required": ["description", "value_type"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				},
 				{
 					"if": {
 						"properties": {
 							"value_type": {
-								"const": "asset",
-								"type": "string"
+								"type": "string",
+								"const": "asset"
 							}
 						}
 					},
 					"then": {
-						"type": "object",
 						"title": "TagRuleAsset",
+						"type": "object",
+						"required": ["value_type", "description"],
 						"properties": {
+							"value_type": {
+								"type": "string",
+								"const": "asset"
+							},
+							"description": {
+								"$ref": "#/definitions/MarkdownString"
+							},
 							"applies_to": {
 								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
 								"default": null,
@@ -9725,36 +9735,36 @@
 									}
 								]
 							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
 							"wildcard": {
-								"default": false,
+								"type": "boolean",
 								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"type": "boolean"
-							},
-							"value_type": {
-								"const": "asset",
-								"type": "string"
+								"default": false
 							}
 						},
-						"required": ["description", "value_type"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				},
 				{
 					"if": {
 						"properties": {
 							"value_type": {
-								"const": "move",
-								"type": "string"
+								"type": "string",
+								"const": "move"
 							}
 						}
 					},
 					"then": {
-						"type": "object",
 						"title": "TagRuleMove",
+						"type": "object",
+						"required": ["value_type", "description"],
 						"properties": {
+							"value_type": {
+								"type": "string",
+								"const": "move"
+							},
+							"description": {
+								"$ref": "#/definitions/MarkdownString"
+							},
 							"applies_to": {
 								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
 								"default": null,
@@ -9770,36 +9780,36 @@
 									}
 								]
 							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
 							"wildcard": {
-								"default": false,
+								"type": "boolean",
 								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"type": "boolean"
-							},
-							"value_type": {
-								"const": "move",
-								"type": "string"
+								"default": false
 							}
 						},
-						"required": ["description", "value_type"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				},
 				{
 					"if": {
 						"properties": {
 							"value_type": {
-								"const": "atlas_collection",
-								"type": "string"
+								"type": "string",
+								"const": "atlas_collection"
 							}
 						}
 					},
 					"then": {
-						"type": "object",
 						"title": "TagRuleAtlasCollection",
+						"type": "object",
+						"required": ["value_type", "description"],
 						"properties": {
+							"value_type": {
+								"type": "string",
+								"const": "atlas_collection"
+							},
+							"description": {
+								"$ref": "#/definitions/MarkdownString"
+							},
 							"applies_to": {
 								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
 								"default": null,
@@ -9815,36 +9825,36 @@
 									}
 								]
 							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
 							"wildcard": {
-								"default": false,
+								"type": "boolean",
 								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"type": "boolean"
-							},
-							"value_type": {
-								"const": "atlas_collection",
-								"type": "string"
+								"default": false
 							}
 						},
-						"required": ["description", "value_type"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				},
 				{
 					"if": {
 						"properties": {
 							"value_type": {
-								"const": "npc_collection",
-								"type": "string"
+								"type": "string",
+								"const": "npc_collection"
 							}
 						}
 					},
 					"then": {
-						"type": "object",
 						"title": "TagRuleNpcCollection",
+						"type": "object",
+						"required": ["value_type", "description"],
 						"properties": {
+							"value_type": {
+								"type": "string",
+								"const": "npc_collection"
+							},
+							"description": {
+								"$ref": "#/definitions/MarkdownString"
+							},
 							"applies_to": {
 								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
 								"default": null,
@@ -9860,36 +9870,36 @@
 									}
 								]
 							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
 							"wildcard": {
-								"default": false,
+								"type": "boolean",
 								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"type": "boolean"
-							},
-							"value_type": {
-								"const": "npc_collection",
-								"type": "string"
+								"default": false
 							}
 						},
-						"required": ["description", "value_type"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				},
 				{
 					"if": {
 						"properties": {
 							"value_type": {
-								"const": "oracle_collection",
-								"type": "string"
+								"type": "string",
+								"const": "oracle_collection"
 							}
 						}
 					},
 					"then": {
-						"type": "object",
 						"title": "TagRuleOracleCollection",
+						"type": "object",
+						"required": ["value_type", "description"],
 						"properties": {
+							"value_type": {
+								"type": "string",
+								"const": "oracle_collection"
+							},
+							"description": {
+								"$ref": "#/definitions/MarkdownString"
+							},
 							"applies_to": {
 								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
 								"default": null,
@@ -9905,36 +9915,36 @@
 									}
 								]
 							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
 							"wildcard": {
-								"default": false,
+								"type": "boolean",
 								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"type": "boolean"
-							},
-							"value_type": {
-								"const": "oracle_collection",
-								"type": "string"
+								"default": false
 							}
 						},
-						"required": ["description", "value_type"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				},
 				{
 					"if": {
 						"properties": {
 							"value_type": {
-								"const": "asset_collection",
-								"type": "string"
+								"type": "string",
+								"const": "asset_collection"
 							}
 						}
 					},
 					"then": {
-						"type": "object",
 						"title": "TagRuleAssetCollection",
+						"type": "object",
+						"required": ["value_type", "description"],
 						"properties": {
+							"value_type": {
+								"type": "string",
+								"const": "asset_collection"
+							},
+							"description": {
+								"$ref": "#/definitions/MarkdownString"
+							},
 							"applies_to": {
 								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
 								"default": null,
@@ -9950,36 +9960,36 @@
 									}
 								]
 							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
 							"wildcard": {
-								"default": false,
+								"type": "boolean",
 								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"type": "boolean"
-							},
-							"value_type": {
-								"const": "asset_collection",
-								"type": "string"
+								"default": false
 							}
 						},
-						"required": ["description", "value_type"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				},
 				{
 					"if": {
 						"properties": {
 							"value_type": {
-								"const": "move_category",
-								"type": "string"
+								"type": "string",
+								"const": "move_category"
 							}
 						}
 					},
 					"then": {
-						"type": "object",
 						"title": "TagRuleMoveCategory",
+						"type": "object",
+						"required": ["value_type", "description"],
 						"properties": {
+							"value_type": {
+								"type": "string",
+								"const": "move_category"
+							},
+							"description": {
+								"$ref": "#/definitions/MarkdownString"
+							},
 							"applies_to": {
 								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
 								"default": null,
@@ -9995,36 +10005,36 @@
 									}
 								]
 							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
 							"wildcard": {
-								"default": false,
+								"type": "boolean",
 								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"type": "boolean"
-							},
-							"value_type": {
-								"const": "move_category",
-								"type": "string"
+								"default": false
 							}
 						},
-						"required": ["description", "value_type"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				},
 				{
 					"if": {
 						"properties": {
 							"value_type": {
-								"const": "delve_site",
-								"type": "string"
+								"type": "string",
+								"const": "delve_site"
 							}
 						}
 					},
 					"then": {
-						"type": "object",
 						"title": "TagRuleDelveSite",
+						"type": "object",
+						"required": ["value_type", "description"],
 						"properties": {
+							"value_type": {
+								"type": "string",
+								"const": "delve_site"
+							},
+							"description": {
+								"$ref": "#/definitions/MarkdownString"
+							},
 							"applies_to": {
 								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
 								"default": null,
@@ -10040,36 +10050,36 @@
 									}
 								]
 							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
 							"wildcard": {
-								"default": false,
+								"type": "boolean",
 								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"type": "boolean"
-							},
-							"value_type": {
-								"const": "delve_site",
-								"type": "string"
+								"default": false
 							}
 						},
-						"required": ["description", "value_type"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				},
 				{
 					"if": {
 						"properties": {
 							"value_type": {
-								"const": "delve_site_domain",
-								"type": "string"
+								"type": "string",
+								"const": "delve_site_domain"
 							}
 						}
 					},
 					"then": {
-						"type": "object",
 						"title": "TagRuleDelveSiteDomain",
+						"type": "object",
+						"required": ["value_type", "description"],
 						"properties": {
+							"value_type": {
+								"type": "string",
+								"const": "delve_site_domain"
+							},
+							"description": {
+								"$ref": "#/definitions/MarkdownString"
+							},
 							"applies_to": {
 								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
 								"default": null,
@@ -10085,36 +10095,36 @@
 									}
 								]
 							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
 							"wildcard": {
-								"default": false,
+								"type": "boolean",
 								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"type": "boolean"
-							},
-							"value_type": {
-								"const": "delve_site_domain",
-								"type": "string"
+								"default": false
 							}
 						},
-						"required": ["description", "value_type"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				},
 				{
 					"if": {
 						"properties": {
 							"value_type": {
-								"const": "delve_site_theme",
-								"type": "string"
+								"type": "string",
+								"const": "delve_site_theme"
 							}
 						}
 					},
 					"then": {
-						"type": "object",
 						"title": "TagRuleDelveSiteTheme",
+						"type": "object",
+						"required": ["value_type", "description"],
 						"properties": {
+							"value_type": {
+								"type": "string",
+								"const": "delve_site_theme"
+							},
+							"description": {
+								"$ref": "#/definitions/MarkdownString"
+							},
 							"applies_to": {
 								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
 								"default": null,
@@ -10130,36 +10140,36 @@
 									}
 								]
 							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
 							"wildcard": {
-								"default": false,
+								"type": "boolean",
 								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"type": "boolean"
-							},
-							"value_type": {
-								"const": "delve_site_theme",
-								"type": "string"
+								"default": false
 							}
 						},
-						"required": ["description", "value_type"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				},
 				{
 					"if": {
 						"properties": {
 							"value_type": {
-								"const": "rarity",
-								"type": "string"
+								"type": "string",
+								"const": "rarity"
 							}
 						}
 					},
 					"then": {
-						"type": "object",
 						"title": "TagRuleRarity",
+						"type": "object",
+						"required": ["value_type", "description"],
 						"properties": {
+							"value_type": {
+								"type": "string",
+								"const": "rarity"
+							},
+							"description": {
+								"$ref": "#/definitions/MarkdownString"
+							},
 							"applies_to": {
 								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
 								"default": null,
@@ -10175,36 +10185,36 @@
 									}
 								]
 							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
 							"wildcard": {
-								"default": false,
+								"type": "boolean",
 								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"type": "boolean"
-							},
-							"value_type": {
-								"const": "rarity",
-								"type": "string"
+								"default": false
 							}
 						},
-						"required": ["description", "value_type"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				},
 				{
 					"if": {
 						"properties": {
 							"value_type": {
-								"const": "truth",
-								"type": "string"
+								"type": "string",
+								"const": "truth"
 							}
 						}
 					},
 					"then": {
-						"type": "object",
 						"title": "TagRuleTruth",
+						"type": "object",
+						"required": ["value_type", "description"],
 						"properties": {
+							"value_type": {
+								"type": "string",
+								"const": "truth"
+							},
+							"description": {
+								"$ref": "#/definitions/MarkdownString"
+							},
 							"applies_to": {
 								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
 								"default": null,
@@ -10220,36 +10230,36 @@
 									}
 								]
 							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
 							"wildcard": {
-								"default": false,
+								"type": "boolean",
 								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"type": "boolean"
-							},
-							"value_type": {
-								"const": "truth",
-								"type": "string"
+								"default": false
 							}
 						},
-						"required": ["description", "value_type"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				},
 				{
 					"if": {
 						"properties": {
 							"value_type": {
-								"const": "enum",
-								"type": "string"
+								"type": "string",
+								"const": "enum"
 							}
 						}
 					},
 					"then": {
-						"type": "object",
 						"title": "TagRuleEnum",
+						"type": "object",
+						"required": ["value_type", "description", "enum"],
 						"properties": {
+							"value_type": {
+								"type": "string",
+								"const": "enum"
+							},
+							"description": {
+								"$ref": "#/definitions/MarkdownString"
+							},
 							"applies_to": {
 								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
 								"default": null,
@@ -10264,17 +10274,10 @@
 										"type": "null"
 									}
 								]
-							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
 							},
 							"array": {
-								"default": false,
-								"type": "boolean"
-							},
-							"value_type": {
-								"const": "enum",
-								"type": "string"
+								"type": "boolean",
+								"default": false
 							},
 							"enum": {
 								"type": "array",
@@ -10283,8 +10286,7 @@
 								}
 							}
 						},
-						"required": ["description", "value_type", "enum"],
-						"additionalProperties": false
+						"additionalProperties": {}
 					}
 				}
 			]
@@ -10331,7 +10333,7 @@
 					"$ref": "#/definitions/Tag"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"TextField": {
 			"title": "TextField",
@@ -10364,7 +10366,7 @@
 					"description": "An icon associated with this input."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"TriggerActionRoll": {
 			"title": "TriggerActionRoll",
@@ -10386,7 +10388,7 @@
 					"pattern": ".*\\.{3}"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"TriggerActionRollCondition": {
 			"title": "TriggerActionRollCondition",
@@ -10411,7 +10413,7 @@
 					"description": "A markdown string of any trigger text specific to this trigger condition."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"TriggerActionRollConditionEnhancement": {
 			"title": "TriggerActionRollConditionEnhancement",
@@ -10452,7 +10454,7 @@
 					"description": "A markdown string of any trigger text specific to this trigger condition."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"TriggerActionRollEnhancement": {
 			"title": "TriggerActionRollEnhancement",
@@ -10468,7 +10470,7 @@
 					}
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"TriggerBy": {
 			"title": "TriggerBy",
@@ -10486,7 +10488,7 @@
 					"default": true
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"TriggerNoRoll": {
 			"title": "TriggerNoRoll",
@@ -10509,7 +10511,7 @@
 					"pattern": ".*\\.{3}"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"TriggerNoRollCondition": {
 			"title": "TriggerNoRollCondition",
@@ -10532,7 +10534,7 @@
 					"description": "A markdown string of any trigger text specific to this trigger condition."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"TriggerNoRollEnhancement": {
 			"title": "TriggerNoRollEnhancement",
@@ -10548,7 +10550,7 @@
 					}
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"TriggerProgressRoll": {
 			"title": "TriggerProgressRoll",
@@ -10569,7 +10571,7 @@
 					"pattern": ".*\\.{3}"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"TriggerProgressRollCondition": {
 			"title": "TriggerProgressRollCondition",
@@ -10595,7 +10597,7 @@
 					"description": "A markdown string of any trigger text specific to this trigger condition."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"TriggerProgressRollConditionEnhancement": {
 			"title": "TriggerProgressRollConditionEnhancement",
@@ -10637,7 +10639,7 @@
 					"description": "A markdown string of any trigger text specific to this trigger condition."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"TriggerProgressRollEnhancement": {
 			"title": "TriggerProgressRollEnhancement",
@@ -10653,7 +10655,7 @@
 					}
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"TriggerSpecialTrack": {
 			"title": "TriggerSpecialTrack",
@@ -10674,7 +10676,7 @@
 					"pattern": ".*\\.{3}"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"TriggerSpecialTrackCondition": {
 			"title": "TriggerSpecialTrackCondition",
@@ -10699,7 +10701,7 @@
 					"description": "A markdown string of any trigger text specific to this trigger condition."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"TriggerSpecialTrackConditionEnhancement": {
 			"title": "TriggerSpecialTrackConditionEnhancement",
@@ -10741,7 +10743,7 @@
 					"description": "A markdown string of any trigger text specific to this trigger condition."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"TriggerSpecialTrackConditionOption": {
 			"title": "TriggerSpecialTrackConditionOption",
@@ -10752,7 +10754,7 @@
 					"$ref": "#/definitions/SpecialTrackType"
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"TriggerSpecialTrackEnhancement": {
 			"title": "TriggerSpecialTrackEnhancement",
@@ -10768,7 +10770,7 @@
 					}
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"Truth": {
 			"title": "Truth",
@@ -10851,7 +10853,7 @@
 					}
 				}
 			},
-			"additionalProperties": true
+			"additionalProperties": {}
 		},
 		"TruthId": {
 			"title": "TruthId",
@@ -10903,7 +10905,7 @@
 					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
 				}
 			},
-			"additionalProperties": false
+			"additionalProperties": {}
 		},
 		"TruthOptionId": {
 			"title": "TruthOptionId",

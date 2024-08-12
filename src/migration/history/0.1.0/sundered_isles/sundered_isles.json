@@ -155,15 +155,15 @@
 							"oracle_type": "table_text2",
 							"dice": "1d100",
 							"summary": "People who share traditions and a way of life.",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result",
-								"text2": "Details"
-							},
 							"tags": {
 								"sundered_isles": {
 									"faction_type": "society"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result",
+								"text2": "Details"
 							},
 							"rows": [
 								{
@@ -277,15 +277,15 @@
 							"oracle_type": "table_text2",
 							"dice": "1d100",
 							"summary": "People joined in a collective trade, pursuit, or goal",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result",
-								"text2": "Details"
-							},
 							"tags": {
 								"sundered_isles": {
 									"faction_type": "organization"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result",
+								"text2": "Details"
 							},
 							"rows": [
 								{
@@ -399,15 +399,15 @@
 							"oracle_type": "table_text2",
 							"dice": "1d100",
 							"summary": "People seeking dominion over the isles",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result",
-								"text2": "Details"
-							},
 							"tags": {
 								"sundered_isles": {
 									"faction_type": "empire"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result",
+								"text2": "Details"
 							},
 							"rows": [
 								{
@@ -1329,14 +1329,14 @@
 						"min": 1,
 						"max": 2
 					},
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/cave/threshold_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -1503,10 +1503,6 @@
 					"name": "Cursed Cave Threshold",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -1514,6 +1510,10 @@
 								"oracle_rollable:sundered_isles/cave/threshold"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -1648,16 +1648,16 @@
 					"name": "Lurking Threat",
 					"oracle_type": "table_text3",
 					"dice": "1d100",
+					"tags": {
+						"sundered_isles": {
+							"cursed_by": "oracle_rollable:sundered_isles/cave/lurking_threat_cursed"
+						}
+					},
 					"column_labels": {
 						"roll": "Roll",
 						"text": "Threat",
 						"text2": "When the clock advances...",
 						"text3": "When the clock is filled..."
-					},
-					"tags": {
-						"sundered_isles": {
-							"cursed_by": "oracle_rollable:sundered_isles/cave/lurking_threat_cursed"
-						}
 					},
 					"rows": [
 						{
@@ -1770,12 +1770,6 @@
 					"name": "Cursed Lurking Threat",
 					"oracle_type": "table_text3",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Threat",
-						"text2": "When the clock advances...",
-						"text3": "When the clock is filled..."
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -1783,6 +1777,12 @@
 								"oracle_rollable:sundered_isles/cave/lurking_threat"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Threat",
+						"text2": "When the clock advances...",
+						"text3": "When the clock is filled..."
 					},
 					"rows": [
 						{
@@ -1977,6 +1977,7 @@
 						}
 					},
 					"column_labels": {
+						"roll": "Roll",
 						"text": "Result",
 						"text2": "Details"
 					},
@@ -2009,15 +2010,15 @@
 								"min": 1,
 								"max": 2
 							},
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"cursed_by": "oracle_rollable:sundered_isles/cave/sea/feature_cursed",
 									"location": "sea"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -2609,10 +2610,6 @@
 							"name": "Sea Cave Cursed Features",
 							"oracle_type": "table_text",
 							"dice": "1d100",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"curse_behavior": "replace_result",
@@ -2621,6 +2618,10 @@
 									],
 									"location": "sea"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -2803,14 +2804,14 @@
 							"name": "Sea Cave Peril",
 							"oracle_type": "table_text",
 							"dice": "1d100",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"location": "sea"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -3043,14 +3044,14 @@
 							"name": "Sea Cave Opportunity",
 							"oracle_type": "table_text",
 							"dice": "1d100",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"location": "sea"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -3184,14 +3185,14 @@
 								"min": 1,
 								"max": 2
 							},
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"location": "sea"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -3337,15 +3338,15 @@
 								"min": 1,
 								"max": 2
 							},
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"cursed_by": "oracle_rollable:sundered_isles/cave/inland_cave/feature_cursed",
 									"location": "inland"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -3937,10 +3938,6 @@
 							"name": "Inland Cave Cursed Features",
 							"oracle_type": "table_text",
 							"dice": "1d100",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"curse_behavior": "replace_result",
@@ -3949,6 +3946,10 @@
 									],
 									"location": "inland"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -4131,14 +4132,14 @@
 							"name": "Inland Cave Peril",
 							"oracle_type": "table_text",
 							"dice": "1d100",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"location": "inland"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -4371,14 +4372,14 @@
 							"name": "Inland Cave Opportunity",
 							"oracle_type": "table_text",
 							"dice": "1d100",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"location": "inland"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -4503,14 +4504,14 @@
 								"min": 1,
 								"max": 2
 							},
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"location": "inland"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -4673,14 +4674,14 @@
 						"min": 1,
 						"max": 2
 					},
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/character/first_look_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -5023,10 +5024,6 @@
 					"name": "Cursed Character First Look",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -5034,6 +5031,10 @@
 								"oracle_rollable:sundered_isles/character/first_look"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -6401,10 +6402,6 @@
 					"oracle_type": "table_text",
 					"dice": "1d100",
 					"summary": "If you roll a [Trademark Weapon](datasworn:oracle_rollable:sundered_isles/character/trademark_weapons) curse, take your result and give that weapon a cursed aspect from the table below.",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "add_result",
@@ -6412,6 +6409,10 @@
 								"oracle_rollable:sundered_isles/character/trademark_weapons"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -6584,14 +6585,14 @@
 						"min": 1,
 						"max": 2
 					},
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/character/details_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -7414,10 +7415,6 @@
 					"name": "Cursed Character Details",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -7425,6 +7422,10 @@
 								"oracle_rollable:sundered_isles/character/details"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -7580,14 +7581,14 @@
 						"min": 1,
 						"max": 2
 					},
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/character/goals_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -8010,10 +8011,6 @@
 					"name": "Cursed Character Goals",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -8021,6 +8018,10 @@
 								"oracle_rollable:sundered_isles/character/goals"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -12733,14 +12734,14 @@
 								"oracle_rollable:starforged/character/name/callsign"
 							],
 							"dice": "1d100",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"cursed_by": "oracle_rollable:sundered_isles/character/name/moniker_cursed/category"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -13572,10 +13573,6 @@
 									"name": "Moniker Category",
 									"oracle_type": "table_text",
 									"dice": "1d100",
-									"column_labels": {
-										"roll": "Roll",
-										"text": "Result"
-									},
 									"tags": {
 										"sundered_isles": {
 											"curse_behavior": "replace_result",
@@ -13583,6 +13580,10 @@
 												"oracle_rollable:sundered_isles/character/name/moniker"
 											]
 										}
+									},
+									"column_labels": {
+										"roll": "Roll",
+										"text": "Result"
 									},
 									"rows": [
 										{
@@ -18348,14 +18349,14 @@
 								"min": 2,
 								"max": 4
 							},
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"faction_type": "society"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -18731,14 +18732,14 @@
 							"oracle_type": "table_text",
 							"dice": "1d100",
 							"summary": "Use this table to reveal the most influential or powerful leaders within a society.",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"faction_type": "society"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -18878,14 +18879,14 @@
 								"min": 1,
 								"max": 3
 							},
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"faction_type": "society"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -19442,14 +19443,14 @@
 							"name": "Organization Type",
 							"oracle_type": "table_text",
 							"dice": "1d100",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"faction_type": "organization"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -19644,14 +19645,14 @@
 								"min": 1,
 								"max": 2
 							},
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"faction_type": "organization"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -19918,14 +19919,14 @@
 								"min": 1,
 								"max": 2
 							},
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"faction_type": "organization"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -20130,14 +20131,14 @@
 							"name": "Imperial Leadership",
 							"oracle_type": "table_text",
 							"dice": "1d100",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"faction_type": "empire"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -20254,14 +20255,14 @@
 								"min": 2,
 								"max": 3
 							},
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"faction_type": "empire"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -20512,14 +20513,14 @@
 								"min": 1,
 								"max": 2
 							},
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"faction_type": "empire"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -21635,14 +21636,14 @@
 							"name": "Faction Name: Society Identity",
 							"oracle_type": "table_text",
 							"dice": "1d100",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"faction_type": "society"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -21761,14 +21762,14 @@
 							"name": "Empire Identity",
 							"oracle_type": "table_text",
 							"dice": "1d100",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"faction_type": "empire"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -22047,14 +22048,14 @@
 							"name": "Faction Name: Organization Identity",
 							"oracle_type": "table_text",
 							"dice": "1d100",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"faction_type": "organization"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -22693,7 +22694,8 @@
 										}
 									},
 									"column_labels": {
-										"roll": "Roll"
+										"roll": "Roll",
+										"text": "Result"
 									},
 									"_source": {
 										"title": "Sundered Isles",
@@ -22894,7 +22896,8 @@
 										}
 									},
 									"column_labels": {
-										"roll": "Roll"
+										"roll": "Roll",
+										"text": "Result"
 									},
 									"_source": {
 										"title": "Sundered Isles",
@@ -23095,7 +23098,8 @@
 										}
 									},
 									"column_labels": {
-										"roll": "Roll"
+										"roll": "Roll",
+										"text": "Result"
 									},
 									"_source": {
 										"title": "Sundered Isles",
@@ -23296,7 +23300,8 @@
 										}
 									},
 									"column_labels": {
-										"roll": "Roll"
+										"roll": "Roll",
+										"text": "Result"
 									},
 									"_source": {
 										"title": "Sundered Isles",
@@ -23497,7 +23502,8 @@
 										}
 									},
 									"column_labels": {
-										"roll": "Roll"
+										"roll": "Roll",
+										"text": "Result"
 									},
 									"_source": {
 										"title": "Sundered Isles",
@@ -23698,7 +23704,8 @@
 										}
 									},
 									"column_labels": {
-										"roll": "Roll"
+										"roll": "Roll",
+										"text": "Result"
 									},
 									"_source": {
 										"title": "Sundered Isles",
@@ -23899,7 +23906,8 @@
 										}
 									},
 									"column_labels": {
-										"roll": "Roll"
+										"roll": "Roll",
+										"text": "Result"
 									},
 									"_source": {
 										"title": "Sundered Isles",
@@ -24100,7 +24108,8 @@
 										}
 									},
 									"column_labels": {
-										"roll": "Roll"
+										"roll": "Roll",
+										"text": "Result"
 									},
 									"_source": {
 										"title": "Sundered Isles",
@@ -24301,7 +24310,8 @@
 										}
 									},
 									"column_labels": {
-										"roll": "Roll"
+										"roll": "Roll",
+										"text": "Result"
 									},
 									"_source": {
 										"title": "Sundered Isles",
@@ -24502,7 +24512,8 @@
 										}
 									},
 									"column_labels": {
-										"roll": "Roll"
+										"roll": "Roll",
+										"text": "Result"
 									},
 									"_source": {
 										"title": "Sundered Isles",
@@ -24582,14 +24593,14 @@
 								"min": 1,
 								"max": 2
 							},
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"cursed_by": "oracle_rollable:sundered_isles/getting_underway/create_your_character/your_backstory_cursed"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -24836,10 +24847,6 @@
 							"name": "Your Cursed Backstory",
 							"oracle_type": "table_text",
 							"dice": "1d100",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"curse_behavior": "replace_result",
@@ -24847,6 +24854,10 @@
 										"oracle_rollable:sundered_isles/getting_underway/create_your_character/your_backstory"
 									]
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -25526,14 +25537,14 @@
 							"oracle_type": "table_text",
 							"dice": "1d100",
 							"summary": "If you have a command, envision how you claimed or earned the vessel. For inspiration, use the table below. If you sail under the command of a non-player character, you can use this table to give their ship a backstory.",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"cursed_by": "oracle_rollable:sundered_isles/getting_underway/take_command/ship_history_cursed"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -25716,10 +25727,6 @@
 							"name": "Cursed Ship",
 							"oracle_type": "table_text",
 							"dice": "1d100",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"curse_behavior": "replace_result",
@@ -25727,6 +25734,10 @@
 										"oracle_rollable:sundered_isles/getting_underway/take_command/ship_history"
 									]
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -25830,14 +25841,14 @@
 							"oracle_type": "table_text",
 							"dice": "1d100",
 							"summary": "Envision the makeup of the ship’s crew, using the table below for inspiration. Rolling for a result can inspire details for your own background and potential quests—or it may put you at odds with a crew that is contrary to your nature and goals.",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"cursed_by": "oracle_rollable:sundered_isles/getting_underway/take_command/crew_cursed"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -26022,10 +26033,6 @@
 							"oracle_type": "table_text",
 							"dice": "1d100",
 							"summary": "If you roll a curse for Crew Characteristics, take your result on that table and give them an eerie, supernatural, or dreadful aspect. Use the table below for inspiration.",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"curse_behavior": "add_result",
@@ -26033,6 +26040,10 @@
 										"oracle_rollable:sundered_isles/getting_underway/take_command/crew"
 									]
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -26200,15 +26211,15 @@
 								"min": 1,
 								"max": 3
 							},
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Location",
-								"text2": "Question"
-							},
 							"tags": {
 								"sundered_isles": {
 									"cursed_by": "oracle_rollable:sundered_isles/getting_underway/chart_your_course/details_cursed"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Location",
+								"text2": "Question"
 							},
 							"rows": [
 								{
@@ -26483,11 +26494,6 @@
 							"name": "Cursed Location Details",
 							"oracle_type": "table_text2",
 							"dice": "1d100",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Location",
-								"text2": "Question"
-							},
 							"tags": {
 								"sundered_isles": {
 									"curse_behavior": "replace_result",
@@ -26495,6 +26501,11 @@
 										"oracle_rollable:sundered_isles/getting_underway/chart_your_course/details"
 									]
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Location",
+								"text2": "Question"
 							},
 							"rows": [
 								{
@@ -26973,14 +26984,14 @@
 						"min": 1,
 						"max": 2
 					},
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/island/offshore_observations_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -27355,10 +27366,6 @@
 					"name": "Cursed Offshore Observations",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -27366,6 +27373,10 @@
 								"oracle_rollable:sundered_isles/island/offshore_observations"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -27717,14 +27728,14 @@
 					"name": "Island Name",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/island/name_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -28547,10 +28558,6 @@
 					"name": "Cursed Island Name",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -28558,6 +28565,10 @@
 								"oracle_rollable:sundered_isles/island/name"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -29343,6 +29354,7 @@
 								}
 							},
 							"column_labels": {
+								"roll": "Roll",
 								"text": "Result",
 								"text2": "Details"
 							},
@@ -29570,6 +29582,7 @@
 						}
 					},
 					"column_labels": {
+						"roll": "Roll",
 						"text": "Result"
 					},
 					"_source": {
@@ -29719,6 +29732,7 @@
 						}
 					},
 					"column_labels": {
+						"roll": "Roll",
 						"text": "Result",
 						"text2": "Details"
 					},
@@ -31926,7 +31940,8 @@
 						}
 					},
 					"column_labels": {
-						"roll": "Roll"
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"_source": {
 						"title": "Sundered Isles",
@@ -32767,7 +32782,8 @@
 						}
 					},
 					"column_labels": {
-						"roll": "Roll"
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"_source": {
 						"title": "Sundered Isles",
@@ -33074,14 +33090,14 @@
 					"name": "Overland Details",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/overland/details_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -33904,10 +33920,6 @@
 					"name": "Cursed Overland Details",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -33915,6 +33927,10 @@
 								"oracle_rollable:sundered_isles/overland/details"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -35666,6 +35682,7 @@
 						}
 					},
 					"column_labels": {
+						"roll": "Roll",
 						"text": "Result"
 					},
 					"_source": {
@@ -35694,15 +35711,15 @@
 							"oracle_type": "table_text",
 							"dice": "1d100",
 							"summary": "Hilly or mountainous terrain",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"cursed_by": "oracle_rollable:sundered_isles/overland/region_landmarks/cursed",
 									"overland_region": "highlands"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -35806,15 +35823,15 @@
 							"oracle_type": "table_text",
 							"dice": "1d100",
 							"summary": "Dense tropical rainforest",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"cursed_by": "oracle_rollable:sundered_isles/overland/region_landmarks/cursed",
 									"overland_region": "jungle"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -35998,15 +36015,15 @@
 							"oracle_type": "table_text",
 							"dice": "1d100",
 							"summary": "Lands scarred by volcanic eruptions",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"cursed_by": "oracle_rollable:sundered_isles/overland/region_landmarks/cursed",
 									"overland_region": "lava_field"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -36190,15 +36207,15 @@
 							"oracle_type": "table_text",
 							"dice": "1d100",
 							"summary": "Waterlogged region with grasses and reeds",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"cursed_by": "oracle_rollable:sundered_isles/overland/region_landmarks/cursed",
 									"overland_region": "marsh"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -36382,15 +36399,15 @@
 							"oracle_type": "table_text",
 							"dice": "1d100",
 							"summary": "Major inland waterway",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"cursed_by": "oracle_rollable:sundered_isles/overland/region_landmarks/cursed",
 									"overland_region": "river"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -36574,15 +36591,15 @@
 							"oracle_type": "table_text",
 							"dice": "1d100",
 							"summary": "Open landscape dominated by grass or shrubs",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"cursed_by": "oracle_rollable:sundered_isles/overland/region_landmarks/cursed",
 									"overland_region": "scrub"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -36766,15 +36783,15 @@
 							"oracle_type": "table_text",
 							"dice": "1d100",
 							"summary": "Where the land meets the sea",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"cursed_by": "oracle_rollable:sundered_isles/overland/region_landmarks/cursed",
 									"overland_region": "shore"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -36958,15 +36975,15 @@
 							"oracle_type": "table_text",
 							"dice": "1d100",
 							"summary": "Flooded forest with thick vegetation",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"cursed_by": "oracle_rollable:sundered_isles/overland/region_landmarks/cursed",
 									"overland_region": "swamp"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -37150,15 +37167,15 @@
 							"oracle_type": "table_text",
 							"dice": "1d100",
 							"summary": "Arid, rocky terrain",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"cursed_by": "oracle_rollable:sundered_isles/overland/region_landmarks/cursed",
 									"overland_region": "wastes"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -37342,15 +37359,15 @@
 							"oracle_type": "table_text",
 							"dice": "1d100",
 							"summary": "Forested lands",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"cursed_by": "oracle_rollable:sundered_isles/overland/region_landmarks/cursed",
 									"overland_region": "woodland"
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -37533,10 +37550,6 @@
 							"name": "Cursed Landmark",
 							"oracle_type": "table_text",
 							"dice": "1d100",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
 							"tags": {
 								"sundered_isles": {
 									"curse_behavior": "replace_result",
@@ -37544,6 +37557,10 @@
 										"oracle_rollable:sundered_isles/overland/region_landmarks/*"
 									]
 								}
+							},
+							"column_labels": {
+								"roll": "Roll",
+								"text": "Result"
 							},
 							"rows": [
 								{
@@ -38076,14 +38093,14 @@
 						"min": 1,
 						"max": 2
 					},
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/ruin/first_look_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -38458,10 +38475,6 @@
 					"name": "Cursed Ruin First Look",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -38469,6 +38482,10 @@
 								"oracle_rollable:sundered_isles/ruin/first_look"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -38744,15 +38761,15 @@
 						"min": 1,
 						"max": 2
 					},
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result",
-						"text2": "Details"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/ruin/mystery_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result",
+						"text2": "Details"
 					},
 					"rows": [
 						{
@@ -38865,11 +38882,6 @@
 					"name": "Cursed Ruin Mystery",
 					"oracle_type": "table_text2",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result",
-						"text2": "Details"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -38877,6 +38889,11 @@
 								"oracle_rollable:sundered_isles/ruin/mystery"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result",
+						"text2": "Details"
 					},
 					"rows": [
 						{
@@ -38989,14 +39006,14 @@
 					"name": "Ruin Cipher",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/ruin/cipher_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -39099,10 +39116,6 @@
 					"name": "Cursed Ruin Cipher",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -39110,6 +39123,10 @@
 								"oracle_rollable:sundered_isles/ruin/cipher"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -39216,14 +39233,14 @@
 						"min": 1,
 						"max": 2
 					},
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/ruin/feature_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -40048,10 +40065,6 @@
 					"name": "Cursed Ruin Features",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -40059,6 +40072,10 @@
 								"oracle_rollable:sundered_isles/ruin/feature"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -41009,14 +41026,14 @@
 					"name": "Seafaring Details",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/seafaring/details_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -41839,10 +41856,6 @@
 					"name": "Cursed Seafaring Details",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -41850,6 +41863,10 @@
 								"oracle_rollable:sundered_isles/seafaring/details"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -43557,6 +43574,7 @@
 								}
 							},
 							"column_labels": {
+								"roll": "Roll",
 								"text": "Result"
 							},
 							"_source": {
@@ -43913,6 +43931,7 @@
 								}
 							},
 							"column_labels": {
+								"roll": "Roll",
 								"text": "Result"
 							},
 							"_source": {
@@ -44187,14 +44206,14 @@
 						"min": 1,
 						"max": 2
 					},
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/settlement/first_look_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -44585,10 +44604,6 @@
 					"name": "Cursed Settlement First Look",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -44596,6 +44611,10 @@
 								"oracle_rollable:sundered_isles/settlement/first_look"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -44867,10 +44886,6 @@
 					"name": "Cursed Settlement Focus",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -44878,6 +44893,10 @@
 								"oracle_rollable:sundered_isles/settlement/focus/*"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -44984,14 +45003,14 @@
 						"min": 1,
 						"max": 2
 					},
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/settlement/details_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -45814,10 +45833,6 @@
 					"name": "Cursed Settlement Details",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -45825,6 +45840,10 @@
 								"oracle_rollable:sundered_isles/settlement/details"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -46367,14 +46386,14 @@
 					"name": "Settlement Name",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/settlement/name_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -47197,10 +47216,6 @@
 					"name": "Cursed Settlement Name",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -47208,6 +47223,10 @@
 								"oracle_rollable:sundered_isles/settlement/name"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -47771,6 +47790,7 @@
 						}
 					},
 					"column_labels": {
+						"roll": "Roll",
 						"text": "Result",
 						"text2": "Details"
 					},
@@ -48178,6 +48198,7 @@
 								}
 							},
 							"column_labels": {
+								"roll": "Roll",
 								"text": "Result"
 							},
 							"_source": {
@@ -49454,14 +49475,14 @@
 						"min": 1,
 						"max": 2
 					},
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/ship/first_look_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -49820,10 +49841,6 @@
 					"name": "Cursed Ship First Look",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -49831,6 +49848,10 @@
 								"oracle_rollable:sundered_isles/ship/first_look_cursed"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -50182,14 +50203,14 @@
 					"name": "Ship Symbol",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/ship/symbol_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -50605,10 +50626,6 @@
 					"name": "Cursed Ship Symbol",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -50616,6 +50633,10 @@
 								"oracle_rollable:sundered_isles/ship/symbol"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -50734,10 +50755,6 @@
 					"name": "Cursed Ship Mission",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -50745,6 +50762,10 @@
 								"oracle_rollable:sundered_isles/ship/mission/*"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -50835,14 +50856,14 @@
 						"min": 1,
 						"max": 2
 					},
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/ship/details_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -51194,14 +51215,14 @@
 					"name": "Cursed Ship Details",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/ship/details_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -51436,14 +51457,14 @@
 						"min": 1,
 						"max": 4
 					},
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/ship/cargo_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -51834,15 +51855,15 @@
 					"name": "Cursed Cargo",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
 							"cursed_version_of": ["oracle_rollable:sundered_isles/ship/cargo"]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -51993,14 +52014,14 @@
 					"name": "Ship Name",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/ship/name_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -52815,15 +52836,15 @@
 					"name": "Cursed Ship Name",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
 							"cursed_version_of": ["oracle_rollable:sundered_isles/ship/name"]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -53939,6 +53960,7 @@
 						}
 					},
 					"column_labels": {
+						"roll": "Roll",
 						"text": "Result"
 					},
 					"_source": {
@@ -55416,14 +55438,14 @@
 						"min": 1,
 						"max": 2
 					},
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/shipwreck/first_look_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -55743,10 +55765,6 @@
 					"name": "Cursed Shipwreck First Look",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -55754,6 +55772,10 @@
 								"oracle_rollable:sundered_isles/shipwreck/first_look"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -56004,14 +56026,14 @@
 						"min": 1,
 						"max": 3
 					},
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/shipwreck/details_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -56299,10 +56321,6 @@
 					"name": "Cursed Shipwreck Details",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -56310,6 +56328,10 @@
 								"oracle_rollable:sundered_isles/shipwreck/details"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -57436,6 +57458,7 @@
 								}
 							},
 							"column_labels": {
+								"roll": "Roll",
 								"text": "Result"
 							},
 							"_source": {
@@ -57492,14 +57515,14 @@
 					"oracle_type": "table_text",
 					"dice": "1d100",
 					"summary": "If you’re not sure of a treasure’s location—such as when chasing down a rumored treasure or gathering details on a treasure-related quest—check this table.",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/treasure/location_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -57570,10 +57593,6 @@
 					"name": "Cursed Treasure Location",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -57581,6 +57600,10 @@
 								"oracle_rollable:sundered_isles/treasure/location"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -57771,14 +57794,14 @@
 						"min": 1,
 						"max": 2
 					},
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/treasure/aspects_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -57929,10 +57952,6 @@
 					"name": "Cursed Treasure Aspects",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -57940,6 +57959,10 @@
 								"oracle_rollable:sundered_isles/treasure/aspects"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -58366,14 +58389,14 @@
 					"oracle_type": "table_text",
 					"dice": "1d100",
 					"summary": "A token is an item of personal significance—such as a memento, heirloom, or individual treasure. Use this table when prompted by the [Precious Items](datasworn:oracle_rollable:sundered_isles/treasure/precious_items) table, or to add detail to a character. A token might have intrinsic value, but is often a thing of worth only to its owner. Not all treasures are silver and gold.",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/treasure/tokens_cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -59196,10 +59219,6 @@
 					"name": "Cursed Tokens",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -59207,6 +59226,10 @@
 								"oracle_rollable:sundered_isles/treasure/tokens"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -59786,6 +59809,7 @@
 						}
 					},
 					"column_labels": {
+						"roll": "Roll",
 						"text": "Result",
 						"text2": "Details"
 					},
@@ -59828,15 +59852,15 @@
 					"name": "Foul Weather",
 					"oracle_type": "table_text2",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result",
-						"text2": "Details"
-					},
 					"tags": {
 						"sundered_isles": {
 							"cursed_by": "oracle_rollable:sundered_isles/weather/cursed"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result",
+						"text2": "Details"
 					},
 					"rows": [
 						{
@@ -59922,11 +59946,6 @@
 					"name": "Cursed Weather",
 					"oracle_type": "table_text2",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result",
-						"text2": "Details"
-					},
 					"tags": {
 						"sundered_isles": {
 							"curse_behavior": "replace_result",
@@ -59934,6 +59953,11 @@
 								"oracle_rollable:sundered_isles/weather/foul"
 							]
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result",
+						"text2": "Details"
 					},
 					"rows": [
 						{
@@ -60260,6 +60284,7 @@
 						}
 					},
 					"column_labels": {
+						"roll": "Roll",
 						"text": "Result"
 					},
 					"_source": {

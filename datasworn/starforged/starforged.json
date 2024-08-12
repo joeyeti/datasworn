@@ -8416,7 +8416,8 @@
 						}
 					},
 					"column_labels": {
-						"roll": "Roll"
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"_source": {
 						"title": "Ironsworn: Starforged Rulebook",
@@ -8458,11 +8459,11 @@
 					"oracle_type": "table_text",
 					"dice": "1d100",
 					"summary": "When you [Ask the Oracle](datasworn:move:starforged/fate/ask_the_oracle) about a goal, situation, or event, roll for an [Action](datasworn:oracle_rollable:starforged/core/action) and [Theme](datasworn:oracle_rollable:starforged/core/theme). Together, these provide an interpretative verb/noun prompt.",
+					"suggestions": ["oracle_rollable:starforged/core/theme"],
 					"column_labels": {
 						"roll": "Roll",
 						"text": "Result"
 					},
-					"suggestions": ["oracle_rollable:starforged/core/theme"],
 					"rows": [
 						{
 							"_id": "oracle_rollable.row:starforged/core/action.0",
@@ -9785,11 +9786,11 @@
 					"oracle_type": "table_text",
 					"dice": "1d100",
 					"summary": "When you [Ask the Oracle](datasworn:move:starforged/fate/ask_the_oracle) about a goal, situation, or event, roll for an [Action](datasworn:oracle_rollable:starforged/core/action) and [Theme](datasworn:oracle_rollable:starforged/core/theme). Together, these provide an interpretative verb/noun prompt.",
+					"suggestions": ["oracle_rollable:starforged/core/action"],
 					"column_labels": {
 						"roll": "Roll",
 						"text": "Result"
 					},
-					"suggestions": ["oracle_rollable:starforged/core/action"],
 					"rows": [
 						{
 							"_id": "oracle_rollable.row:starforged/core/theme.0",
@@ -11112,11 +11113,11 @@
 					"oracle_type": "table_text",
 					"dice": "1d100",
 					"summary": "When you [Ask the Oracle](datasworn:move:starforged/fate/ask_the_oracle) to help define the nature of a location, discovery, or encounter, roll for a [Descriptor](datasworn:oracle_rollable:starforged/core/descriptor) and a [Focus](datasworn:oracle_rollable:starforged/core/focus) for an adjective/noun prompt.",
+					"suggestions": ["oracle_rollable:starforged/core/focus"],
 					"column_labels": {
 						"roll": "Roll",
 						"text": "Result"
 					},
-					"suggestions": ["oracle_rollable:starforged/core/focus"],
 					"rows": [
 						{
 							"_id": "oracle_rollable.row:starforged/core/descriptor.0",
@@ -12439,11 +12440,11 @@
 					"oracle_type": "table_text",
 					"dice": "1d100",
 					"summary": "When you [Ask the Oracle](datasworn:move:starforged/fate/ask_the_oracle) to help define the nature of a location, discovery, or encounter, roll for a [Descriptor](datasworn:oracle_rollable:starforged/core/descriptor) and a [Focus](datasworn:oracle_rollable:starforged/core/focus) for an adjective/noun prompt.",
+					"suggestions": ["oracle_rollable:starforged/core/descriptor"],
 					"column_labels": {
 						"roll": "Roll",
 						"text": "Result"
 					},
-					"suggestions": ["oracle_rollable:starforged/core/descriptor"],
 					"rows": [
 						{
 							"_id": "oracle_rollable.row:starforged/core/focus.0",
@@ -16242,6 +16243,7 @@
 						}
 					},
 					"column_labels": {
+						"roll": "Roll",
 						"text": "Result"
 					},
 					"_source": {
@@ -20889,6 +20891,7 @@
 						}
 					},
 					"column_labels": {
+						"roll": "Roll",
 						"text": "Result"
 					},
 					"_source": {
@@ -21071,6 +21074,7 @@
 						}
 					},
 					"column_labels": {
+						"roll": "Roll",
 						"text": "Result"
 					},
 					"_source": {
@@ -21344,14 +21348,14 @@
 						"min": 1,
 						"max": 3
 					},
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"starforged": {
 							"faction_type": "dominion"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -21686,14 +21690,14 @@
 					"name": "Dominion: Leadership",
 					"oracle_type": "table_text",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"starforged": {
 							"faction_type": "dominion"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -21797,14 +21801,14 @@
 					"oracle_type": "table_text",
 					"icon": "icons/faction/guild.svg",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"starforged": {
 							"faction_type": "guild"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -22032,14 +22036,14 @@
 					"oracle_type": "table_text",
 					"icon": "icons/faction/fringe_group.svg",
 					"dice": "1d100",
-					"column_labels": {
-						"roll": "Roll",
-						"text": "Result"
-					},
 					"tags": {
 						"starforged": {
 							"faction_type": "fringe_group"
 						}
+					},
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"rows": [
 						{
@@ -29627,11 +29631,11 @@
 					"oracle_type": "table_text",
 					"dice": "1d100",
 					"summary": "This oracle provides a simple method of generating a planetary class. If this is enough information, stop there and envision the world as appropriate to its type. For a bit more detail, make a roll on the Descriptor oracle and envision how that aspect defines the nature of the planet or a specific planetside location.",
+					"suggestions": ["oracle_rollable:starforged/core/descriptor"],
 					"column_labels": {
 						"roll": "Roll",
 						"text": "Result"
 					},
-					"suggestions": ["oracle_rollable:starforged/core/descriptor"],
 					"rows": [
 						{
 							"_id": "oracle_rollable.row:starforged/planet/class.0",
@@ -30535,6 +30539,7 @@
 								}
 							},
 							"column_labels": {
+								"roll": "Roll",
 								"text": "Result"
 							},
 							"_source": {
@@ -31359,6 +31364,7 @@
 								}
 							},
 							"column_labels": {
+								"roll": "Roll",
 								"text": "Result"
 							},
 							"_source": {
@@ -32171,6 +32177,7 @@
 								}
 							},
 							"column_labels": {
+								"roll": "Roll",
 								"text": "Result"
 							},
 							"_source": {
@@ -32995,6 +33002,7 @@
 								}
 							},
 							"column_labels": {
+								"roll": "Roll",
 								"text": "Result"
 							},
 							"_source": {
@@ -33816,6 +33824,7 @@
 								}
 							},
 							"column_labels": {
+								"roll": "Roll",
 								"text": "Result"
 							},
 							"_source": {
@@ -34640,6 +34649,7 @@
 								}
 							},
 							"column_labels": {
+								"roll": "Roll",
 								"text": "Result"
 							},
 							"_source": {
@@ -35473,6 +35483,7 @@
 								}
 							},
 							"column_labels": {
+								"roll": "Roll",
 								"text": "Result"
 							},
 							"_source": {
@@ -36294,6 +36305,7 @@
 								}
 							},
 							"column_labels": {
+								"roll": "Roll",
 								"text": "Result"
 							},
 							"_source": {
@@ -37109,6 +37121,7 @@
 								}
 							},
 							"column_labels": {
+								"roll": "Roll",
 								"text": "Result"
 							},
 							"_source": {
@@ -37918,6 +37931,7 @@
 								}
 							},
 							"column_labels": {
+								"roll": "Roll",
 								"text": "Result"
 							},
 							"_source": {
@@ -39135,6 +39149,7 @@
 								}
 							},
 							"column_labels": {
+								"roll": "Roll",
 								"text": "Result"
 							},
 							"_source": {
@@ -39773,6 +39788,7 @@
 						}
 					},
 					"column_labels": {
+						"roll": "Roll",
 						"text": "Result"
 					},
 					"_source": {
@@ -40212,6 +40228,7 @@
 						}
 					},
 					"column_labels": {
+						"roll": "Roll",
 						"text": "Result"
 					},
 					"_source": {
@@ -47395,6 +47412,7 @@
 						}
 					},
 					"column_labels": {
+						"roll": "Roll",
 						"text": "Result"
 					},
 					"_source": {
@@ -48730,7 +48748,8 @@
 						}
 					},
 					"column_labels": {
-						"roll": "Roll"
+						"roll": "Roll",
+						"text": "Result"
 					},
 					"_source": {
 						"title": "Ironsworn: Starforged Rulebook",

@@ -16,6 +16,7 @@ export const DelveSiteThemeFeature = EmbeddedType(
 			'Represents a single Feature entry from a delve site Theme card.'
 	}
 )
+
 export const DelveSiteThemeDanger = EmbeddedType(
 	OracleRollableRowText,
 	'delve_site_theme',

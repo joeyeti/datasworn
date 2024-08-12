@@ -2007,7 +2007,7 @@ pub struct DelveSiteDomain {
     pub tags: Option<Box<Tags>>,
 }
 
-/// Represents a single Danger entry from a delve site Domain card.
+/// Represents a row in an oracle table, with a single text cell.
 #[derive(Serialize, Deserialize)]
 pub struct DelveSiteDomainDanger {
     #[serde(rename = "_id")]
@@ -2059,7 +2059,7 @@ pub type DelveSiteDomainDangerId = String;
 /// DelveSiteDomainDanger objects.
 pub type DelveSiteDomainDangerIdWildcard = String;
 
-/// Represents a single Feature entry from a delve site Domain card.
+/// Represents a row in an oracle table, with a single text cell.
 #[derive(Serialize, Deserialize)]
 pub struct DelveSiteDomainFeature {
     #[serde(rename = "_id")]
@@ -2197,7 +2197,7 @@ pub struct DelveSiteTheme {
     pub tags: Option<Box<Tags>>,
 }
 
-/// Represents a single Danger entry from a delve site Theme card.
+/// Represents a row in an oracle table, with a single text cell.
 #[derive(Serialize, Deserialize)]
 pub struct DelveSiteThemeDanger {
     #[serde(rename = "_id")]
@@ -2249,7 +2249,7 @@ pub type DelveSiteThemeDangerId = String;
 /// DelveSiteThemeDanger objects.
 pub type DelveSiteThemeDangerIdWildcard = String;
 
-/// Represents a single Feature entry from a delve site Theme card.
+/// Represents a row in an oracle table, with a single text cell.
 #[derive(Serialize, Deserialize)]
 pub struct DelveSiteThemeFeature {
     #[serde(rename = "_id")]
