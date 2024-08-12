@@ -17,12 +17,7 @@ import {
 	loadDataswornSourceSchema,
 } from '../schema/loadSchema.js'
 import Log from '../utils/Log.js'
-import {
-	readDataswornSourceData,
-	readJSON,
-	readYAML,
-	writeJSON,
-} from '../utils/readWrite.js'
+import { readJSON, readYAML, writeJSON } from '../utils/readWrite.js'
 import AJV from '../validation/ajv.js'
 import { idLike, needsIdValidation } from '../../pkg-core/Validators/Text.js'
 import { sortJson } from '../../pkg-core/Utils/Sort.js'
