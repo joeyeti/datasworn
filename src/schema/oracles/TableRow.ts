@@ -13,7 +13,7 @@ import { DiceRange, StaticDiceRange } from '../common/Range.js'
 
 import Id from '../common/Id.js'
 
-import * as Localize from '../common/Localize.js'
+import * as Text from '../common/Text.js'
 
 import * as Metadata from '../common/Metadata.js'
 
@@ -23,7 +23,7 @@ import type { ObjectProperties } from '../utils/ObjectProperties.js'
 import { setDescriptions, type PickByType } from '../utils/typebox.js'
 
 const TableRowBase = Type.Object({
-	text: Type.Ref(Localize.MarkdownString, {
+	text: Type.Ref(Text.MarkdownString, {
 		description: 'The primary text content of this row.'
 	}),
 	icon: Type.Optional(Type.Ref(Metadata.SvgImageUrl)),
@@ -44,7 +44,7 @@ const TableRowBase = Type.Object({
 		Type.Ref(Rolls.OracleRollTemplate, { releaseStage: 'experimental' })
 	),
 	_i18n: Type.Optional(
-		Type.Ref(Localize.I18nHints, {
+		Type.Ref(Text.I18nHints, {
 			releaseStage: 'experimental'
 		})
 	)
@@ -92,7 +92,7 @@ export type OracleRollableRowText = Static<typeof OracleRollableRowText>
 export const OracleRollableRowText2 = Assign(
 	TableRowNullableMixin,
 	Type.Object({
-		text2: Utils.Nullable(Type.Ref(Localize.MarkdownString), {
+		text2: Utils.Nullable(Type.Ref(Text.MarkdownString), {
 			description:
 				'The secondary text for this row. Use `null` to represent a cell with a blank or empty vlue.'
 		})
@@ -108,11 +108,11 @@ export type OracleRollableRowText2 = Static<typeof OracleRollableRowText2>
 export const OracleRollableRowText3 = Assign(
 	TableRowNullableMixin,
 	Type.Object({
-		text2: Utils.Nullable(Type.Ref(Localize.MarkdownString), {
+		text2: Utils.Nullable(Type.Ref(Text.MarkdownString), {
 			description:
 				'The secondary text for this row. Use `null` to represent a cell with a blank or empty value.'
 		}),
-		text3: Utils.Nullable(Type.Ref(Localize.MarkdownString), {
+		text3: Utils.Nullable(Type.Ref(Text.MarkdownString), {
 			description:
 				'The tertiary text for this row. Use `null` to represent a cell with a blank or empty vlue.'
 		})
@@ -128,8 +128,7 @@ type StringDefaultsFor<T extends TObject> = {
 	[K in
 		| keyof PickByType<
 				T['properties'],
-				| TRef<typeof Localize.Label>
-				| Utils.TNullable<TRef<typeof Localize.Label>>
+				TRef<typeof Text.Label> | Utils.TNullable<TRef<typeof Text.Label>>
 		  >
 		| 'roll']: string | null
 }

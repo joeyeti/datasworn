@@ -1,8 +1,8 @@
 import { Type, type Static } from '@sinclair/typebox'
-import * as Localize from '../common/Localize.js'
+import * as Text from '../common/Text.js'
 
 export const EntityPrompt = Type.Object(
-	{ text: Type.Ref(Localize.MarkdownString) },
+	{ text: Type.Ref(Text.MarkdownString) },
 	{
 		$id: 'EntityPrompt',
 		description:

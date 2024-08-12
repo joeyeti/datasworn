@@ -1,14 +1,14 @@
 import { type Static, Type } from '@sinclair/typebox'
 
-import * as Localize from '../common/Localize.js'
+import * as Text from '../common/Text.js'
 
 export const StatRule = Type.Object(
 	{
-		label: Type.Ref(Localize.Label, {
+		label: Type.Ref(Text.Label, {
 			description: 'A label for this stat.',
 			examples: ['edge']
 		}),
-		description: Type.Ref(Localize.MarkdownString, {
+		description: Type.Ref(Text.MarkdownString, {
 			description: 'A description of this stat.',
 			examples: ['Quickness, agility, and prowess when fighting at a distance.']
 		})

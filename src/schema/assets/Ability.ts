@@ -8,17 +8,17 @@ import { AssetAbilityControlField, AssetAbilityOptionField } from './Fields.js'
 import { EmbeddedOracleRollable } from '../oracles/EmbeddedOracleRollable.js'
 
 import Id from '../common/Id.js'
-import * as Localize from '../common/Localize.js'
+import * as Text from '../common/Text.js'
 
 export const AssetAbility = Generic.IdNode(
 	Type.Object({
 		name: Type.Optional(
-			Type.Ref(Localize.Label, {
+			Type.Ref(Text.Label, {
 				description:
 					'A handful of asset abilities have a label/name, for instance classic Ironsworn companion assets. Most canonical assets omit this property.'
 			})
 		),
-		text: Type.Ref(Localize.MarkdownString, {
+		text: Type.Ref(Text.MarkdownString, {
 			description: 'The complete rules text of this asset ability.'
 		}),
 		enabled: Type.Boolean({

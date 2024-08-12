@@ -9,7 +9,7 @@ import {
 	type TObject,
 	CloneType
 } from '@sinclair/typebox'
-import * as Localize from '../common/Localize.js'
+import * as Text from '../common/Text.js'
 import {
 	setDescriptions,
 	type TFuzzyNull,
@@ -42,7 +42,7 @@ export type TriggerBy = Static<typeof TriggerBy>
 
 const TriggerConditionBase = Type.Object({
 	text: Type.Optional(
-		Type.Ref(Localize.MarkdownString, {
+		Type.Ref(Text.MarkdownString, {
 			description:
 				'A markdown string of any trigger text specific to this trigger condition.'
 		})
@@ -132,7 +132,7 @@ export function TriggerConditionEnhancement<T extends TTriggerCondition>(
 }
 
 const TriggerMixin = Type.Object({
-	text: Type.Ref(Localize.MarkdownString, {
+	text: Type.Ref(Text.MarkdownString, {
 		description:
 			'A markdown string containing the primary trigger text for this move.\n\nSecondary trigger text (for specific stats or uses of an asset ability) may be described in individual trigger conditions.',
 		type: 'string',

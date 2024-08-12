@@ -2,7 +2,7 @@ import { Type, type Static, type TUnsafe } from '@sinclair/typebox'
 import * as Generic from './Generic.js'
 
 import type Id from './common/Id.js'
-import * as Localize from './common/Localize.js'
+import * as Text from './common/Text.js'
 
 import { mapValues } from 'lodash-es'
 import { VERSION, rootSchemaName } from '../scripts/const.js'
@@ -34,9 +34,9 @@ export const Version = Type.Literal(VERSION, {
 const RulesPackageBase = Type.Object({
 	_id: Type.Ref<typeof Id.RulesPackageId>('RulesPackageId'),
 	type: Type.String(),
-	// name: Utils.SourceOptional(Type.Ref(Localize.Label)),
+	// name: Utils.SourceOptional(Type.Ref(Text.Label)),
 	datasworn_version: Version,
-	description: Type.Optional(Type.Ref(Localize.MarkdownString)),
+	description: Type.Optional(Type.Ref(Text.MarkdownString)),
 	...mapValues(Type.Required(Type.Omit(SourceInfo, ['page'])).properties, (v) =>
 		Utils.setSourceOptional(v)
 	),

@@ -7,7 +7,7 @@ import {
 	type TNull,
 	type TRef
 } from '@sinclair/typebox'
-import * as Localize from '../common/Localize.js'
+import * as Text from '../common/Text.js'
 import { ExtractLiteralFromEnum } from '../utils/ExtractLiteralFromEnum.js'
 
 import type { SetRequired } from 'type-fest'
@@ -32,7 +32,7 @@ const MoveBase = Type.Object({
 				'Indicates that this move replaces the identified moves. References to the replaced moves can be considered equivalent to this move.'
 		})
 	),
-	text: Type.Ref(Localize.MarkdownString, {
+	text: Type.Ref(Text.MarkdownString, {
 		description: 'The complete rules text of the move.'
 	}),
 	oracles: Type.Optional(

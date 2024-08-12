@@ -2,7 +2,7 @@ import { Type, type Static } from '@sinclair/typebox'
 import { CollectableNode } from './generic/CollectableNode.js'
 import { CollectionNode } from './generic/CollectionNode.js'
 import { Dictionary } from './generic/Dictionary.js'
-import { Label, MarkdownString } from './common/Localize.js'
+import { Label, MarkdownString } from './common/Text.js'
 import { FlatIntersect } from './utils/FlatIntersect.js'
 
 import { AssetPropertiesEnhanceable } from './assets/common.js'

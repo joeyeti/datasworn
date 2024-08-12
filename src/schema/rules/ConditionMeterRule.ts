@@ -1,11 +1,11 @@
 import { Type, type Static } from '@sinclair/typebox'
 import * as Inputs from '../common/Inputs.js'
-import * as Localize from '../common/Localize.js'
+import * as Text from '../common/Text.js'
 import { Assign } from '../utils/FlatIntersect.js'
 
 export const ConditionMeterRule = Assign(
 	Type.Object({
-		description: Type.Ref(Localize.MarkdownString, {
+		description: Type.Ref(Text.MarkdownString, {
 			description: 'A description of this condition meter.'
 		}),
 		shared: Type.Boolean({

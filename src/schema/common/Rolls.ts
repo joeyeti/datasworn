@@ -1,6 +1,6 @@
 import { type TString, Type, type Static } from '@sinclair/typebox'
 import * as Utils from '../Utils.js'
-import * as Localize from './Localize.js'
+import * as Text from './Text.js'
 import Id from './Id.js'
 
 export const DiceExpression = Type.String({
@@ -68,7 +68,7 @@ export type TOracleRoll = typeof OracleRoll
 export const OracleRollTemplate = Type.Object(
 	{
 		text: Type.Optional(
-			Type.Ref(Localize.MarkdownTemplateString, {
+			Type.Ref(Text.MarkdownTemplateString, {
 				description:
 					'A string template that may be used in place of OracleRollableRow#text.',
 				examples: [
@@ -77,13 +77,13 @@ export const OracleRollTemplate = Type.Object(
 			})
 		),
 		text2: Type.Optional(
-			Type.Ref(Localize.MarkdownTemplateString, {
+			Type.Ref(Text.MarkdownTemplateString, {
 				description:
 					'A string template that may be used in place of OracleRollableRow#text2.'
 			})
 		),
 		text3: Type.Optional(
-			Type.Ref(Localize.MarkdownTemplateString, {
+			Type.Ref(Text.MarkdownTemplateString, {
 				description:
 					'A string template that may be used in place of OracleRollableRow#text3.'
 			})
@@ -101,7 +101,7 @@ export type OracleRollTemplate = Static<typeof OracleRollTemplate>
 
 export const OracleMatchBehavior = Type.Object(
 	{
-		text: Type.Ref(Localize.MarkdownString)
+		text: Type.Ref(Text.MarkdownString)
 	},
 	{ $id: 'OracleMatchBehavior' }
 )

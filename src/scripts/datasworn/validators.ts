@@ -3,12 +3,12 @@ import * as Generic from '../../schema/Generic.js'
 import { Dictionary } from '../../schema/Generic.js'
 import * as Utils from '../../schema/Utils.js'
 
-import * as Localize from '../../schema/common/Localize.js'
+import * as Text from '../../schema/common/Text.js'
 import * as Metadata from '../../schema/common/Metadata.js'
 
 /** Type validators */
 namespace Assert {
-	const commonRefs = [...Object.values(Localize), ...Object.values(Metadata)]
+	const commonRefs = [...Object.values(Text), ...Object.values(Metadata)]
 
 	const sourcedNodeValidatorSchema = Utils.OmitOptional(
 		Generic.SourcedNodeBase,

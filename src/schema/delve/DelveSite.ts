@@ -5,7 +5,7 @@ import { JsonTypeDef } from '../Symbols.js'
 import * as Utils from '../Utils.js'
 import { DiceRange, StaticDiceRange } from '../common/Range.js'
 import Id from '../common/Id.js'
-import * as Localize from '../common/Localize.js'
+import * as Text from '../common/Text.js'
 import * as Progress from '../common/Progress.js'
 import { NonCollectableNode } from '../generic/NonCollectableNode.js'
 import { EmbeddedType } from './common.js'
@@ -19,7 +19,7 @@ export type DelveSiteDenizenFrequency = Static<typeof DelveSiteDenizenFrequency>
 export const DelveSiteDenizen = EmbeddedType(
 	Type.Object({
 		name: Type.Optional(
-			Type.Ref(Localize.Label, {
+			Type.Ref(Text.Label, {
 				description:
 					"A name for the denizen, if it's different than the `name` property of the NPC."
 			})
@@ -81,7 +81,7 @@ export const DelveSite = NonCollectableNode(
 				}
 			)
 		),
-		description: Type.Ref(Localize.MarkdownString),
+		description: Type.Ref(Text.MarkdownString),
 		denizens: Type.Intersect(
 			[
 				DelveSiteDenizens,

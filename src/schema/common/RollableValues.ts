@@ -6,7 +6,7 @@ import {
 } from '@sinclair/typebox'
 import * as Utils from '../Utils.js'
 import Id from './Id.js'
-import * as Localize from './Localize.js'
+import * as Text from './Text.js'
 import * as Player from './Player.js'
 import { Assign } from '../utils/FlatIntersect.js'
 
@@ -124,7 +124,7 @@ export type ConditionMeterValueRef = Static<typeof ConditionMeterValueRef>
 export const CustomValue = RollableValueBase(
 	'custom',
 	Type.Object({
-		label: Type.Ref(Localize.Label),
+		label: Type.Ref(Text.Label),
 		value: Type.Integer()
 	}),
 	{ $id: 'CustomValue' }

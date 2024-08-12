@@ -1,12 +1,12 @@
 import { type Static, Type } from '@sinclair/typebox'
-import * as Localize from '../common/Localize.js'
+import * as Text from '../common/Text.js'
 
 export const SpecialTrackRule = Type.Object(
 	{
-		label: Type.Ref(Localize.Label, {
+		label: Type.Ref(Text.Label, {
 			description: 'A label for this special track.'
 		}),
-		description: Type.Ref(Localize.MarkdownString, {
+		description: Type.Ref(Text.MarkdownString, {
 			description: 'A description of this special track.'
 		}),
 		shared: Type.Boolean({

@@ -2,14 +2,14 @@ import { Type, type Static } from '@sinclair/typebox'
 import * as Generic from './Generic.js'
 import { Namespace } from './Symbols.js'
 
-import * as Localize from './common/Localize.js'
+import * as Text from './common/Text.js'
 import * as Progress from './common/Progress.js'
 import { EmbedOnlyNode } from './generic/EmbedOnlyNode.js'
 import { FlatIntersect } from './utils/FlatIntersect.js'
 
 const ns = 'Npcs'
 
-export const NpcNature = Type.Ref(Localize.Label, {
+export const NpcNature = Type.Ref(Text.Label, {
 	description:
 		"A localized category label describing the nature of this NPC.\n\nIn Ironsworn classic, this is probably the singular form of the parent collection's name.\n\nFor Starforged, see the table on p. 258 for examples.",
 	examples: [
@@ -40,8 +40,8 @@ const NpcMixin = FlatIntersect([
 			description: 'The suggested challenge rank for this NPC.'
 		}),
 		nature: Type.Ref(NpcNature),
-		drives: Type.Array(Type.Ref(Localize.MarkdownString)),
-		tactics: Type.Array(Type.Ref(Localize.MarkdownString))
+		drives: Type.Array(Type.Ref(Text.MarkdownString)),
+		tactics: Type.Array(Type.Ref(Text.MarkdownString))
 	})
 ])
 

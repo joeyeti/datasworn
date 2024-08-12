@@ -4,7 +4,7 @@ import {
 	type Static,
 	type TObject
 } from '@sinclair/typebox'
-import { Label } from '../common/Localize.js'
+import { Label } from '../common/Text.js'
 import { SourceInfo, Suggestions } from '../common/Metadata.js'
 import { Tags } from '../rules/TagRule.js'
 import { FlatIntersect, type TAssign } from '../utils/FlatIntersect.js'

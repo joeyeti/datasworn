@@ -6,7 +6,7 @@ import {
 	type TRef,
 	type TString
 } from '@sinclair/typebox'
-import { Label, MarkdownString } from '../common/Localize.js'
+import { Label, MarkdownString } from '../common/Text.js'
 import { FlatIntersect } from '../utils/FlatIntersect.js'
 import type { OracleRollableRowText3 } from './TableRow.js'
 import { omit } from 'lodash-es'

@@ -1,14 +1,14 @@
 import { Type, type Static } from '@sinclair/typebox'
 import * as Generic from '../Generic.js'
-import * as Localize from '../common/Localize.js'
+import * as Text from '../common/Text.js'
 import * as Player from '../common/Player.js'
 
 export const ImpactRule = Type.Object(
 	{
-		label: Type.Ref(Localize.Label, {
+		label: Type.Ref(Text.Label, {
 			description: 'The label for this impact.'
 		}),
-		description: Type.Ref(Localize.MarkdownString, {
+		description: Type.Ref(Text.MarkdownString, {
 			description: 'A description of this impact.'
 		}),
 		shared: Type.Boolean({
@@ -34,10 +34,10 @@ export type ImpactRule = Static<typeof ImpactRule>
 
 export const ImpactCategory = Type.Object(
 	{
-		label: Type.Ref(Localize.Label, {
+		label: Type.Ref(Text.Label, {
 			description: 'A label for this impact category.'
 		}),
-		description: Type.Ref(Localize.MarkdownString, {
+		description: Type.Ref(Text.MarkdownString, {
 			description: 'A description of this impact category.'
 		}),
 		contents: Generic.Dictionary(Type.Ref(ImpactRule), {

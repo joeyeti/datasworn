@@ -21,7 +21,7 @@ import {
 import * as Generic from '../Generic.js'
 import * as Utils from '../Utils.js'
 import type * as Id from './Id.js'
-import * as Localize from './Localize.js'
+import * as Text from './Text.js'
 import JtdType from '../../scripts/json-typedef/typedef.js'
 import type { ObjectProperties } from '../utils/ObjectProperties.js'
 import { Assign } from '../utils/FlatIntersect.js'
@@ -35,7 +35,7 @@ export function Input<Value extends TSchema>(
 ) {
 	return Type.Object(
 		{
-			label: Type.Ref(Localize.Label),
+			label: Type.Ref(Text.Label),
 			value: {
 				description: 'The current value of this input.',
 				...value
@@ -254,7 +254,7 @@ export type TTextInput = typeof TextInput
  * @abstract
  */
 const SelectOptionBase = Type.Object({
-	label: Type.Ref(Localize.Label),
+	label: Type.Ref(Text.Label),
 	choice_type: Type.Literal('choice')
 })
 
@@ -290,7 +290,7 @@ export interface Choices<T> {
 }
 
 const SelectChoicesGroupBase = Type.Object({
-	name: Type.Ref(Localize.Label, {
+	name: Type.Ref(Text.Label, {
 		description: 'A label for this option group.'
 	}),
 	choice_type: Type.Literal('choice_group')

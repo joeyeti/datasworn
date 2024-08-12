@@ -12,7 +12,7 @@ import * as Entities from './Entities.js'
 import { RulesPackage, Ruleset, Expansion } from './RulesPackages.js'
 
 import Id from './common/Id.js'
-import * as Localize from './common/Localize.js'
+import * as Text from './common/Text.js'
 import * as Metadata from './common/Metadata.js'
 import * as Player from './common/Player.js'
 import * as Progress from './common/Progress.js'
@@ -59,7 +59,7 @@ const defsBase = pickBy(
 		Expansion,
 		...Id,
 		...Metadata,
-		...Localize,
+		...Text,
 		...Rules,
 		...Progress,
 		...RollableValues,

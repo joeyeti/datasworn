@@ -4,7 +4,7 @@ import {
 	type TAnySchema,
 	type TBigInt
 } from '@sinclair/typebox'
-import * as Localize from '../common/Localize.js'
+import * as Text from '../common/Text.js'
 import type { TOracleRoll } from '../common/Rolls.js'
 import { UnionEnumFromRecord } from '../utils/UnionEnumFromRecord.js'
 
@@ -97,7 +97,7 @@ export type ProgressRollMethod = Static<typeof ProgressRollMethod>
 
 export const MoveOutcome = Type.Object(
 	{
-		text: Type.Ref(Localize.MarkdownString, {
+		text: Type.Ref(Text.MarkdownString, {
 			pattern: /On a __(strong hit|weak hit|miss)__/.source,
 			type: 'string'
 		}),

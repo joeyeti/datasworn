@@ -1,7 +1,7 @@
 import { Type, type Static } from '@sinclair/typebox'
 import * as Generic from '../Generic.js'
 import Id from './Id.js'
-import * as Localize from './Localize.js'
+import * as Text from './Text.js'
 import { UnionEnumFromRecord } from '../utils/UnionEnumFromRecord.js'
 
 export const ChallengeRank = UnionEnumFromRecord(
@@ -41,7 +41,7 @@ export const SpecialTrackType = Type.Ref(Id.DictKey, {
 export type SpecialTrackType = Static<typeof SpecialTrackType>
 export const ProgressTrackTypeInfo = Type.Object(
 	{
-		category: Type.Ref(Localize.Label, {
+		category: Type.Ref(Text.Label, {
 			description: 'A category label for progress tracks of this type.',
 			examples: [
 				'Vow',

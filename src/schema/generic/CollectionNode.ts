@@ -13,7 +13,7 @@ import {
 	CollectionsKey
 } from '../../scripts/const.js'
 import TypeId from '../../pkg-core/IdElements/TypeId.js'
-import * as Localize from '../common/Localize.js'
+import * as Text from '../common/Text.js'
 import { Assign, FlatIntersect, type TAssign } from '../utils/FlatIntersect.js'
 import { pascalCase } from '../utils/string.js'
 import { Dictionary, type TDictionary } from './Dictionary.js'
@@ -44,13 +44,13 @@ export function getCollectionNodeMetadata(
 			})
 		),
 		summary: Type.Optional(
-			Type.Ref(Localize.MarkdownString, {
+			Type.Ref(Text.MarkdownString, {
 				description:
 					'A brief summary of this collection, no more than a few sentences in length. This is intended for use in application tooltips and similar sorts of hints. Longer text should use the "description" key instead.'
 			})
 		),
 		description: Type.Optional(
-			Type.Ref(Localize.MarkdownString, {
+			Type.Ref(Text.MarkdownString, {
 				description:
 					"A longer description of this collection, which might include multiple paragraphs. If it's only a couple sentences, use the `summary` key instead."
 			})

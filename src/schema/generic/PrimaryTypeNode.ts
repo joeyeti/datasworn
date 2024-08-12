@@ -12,7 +12,7 @@ import {
 import type { SetRequired } from 'type-fest'
 import type TypeId from '../../pkg-core/IdElements/TypeId.js'
 import { Discriminable, type TDiscriminable } from '../Utils.js'
-import { Label } from '../common/Localize.js'
+import { Label } from '../common/Text.js'
 import { CssColor, WebpImageUrl, SvgImageUrl } from '../common/Metadata.js'
 import { Assign, FlatIntersect, type TAssign } from '../utils/FlatIntersect.js'
 import { pascalCase } from '../utils/string.js'
