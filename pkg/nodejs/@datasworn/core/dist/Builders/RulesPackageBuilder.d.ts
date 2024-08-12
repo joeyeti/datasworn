@@ -2,7 +2,7 @@ import type TypeId from '../IdElements/TypeId.js';
 import type TypeNode from '../TypeNode.js';
 import { type Datasworn, type DataswornSource } from '../index.js';
 export type SchemaValidator<TTarget> = (data: unknown) => data is TTarget;
-export type Logger = Record<'warn' | 'info' | 'debug' | 'error', (message?: any, ...optionalParams: any[]) => any>;
+export type Logger = Record<'warn' | 'info' | 'debug' | 'error', (message?: unknown, ...optionalParams: unknown[]) => unknown>;
 export type IdRefTracker = {
     valid: Set<string>;
     unreachable: Set<string>;

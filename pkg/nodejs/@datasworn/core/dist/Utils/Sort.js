@@ -1,17 +1,22 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.dataswornKeyOrder = exports.sourceMetadataKeys = exports.rulesKeys = exports.numericKeys = exports.longArrayKeys = exports.longDescriptionKeys = exports.shortDescriptionKeys = exports.usageKeys = exports.discriminatorKeys = exports.relationshipKeys = exports.idKeys = exports.unsortableKeys = void 0;
 exports.compareObjectKeys = compareObjectKeys;
 exports.sortDataswornKeys = sortDataswornKeys;
+exports.sortJson = sortJson;
 exports.sortObjectKeys = sortObjectKeys;
 const CONST_js_1 = require("../IdElements/CONST.js");
+const Pattern_js_1 = __importDefault(require("../IdElements/Pattern.js"));
 exports.unsortableKeys = [
     'columns',
     'controls',
     CONST_js_1.ContentsKey,
     'options',
     CONST_js_1.CollectionsKey,
-    'choices',
+    'choices'
 ];
 exports.idKeys = [CONST_js_1.IdKey, '_key', '_index'];
 exports.relationshipKeys = [
@@ -24,7 +29,7 @@ exports.relationshipKeys = [
     'domain',
     'name_oracle',
     'npc',
-    'extra_card',
+    'extra_card'
 ];
 // TODO: this could be done programmatically by looking at the appropriate symbol key on DiscriminatedUnion schemas
 exports.discriminatorKeys = [
@@ -35,7 +40,7 @@ exports.discriminatorKeys = [
     'choice_type',
     'oracle_type',
     'value_type',
-    'using',
+    'using'
 ];
 exports.usageKeys = [
     'auto',
@@ -47,7 +52,7 @@ exports.usageKeys = [
     'ally',
     'player',
     'is_impact',
-    'disables_asset',
+    'disables_asset'
 ];
 exports.shortDescriptionKeys = [
     'result',
@@ -57,20 +62,20 @@ exports.shortDescriptionKeys = [
     'features',
     'dangers',
     'drives',
-    'tactics',
+    'tactics'
 ];
 exports.longDescriptionKeys = [
     'text',
     'text2',
     'text3',
     'description',
-    'your_character',
+    'your_character'
 ];
 exports.longArrayKeys = [
     'denizens',
     'enhance_moves',
     'rows',
-    'table',
+    'table'
 ];
 exports.numericKeys = ['min', 'max', 'value', 'rank'];
 exports.rulesKeys = [
@@ -93,7 +98,7 @@ exports.rulesKeys = [
     'recover',
     'suffer',
     'choices',
-    'xp_cost',
+    'xp_cost'
 ];
 exports.sourceMetadataKeys = [
     'email',
@@ -102,7 +107,7 @@ exports.sourceMetadataKeys = [
     'license',
     'page',
     'title',
-    'url',
+    'url'
 ];
 exports.dataswornKeyOrder = [
     ...exports.idKeys,
@@ -177,7 +182,7 @@ exports.dataswornKeyOrder = [
     'site_themes',
     'truths',
     '_source',
-    '_i18n',
+    '_i18n'
 ];
 function compareObjectKeys(a, b, keyOrder = [], unsortableKeys) {
     const [indexA, indexB] = [a, b].map((key) => {
@@ -197,12 +202,74 @@ function compareObjectKeys(a, b, keyOrder = [], unsortableKeys) {
         return -1;
     return indexA - indexB;
 }
-function sortDataswornKeys(object, sortOrder = exports.dataswornKeyOrder) {
-    return sortObjectKeys(object, sortOrder);
+function sortDataswornKeys(value) {
+    return sortObjectKeys(value, exports.dataswornKeyOrder);
 }
-function sortObjectKeys(object, keyOrder = []) {
-    if (Array.isArray(object))
-        return object;
+function _isPOJO(value) {
+    if (typeof value !== 'object')
+        return false;
+    if (value === null)
+        return false;
+    if (Array.isArray(value))
+        return false;
+    return true;
+}
+function _isIdNode(value) {
+    if (!_isPOJO(value))
+        return false;
+    if (!(CONST_js_1.IdKey in value))
+        return false;
+    const id = value[CONST_js_1.IdKey];
+    return typeof id === 'string';
+}
+function _isDictionaryOfPOJOs(value) {
+    if (!_isPOJO(value))
+        return false;
+    for (const k in value) {
+        if (!Pattern_js_1.default.DictKey.test(k))
+            return false;
+        const dict_entry = value[k];
+        if (!_isPOJO(dict_entry))
+            return false;
+    }
+    return true;
+}
+function _isDictionaryOfIdNodes(value) {
+    if (!_isPOJO(value))
+        return false;
+    for (const k in value) {
+        if (!Pattern_js_1.default.DictKey.test(k))
+            return false;
+        const dict_entry = value[k];
+        if (!_isIdNode(dict_entry))
+            return false;
+    }
+    return true;
+}
+function _sortObject(key, value) {
+    if (_isDictionaryOfPOJOs(value))
+        return value;
+}
+const sortBlacklist = [
+    'options',
+    'controls',
+    'contents',
+    'collections',
+    'oracles',
+    'assets',
+    'moves',
+    'variants'
+];
+function sortJson(key, value) {
+    if (sortBlacklist.includes(key))
+        return value;
+    if (!_isPOJO(value))
+        return value;
+    if (_isDictionaryOfIdNodes(value))
+        return value;
+    return sortDataswornKeys(value);
+}
+function sortObjectKeys(object, keyOrder) {
     const entries = Object.entries(object).sort(([a], [b]) => compareObjectKeys(a, b, keyOrder));
     return Object.fromEntries(entries);
 }

@@ -13,11 +13,10 @@ var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-var _RulesPackageBuilder_instances, _a, _RulesPackageBuilder_schemaValidator, _RulesPackageBuilder_sourceSchemaValidator, _RulesPackageBuilder_result, _RulesPackageBuilder_isSorted, _RulesPackageBuilder_isMergeComplete, _RulesPackageBuilder_isValidated, _RulesPackageBuilder_countTypes, _RulesPackageBuilder_build, _RulesPackageBuilder_sortKeys, _RulesPackageBuilder_addFile, _RulesPackageBuilder_isObject, _RulesPackageBuilder_merge, _RulesPackagePart_data, _RulesPackagePart_isValidated;
+var _RulesPackageBuilder_instances, _a, _RulesPackageBuilder_schemaValidator, _RulesPackageBuilder_sourceSchemaValidator, _RulesPackageBuilder_result, _RulesPackageBuilder_isMergeComplete, _RulesPackageBuilder_isValidated, _RulesPackageBuilder_countTypes, _RulesPackageBuilder_build, _RulesPackageBuilder_addFile, _RulesPackageBuilder_isObject, _RulesPackageBuilder_merge, _RulesPackagePart_data, _RulesPackagePart_isValidated;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RulesPackageBuilder = void 0;
 const CONST_js_1 = require("../IdElements/CONST.js");
-const Sort_js_1 = require("../Utils/Sort.js");
 const Text_js_1 = require("../Validators/Text.js");
 const index_js_1 = __importDefault(require("../Validators/index.js"));
 const index_js_2 = require("../index.js");
@@ -65,7 +64,6 @@ class RulesPackageBuilder {
             __classPrivateFieldGet(this, _RulesPackageBuilder_instances, "m", _RulesPackageBuilder_merge).call(this, __classPrivateFieldGet(this, _RulesPackageBuilder_result, "f"), part.data);
         __classPrivateFieldSet(this, _RulesPackageBuilder_isMergeComplete, true, "f");
         __classPrivateFieldSet(this, _RulesPackageBuilder_isValidated, false, "f");
-        __classPrivateFieldSet(this, _RulesPackageBuilder_isSorted, false, "f");
         return this;
     }
     toJSON() {
@@ -155,14 +153,13 @@ class RulesPackageBuilder {
         this.files = new Map();
         this.index = new Map();
         _RulesPackageBuilder_result.set(this, {});
-        _RulesPackageBuilder_isSorted.set(this, false);
         _RulesPackageBuilder_isMergeComplete.set(this, false);
         _RulesPackageBuilder_isValidated.set(this, false);
         this.counter = {};
         this.idRefs = new Set();
         this.errors = new Map();
         if (!_a.isInitialized)
-            throw new Error(`RulesPackageBuilder constructor is missing validator functions. Set them with the RulesPackageBuilder.init static method before creating an instance.`);
+            throw new Error('RulesPackageBuilder constructor is missing validator functions. Set them with the RulesPackageBuilder.init static method before creating an instance.');
         this.id = id;
         this.logger = logger;
     }
@@ -178,7 +175,7 @@ class RulesPackageBuilder {
     }
 }
 exports.RulesPackageBuilder = RulesPackageBuilder;
-_a = RulesPackageBuilder, _RulesPackageBuilder_result = new WeakMap(), _RulesPackageBuilder_isSorted = new WeakMap(), _RulesPackageBuilder_isMergeComplete = new WeakMap(), _RulesPackageBuilder_isValidated = new WeakMap(), _RulesPackageBuilder_instances = new WeakSet(), _RulesPackageBuilder_countTypes = function _RulesPackageBuilder_countTypes() {
+_a = RulesPackageBuilder, _RulesPackageBuilder_result = new WeakMap(), _RulesPackageBuilder_isMergeComplete = new WeakMap(), _RulesPackageBuilder_isValidated = new WeakMap(), _RulesPackageBuilder_instances = new WeakSet(), _RulesPackageBuilder_countTypes = function _RulesPackageBuilder_countTypes() {
     const ct = {};
     for (const [k, _] of this.index) {
         const [prefix] = k.split(':');
@@ -189,14 +186,7 @@ _a = RulesPackageBuilder, _RulesPackageBuilder_result = new WeakMap(), _RulesPac
 }, _RulesPackageBuilder_build = function _RulesPackageBuilder_build(force = false) {
     this.mergeFiles(force);
     __classPrivateFieldSet(this, _RulesPackageBuilder_isValidated, false, "f");
-    __classPrivateFieldGet(this, _RulesPackageBuilder_instances, "m", _RulesPackageBuilder_sortKeys).call(this, force);
     return __classPrivateFieldGet(this, _RulesPackageBuilder_result, "f");
-}, _RulesPackageBuilder_sortKeys = function _RulesPackageBuilder_sortKeys(force = false) {
-    if (__classPrivateFieldGet(this, _RulesPackageBuilder_isSorted, "f") && !force)
-        return this;
-    __classPrivateFieldSet(this, _RulesPackageBuilder_result, (0, Sort_js_1.sortObjectKeys)(__classPrivateFieldGet(this, _RulesPackageBuilder_result, "f"), Sort_js_1.dataswornKeyOrder), "f");
-    __classPrivateFieldSet(this, _RulesPackageBuilder_isSorted, true, "f");
-    return this;
 }, _RulesPackageBuilder_addFile = function _RulesPackageBuilder_addFile(file) {
     const fileToAdd = file instanceof RulesPackagePart
         ? file
@@ -217,7 +207,7 @@ _a = RulesPackageBuilder, _RulesPackageBuilder_result = new WeakMap(), _RulesPac
 }, _RulesPackageBuilder_merge = function _RulesPackageBuilder_merge(target, ...sources) {
     if (!sources.length) {
         // nothing left to add, so index it
-        if (__classPrivateFieldGet(_a, _a, "m", _RulesPackageBuilder_isObject).call(_a, target) && '_id' in target) {
+        if (__classPrivateFieldGet(_a, _a, "m", _RulesPackageBuilder_isObject).call(_a, target) && CONST_js_1.IdKey in target) {
             const isRulesPackage = ['ruleset', 'expansion'].includes(target.type);
             // if ((target._id as string).startsWith('asset.ability'))
             // 	console.log(target._id)
