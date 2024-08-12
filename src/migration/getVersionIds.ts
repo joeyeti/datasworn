@@ -6,7 +6,8 @@ import {
 	TypeSep,
 	PathKeySep,
 	GlobstarString,
-	VERSION
+	VERSION,
+  IdKey
 } from '../scripts/const.js'
 import { escapeRegExp } from 'lodash-es'
 import Pattern from '../pkg-core/IdElements/Pattern.js'
@@ -21,7 +22,7 @@ import { sortByIdDepth } from './utils/common.js'
 
 const oldVersion = '0.0.10'
 
-const idKeys = new Set(['_id', '$id'])
+const idKeys = new Set([IdKey, '$id'])
 
 export async function forEachIdInVersion(
 	version: string,

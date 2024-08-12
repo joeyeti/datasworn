@@ -1,4 +1,4 @@
-import { PrefixSep } from '../IdElements/CONST.js'
+import { IdKey, PrefixSep } from '../IdElements/CONST.js'
 import type TypeId from '../IdElements/TypeId.js'
 import type TypeNode from '../TypeNode.js'
 import { dataswornKeyOrder, sortObjectKeys } from '../Utils/Sort.js'
@@ -9,7 +9,7 @@ import { IdParser, type Datasworn, type DataswornSource } from '../index.js'
 export type SchemaValidator<TTarget> = (data: unknown) => data is TTarget
 export type Logger = Record<
 	'warn' | 'info' | 'debug' | 'error',
-	(message?: any, ...optionalParams: any[]) => any
+	(message?: unknown, ...optionalParams: unknown[]) => unknown
 >
 export type IdRefTracker = {
 	valid: Set<string>
@@ -243,7 +243,7 @@ export class RulesPackageBuilder<
 	constructor(id: string, logger: Logger) {
 		if (!RulesPackageBuilder.isInitialized)
 			throw new Error(
-				`RulesPackageBuilder constructor is missing validator functions. Set them with the RulesPackageBuilder.init static method before creating an instance.`
+				'RulesPackageBuilder constructor is missing validator functions. Set them with the RulesPackageBuilder.init static method before creating an instance.'
 			)
 		this.id = id
 		this.logger = logger
@@ -296,7 +296,7 @@ export class RulesPackageBuilder<
 	#merge(target: unknown, ...sources: unknown[]): unknown {
 		if (!sources.length) {
 			// nothing left to add, so index it
-			if (RulesPackageBuilder.#isObject(target) && '_id' in target) {
+			if (RulesPackageBuilder.#isObject(target) && IdKey in target) {
 				const isRulesPackage = ['ruleset', 'expansion'].includes(
 					(target as DataswornSource.RulesPackage).type
 				)

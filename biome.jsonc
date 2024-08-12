@@ -63,7 +63,8 @@
 					"options": { "strictCase": false }
 				}
 			},
-			"suspicious": { "noEmptyInterface": "off", "noRedeclare": "off" }
+			"suspicious": { "noEmptyInterface": "off", "noRedeclare": "off" },
+			"complexity": { "noThisInStatic": "warn" }
 		}
 	},
 	"javascript": {

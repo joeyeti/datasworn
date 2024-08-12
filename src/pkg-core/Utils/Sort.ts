@@ -192,8 +192,8 @@ export const dataswornKeyOrder = [
 	'site_themes',
 	'truths',
 	'_source',
-	'_i18n',
-] as const
+	'_i18n'
+] as const satisfies string[]
 
 export function compareObjectKeys(
 	a: string,
