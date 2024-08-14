@@ -1,8 +1,12 @@
 {
 	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"files": {
+		"maxSize": 2048000
+	},
 	"formatter": {
 		"include": [
 			"src/**/*.ts",
+			"src/**/*.js",
 			"pkg/nodejs/**/*.d.ts",
 			"pkg/nodejs/**/*.json",
 			"src/migration/history/*/*.d.ts",
@@ -12,7 +16,6 @@
 			"source_data/**/*.json"
 		],
 		"ignore": [
-			"**/*.js",
 			"**/dist",
 			"**/docs",
 			"**/*.d.ts",
@@ -20,6 +23,7 @@
 			"**/*.md",
 			"**/.github",
 			"**/.vscode",
+			"pkg/nodejs/**/*.js",
 			"src/data-legacy",
 			"src/extras",
 			"package.json",
