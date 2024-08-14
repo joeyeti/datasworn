@@ -1,7 +1,7 @@
 {
 	"name": "@datasworn/sundered-isles",
-	"version": "0.1.0-0",
-	"private": false,
+	"version": "0.1.0",
+	"private": true,
 	"description": "Datasworn JSON data for the Starforged: Sundered Isles expansion.",
 	"files": [
 		"json",
@@ -34,7 +34,7 @@
 		"url": "https://github.com/rsek/datasworn/issues"
 	},
 	"dependencies": {
-		"@datasworn/starforged": "0.1.0-0"
+		"@datasworn/starforged": "0.1.0"
 	},
 	"authors": [
 		{

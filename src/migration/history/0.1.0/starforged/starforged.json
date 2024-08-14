@@ -49594,8 +49594,8 @@
 						"url": "https://ironswornrpg.com"
 					}
 				},
-				"starship_name": {
-					"_id": "oracle_rollable:starforged/starship/starship_name",
+				"name": {
+					"_id": "oracle_rollable:starforged/starship/name",
 					"type": "oracle_rollable",
 					"name": "Starship Name",
 					"oracle_type": "table_text",
@@ -49607,7 +49607,7 @@
 					},
 					"rows": [
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.0",
+							"_id": "oracle_rollable.row:starforged/starship/name.0",
 							"roll": {
 								"min": 1,
 								"max": 1
@@ -49615,7 +49615,7 @@
 							"text": "Arclight"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.1",
+							"_id": "oracle_rollable.row:starforged/starship/name.1",
 							"roll": {
 								"min": 2,
 								"max": 2
@@ -49623,7 +49623,7 @@
 							"text": "Argent Arrow"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.2",
+							"_id": "oracle_rollable.row:starforged/starship/name.2",
 							"roll": {
 								"min": 3,
 								"max": 3
@@ -49631,7 +49631,7 @@
 							"text": "Artemis"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.3",
+							"_id": "oracle_rollable.row:starforged/starship/name.3",
 							"roll": {
 								"min": 4,
 								"max": 4
@@ -49639,7 +49639,7 @@
 							"text": "Astral Explorer"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.4",
+							"_id": "oracle_rollable.row:starforged/starship/name.4",
 							"roll": {
 								"min": 5,
 								"max": 5
@@ -49647,7 +49647,7 @@
 							"text": "Atlas"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.5",
+							"_id": "oracle_rollable.row:starforged/starship/name.5",
 							"roll": {
 								"min": 6,
 								"max": 6
@@ -49655,7 +49655,7 @@
 							"text": "Aurora"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.6",
+							"_id": "oracle_rollable.row:starforged/starship/name.6",
 							"roll": {
 								"min": 7,
 								"max": 7
@@ -49663,7 +49663,7 @@
 							"text": "Avari’s Wake"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.7",
+							"_id": "oracle_rollable.row:starforged/starship/name.7",
 							"roll": {
 								"min": 8,
 								"max": 8
@@ -49671,7 +49671,7 @@
 							"text": "Banshee’s Cry"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.8",
+							"_id": "oracle_rollable.row:starforged/starship/name.8",
 							"roll": {
 								"min": 9,
 								"max": 9
@@ -49679,7 +49679,7 @@
 							"text": "Beowulf"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.9",
+							"_id": "oracle_rollable.row:starforged/starship/name.9",
 							"roll": {
 								"min": 10,
 								"max": 10
@@ -49687,7 +49687,7 @@
 							"text": "Bloody Jaw"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.10",
+							"_id": "oracle_rollable.row:starforged/starship/name.10",
 							"roll": {
 								"min": 11,
 								"max": 11
@@ -49695,7 +49695,7 @@
 							"text": "Broken Sword"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.11",
+							"_id": "oracle_rollable.row:starforged/starship/name.11",
 							"roll": {
 								"min": 12,
 								"max": 12
@@ -49703,7 +49703,7 @@
 							"text": "Buccaneer"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.12",
+							"_id": "oracle_rollable.row:starforged/starship/name.12",
 							"roll": {
 								"min": 13,
 								"max": 13
@@ -49711,7 +49711,7 @@
 							"text": "Cerelis Nine"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.13",
+							"_id": "oracle_rollable.row:starforged/starship/name.13",
 							"roll": {
 								"min": 14,
 								"max": 14
@@ -49719,7 +49719,7 @@
 							"text": "Clarion Call"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.14",
+							"_id": "oracle_rollable.row:starforged/starship/name.14",
 							"roll": {
 								"min": 15,
 								"max": 15
@@ -49727,7 +49727,7 @@
 							"text": "Dawn’s Herald"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.15",
+							"_id": "oracle_rollable.row:starforged/starship/name.15",
 							"roll": {
 								"min": 16,
 								"max": 16
@@ -49735,7 +49735,7 @@
 							"text": "Dead Reckoning"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.16",
+							"_id": "oracle_rollable.row:starforged/starship/name.16",
 							"roll": {
 								"min": 17,
 								"max": 17
@@ -49743,7 +49743,7 @@
 							"text": "Drift Runner"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.17",
+							"_id": "oracle_rollable.row:starforged/starship/name.17",
 							"roll": {
 								"min": 18,
 								"max": 18
@@ -49751,7 +49751,7 @@
 							"text": "Eclipse"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.18",
+							"_id": "oracle_rollable.row:starforged/starship/name.18",
 							"roll": {
 								"min": 19,
 								"max": 19
@@ -49759,7 +49759,7 @@
 							"text": "Elara Five"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.19",
+							"_id": "oracle_rollable.row:starforged/starship/name.19",
 							"roll": {
 								"min": 20,
 								"max": 20
@@ -49767,7 +49767,7 @@
 							"text": "Enchantress"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.20",
+							"_id": "oracle_rollable.row:starforged/starship/name.20",
 							"roll": {
 								"min": 21,
 								"max": 21
@@ -49775,7 +49775,7 @@
 							"text": "Endurance"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.21",
+							"_id": "oracle_rollable.row:starforged/starship/name.21",
 							"roll": {
 								"min": 22,
 								"max": 22
@@ -49783,7 +49783,7 @@
 							"text": "Excalibur"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.22",
+							"_id": "oracle_rollable.row:starforged/starship/name.22",
 							"roll": {
 								"min": 23,
 								"max": 23
@@ -49791,7 +49791,7 @@
 							"text": "Eye of the Void"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.23",
+							"_id": "oracle_rollable.row:starforged/starship/name.23",
 							"roll": {
 								"min": 24,
 								"max": 24
@@ -49799,7 +49799,7 @@
 							"text": "Fall of Icarus"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.24",
+							"_id": "oracle_rollable.row:starforged/starship/name.24",
 							"roll": {
 								"min": 25,
 								"max": 25
@@ -49807,7 +49807,7 @@
 							"text": "Fallen Light"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.25",
+							"_id": "oracle_rollable.row:starforged/starship/name.25",
 							"roll": {
 								"min": 26,
 								"max": 26
@@ -49815,7 +49815,7 @@
 							"text": "False Hope"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.26",
+							"_id": "oracle_rollable.row:starforged/starship/name.26",
 							"roll": {
 								"min": 27,
 								"max": 27
@@ -49823,7 +49823,7 @@
 							"text": "Firebreak"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.27",
+							"_id": "oracle_rollable.row:starforged/starship/name.27",
 							"roll": {
 								"min": 28,
 								"max": 28
@@ -49831,7 +49831,7 @@
 							"text": "First Light"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.28",
+							"_id": "oracle_rollable.row:starforged/starship/name.28",
 							"roll": {
 								"min": 29,
 								"max": 29
@@ -49839,7 +49839,7 @@
 							"text": "Forge Flier"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.29",
+							"_id": "oracle_rollable.row:starforged/starship/name.29",
 							"roll": {
 								"min": 30,
 								"max": 30
@@ -49847,7 +49847,7 @@
 							"text": "Fortune’s Favor"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.30",
+							"_id": "oracle_rollable.row:starforged/starship/name.30",
 							"roll": {
 								"min": 31,
 								"max": 31
@@ -49855,7 +49855,7 @@
 							"text": "Freya’s Wrath"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.31",
+							"_id": "oracle_rollable.row:starforged/starship/name.31",
 							"roll": {
 								"min": 32,
 								"max": 32
@@ -49863,7 +49863,7 @@
 							"text": "Ghost"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.32",
+							"_id": "oracle_rollable.row:starforged/starship/name.32",
 							"roll": {
 								"min": 33,
 								"max": 33
@@ -49871,7 +49871,7 @@
 							"text": "Guiding Star"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.33",
+							"_id": "oracle_rollable.row:starforged/starship/name.33",
 							"roll": {
 								"min": 34,
 								"max": 34
@@ -49879,7 +49879,7 @@
 							"text": "Hand of Fate"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.34",
+							"_id": "oracle_rollable.row:starforged/starship/name.34",
 							"roll": {
 								"min": 35,
 								"max": 35
@@ -49887,7 +49887,7 @@
 							"text": "Herald of Doom"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.35",
+							"_id": "oracle_rollable.row:starforged/starship/name.35",
 							"roll": {
 								"min": 36,
 								"max": 36
@@ -49895,7 +49895,7 @@
 							"text": "Implacable"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.36",
+							"_id": "oracle_rollable.row:starforged/starship/name.36",
 							"roll": {
 								"min": 37,
 								"max": 37
@@ -49903,7 +49903,7 @@
 							"text": "Implicit"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.37",
+							"_id": "oracle_rollable.row:starforged/starship/name.37",
 							"roll": {
 								"min": 38,
 								"max": 38
@@ -49911,7 +49911,7 @@
 							"text": "Inferno"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.38",
+							"_id": "oracle_rollable.row:starforged/starship/name.38",
 							"roll": {
 								"min": 39,
 								"max": 39
@@ -49919,7 +49919,7 @@
 							"text": "Invictus"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.39",
+							"_id": "oracle_rollable.row:starforged/starship/name.39",
 							"roll": {
 								"min": 40,
 								"max": 40
@@ -49927,7 +49927,7 @@
 							"text": "Iron Cairn"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.40",
+							"_id": "oracle_rollable.row:starforged/starship/name.40",
 							"roll": {
 								"min": 41,
 								"max": 41
@@ -49935,7 +49935,7 @@
 							"text": "Karena’s Reverie"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.41",
+							"_id": "oracle_rollable.row:starforged/starship/name.41",
 							"roll": {
 								"min": 42,
 								"max": 42
@@ -49943,7 +49943,7 @@
 							"text": "Kraken"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.42",
+							"_id": "oracle_rollable.row:starforged/starship/name.42",
 							"roll": {
 								"min": 43,
 								"max": 43
@@ -49951,7 +49951,7 @@
 							"text": "Kuno’s Hammer"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.43",
+							"_id": "oracle_rollable.row:starforged/starship/name.43",
 							"roll": {
 								"min": 44,
 								"max": 44
@@ -49959,7 +49959,7 @@
 							"text": "Lightline"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.44",
+							"_id": "oracle_rollable.row:starforged/starship/name.44",
 							"roll": {
 								"min": 45,
 								"max": 45
@@ -49967,7 +49967,7 @@
 							"text": "Lodestar"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.45",
+							"_id": "oracle_rollable.row:starforged/starship/name.45",
 							"roll": {
 								"min": 46,
 								"max": 46
@@ -49975,7 +49975,7 @@
 							"text": "Long Haul"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.46",
+							"_id": "oracle_rollable.row:starforged/starship/name.46",
 							"roll": {
 								"min": 47,
 								"max": 47
@@ -49983,7 +49983,7 @@
 							"text": "Lost Fortune"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.47",
+							"_id": "oracle_rollable.row:starforged/starship/name.47",
 							"roll": {
 								"min": 48,
 								"max": 48
@@ -49991,7 +49991,7 @@
 							"text": "Luminous Sorrow"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.48",
+							"_id": "oracle_rollable.row:starforged/starship/name.48",
 							"roll": {
 								"min": 49,
 								"max": 49
@@ -49999,7 +49999,7 @@
 							"text": "Manta"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.49",
+							"_id": "oracle_rollable.row:starforged/starship/name.49",
 							"roll": {
 								"min": 50,
 								"max": 50
@@ -50007,7 +50007,7 @@
 							"text": "Mercy"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.50",
+							"_id": "oracle_rollable.row:starforged/starship/name.50",
 							"roll": {
 								"min": 51,
 								"max": 51
@@ -50015,7 +50015,7 @@
 							"text": "Mutara"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.51",
+							"_id": "oracle_rollable.row:starforged/starship/name.51",
 							"roll": {
 								"min": 52,
 								"max": 52
@@ -50023,7 +50023,7 @@
 							"text": "Nebula Prowler"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.52",
+							"_id": "oracle_rollable.row:starforged/starship/name.52",
 							"roll": {
 								"min": 53,
 								"max": 53
@@ -50031,7 +50031,7 @@
 							"text": "Newton’s Folly"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.53",
+							"_id": "oracle_rollable.row:starforged/starship/name.53",
 							"roll": {
 								"min": 54,
 								"max": 54
@@ -50039,7 +50039,7 @@
 							"text": "Nightfall"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.54",
+							"_id": "oracle_rollable.row:starforged/starship/name.54",
 							"roll": {
 								"min": 55,
 								"max": 55
@@ -50047,7 +50047,7 @@
 							"text": "Nomad"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.55",
+							"_id": "oracle_rollable.row:starforged/starship/name.55",
 							"roll": {
 								"min": 56,
 								"max": 56
@@ -50055,7 +50055,7 @@
 							"text": "Obsidian Trident"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.56",
+							"_id": "oracle_rollable.row:starforged/starship/name.56",
 							"roll": {
 								"min": 57,
 								"max": 57
@@ -50063,7 +50063,7 @@
 							"text": "Onslaught"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.57",
+							"_id": "oracle_rollable.row:starforged/starship/name.57",
 							"roll": {
 								"min": 58,
 								"max": 58
@@ -50071,7 +50071,7 @@
 							"text": "Orca"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.58",
+							"_id": "oracle_rollable.row:starforged/starship/name.58",
 							"roll": {
 								"min": 59,
 								"max": 59
@@ -50079,7 +50079,7 @@
 							"text": "Outward Bound"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.59",
+							"_id": "oracle_rollable.row:starforged/starship/name.59",
 							"roll": {
 								"min": 60,
 								"max": 60
@@ -50087,7 +50087,7 @@
 							"text": "Phantom"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.60",
+							"_id": "oracle_rollable.row:starforged/starship/name.60",
 							"roll": {
 								"min": 61,
 								"max": 61
@@ -50095,7 +50095,7 @@
 							"text": "Photon"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.61",
+							"_id": "oracle_rollable.row:starforged/starship/name.61",
 							"roll": {
 								"min": 62,
 								"max": 62
@@ -50103,7 +50103,7 @@
 							"text": "Poltergeist"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.62",
+							"_id": "oracle_rollable.row:starforged/starship/name.62",
 							"roll": {
 								"min": 63,
 								"max": 63
@@ -50111,7 +50111,7 @@
 							"text": "Profit Margin"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.63",
+							"_id": "oracle_rollable.row:starforged/starship/name.63",
 							"roll": {
 								"min": 64,
 								"max": 64
@@ -50119,7 +50119,7 @@
 							"text": "Raven’s Call"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.64",
+							"_id": "oracle_rollable.row:starforged/starship/name.64",
 							"roll": {
 								"min": 65,
 								"max": 65
@@ -50127,7 +50127,7 @@
 							"text": "Raya’s Promise"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.65",
+							"_id": "oracle_rollable.row:starforged/starship/name.65",
 							"roll": {
 								"min": 66,
 								"max": 66
@@ -50135,7 +50135,7 @@
 							"text": "Reaper"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.66",
+							"_id": "oracle_rollable.row:starforged/starship/name.66",
 							"roll": {
 								"min": 67,
 								"max": 67
@@ -50143,7 +50143,7 @@
 							"text": "Reforged Hope"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.67",
+							"_id": "oracle_rollable.row:starforged/starship/name.67",
 							"roll": {
 								"min": 68,
 								"max": 68
@@ -50151,7 +50151,7 @@
 							"text": "Relentless"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.68",
+							"_id": "oracle_rollable.row:starforged/starship/name.68",
 							"roll": {
 								"min": 69,
 								"max": 69
@@ -50159,7 +50159,7 @@
 							"text": "Royal Signet"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.69",
+							"_id": "oracle_rollable.row:starforged/starship/name.69",
 							"roll": {
 								"min": 70,
 								"max": 70
@@ -50167,7 +50167,7 @@
 							"text": "Rubicon"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.70",
+							"_id": "oracle_rollable.row:starforged/starship/name.70",
 							"roll": {
 								"min": 71,
 								"max": 71
@@ -50175,7 +50175,7 @@
 							"text": "Sareea’s Tribute"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.71",
+							"_id": "oracle_rollable.row:starforged/starship/name.71",
 							"roll": {
 								"min": 72,
 								"max": 72
@@ -50183,7 +50183,7 @@
 							"text": "Second Chance"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.72",
+							"_id": "oracle_rollable.row:starforged/starship/name.72",
 							"roll": {
 								"min": 73,
 								"max": 73
@@ -50191,7 +50191,7 @@
 							"text": "Shard of the Sun"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.73",
+							"_id": "oracle_rollable.row:starforged/starship/name.73",
 							"roll": {
 								"min": 74,
 								"max": 74
@@ -50199,7 +50199,7 @@
 							"text": "Shattered Siege"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.74",
+							"_id": "oracle_rollable.row:starforged/starship/name.74",
 							"roll": {
 								"min": 75,
 								"max": 75
@@ -50207,7 +50207,7 @@
 							"text": "Shattered Star"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.75",
+							"_id": "oracle_rollable.row:starforged/starship/name.75",
 							"roll": {
 								"min": 76,
 								"max": 76
@@ -50215,7 +50215,7 @@
 							"text": "Silver Talon"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.76",
+							"_id": "oracle_rollable.row:starforged/starship/name.76",
 							"roll": {
 								"min": 77,
 								"max": 77
@@ -50223,7 +50223,7 @@
 							"text": "Smoldering Flame"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.77",
+							"_id": "oracle_rollable.row:starforged/starship/name.77",
 							"roll": {
 								"min": 78,
 								"max": 78
@@ -50231,7 +50231,7 @@
 							"text": "Sovereign Skies"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.78",
+							"_id": "oracle_rollable.row:starforged/starship/name.78",
 							"roll": {
 								"min": 79,
 								"max": 79
@@ -50239,7 +50239,7 @@
 							"text": "Sparrowhawk"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.79",
+							"_id": "oracle_rollable.row:starforged/starship/name.79",
 							"roll": {
 								"min": 80,
 								"max": 80
@@ -50247,7 +50247,7 @@
 							"text": "Stardust"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.80",
+							"_id": "oracle_rollable.row:starforged/starship/name.80",
 							"roll": {
 								"min": 81,
 								"max": 81
@@ -50255,7 +50255,7 @@
 							"text": "Starfall"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.81",
+							"_id": "oracle_rollable.row:starforged/starship/name.81",
 							"roll": {
 								"min": 82,
 								"max": 82
@@ -50263,7 +50263,7 @@
 							"text": "Stellar Hawk"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.82",
+							"_id": "oracle_rollable.row:starforged/starship/name.82",
 							"roll": {
 								"min": 83,
 								"max": 83
@@ -50271,7 +50271,7 @@
 							"text": "Stormswept"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.83",
+							"_id": "oracle_rollable.row:starforged/starship/name.83",
 							"roll": {
 								"min": 84,
 								"max": 84
@@ -50279,7 +50279,7 @@
 							"text": "Sundered Aegis"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.84",
+							"_id": "oracle_rollable.row:starforged/starship/name.84",
 							"roll": {
 								"min": 85,
 								"max": 85
@@ -50287,7 +50287,7 @@
 							"text": "Sundown"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.85",
+							"_id": "oracle_rollable.row:starforged/starship/name.85",
 							"roll": {
 								"min": 86,
 								"max": 86
@@ -50295,7 +50295,7 @@
 							"text": "Sureshot"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.86",
+							"_id": "oracle_rollable.row:starforged/starship/name.86",
 							"roll": {
 								"min": 87,
 								"max": 87
@@ -50303,7 +50303,7 @@
 							"text": "Terminus Clipper"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.87",
+							"_id": "oracle_rollable.row:starforged/starship/name.87",
 							"roll": {
 								"min": 88,
 								"max": 88
@@ -50311,7 +50311,7 @@
 							"text": "Terrapin"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.88",
+							"_id": "oracle_rollable.row:starforged/starship/name.88",
 							"roll": {
 								"min": 89,
 								"max": 89
@@ -50319,7 +50319,7 @@
 							"text": "Timber Wolf"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.89",
+							"_id": "oracle_rollable.row:starforged/starship/name.89",
 							"roll": {
 								"min": 90,
 								"max": 90
@@ -50327,7 +50327,7 @@
 							"text": "Tip of the Spear"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.90",
+							"_id": "oracle_rollable.row:starforged/starship/name.90",
 							"roll": {
 								"min": 91,
 								"max": 91
@@ -50335,7 +50335,7 @@
 							"text": "Titan"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.91",
+							"_id": "oracle_rollable.row:starforged/starship/name.91",
 							"roll": {
 								"min": 92,
 								"max": 92
@@ -50343,7 +50343,7 @@
 							"text": "Tormentor"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.92",
+							"_id": "oracle_rollable.row:starforged/starship/name.92",
 							"roll": {
 								"min": 93,
 								"max": 93
@@ -50351,7 +50351,7 @@
 							"text": "Trithia Six"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.93",
+							"_id": "oracle_rollable.row:starforged/starship/name.93",
 							"roll": {
 								"min": 94,
 								"max": 94
@@ -50359,7 +50359,7 @@
 							"text": "Ultraviolet"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.94",
+							"_id": "oracle_rollable.row:starforged/starship/name.94",
 							"roll": {
 								"min": 95,
 								"max": 95
@@ -50367,7 +50367,7 @@
 							"text": "Valora’s Comet"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.95",
+							"_id": "oracle_rollable.row:starforged/starship/name.95",
 							"roll": {
 								"min": 96,
 								"max": 96
@@ -50375,7 +50375,7 @@
 							"text": "Vengeance"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.96",
+							"_id": "oracle_rollable.row:starforged/starship/name.96",
 							"roll": {
 								"min": 97,
 								"max": 97
@@ -50383,7 +50383,7 @@
 							"text": "Venture"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.97",
+							"_id": "oracle_rollable.row:starforged/starship/name.97",
 							"roll": {
 								"min": 98,
 								"max": 98
@@ -50391,7 +50391,7 @@
 							"text": "Vigilant"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.98",
+							"_id": "oracle_rollable.row:starforged/starship/name.98",
 							"roll": {
 								"min": 99,
 								"max": 99
@@ -50399,7 +50399,7 @@
 							"text": "Voidtreader"
 						},
 						{
-							"_id": "oracle_rollable.row:starforged/starship/starship_name.99",
+							"_id": "oracle_rollable.row:starforged/starship/name.99",
 							"roll": {
 								"min": 100,
 								"max": 100

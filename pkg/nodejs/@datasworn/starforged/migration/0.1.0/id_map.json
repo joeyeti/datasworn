@@ -527,7 +527,7 @@
 	"starforged/collections/oracles/planets/furnace/settlements": "oracle_collection:starforged/planet/furnace/settlements",
 	"starforged/collections/oracles/planets/desert/settlements": "oracle_collection:starforged/planet/desert/settlements",
 	"starforged/oracles/starships/type": "oracle_rollable:starforged/starship/type",
-	"starforged/oracles/starships/starship_name": "oracle_rollable:starforged/starship/starship_name",
+	"starforged/oracles/starships/starship_name": "oracle_rollable:starforged/starship/name",
 	"starforged/oracles/starships/initial_contact": "oracle_rollable:starforged/starship/initial_contact",
 	"starforged/oracles/starships/fleet": "oracle_rollable:starforged/starship/fleet",
 	"starforged/oracles/starships/first_look": "oracle_rollable:starforged/starship/first_look",

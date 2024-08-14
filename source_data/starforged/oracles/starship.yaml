@@ -553,7 +553,7 @@ oracles:
                 auto: true
               - oracle: oracle_rollable:starforged/core/focus
                 auto: true
-      starship_name:
+      name:
         name: Starship Name
         oracle_type: table_text
         type: oracle_rollable

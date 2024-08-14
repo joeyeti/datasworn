@@ -1,6 +1,6 @@
 {
 	"name": "@datasworn/starforged",
-	"version": "0.1.0-0",
+	"version": "0.1.0",
 	"description": "Datasworn JSON data for Ironsworn: Starforged.",
 	"files": [
 		"icons",
@@ -34,7 +34,7 @@
 		"url": "https://github.com/rsek/datasworn/issues"
 	},
 	"dependencies": {
-		"@datasworn/core": "0.1.0-0"
+		"@datasworn/core": "0.1.0"
 	},
 	"authors": [
 		{
