@@ -105,6 +105,26 @@ assets:
           - enabled: true
             text: |-
               You have 2 command; your max is 4. When you or an ally make a move leading or aided by the crew, you may (after rolling) suffer -1 command to improve a miss to a weak hit, or a weak hit to a strong hit. When you [Pay the Price](datasworn:move:starforged/fate/pay_the_price), you may suffer the cost as -1 command. While at 0 command, this asset counts as an impact. To bolster your crew, provide a notable reward or respite, and roll +heart. On a strong hit, take +4 command. On a weak hit, take +2. On a miss, take +2 but envision a threat to your crew or leadership.
+            moves:
+              bolster_your_crew:
+                name: Bolster Your Crew
+                type: move
+                roll_type: action_roll
+                trigger:
+                  text: When you bolster your crew by providing a notable reward or respite...
+                  conditions:
+                    - method: player_choice
+                      roll_options:
+                        - using: stat
+                          stat: heart
+                text: To bolster your crew, provide a notable reward or respite, and roll +heart. On a strong hit, take +4 command. On a weak hit, take +2. On a miss, take +2 but envision a threat to your crew or leadership.
+                outcomes:
+                  strong_hit:
+                    text: On a __strong hit__, take +4 command.
+                  weak_hit:
+                    text: On a __weak hit__, take +2 command.
+                  miss:
+                    text: On a __miss__, take +2 command but envision a threat to your crew or leadership.
           - text: |-
               Take +2 command; your max is now 6.
             enhance_asset:
