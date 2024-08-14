@@ -16,3 +16,6 @@ temp
 
 !/source_data/**
 haxesworn
+
+**/__pycache__
+**/.venv
