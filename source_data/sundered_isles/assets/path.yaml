@@ -731,10 +731,10 @@ assets:
           <<: *Source
         <<: *PathAsset
         options:
-          field_one:
+          field_1:
             label: field
             field_type: text
-          field_two:
+          field_2:
             label: field
             field_type: text
         abilities:

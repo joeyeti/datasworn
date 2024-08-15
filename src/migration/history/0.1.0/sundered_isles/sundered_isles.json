@@ -65651,12 +65651,12 @@
 					"category": "Path",
 					"color": "#3f7faa",
 					"options": {
-						"field_one": {
+						"field_1": {
 							"label": "field",
 							"field_type": "text",
 							"value": null
 						},
-						"field_two": {
+						"field_2": {
 							"label": "field",
 							"field_type": "text",
 							"value": null
