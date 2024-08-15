@@ -62,7 +62,7 @@ assets:
         tags:
           starforged:
             recommended: true
-          core:
+          _core:
             supernatural: true
         requirement: Once you mark tormented or doomed...
         abilities:
@@ -182,7 +182,7 @@ assets:
         tags:
           starforged:
             recommended: true
-          core:
+          _core:
             supernatural: true
         requirement: Once you die or are cursed with undeath...
         abilities:

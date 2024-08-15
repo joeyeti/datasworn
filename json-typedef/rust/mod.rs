@@ -312,11 +312,9 @@ pub struct Asset {
     #[serde(rename = "type")]
     pub type_: AssetType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     #[serde(rename = "attachments")]
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -385,11 +383,9 @@ pub struct AssetAbility {
     #[serde(rename = "text")]
     pub text: MarkdownString,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// Fields whose values are expected to change over the life of the asset.
     #[serde(rename = "controls")]
@@ -702,11 +698,9 @@ pub struct AssetCollection {
     #[serde(rename = "type")]
     pub type_: AssetCollectionType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -1332,11 +1326,9 @@ pub struct AtlasCollection {
     #[serde(rename = "type")]
     pub type_: AtlasCollectionType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -1431,11 +1423,9 @@ pub struct AtlasEntry {
     #[serde(rename = "type")]
     pub type_: AtlasEntryType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -1719,6 +1709,27 @@ pub struct ConditionMeterValueRef {
 }
 
 #[derive(Serialize, Deserialize)]
+pub struct CoreTags {
+    /// This object requires allies to function, and is intended for co-op play,
+    /// or guided play with allies. It is not appropriate for solo play.
+    #[serde(rename = "requires_allies")]
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub requiresAllies: Option<Box<bool>>,
+
+    /// This object is supernatural in nature, and is ideal for settings that
+    /// feature supernatural or mythic powers.
+    #[serde(rename = "supernatural")]
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub supernatural: Option<Box<bool>>,
+
+    /// This object is technological in nature, and is ideal for settings that
+    /// feature remarkable technologies.
+    #[serde(rename = "technological")]
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub technological: Option<Box<bool>>,
+}
+
+#[derive(Serialize, Deserialize)]
 pub enum CounterFieldFieldType {
     #[serde(rename = "counter")]
     Counter,
@@ -1821,11 +1832,9 @@ pub struct DelveSite {
     #[serde(rename = "type")]
     pub type_: DelveSiteType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -1955,11 +1964,9 @@ pub struct DelveSiteDomain {
     #[serde(rename = "type")]
     pub type_: DelveSiteDomainType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -2156,11 +2163,9 @@ pub struct DelveSiteTheme {
     #[serde(rename = "type")]
     pub type_: DelveSiteThemeType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -2328,6 +2333,10 @@ pub struct DiceRange {
 /// A `snake_case` key used in a Datasworn dictionary object.
 pub type DictKey = String;
 
+/// Implementation hints or other developer-facing comments on this node. These
+/// should be omitted when representing an object for gameplay.
+pub type Documentation = String;
+
 /// An email address.
 pub type Email = String;
 
@@ -2397,11 +2406,9 @@ pub struct EmbeddedActionRollMove {
     #[serde(rename = "type")]
     pub type_: EmbeddedActionRollMoveType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -2481,11 +2488,9 @@ pub struct EmbeddedMoveActionRoll {
     #[serde(rename = "type")]
     pub type_: EmbeddedMoveActionRollType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -2546,11 +2551,9 @@ pub struct EmbeddedMoveNoRoll {
     #[serde(rename = "type")]
     pub type_: EmbeddedMoveNoRollType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -2619,11 +2622,9 @@ pub struct EmbeddedMoveProgressRoll {
     #[serde(rename = "type")]
     pub type_: EmbeddedMoveProgressRollType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -2687,11 +2688,9 @@ pub struct EmbeddedMoveSpecialTrack {
     #[serde(rename = "type")]
     pub type_: EmbeddedMoveSpecialTrackType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -2765,11 +2764,9 @@ pub struct EmbeddedNoRollMove {
     #[serde(rename = "type")]
     pub type_: EmbeddedNoRollMoveType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -2844,11 +2841,9 @@ pub struct EmbeddedOracleColumnText {
     #[serde(rename = "type")]
     pub type_: EmbeddedOracleColumnTextType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -2933,11 +2928,9 @@ pub struct EmbeddedOracleColumnText2 {
     #[serde(rename = "type")]
     pub type_: EmbeddedOracleColumnText2Type,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -3022,11 +3015,9 @@ pub struct EmbeddedOracleColumnText3 {
     #[serde(rename = "type")]
     pub type_: EmbeddedOracleColumnText3Type,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -3124,11 +3115,9 @@ pub struct EmbeddedOracleRollableColumnText {
     #[serde(rename = "type")]
     pub type_: EmbeddedOracleRollableColumnTextType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -3204,11 +3193,9 @@ pub struct EmbeddedOracleRollableColumnText2 {
     #[serde(rename = "type")]
     pub type_: EmbeddedOracleRollableColumnText2Type,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -3284,11 +3271,9 @@ pub struct EmbeddedOracleRollableColumnText3 {
     #[serde(rename = "type")]
     pub type_: EmbeddedOracleRollableColumnText3Type,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -3376,11 +3361,9 @@ pub struct EmbeddedOracleRollableTableText {
     #[serde(rename = "type")]
     pub type_: EmbeddedOracleRollableTableTextType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -3471,11 +3454,9 @@ pub struct EmbeddedOracleRollableTableText2 {
     #[serde(rename = "type")]
     pub type_: EmbeddedOracleRollableTableText2Type,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -3569,11 +3550,9 @@ pub struct EmbeddedOracleRollableTableText3 {
     #[serde(rename = "type")]
     pub type_: EmbeddedOracleRollableTableText3Type,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -3674,11 +3653,9 @@ pub struct EmbeddedOracleTableText {
     #[serde(rename = "type")]
     pub type_: EmbeddedOracleTableTextType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -3778,11 +3755,9 @@ pub struct EmbeddedOracleTableText2 {
     #[serde(rename = "type")]
     pub type_: EmbeddedOracleTableText2Type,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -3885,11 +3860,9 @@ pub struct EmbeddedOracleTableText3 {
     #[serde(rename = "type")]
     pub type_: EmbeddedOracleTableText3Type,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -3977,11 +3950,9 @@ pub struct EmbeddedProgressRollMove {
     #[serde(rename = "type")]
     pub type_: EmbeddedProgressRollMoveType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -4054,11 +4025,9 @@ pub struct EmbeddedSpecialTrackMove {
     #[serde(rename = "type")]
     pub type_: EmbeddedSpecialTrackMoveType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -4379,11 +4348,9 @@ pub struct MoveActionRoll0 {
     #[serde(rename = "type")]
     pub type_: MoveActionRollType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -4461,11 +4428,9 @@ pub struct MoveNoRoll0 {
     #[serde(rename = "type")]
     pub type_: MoveNoRollType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -4553,11 +4518,9 @@ pub struct MoveProgressRoll0 {
     #[serde(rename = "type")]
     pub type_: MoveProgressRollType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -4640,11 +4603,9 @@ pub struct MoveSpecialTrack0 {
     #[serde(rename = "type")]
     pub type_: MoveSpecialTrackType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -4734,11 +4695,9 @@ pub struct MoveActionRoll {
     #[serde(rename = "type")]
     pub type_: MoveActionRollType0,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -4835,11 +4794,9 @@ pub struct MoveCategory {
     #[serde(rename = "type")]
     pub type_: MoveCategoryType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -5023,11 +4980,9 @@ pub struct MoveNoRoll {
     #[serde(rename = "type")]
     pub type_: MoveNoRollType0,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -5194,11 +5149,9 @@ pub struct MoveProgressRoll {
     #[serde(rename = "type")]
     pub type_: MoveProgressRollType0,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -5337,11 +5290,9 @@ pub struct MoveSpecialTrack {
     #[serde(rename = "type")]
     pub type_: MoveSpecialTrackType0,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -5473,11 +5424,9 @@ pub struct Npc {
     #[serde(rename = "variants")]
     pub variants: HashMap<String, NpcVariant>,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -5556,11 +5505,9 @@ pub struct NpcCollection {
     #[serde(rename = "type")]
     pub type_: NpcCollectionType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -5657,11 +5604,9 @@ pub struct NpcVariant {
     #[serde(rename = "rank")]
     pub rank: ChallengeRank,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     #[serde(rename = "summary")]
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -5739,11 +5684,9 @@ pub struct OracleCollectionTableSharedRolls {
     #[serde(rename = "type")]
     pub type_: OracleCollectionTableSharedRollsType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -5838,11 +5781,9 @@ pub struct OracleCollectionTableSharedText {
     #[serde(rename = "type")]
     pub type_: OracleCollectionTableSharedTextType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -5940,11 +5881,9 @@ pub struct OracleCollectionTableSharedText2 {
     #[serde(rename = "type")]
     pub type_: OracleCollectionTableSharedText2Type,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -6045,11 +5984,9 @@ pub struct OracleCollectionTableSharedText3 {
     #[serde(rename = "type")]
     pub type_: OracleCollectionTableSharedText3Type,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -6138,11 +6075,9 @@ pub struct OracleCollectionTables {
     #[serde(rename = "type")]
     pub type_: OracleCollectionTablesType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -6252,11 +6187,9 @@ pub struct OracleColumnText {
     #[serde(rename = "type")]
     pub type_: OracleColumnTextType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -6348,11 +6281,9 @@ pub struct OracleColumnText2 {
     #[serde(rename = "type")]
     pub type_: OracleColumnText2Type,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -6444,11 +6375,9 @@ pub struct OracleColumnText3 {
     #[serde(rename = "type")]
     pub type_: OracleColumnText3Type,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -6631,11 +6560,9 @@ pub struct OracleRollableColumnText {
     #[serde(rename = "type")]
     pub type_: OracleRollableColumnTextType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -6718,11 +6645,9 @@ pub struct OracleRollableColumnText2 {
     #[serde(rename = "type")]
     pub type_: OracleRollableColumnText2Type,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -6805,11 +6730,9 @@ pub struct OracleRollableColumnText3 {
     #[serde(rename = "type")]
     pub type_: OracleRollableColumnText3Type,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -6911,11 +6834,9 @@ pub struct OracleRollableTableText {
     #[serde(rename = "type")]
     pub type_: OracleRollableTableTextType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -7019,11 +6940,9 @@ pub struct OracleRollableTableText2 {
     #[serde(rename = "type")]
     pub type_: OracleRollableTableText2Type,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -7130,11 +7049,9 @@ pub struct OracleRollableTableText3 {
     #[serde(rename = "type")]
     pub type_: OracleRollableTableText3Type,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -7407,11 +7324,9 @@ pub struct OracleRollableTableTableText {
     #[serde(rename = "type")]
     pub type_: OracleRollableTableTableTextType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -7515,11 +7430,9 @@ pub struct OracleRollableTableTableText2 {
     #[serde(rename = "type")]
     pub type_: OracleRollableTableTableText2Type,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -7626,11 +7539,9 @@ pub struct OracleRollableTableTableText3 {
     #[serde(rename = "type")]
     pub type_: OracleRollableTableTableText3Type,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -7731,11 +7642,9 @@ pub struct OracleTableSharedRolls {
     #[serde(rename = "type")]
     pub type_: OracleTableSharedRollsType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -7839,11 +7748,9 @@ pub struct OracleTableSharedText {
     #[serde(rename = "type")]
     pub type_: OracleTableSharedTextType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -7950,11 +7857,9 @@ pub struct OracleTableSharedText2 {
     #[serde(rename = "type")]
     pub type_: OracleTableSharedText2Type,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -8064,11 +7969,9 @@ pub struct OracleTableSharedText3 {
     #[serde(rename = "type")]
     pub type_: OracleTableSharedText3Type,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -8189,11 +8092,9 @@ pub struct OracleTableText {
     #[serde(rename = "type")]
     pub type_: OracleTableTextType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -8306,11 +8207,9 @@ pub struct OracleTableText2 {
     #[serde(rename = "type")]
     pub type_: OracleTableText2Type,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -8426,11 +8325,9 @@ pub struct OracleTableText3 {
     #[serde(rename = "type")]
     pub type_: OracleTableText3Type,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -8518,11 +8415,9 @@ pub struct OracleTablesCollection {
     #[serde(rename = "type")]
     pub type_: OracleTablesCollectionType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -8710,11 +8605,9 @@ pub struct Rarity {
     #[serde(rename = "xp_cost")]
     pub xpCost: i16,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -9458,311 +9351,16 @@ pub type SvgImageUrl = String;
 pub type Tag = Option<Value>;
 
 #[derive(Serialize, Deserialize)]
-#[serde(tag = "value_type")]
-pub enum TagRule {
-    #[serde(rename = "asset")]
-    Asset(TagRuleAsset),
+pub struct TagRule {
+    #[serde(rename = "$schema")]
+    pub schema: TagSchema,
 
-    #[serde(rename = "asset_collection")]
-    AssetCollection(TagRuleAssetCollection),
-
-    #[serde(rename = "atlas_collection")]
-    AtlasCollection(TagRuleAtlasCollection),
-
-    #[serde(rename = "atlas_entry")]
-    AtlasEntry(TagRuleAtlasEntry),
-
-    #[serde(rename = "boolean")]
-    Boolean(TagRuleBoolean),
-
-    #[serde(rename = "delve_site")]
-    DelveSite(TagRuleDelveSite),
-
-    #[serde(rename = "delve_site_domain")]
-    DelveSiteDomain(TagRuleDelveSiteDomain),
-
-    #[serde(rename = "delve_site_theme")]
-    DelveSiteTheme(TagRuleDelveSiteTheme),
-
-    #[serde(rename = "enum")]
-    Enum(TagRuleEnum),
-
-    #[serde(rename = "integer")]
-    Integer(TagRuleInteger),
-
-    #[serde(rename = "move")]
-    Move(TagRuleMove),
-
-    #[serde(rename = "move_category")]
-    MoveCategory(TagRuleMoveCategory),
-
-    #[serde(rename = "npc")]
-    Npc(TagRuleNpc),
-
-    #[serde(rename = "npc_collection")]
-    NpcCollection(TagRuleNpcCollection),
-
-    #[serde(rename = "oracle_collection")]
-    OracleCollection(TagRuleOracleCollection),
-
-    #[serde(rename = "oracle_rollable")]
-    OracleRollable(TagRuleOracleRollable),
-
-    #[serde(rename = "rarity")]
-    Rarity(TagRuleRarity),
-
-    #[serde(rename = "truth")]
-    Truth(TagRuleTruth),
-}
-
-#[derive(Serialize, Deserialize)]
-pub struct TagRuleAsset {
     #[serde(rename = "applies_to")]
     pub appliesTo: Vec<TaggableNodeType>,
-
-    #[serde(rename = "description")]
-    pub description: MarkdownString,
-
-    /// If `true`, this field accepts an array of wildcard ID strings. If
-    /// `false`, this field accepts a single non-wildcard ID string.
-    #[serde(rename = "wildcard")]
-    pub wildcard: bool,
 }
 
-#[derive(Serialize, Deserialize)]
-pub struct TagRuleAssetCollection {
-    #[serde(rename = "applies_to")]
-    pub appliesTo: Vec<TaggableNodeType>,
-
-    #[serde(rename = "description")]
-    pub description: MarkdownString,
-
-    /// If `true`, this field accepts an array of wildcard ID strings. If
-    /// `false`, this field accepts a single non-wildcard ID string.
-    #[serde(rename = "wildcard")]
-    pub wildcard: bool,
-}
-
-#[derive(Serialize, Deserialize)]
-pub struct TagRuleAtlasCollection {
-    #[serde(rename = "applies_to")]
-    pub appliesTo: Vec<TaggableNodeType>,
-
-    #[serde(rename = "description")]
-    pub description: MarkdownString,
-
-    /// If `true`, this field accepts an array of wildcard ID strings. If
-    /// `false`, this field accepts a single non-wildcard ID string.
-    #[serde(rename = "wildcard")]
-    pub wildcard: bool,
-}
-
-#[derive(Serialize, Deserialize)]
-pub struct TagRuleAtlasEntry {
-    #[serde(rename = "applies_to")]
-    pub appliesTo: Vec<TaggableNodeType>,
-
-    #[serde(rename = "description")]
-    pub description: MarkdownString,
-
-    /// If `true`, this field accepts an array of wildcard ID strings. If
-    /// `false`, this field accepts a single non-wildcard ID string.
-    #[serde(rename = "wildcard")]
-    pub wildcard: bool,
-}
-
-#[derive(Serialize, Deserialize)]
-pub struct TagRuleBoolean {
-    #[serde(rename = "applies_to")]
-    pub appliesTo: Vec<TaggableNodeType>,
-
-    #[serde(rename = "array")]
-    pub array: bool,
-
-    #[serde(rename = "description")]
-    pub description: MarkdownString,
-}
-
-#[derive(Serialize, Deserialize)]
-pub struct TagRuleDelveSite {
-    #[serde(rename = "applies_to")]
-    pub appliesTo: Vec<TaggableNodeType>,
-
-    #[serde(rename = "description")]
-    pub description: MarkdownString,
-
-    /// If `true`, this field accepts an array of wildcard ID strings. If
-    /// `false`, this field accepts a single non-wildcard ID string.
-    #[serde(rename = "wildcard")]
-    pub wildcard: bool,
-}
-
-#[derive(Serialize, Deserialize)]
-pub struct TagRuleDelveSiteDomain {
-    #[serde(rename = "applies_to")]
-    pub appliesTo: Vec<TaggableNodeType>,
-
-    #[serde(rename = "description")]
-    pub description: MarkdownString,
-
-    /// If `true`, this field accepts an array of wildcard ID strings. If
-    /// `false`, this field accepts a single non-wildcard ID string.
-    #[serde(rename = "wildcard")]
-    pub wildcard: bool,
-}
-
-#[derive(Serialize, Deserialize)]
-pub struct TagRuleDelveSiteTheme {
-    #[serde(rename = "applies_to")]
-    pub appliesTo: Vec<TaggableNodeType>,
-
-    #[serde(rename = "description")]
-    pub description: MarkdownString,
-
-    /// If `true`, this field accepts an array of wildcard ID strings. If
-    /// `false`, this field accepts a single non-wildcard ID string.
-    #[serde(rename = "wildcard")]
-    pub wildcard: bool,
-}
-
-#[derive(Serialize, Deserialize)]
-pub struct TagRuleEnum {
-    #[serde(rename = "applies_to")]
-    pub appliesTo: Vec<TaggableNodeType>,
-
-    #[serde(rename = "array")]
-    pub array: bool,
-
-    #[serde(rename = "description")]
-    pub description: MarkdownString,
-
-    #[serde(rename = "enum")]
-    pub enum_: Vec<DictKey>,
-}
-
-#[derive(Serialize, Deserialize)]
-pub struct TagRuleInteger {
-    #[serde(rename = "applies_to")]
-    pub appliesTo: Vec<TaggableNodeType>,
-
-    #[serde(rename = "array")]
-    pub array: bool,
-
-    #[serde(rename = "description")]
-    pub description: MarkdownString,
-}
-
-#[derive(Serialize, Deserialize)]
-pub struct TagRuleMove {
-    #[serde(rename = "applies_to")]
-    pub appliesTo: Vec<TaggableNodeType>,
-
-    #[serde(rename = "description")]
-    pub description: MarkdownString,
-
-    /// If `true`, this field accepts an array of wildcard ID strings. If
-    /// `false`, this field accepts a single non-wildcard ID string.
-    #[serde(rename = "wildcard")]
-    pub wildcard: bool,
-}
-
-#[derive(Serialize, Deserialize)]
-pub struct TagRuleMoveCategory {
-    #[serde(rename = "applies_to")]
-    pub appliesTo: Vec<TaggableNodeType>,
-
-    #[serde(rename = "description")]
-    pub description: MarkdownString,
-
-    /// If `true`, this field accepts an array of wildcard ID strings. If
-    /// `false`, this field accepts a single non-wildcard ID string.
-    #[serde(rename = "wildcard")]
-    pub wildcard: bool,
-}
-
-#[derive(Serialize, Deserialize)]
-pub struct TagRuleNpc {
-    #[serde(rename = "applies_to")]
-    pub appliesTo: Vec<TaggableNodeType>,
-
-    #[serde(rename = "description")]
-    pub description: MarkdownString,
-
-    /// If `true`, this field accepts an array of wildcard ID strings. If
-    /// `false`, this field accepts a single non-wildcard ID string.
-    #[serde(rename = "wildcard")]
-    pub wildcard: bool,
-}
-
-#[derive(Serialize, Deserialize)]
-pub struct TagRuleNpcCollection {
-    #[serde(rename = "applies_to")]
-    pub appliesTo: Vec<TaggableNodeType>,
-
-    #[serde(rename = "description")]
-    pub description: MarkdownString,
-
-    /// If `true`, this field accepts an array of wildcard ID strings. If
-    /// `false`, this field accepts a single non-wildcard ID string.
-    #[serde(rename = "wildcard")]
-    pub wildcard: bool,
-}
-
-#[derive(Serialize, Deserialize)]
-pub struct TagRuleOracleCollection {
-    #[serde(rename = "applies_to")]
-    pub appliesTo: Vec<TaggableNodeType>,
-
-    #[serde(rename = "description")]
-    pub description: MarkdownString,
-
-    /// If `true`, this field accepts an array of wildcard ID strings. If
-    /// `false`, this field accepts a single non-wildcard ID string.
-    #[serde(rename = "wildcard")]
-    pub wildcard: bool,
-}
-
-#[derive(Serialize, Deserialize)]
-pub struct TagRuleOracleRollable {
-    #[serde(rename = "applies_to")]
-    pub appliesTo: Vec<TaggableNodeType>,
-
-    #[serde(rename = "description")]
-    pub description: MarkdownString,
-
-    /// If `true`, this field accepts an array of wildcard ID strings. If
-    /// `false`, this field accepts a single non-wildcard ID string.
-    #[serde(rename = "wildcard")]
-    pub wildcard: bool,
-}
-
-#[derive(Serialize, Deserialize)]
-pub struct TagRuleRarity {
-    #[serde(rename = "applies_to")]
-    pub appliesTo: Vec<TaggableNodeType>,
-
-    #[serde(rename = "description")]
-    pub description: MarkdownString,
-
-    /// If `true`, this field accepts an array of wildcard ID strings. If
-    /// `false`, this field accepts a single non-wildcard ID string.
-    #[serde(rename = "wildcard")]
-    pub wildcard: bool,
-}
-
-#[derive(Serialize, Deserialize)]
-pub struct TagRuleTruth {
-    #[serde(rename = "applies_to")]
-    pub appliesTo: Vec<TaggableNodeType>,
-
-    #[serde(rename = "description")]
-    pub description: MarkdownString,
-
-    /// If `true`, this field accepts an array of wildcard ID strings. If
-    /// `false`, this field accepts a single non-wildcard ID string.
-    #[serde(rename = "wildcard")]
-    pub wildcard: bool,
-}
+/// A JSON schema used to validate the tag data.
+pub type TagSchema = Option<Value>;
 
 #[derive(Serialize, Deserialize)]
 pub enum TaggableNodeType {
@@ -9835,27 +9433,6 @@ pub enum TaggableNodeType {
 
 /// A dictionary of tags, keyed by the RulesPackageId that the tags are from.
 pub type Tags = HashMap<String, HashMap<String, Tag>>;
-
-#[derive(Serialize, Deserialize)]
-pub struct TagsCore {
-    /// This object requires allies to function, and is intended for co-op play,
-    /// or guided play with allies. It is not appropriate for solo play.
-    #[serde(rename = "requires_allies")]
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub requiresAllies: Option<Box<bool>>,
-
-    /// This object is supernatural in nature, and is ideal for settings that
-    /// feature supernatural or mythic powers.
-    #[serde(rename = "supernatural")]
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub supernatural: Option<Box<bool>>,
-
-    /// This object is technological in nature, and is ideal for settings that
-    /// feature remarkable technologies.
-    #[serde(rename = "technological")]
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub technological: Option<Box<bool>>,
-}
 
 #[derive(Serialize, Deserialize)]
 pub enum TextFieldFieldType {
@@ -10156,11 +9733,9 @@ pub struct Truth {
     #[serde(rename = "type")]
     pub type_: TruthType,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     /// The name of this node as it appears on the page in the book, if it's
     /// different from `name`.
@@ -10232,11 +9807,9 @@ pub struct TruthOption {
     #[serde(rename = "roll")]
     pub roll: DiceRange,
 
-    /// Implementation hints or other developer-facing comments on this node.
-    /// These should be omitted when presenting the node for gameplay.
     #[serde(rename = "_comment")]
     #[serde(skip_serializing_if = "Option::is_none")]
-    pub comment: Option<Box<String>>,
+    pub comment: Option<Box<Documentation>>,
 
     #[serde(rename = "oracles")]
     #[serde(skip_serializing_if = "Option::is_none")]

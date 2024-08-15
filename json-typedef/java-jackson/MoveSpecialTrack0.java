@@ -41,7 +41,7 @@ public class MoveSpecialTrack0 extends Move {
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty("_comment")
-    private String comment;
+    private Documentation comment;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty("canonical_name")
@@ -206,19 +206,15 @@ public class MoveSpecialTrack0 extends Move {
 
     /**
      * Getter for comment.<p>
-     * Implementation hints or other developer-facing comments on this node.
-     * These should be omitted when presenting the node for gameplay.
      */
-    public String getComment() {
+    public Documentation getComment() {
         return comment;
     }
 
     /**
      * Setter for comment.<p>
-     * Implementation hints or other developer-facing comments on this node.
-     * These should be omitted when presenting the node for gameplay.
      */
-    public void setComment(String comment) {
+    public void setComment(Documentation comment) {
         this.comment = comment;
     }
 

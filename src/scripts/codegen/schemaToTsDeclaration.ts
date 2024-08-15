@@ -22,6 +22,7 @@ import {
 	TUnionEnum,
 } from '../../schema/Utils.js'
 import Log from '../utils/Log.js'
+import { $schema } from '../const.js'
 
 export function extractDefs(defs: Record<string, TSchema>) {
 	return mapValues(defs, (v, k) => renderDefinition(k, v))
@@ -110,7 +111,8 @@ function extractType(schema: TSchema): string {
 
 		case TypeGuard.IsThis(schema):
 		case TypeGuard.IsRef(schema):
-			return schema.$ref
+			// special case: embedded schema
+			return schema.$ref === $schema ? 'unknown' : schema.$ref
 		case TypeGuard.IsLiteral(schema):
 			return JSON.stringify(schema.const)
 		case TypeGuard.IsInteger(schema):

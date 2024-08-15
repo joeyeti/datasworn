@@ -274,9 +274,7 @@ type Asset struct {
 
 	Type AssetType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	Attachments *AssetAttachment `json:"attachments,omitempty"`
 
@@ -320,9 +318,7 @@ type AssetAbility struct {
 	// The complete rules text of this asset ability.
 	Text MarkdownString `json:"text"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// Fields whose values are expected to change over the life of the asset.
 	Controls map[string]AssetAbilityControlField `json:"controls,omitempty"`
@@ -629,9 +625,7 @@ type AssetCollection struct {
 
 	Type AssetCollectionType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -1306,9 +1300,7 @@ type AtlasCollection struct {
 
 	Type AtlasCollectionType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -1374,9 +1366,7 @@ type AtlasEntry struct {
 
 	Type AtlasEntryType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -1590,6 +1580,20 @@ type ConditionMeterValueRef struct {
 	Using ConditionMeterValueRefUsing `json:"using"`
 }
 
+type CoreTags struct {
+	// This object requires allies to function, and is intended for co-op play, or
+	// guided play with allies. It is not appropriate for solo play.
+	RequiresAllies *bool `json:"requires_allies,omitempty"`
+
+	// This object is supernatural in nature, and is ideal for settings that
+	// feature supernatural or mythic powers.
+	Supernatural *bool `json:"supernatural,omitempty"`
+
+	// This object is technological in nature, and is ideal for settings that
+	// feature remarkable technologies.
+	Technological *bool `json:"technological,omitempty"`
+}
+
 type CounterFieldFieldType string
 
 const (
@@ -1670,9 +1674,7 @@ type DelveSite struct {
 
 	Type DelveSiteType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -1765,9 +1767,7 @@ type DelveSiteDomain struct {
 
 	Type DelveSiteDomainType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -1902,9 +1902,7 @@ type DelveSiteTheme struct {
 
 	Type DelveSiteThemeType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -2017,6 +2015,10 @@ type DiceRange struct {
 // A `snake_case` key used in a Datasworn dictionary object.
 type DictKey = string
 
+// Implementation hints or other developer-facing comments on this node. These
+// should be omitted when representing an object for gameplay.
+type Documentation = string
+
 // An email address.
 type Email = string
 
@@ -2071,9 +2073,7 @@ type EmbeddedActionRollMove struct {
 
 	Type EmbeddedActionRollMoveType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -2172,9 +2172,7 @@ type EmbeddedMoveActionRoll struct {
 
 	Type EmbeddedMoveActionRollType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -2216,9 +2214,7 @@ type EmbeddedMoveNoRoll struct {
 
 	Type EmbeddedMoveNoRollType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -2265,9 +2261,7 @@ type EmbeddedMoveProgressRoll struct {
 
 	Type EmbeddedMoveProgressRollType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -2311,9 +2305,7 @@ type EmbeddedMoveSpecialTrack struct {
 
 	Type EmbeddedMoveSpecialTrackType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -2367,9 +2359,7 @@ type EmbeddedNoRollMove struct {
 
 	Type EmbeddedNoRollMoveType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -2422,9 +2412,7 @@ type EmbeddedOracleColumnText struct {
 
 	Type EmbeddedOracleColumnTextType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -2483,9 +2471,7 @@ type EmbeddedOracleColumnText2 struct {
 
 	Type EmbeddedOracleColumnText2Type `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -2544,9 +2530,7 @@ type EmbeddedOracleColumnText3 struct {
 
 	Type EmbeddedOracleColumnText3Type `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -2664,9 +2648,7 @@ type EmbeddedOracleRollableColumnText struct {
 
 	Type EmbeddedOracleRollableColumnTextType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -2717,9 +2699,7 @@ type EmbeddedOracleRollableColumnText2 struct {
 
 	Type EmbeddedOracleRollableColumnText2Type `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -2770,9 +2750,7 @@ type EmbeddedOracleRollableColumnText3 struct {
 
 	Type EmbeddedOracleRollableColumnText3Type `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -2831,9 +2809,7 @@ type EmbeddedOracleRollableTableText struct {
 
 	Type EmbeddedOracleRollableTableTextType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -2894,9 +2870,7 @@ type EmbeddedOracleRollableTableText2 struct {
 
 	Type EmbeddedOracleRollableTableText2Type `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -2959,9 +2933,7 @@ type EmbeddedOracleRollableTableText3 struct {
 
 	Type EmbeddedOracleRollableTableText3Type `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -3032,9 +3004,7 @@ type EmbeddedOracleTableText struct {
 
 	Type EmbeddedOracleTableTextType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -3103,9 +3073,7 @@ type EmbeddedOracleTableText2 struct {
 
 	Type EmbeddedOracleTableText2Type `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -3176,9 +3144,7 @@ type EmbeddedOracleTableText3 struct {
 
 	Type EmbeddedOracleTableText3Type `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -3239,9 +3205,7 @@ type EmbeddedProgressRollMove struct {
 
 	Type EmbeddedProgressRollMoveType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -3293,9 +3257,7 @@ type EmbeddedSpecialTrackMove struct {
 
 	Type EmbeddedSpecialTrackMoveType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -3570,9 +3532,7 @@ type MoveActionRoll0 struct {
 
 	Type MoveActionRollType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -3626,9 +3586,7 @@ type MoveNoRoll0 struct {
 
 	Type MoveNoRollType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -3689,9 +3647,7 @@ type MoveProgressRoll0 struct {
 
 	Type MoveProgressRollType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -3749,9 +3705,7 @@ type MoveSpecialTrack0 struct {
 
 	Type MoveSpecialTrackType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -3815,9 +3769,7 @@ type MoveActionRoll struct {
 
 	Type MoveActionRollType0 `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -3886,9 +3838,7 @@ type MoveCategory struct {
 
 	Type MoveCategoryType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -4065,9 +4015,7 @@ type MoveNoRoll struct {
 
 	Type MoveNoRollType0 `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -4193,9 +4141,7 @@ type MoveProgressRoll struct {
 
 	Type MoveProgressRollType0 `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -4300,9 +4246,7 @@ type MoveSpecialTrack struct {
 
 	Type MoveSpecialTrackType0 `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -4397,9 +4341,7 @@ type Npc struct {
 
 	Variants map[string]NpcVariant `json:"variants"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -4451,9 +4393,7 @@ type NpcCollection struct {
 
 	Type NpcCollectionType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -4523,9 +4463,7 @@ type NpcVariant struct {
 	// The suggested challenge rank for this NPC.
 	Rank ChallengeRank `json:"rank"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	Summary *MarkdownString `json:"summary,omitempty"`
 }
@@ -4633,9 +4571,7 @@ type OracleCollectionTableSharedRolls struct {
 
 	Type OracleCollectionTableSharedRollsType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -4700,9 +4636,7 @@ type OracleCollectionTableSharedText struct {
 
 	Type OracleCollectionTableSharedTextType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -4769,9 +4703,7 @@ type OracleCollectionTableSharedText2 struct {
 
 	Type OracleCollectionTableSharedText2Type `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -4840,9 +4772,7 @@ type OracleCollectionTableSharedText3 struct {
 
 	Type OracleCollectionTableSharedText3Type `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -4903,9 +4833,7 @@ type OracleCollectionTables struct {
 
 	Type OracleCollectionTablesType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -4984,9 +4912,7 @@ type OracleColumnText struct {
 
 	Type OracleColumnTextType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -5050,9 +4976,7 @@ type OracleColumnText2 struct {
 
 	Type OracleColumnText2Type `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -5116,9 +5040,7 @@ type OracleColumnText3 struct {
 
 	Type OracleColumnText3Type `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -5301,9 +5223,7 @@ type OracleRollableColumnText struct {
 
 	Type OracleRollableColumnTextType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -5359,9 +5279,7 @@ type OracleRollableColumnText2 struct {
 
 	Type OracleRollableColumnText2Type `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -5417,9 +5335,7 @@ type OracleRollableColumnText3 struct {
 
 	Type OracleRollableColumnText3Type `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -5489,9 +5405,7 @@ type OracleRollableTableText struct {
 
 	Type OracleRollableTableTextType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -5562,9 +5476,7 @@ type OracleRollableTableText2 struct {
 
 	Type OracleRollableTableText2Type `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -5637,9 +5549,7 @@ type OracleRollableTableText3 struct {
 
 	Type OracleRollableTableText3Type `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -5856,9 +5766,7 @@ type OracleRollableTableTableText struct {
 
 	Type OracleRollableTableTableTextType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -5929,9 +5837,7 @@ type OracleRollableTableTableText2 struct {
 
 	Type OracleRollableTableTableText2Type `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -6004,9 +5910,7 @@ type OracleRollableTableTableText3 struct {
 
 	Type OracleRollableTableTableText3Type `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -6078,9 +5982,7 @@ type OracleTableSharedRolls struct {
 
 	Type OracleTableSharedRollsType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -6153,9 +6055,7 @@ type OracleTableSharedText struct {
 
 	Type OracleTableSharedTextType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -6230,9 +6130,7 @@ type OracleTableSharedText2 struct {
 
 	Type OracleTableSharedText2Type `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -6309,9 +6207,7 @@ type OracleTableSharedText3 struct {
 
 	Type OracleTableSharedText3Type `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -6396,9 +6292,7 @@ type OracleTableText struct {
 
 	Type OracleTableTextType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -6477,9 +6371,7 @@ type OracleTableText2 struct {
 
 	Type OracleTableText2Type `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -6560,9 +6452,7 @@ type OracleTableText3 struct {
 
 	Type OracleTableText3Type `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -6624,9 +6514,7 @@ type OracleTablesCollection struct {
 
 	Type OracleTablesCollectionType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -6768,9 +6656,7 @@ type Rarity struct {
 	// spend 3 experience points to purchase a rarity.
 	XpCost int16 `json:"xp_cost"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -7475,319 +7361,13 @@ type SvgImageURL = string
 type Tag = interface{}
 
 type TagRule struct {
-	ValueType string
+	Schema TagSchema `json:"$schema"`
 
-	Asset TagRuleAsset
-
-	AssetCollection TagRuleAssetCollection
-
-	AtlasCollection TagRuleAtlasCollection
-
-	AtlasEntry TagRuleAtlasEntry
-
-	Boolean TagRuleBoolean
-
-	DelveSite TagRuleDelveSite
-
-	DelveSiteDomain TagRuleDelveSiteDomain
-
-	DelveSiteTheme TagRuleDelveSiteTheme
-
-	Enum TagRuleEnum
-
-	Integer TagRuleInteger
-
-	Move TagRuleMove
-
-	MoveCategory TagRuleMoveCategory
-
-	Npc TagRuleNpc
-
-	NpcCollection TagRuleNpcCollection
-
-	OracleCollection TagRuleOracleCollection
-
-	OracleRollable TagRuleOracleRollable
-
-	Rarity TagRuleRarity
-
-	Truth TagRuleTruth
-}
-
-func (v TagRule) MarshalJSON() ([]byte, error) {
-	switch v.ValueType {
-	case "asset":
-		return json.Marshal(struct { T string `json:"value_type"`; TagRuleAsset }{ v.ValueType, v.Asset })
-	case "asset_collection":
-		return json.Marshal(struct { T string `json:"value_type"`; TagRuleAssetCollection }{ v.ValueType, v.AssetCollection })
-	case "atlas_collection":
-		return json.Marshal(struct { T string `json:"value_type"`; TagRuleAtlasCollection }{ v.ValueType, v.AtlasCollection })
-	case "atlas_entry":
-		return json.Marshal(struct { T string `json:"value_type"`; TagRuleAtlasEntry }{ v.ValueType, v.AtlasEntry })
-	case "boolean":
-		return json.Marshal(struct { T string `json:"value_type"`; TagRuleBoolean }{ v.ValueType, v.Boolean })
-	case "delve_site":
-		return json.Marshal(struct { T string `json:"value_type"`; TagRuleDelveSite }{ v.ValueType, v.DelveSite })
-	case "delve_site_domain":
-		return json.Marshal(struct { T string `json:"value_type"`; TagRuleDelveSiteDomain }{ v.ValueType, v.DelveSiteDomain })
-	case "delve_site_theme":
-		return json.Marshal(struct { T string `json:"value_type"`; TagRuleDelveSiteTheme }{ v.ValueType, v.DelveSiteTheme })
-	case "enum":
-		return json.Marshal(struct { T string `json:"value_type"`; TagRuleEnum }{ v.ValueType, v.Enum })
-	case "integer":
-		return json.Marshal(struct { T string `json:"value_type"`; TagRuleInteger }{ v.ValueType, v.Integer })
-	case "move":
-		return json.Marshal(struct { T string `json:"value_type"`; TagRuleMove }{ v.ValueType, v.Move })
-	case "move_category":
-		return json.Marshal(struct { T string `json:"value_type"`; TagRuleMoveCategory }{ v.ValueType, v.MoveCategory })
-	case "npc":
-		return json.Marshal(struct { T string `json:"value_type"`; TagRuleNpc }{ v.ValueType, v.Npc })
-	case "npc_collection":
-		return json.Marshal(struct { T string `json:"value_type"`; TagRuleNpcCollection }{ v.ValueType, v.NpcCollection })
-	case "oracle_collection":
-		return json.Marshal(struct { T string `json:"value_type"`; TagRuleOracleCollection }{ v.ValueType, v.OracleCollection })
-	case "oracle_rollable":
-		return json.Marshal(struct { T string `json:"value_type"`; TagRuleOracleRollable }{ v.ValueType, v.OracleRollable })
-	case "rarity":
-		return json.Marshal(struct { T string `json:"value_type"`; TagRuleRarity }{ v.ValueType, v.Rarity })
-	case "truth":
-		return json.Marshal(struct { T string `json:"value_type"`; TagRuleTruth }{ v.ValueType, v.Truth })
-	}
-
-	return nil, fmt.Errorf("bad ValueType value: %s", v.ValueType)
-}
-
-func (v *TagRule) UnmarshalJSON(b []byte) error {
-	var t struct { T string `json:"value_type"` }
-	if err := json.Unmarshal(b, &t); err != nil {
-		return err
-	}
-
-	var err error
-	switch t.T {
-	case "asset":
-		err = json.Unmarshal(b, &v.Asset)
-	case "asset_collection":
-		err = json.Unmarshal(b, &v.AssetCollection)
-	case "atlas_collection":
-		err = json.Unmarshal(b, &v.AtlasCollection)
-	case "atlas_entry":
-		err = json.Unmarshal(b, &v.AtlasEntry)
-	case "boolean":
-		err = json.Unmarshal(b, &v.Boolean)
-	case "delve_site":
-		err = json.Unmarshal(b, &v.DelveSite)
-	case "delve_site_domain":
-		err = json.Unmarshal(b, &v.DelveSiteDomain)
-	case "delve_site_theme":
-		err = json.Unmarshal(b, &v.DelveSiteTheme)
-	case "enum":
-		err = json.Unmarshal(b, &v.Enum)
-	case "integer":
-		err = json.Unmarshal(b, &v.Integer)
-	case "move":
-		err = json.Unmarshal(b, &v.Move)
-	case "move_category":
-		err = json.Unmarshal(b, &v.MoveCategory)
-	case "npc":
-		err = json.Unmarshal(b, &v.Npc)
-	case "npc_collection":
-		err = json.Unmarshal(b, &v.NpcCollection)
-	case "oracle_collection":
-		err = json.Unmarshal(b, &v.OracleCollection)
-	case "oracle_rollable":
-		err = json.Unmarshal(b, &v.OracleRollable)
-	case "rarity":
-		err = json.Unmarshal(b, &v.Rarity)
-	case "truth":
-		err = json.Unmarshal(b, &v.Truth)
-	default:
-		err = fmt.Errorf("bad ValueType value: %s", t.T)
-	}
-
-	if err != nil {
-		return err
-	}
-
-	v.ValueType = t.T
-	return nil
-}
-
-type TagRuleAsset struct {
 	AppliesTo []TaggableNodeType `json:"applies_to"`
-
-	Description MarkdownString `json:"description"`
-
-	// If `true`, this field accepts an array of wildcard ID strings. If `false`,
-	// this field accepts a single non-wildcard ID string.
-	Wildcard bool `json:"wildcard"`
 }
 
-type TagRuleAssetCollection struct {
-	AppliesTo []TaggableNodeType `json:"applies_to"`
-
-	Description MarkdownString `json:"description"`
-
-	// If `true`, this field accepts an array of wildcard ID strings. If `false`,
-	// this field accepts a single non-wildcard ID string.
-	Wildcard bool `json:"wildcard"`
-}
-
-type TagRuleAtlasCollection struct {
-	AppliesTo []TaggableNodeType `json:"applies_to"`
-
-	Description MarkdownString `json:"description"`
-
-	// If `true`, this field accepts an array of wildcard ID strings. If `false`,
-	// this field accepts a single non-wildcard ID string.
-	Wildcard bool `json:"wildcard"`
-}
-
-type TagRuleAtlasEntry struct {
-	AppliesTo []TaggableNodeType `json:"applies_to"`
-
-	Description MarkdownString `json:"description"`
-
-	// If `true`, this field accepts an array of wildcard ID strings. If `false`,
-	// this field accepts a single non-wildcard ID string.
-	Wildcard bool `json:"wildcard"`
-}
-
-type TagRuleBoolean struct {
-	AppliesTo []TaggableNodeType `json:"applies_to"`
-
-	Array bool `json:"array"`
-
-	Description MarkdownString `json:"description"`
-}
-
-type TagRuleDelveSite struct {
-	AppliesTo []TaggableNodeType `json:"applies_to"`
-
-	Description MarkdownString `json:"description"`
-
-	// If `true`, this field accepts an array of wildcard ID strings. If `false`,
-	// this field accepts a single non-wildcard ID string.
-	Wildcard bool `json:"wildcard"`
-}
-
-type TagRuleDelveSiteDomain struct {
-	AppliesTo []TaggableNodeType `json:"applies_to"`
-
-	Description MarkdownString `json:"description"`
-
-	// If `true`, this field accepts an array of wildcard ID strings. If `false`,
-	// this field accepts a single non-wildcard ID string.
-	Wildcard bool `json:"wildcard"`
-}
-
-type TagRuleDelveSiteTheme struct {
-	AppliesTo []TaggableNodeType `json:"applies_to"`
-
-	Description MarkdownString `json:"description"`
-
-	// If `true`, this field accepts an array of wildcard ID strings. If `false`,
-	// this field accepts a single non-wildcard ID string.
-	Wildcard bool `json:"wildcard"`
-}
-
-type TagRuleEnum struct {
-	AppliesTo []TaggableNodeType `json:"applies_to"`
-
-	Array bool `json:"array"`
-
-	Description MarkdownString `json:"description"`
-
-	Enum []DictKey `json:"enum"`
-}
-
-type TagRuleInteger struct {
-	AppliesTo []TaggableNodeType `json:"applies_to"`
-
-	Array bool `json:"array"`
-
-	Description MarkdownString `json:"description"`
-}
-
-type TagRuleMove struct {
-	AppliesTo []TaggableNodeType `json:"applies_to"`
-
-	Description MarkdownString `json:"description"`
-
-	// If `true`, this field accepts an array of wildcard ID strings. If `false`,
-	// this field accepts a single non-wildcard ID string.
-	Wildcard bool `json:"wildcard"`
-}
-
-type TagRuleMoveCategory struct {
-	AppliesTo []TaggableNodeType `json:"applies_to"`
-
-	Description MarkdownString `json:"description"`
-
-	// If `true`, this field accepts an array of wildcard ID strings. If `false`,
-	// this field accepts a single non-wildcard ID string.
-	Wildcard bool `json:"wildcard"`
-}
-
-type TagRuleNpc struct {
-	AppliesTo []TaggableNodeType `json:"applies_to"`
-
-	Description MarkdownString `json:"description"`
-
-	// If `true`, this field accepts an array of wildcard ID strings. If `false`,
-	// this field accepts a single non-wildcard ID string.
-	Wildcard bool `json:"wildcard"`
-}
-
-type TagRuleNpcCollection struct {
-	AppliesTo []TaggableNodeType `json:"applies_to"`
-
-	Description MarkdownString `json:"description"`
-
-	// If `true`, this field accepts an array of wildcard ID strings. If `false`,
-	// this field accepts a single non-wildcard ID string.
-	Wildcard bool `json:"wildcard"`
-}
-
-type TagRuleOracleCollection struct {
-	AppliesTo []TaggableNodeType `json:"applies_to"`
-
-	Description MarkdownString `json:"description"`
-
-	// If `true`, this field accepts an array of wildcard ID strings. If `false`,
-	// this field accepts a single non-wildcard ID string.
-	Wildcard bool `json:"wildcard"`
-}
-
-type TagRuleOracleRollable struct {
-	AppliesTo []TaggableNodeType `json:"applies_to"`
-
-	Description MarkdownString `json:"description"`
-
-	// If `true`, this field accepts an array of wildcard ID strings. If `false`,
-	// this field accepts a single non-wildcard ID string.
-	Wildcard bool `json:"wildcard"`
-}
-
-type TagRuleRarity struct {
-	AppliesTo []TaggableNodeType `json:"applies_to"`
-
-	Description MarkdownString `json:"description"`
-
-	// If `true`, this field accepts an array of wildcard ID strings. If `false`,
-	// this field accepts a single non-wildcard ID string.
-	Wildcard bool `json:"wildcard"`
-}
-
-type TagRuleTruth struct {
-	AppliesTo []TaggableNodeType `json:"applies_to"`
-
-	Description MarkdownString `json:"description"`
-
-	// If `true`, this field accepts an array of wildcard ID strings. If `false`,
-	// this field accepts a single non-wildcard ID string.
-	Wildcard bool `json:"wildcard"`
-}
+// A JSON schema used to validate the tag data.
+type TagSchema = interface{}
 
 type TaggableNodeType string
 
@@ -7839,20 +7419,6 @@ const (
 
 // A dictionary of tags, keyed by the RulesPackageId that the tags are from.
 type Tags = map[string]map[string]Tag
-
-type TagsCore struct {
-	// This object requires allies to function, and is intended for co-op play, or
-	// guided play with allies. It is not appropriate for solo play.
-	RequiresAllies *bool `json:"requires_allies,omitempty"`
-
-	// This object is supernatural in nature, and is ideal for settings that
-	// feature supernatural or mythic powers.
-	Supernatural *bool `json:"supernatural,omitempty"`
-
-	// This object is technological in nature, and is ideal for settings that
-	// feature remarkable technologies.
-	Technological *bool `json:"technological,omitempty"`
-}
 
 type TextFieldFieldType string
 
@@ -8061,9 +7627,7 @@ type Truth struct {
 
 	Type TruthType `json:"type"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	// The name of this node as it appears on the page in the book, if it's
 	// different from `name`.
@@ -8112,9 +7676,7 @@ type TruthOption struct {
 
 	Roll DiceRange `json:"roll"`
 
-	// Implementation hints or other developer-facing comments on this node. These
-	// should be omitted when presenting the node for gameplay.
-	Comment *string `json:"_comment,omitempty"`
+	Comment *Documentation `json:"_comment,omitempty"`
 
 	Oracles map[string]EmbeddedOracleRollable `json:"oracles,omitempty"`
 

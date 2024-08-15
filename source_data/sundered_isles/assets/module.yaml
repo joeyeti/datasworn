@@ -192,7 +192,7 @@ assets:
         name: Harpoon Cannon
         type: asset
         tags:
-          core:
+          _core:
             technological: true
         _source:
           <<: *Source
@@ -520,7 +520,7 @@ assets:
         name: Ironclad Hull
         type: asset
         tags:
-          core:
+          _core:
             technological: true
         _source:
           <<: *Source
@@ -580,7 +580,7 @@ assets:
         name: Lucky Figurehead
         type: asset
         tags:
-          core:
+          _core:
             supernatural: true
         _source:
           <<: *Source
@@ -735,7 +735,7 @@ assets:
         name: Submersible Mode
         type: asset
         tags:
-          core:
+          _core:
             technological: true
         _source:
           <<: *Source
@@ -791,7 +791,7 @@ assets:
         tags:
           starforged:
             recommended: true
-          core:
+          _core:
             supernatural: true
         _source:
           <<: *Source

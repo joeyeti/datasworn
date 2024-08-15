@@ -1,6 +1,12 @@
 import { Type, type Static } from '@sinclair/typebox'
 import { UnionEnumFromRecord } from '../utils/UnionEnumFromRecord.js'
 
+export const Documentation = Type.String({
+	$id: 'Documentation',
+	description:
+		'Implementation hints or other developer-facing comments on this node. These should be omitted when representing an object for gameplay.'
+})
+
 export const Label = Type.String({
 	$id: 'Label',
 	description:

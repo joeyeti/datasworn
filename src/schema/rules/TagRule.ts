@@ -6,11 +6,13 @@ import { Dictionary } from '../generic/Dictionary.js'
 import { JsonTypeDef } from '../Symbols.js'
 import { UnionEnum, Nullable, DiscriminatedUnion } from '../Utils.js'
 import Id, { RulesetId } from '../common/Id.js'
-import { MarkdownString } from '../common/Text.js'
+import { Documentation, MarkdownString } from '../common/Text.js'
 import { DiceExpression } from '../common/Rolls.js'
 import { canonicalTags } from '../tags/canonicalTags.js'
 import { Assign } from '../utils/FlatIntersect.js'
 import { pascalCase, type PascalCase } from '../utils/string.js'
+import { $schema } from '../../scripts/const.js'
+import type { TSchema } from '@sinclair/typebox'
 
 type NodeSchemaName<T extends string> = PascalCase<T>
 type EmbeddedNodeSchemaName<T extends string> = `Embedded${PascalCase<T>}`
@@ -84,57 +86,81 @@ export type TaggableNodeType = Static<typeof TaggableNodeType>
 
 // or should we favor abstraction to a limited set of datasworn constructs instead?
 
-const TagRuleBase = Type.Object({
-	applies_to: Nullable(Type.Array(Type.Ref(TaggableNodeType)), {
-		description:
-			'Types of object that can receive this tag, or `null` if any type of object accepts it.',
-		default: null
-	}),
-	description: Type.Ref(MarkdownString)
+// const TagRuleBase = Type.Object({
+// 	applies_to: Nullable(Type.Array(Type.Ref(TaggableNodeType)), {
+// 		description:
+// 			'Types of object that can receive this tag, or `null` if any type of object accepts it.',
+// 		default: null
+// 	}),
+// 	description: Type.Ref(MarkdownString)
+// })
+
+// const typedTags = keyBy(
+// 	[
+// 		...(['boolean', 'integer'] as const).map((type) =>
+// 			Assign(
+// 				TagRuleBase,
+// 				Type.Object({
+// 					array: Type.Boolean({ default: false }),
+// 					value_type: Type.Literal(type)
+// 				})
+// 			)
+// 		),
+// 		...TypeId.Primary.map((type) =>
+// 			Assign(
+// 				TagRuleBase,
+// 				Type.Object({
+// 					wildcard: Type.Boolean({
+// 						default: false,
+// 						description:
+// 							'If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.'
+// 					}),
+// 					value_type: Type.Literal(type)
+// 				})
+// 			)
+// 		),
+// 		Assign(
+// 			TagRuleBase,
+// 			Type.Object({
+// 				array: Type.Boolean({ default: false }),
+// 				value_type: Type.Literal('enum'),
+// 				enum: Type.Array(Type.Ref(Id.DictKey))
+// 			})
+// 		)
+// 	].map((tag) => ({
+// 		...tag,
+// 		title: 'TagRule' + pascalCase(tag.properties.value_type.const)
+// 	})),
+// 	(tag) => tag.properties.value_type.const
+// )
+
+export const TagSchema = Type.Ref($schema, {
+	description: 'A JSON schema used to validate the tag data.',
+	releaseStage: 'experimental',
+	examples: [Type.Boolean(), Type.Array(Type.Ref('OracleRollableIdWildcard'))],
+
+	[JsonTypeDef]: { schema: JtdType.Any() },
+	// TODO: consider doing an intersection here to prevent types from getting too silly?
+	// * "type" must be a string value (possibly restricted further)
+	// * prohibit "anyOf", "oneOf",
+	$id: 'TagSchema'
 })
 
-const typedTags = keyBy(
-	[
-		...(['boolean', 'integer'] as const).map((type) =>
-			Assign(
-				TagRuleBase,
-				Type.Object({
-					array: Type.Boolean({ default: false }),
-					value_type: Type.Literal(type)
-				})
-			)
-		),
-		...TypeId.Primary.map((type) =>
-			Assign(
-				TagRuleBase,
-				Type.Object({
-					wildcard: Type.Boolean({
-						default: false,
-						description:
-							'If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.'
-					}),
-					value_type: Type.Literal(type)
-				})
-			)
-		),
-		Assign(
-			TagRuleBase,
-			Type.Object({
-				array: Type.Boolean({ default: false }),
-				value_type: Type.Literal('enum'),
-				enum: Type.Array(Type.Ref(Id.DictKey))
-			})
-		)
-	].map((tag) => ({
-		...tag,
-		title: 'TagRule' + pascalCase(tag.properties.value_type.const)
-	})),
-	(tag) => tag.properties.value_type.const
+export const TagRule = Type.Object(
+	{
+		applies_to: Nullable(Type.Array(Type.Ref(TaggableNodeType)), {
+			description:
+				'Types of object that can receive this tag, or `null` if any type of object accepts it.',
+			default: null
+		}),
+		$schema: Type.Ref(TagSchema)
+	},
+	{ $id: 'TagRule', additionalProperties: false }
 )
 
-export const TagRule = DiscriminatedUnion(typedTags, 'value_type', {
-	$id: 'TagRule'
-})
+// export const TagRule = DiscriminatedUnion(typedTags, 'value_type', {
+// 	$id: 'TagRule'
+// })
 export type TagRule = Static<typeof TagRule>
 
 const TagValueNonId = [
@@ -159,24 +185,6 @@ export const Tag = Type.Union(
 	{ $id: 'Tag', [JsonTypeDef]: { schema: JtdType.Any() } }
 )
 
-export const TagsCore = canonicalTags(
-	{
-		supernatural: Type.Boolean({
-			description:
-				'This object is supernatural in nature, and is ideal for settings that feature supernatural or mythic powers.'
-		}),
-		technological: Type.Boolean({
-			description:
-				'This object is technological in nature, and is ideal for settings that feature remarkable technologies.'
-		}),
-		requires_allies: Type.Boolean({
-			description:
-				'This object requires allies to function, and is intended for co-op play, or guided play with allies. It is not appropriate for solo play.'
-		})
-	},
-	{ $id: 'TagsCore' }
-)
-
 export const Tags = Type.Record(
 	RulesetId,
 	Dictionary(Type.Ref<typeof Tag>('Tag'), { title: 'RulesPackageTags' }),
@@ -188,3 +196,32 @@ export const Tags = Type.Record(
 			'A dictionary of tags, keyed by the RulesPackageId that the tags are from.'
 	}
 )
+
+export const CoreTags = Type.Object(
+	{
+		supernatural: Type.Optional(
+			Type.Boolean({
+				description:
+					'This object is supernatural in nature, and is ideal for settings that feature supernatural or mythic powers.'
+			})
+		),
+		technological: Type.Optional(
+			Type.Boolean({
+				description:
+					'This object is technological in nature, and is ideal for settings that feature remarkable technologies.'
+			})
+		),
+		requires_allies: Type.Optional(
+			Type.Boolean({
+				description:
+					'This object requires allies to function, and is intended for co-op play, or guided play with allies. It is not appropriate for solo play.'
+			})
+		)
+	},
+	{ $id: 'CoreTags' }
+)
+const coreNamespaceId = '_core' as const
+
+Tags.properties = {
+	[coreNamespaceId]: Type.Optional(Type.Ref(CoreTags))
+}

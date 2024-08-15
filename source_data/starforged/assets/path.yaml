@@ -147,7 +147,7 @@ assets:
         tags:
           sundered_isles:
             recommended: true
-          core:
+          _core:
             technological: true
         controls:
           # TODO: would this be better included with the asset ability?
@@ -251,7 +251,7 @@ assets:
         tags:
           sundered_isles:
             recommended: true
-          core:
+          _core:
             technological: true
         options:
           one:
@@ -586,7 +586,7 @@ assets:
         tags:
           sundered_isles:
             recommended: true
-          core:
+          _core:
             technological: true
         abilities:
           - text: |-
@@ -627,7 +627,7 @@ assets:
         tags:
           sundered_isles:
             recommended: true
-          core:
+          _core:
             supernatural: true
         options:
           name:
@@ -775,7 +775,7 @@ assets:
         tags:
           sundered_isles:
             recommended: true
-          core:
+          _core:
             supernatural: true
         abilities:
           - text: &EmpathMove |-
@@ -905,7 +905,7 @@ assets:
         tags:
           sundered_isles:
             recommended: true
-          core:
+          _core:
             supernatural: true
         abilities:
           - text: &FirebrandMove |-
@@ -1012,7 +1012,7 @@ assets:
         tags:
           sundered_isles:
             recommended: true
-          core:
+          _core:
             technological: true
         <<: *PathAsset
         abilities:
@@ -1173,7 +1173,7 @@ assets:
         tags:
           sundered_isles:
             recommended: true
-          core:
+          _core:
             supernatural: true
         abilities:
           - text: |-
@@ -1297,7 +1297,7 @@ assets:
         tags:
           sundered_isles:
             recommended: true
-          core:
+          _core:
             supernatural: true
         abilities:
           - text: |-
@@ -1825,7 +1825,7 @@ assets:
         tags:
           sundered_isles:
             recommended: true
-          core:
+          _core:
             supernatural: true
         <<: *PathAsset
         abilities:
@@ -1876,7 +1876,7 @@ assets:
         tags:
           sundered_isles:
             recommended: true
-          core:
+          _core:
             supernatural: true
         <<: *PathAsset
         abilities:

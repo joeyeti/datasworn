@@ -41,8 +41,9 @@ function validateSchemaDefinitions(defs: Record<string, TSchema>) {
 	const allPointers = new Set<string>([...usedRefs, ...availableRefs])
 
 	for (const pointer of allPointers) {
-		if (!usedRefs.has(pointer)) unusedDefinitions.add(pointer)
-		if (!availableRefs.has(pointer)) invalidPointers.add(pointer)
+    if (pointer.startsWith('http')) continue
+				if (!usedRefs.has(pointer)) unusedDefinitions.add(pointer)
+				if (!availableRefs.has(pointer)) invalidPointers.add(pointer)
 	}
 
 	// console.log('unusedDefinitions', unusedDefinitions)

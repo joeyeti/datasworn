@@ -7,17 +7,7 @@ import {
 import Pattern from '../../pkg-core/IdElements/Pattern.js'
 import type { Tag } from '../Rules.js'
 
-export function canonicalTags<Props extends TProperties>(
-	tags: Props,
-	options: ObjectOptions = {}
-) {
-	return Type.Partial(Type.Object(tags), {
-		...options,
-		patternProperties: {
-			[Pattern.DictKey.source]: Type.Ref<typeof Tag>('Tag')
-		}
-	})
-}
+
 const TagsClassic = {}
 const TagsStarforged = {
 	recommended: Type.Boolean({

@@ -19,118 +19,127 @@
 		"special_tracks": {},
 		"tags": {
 			"region": {
-				"value_type": "enum",
-				"description": "This oracle table or row relates to a specific region of the Sundered Isles.",
-				"applies_to": ["oracle_rollable", "row"],
-				"array": false,
-				"enum": ["myriads", "margins", "reaches"]
+				"$schema": {
+					"description": "This oracle table or row relates to a specific region of the Sundered Isles.",
+					"enum": ["myriads", "margins", "reaches"]
+				},
+				"applies_to": ["oracle_rollable", "row"]
 			},
 			"curse_behavior": {
-				"value_type": "enum",
-				"description": "Only relevant if the `cursed_version_of` tag is present.\n  * `replace_result`: Replace the original table result with the cursed table result, using the original table roll value.\n  * `add_result`: Roll again on the cursed table, combining it with the original table result.",
-				"applies_to": ["oracle_rollable"],
-				"array": false,
-				"enum": ["add_result", "replace_result"]
+				"$schema": {
+					"description": "Only relevant if the `cursed_version_of` tag is present.\n  * `replace_result`: Replace the original table result with the cursed table result, using the original table roll value.\n  * `add_result`: Roll again on the cursed table, combining it with the original table result.",
+					"enum": ["add_result", "replace_result"]
+				},
+				"applies_to": ["oracle_rollable"]
 			},
 			"cursed_by": {
-				"value_type": "oracle_rollable",
-				"description": "This oracle has a cursed version.",
-				"applies_to": ["oracle_rollable"],
-				"wildcard": false
+				"$schema": {
+					"description": "This oracle has a cursed version.",
+					"$ref": "#/definitions/OracleRollableId"
+				},
+				"applies_to": ["oracle_rollable"]
 			},
 			"cursed_version_of": {
-				"value_type": "oracle_rollable",
-				"description": "This oracle is the cursed version of one or more oracles. Note that any wildcard matches with their own `cursed_version_of` tag should be ignored (and can safely be be omitted from curse die behavior altogether).",
-				"applies_to": ["oracle_rollable"],
-				"wildcard": true
+				"$schema": {
+					"type": "array",
+					"description": "This oracle is the cursed version of one or more oracles. Note that any wildcard matches with their own `cursed_version_of` tag should be ignored (and can safely be be omitted from curse die behavior altogether).",
+					"items": {
+						"$ref": "#/definitions/OracleRollableWildcardId"
+					}
+				},
+				"applies_to": ["oracle_rollable"]
 			},
 			"faction_type": {
-				"value_type": "enum",
-				"description": "This oracle table or row relates to a specific type of faction.",
-				"applies_to": ["oracle_rollable", "row"],
-				"array": false,
-				"enum": ["society", "organization", "empire"]
+				"$schema": {
+					"description": "This oracle table or row relates to a specific type of faction.",
+					"enum": ["society", "organization", "empire"]
+				},
+				"applies_to": ["oracle_rollable", "row"]
 			},
 			"location": {
-				"value_type": "enum",
-				"description": "This oracle table or row relates to a location type.",
-				"applies_to": ["oracle_rollable", "row"],
-				"array": false,
-				"enum": [
-					"shore",
-					"inland",
-					"waterside",
-					"sea",
-					"sea_cave",
-					"buried",
-					"swamp",
-					"river"
-				]
+				"$schema": {
+					"description": "This oracle table or row relates to a location type.",
+					"enum": [
+						"shore",
+						"inland",
+						"waterside",
+						"sea",
+						"sea_cave",
+						"buried",
+						"swamp",
+						"river"
+					]
+				},
+				"applies_to": ["oracle_rollable", "row"]
 			},
 			"overland_region": {
-				"value_type": "enum",
-				"description": "This oracle table or row relates to a specific overland region type.",
-				"applies_to": ["oracle_rollable", "row"],
-				"array": false,
-				"enum": [
-					"highlands",
-					"jungle",
-					"lava_field",
-					"marsh",
-					"river",
-					"scrub",
-					"shore",
-					"swamp",
-					"wastes",
-					"woodland",
-					"cursed"
-				]
+				"$schema": {
+					"description": "This oracle table or row relates to a specific overland region type.",
+					"enum": [
+						"highlands",
+						"jungle",
+						"lava_field",
+						"marsh",
+						"river",
+						"scrub",
+						"shore",
+						"swamp",
+						"wastes",
+						"woodland",
+						"cursed"
+					]
+				},
+				"applies_to": ["oracle_rollable", "row"]
 			},
 			"requires_allies": {
-				"value_type": "boolean",
-				"description": "This object requires allies to function, and is intended only for co-op play, or guided play with allies. It is not appropriate for solo play.",
-				"applies_to": null,
-				"array": false
+				"$schema": {
+					"type": "boolean",
+					"description": "This object requires allies to function, and is intended only for co-op play, or guided play with allies. It is not appropriate for solo play."
+				},
+				"applies_to": null
 			},
 			"ship_size": {
-				"value_type": "enum",
-				"description": "This oracle table or row relates to a specific size of ship.",
-				"applies_to": ["oracle_rollable", "row"],
-				"array": false,
-				"enum": [
-					"small",
-					"medium",
-					"large",
-					"colossal",
-					"flotilla",
-					"fleet",
-					"armada"
-				]
+				"$schema": {
+					"description": "This oracle table or row relates to a specific size of ship.",
+					"enum": [
+						"small",
+						"medium",
+						"large",
+						"colossal",
+						"flotilla",
+						"fleet",
+						"armada"
+					]
+				},
+				"applies_to": ["oracle_rollable", "row"]
 			},
 			"starforged_friendly": {
-				"value_type": "boolean",
-				"description": "This asset is ideal for use in Starforged.",
-				"applies_to": ["asset"],
-				"array": false
+				"$schema": {
+					"type": "boolean",
+					"description": "This asset is ideal for use in Starforged."
+				},
+				"applies_to": ["asset"]
 			},
 			"supernatural": {
-				"value_type": "boolean",
-				"description": "This object is supernatural in nature, and is ideal for settings that feature supernatural or mythic powers.",
-				"applies_to": ["asset", "row"],
-				"array": false
+				"$schema": {
+					"type": "boolean",
+					"description": "This object is supernatural in nature, and is ideal for settings that feature supernatural or mythic powers."
+				},
+				"applies_to": ["asset", "row"]
 			},
 			"technological": {
-				"value_type": "boolean",
-				"description": "This object is technological in nature, and is ideal for settings that feature remarkable technologies.",
-				"applies_to": ["asset", "row"],
-				"array": false
+				"$schema": {
+					"type": "boolean",
+					"description": "This object is technological in nature, and is ideal for settings that feature remarkable technologies."
+				},
+				"applies_to": ["asset", "row"]
 			},
 			"treasure_size": {
-				"value_type": "enum",
-				"description": "This oracle table or row relates to a specific size of treasure.",
-				"applies_to": ["oracle_rollable", "row"],
-				"array": false,
-				"enum": ["small", "medium", "large", "vast"]
+				"$schema": {
+					"description": "This oracle table or row relates to a specific size of treasure.",
+					"enum": ["small", "medium", "large", "vast"]
+				},
+				"applies_to": ["oracle_rollable", "row"]
 			}
 		}
 	},
@@ -60429,7 +60438,7 @@
 						}
 					},
 					"tags": {
-						"core": {
+						"_core": {
 							"supernatural": true
 						}
 					},
@@ -60521,7 +60530,7 @@
 					],
 					"controls": {},
 					"tags": {
-						"core": {
+						"_core": {
 							"supernatural": true
 						}
 					},
@@ -60788,7 +60797,7 @@
 						}
 					},
 					"tags": {
-						"core": {
+						"_core": {
 							"supernatural": true
 						}
 					},
@@ -61525,7 +61534,7 @@
 					],
 					"controls": {},
 					"tags": {
-						"core": {
+						"_core": {
 							"supernatural": true
 						}
 					},
@@ -61715,7 +61724,7 @@
 					],
 					"controls": {},
 					"tags": {
-						"core": {
+						"_core": {
 							"supernatural": true
 						},
 						"starforged": {
@@ -62045,7 +62054,7 @@
 					],
 					"controls": {},
 					"tags": {
-						"core": {
+						"_core": {
 							"supernatural": true
 						},
 						"starforged": {
@@ -62575,7 +62584,7 @@
 					],
 					"controls": {},
 					"tags": {
-						"core": {
+						"_core": {
 							"technological": true
 						}
 					},
@@ -63374,7 +63383,7 @@
 						}
 					},
 					"tags": {
-						"core": {
+						"_core": {
 							"technological": true
 						}
 					},
@@ -63540,7 +63549,7 @@
 					],
 					"controls": {},
 					"tags": {
-						"core": {
+						"_core": {
 							"supernatural": true
 						}
 					},
@@ -63868,7 +63877,7 @@
 					],
 					"controls": {},
 					"tags": {
-						"core": {
+						"_core": {
 							"technological": true
 						}
 					},
@@ -63959,7 +63968,7 @@
 					],
 					"controls": {},
 					"tags": {
-						"core": {
+						"_core": {
 							"supernatural": true
 						},
 						"starforged": {
@@ -64164,7 +64173,7 @@
 					],
 					"controls": {},
 					"tags": {
-						"core": {
+						"_core": {
 							"technological": true
 						},
 						"starforged": {
@@ -64695,7 +64704,7 @@
 						}
 					},
 					"tags": {
-						"core": {
+						"_core": {
 							"supernatural": true
 						},
 						"starforged": {
@@ -65045,7 +65054,7 @@
 					],
 					"controls": {},
 					"tags": {
-						"core": {
+						"_core": {
 							"supernatural": true
 						},
 						"starforged": {
@@ -65865,7 +65874,7 @@
 					],
 					"controls": {},
 					"tags": {
-						"core": {
+						"_core": {
 							"supernatural": true
 						},
 						"starforged": {
@@ -66209,7 +66218,7 @@
 					],
 					"controls": {},
 					"tags": {
-						"core": {
+						"_core": {
 							"supernatural": true
 						},
 						"starforged": {
@@ -66776,7 +66785,7 @@
 						}
 					},
 					"tags": {
-						"core": {
+						"_core": {
 							"supernatural": true
 						}
 					},
@@ -67207,7 +67216,7 @@
 						}
 					},
 					"tags": {
-						"core": {
+						"_core": {
 							"technological": true
 						}
 					},
@@ -67336,7 +67345,7 @@
 						}
 					},
 					"tags": {
-						"core": {
+						"_core": {
 							"technological": true
 						}
 					},

@@ -448,8 +448,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"_source": {
 					"$ref": "#/definitions/SourceInfo",
@@ -522,8 +521,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"enhance_moves": {
 					"type": "array",
@@ -879,8 +877,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"_source": {
 					"$ref": "#/definitions/SourceInfo",
@@ -1394,8 +1391,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"_source": {
 					"$ref": "#/definitions/SourceInfo",
@@ -1483,8 +1479,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"_source": {
 					"$ref": "#/definitions/SourceInfo",
@@ -1737,6 +1732,24 @@
 				}
 			}
 		},
+		"CoreTags": {
+			"title": "CoreTags",
+			"type": "object",
+			"properties": {
+				"requires_allies": {
+					"type": "boolean",
+					"description": "This object requires allies to function, and is intended for co-op play, or guided play with allies. It is not appropriate for solo play."
+				},
+				"supernatural": {
+					"type": "boolean",
+					"description": "This object is supernatural in nature, and is ideal for settings that feature supernatural or mythic powers."
+				},
+				"technological": {
+					"type": "boolean",
+					"description": "This object is technological in nature, and is ideal for settings that feature remarkable technologies."
+				}
+			}
+		},
 		"CounterField": {
 			"title": "CounterField",
 			"type": "object",
@@ -1899,8 +1912,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"denizens": {
 					"description": "Represents the delve site's denizen matrix as an array of objects.",
@@ -2758,8 +2770,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"_source": {
 					"$ref": "#/definitions/SourceInfo",
@@ -3388,8 +3399,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"_source": {
 					"$ref": "#/definitions/SourceInfo",
@@ -3575,6 +3585,11 @@
 			"remarks": "If you need to generate a key from a user-provided label, it's recommended to use a 'slugify' function/library, e.g. https://www.npmjs.com/package/slugify for NodeJS.",
 			"pattern": "^[a-z][a-z0-9_]*$"
 		},
+		"Documentation": {
+			"title": "Documentation",
+			"type": "string",
+			"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when representing an object for gameplay."
+		},
 		"Email": {
 			"title": "Email",
 			"type": "string",
@@ -3649,8 +3664,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"allow_momentum_burn": {
 					"type": "boolean",
@@ -3802,8 +3816,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"allow_momentum_burn": {
 					"type": "boolean",
@@ -3882,8 +3895,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"rows": {
 					"type": "array",
@@ -3964,8 +3976,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"rows": {
 					"type": "array",
@@ -4046,8 +4057,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"rows": {
 					"type": "array",
@@ -4263,8 +4273,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"column_labels": {
 					"title": "TextColumnLabels",
@@ -4370,8 +4379,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"column_labels": {
 					"title": "Text2ColumnLabels",
@@ -4481,8 +4489,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"column_labels": {
 					"title": "Text3ColumnLabels",
@@ -4586,8 +4593,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"allow_momentum_burn": {
 					"type": "boolean",
@@ -4665,8 +4671,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"allow_momentum_burn": {
 					"type": "boolean",
@@ -5194,8 +5199,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"_source": {
 					"$ref": "#/definitions/SourceInfo",
@@ -5324,8 +5328,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"_source": {
 					"$ref": "#/definitions/SourceInfo",
@@ -5514,8 +5517,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"_source": {
 					"$ref": "#/definitions/SourceInfo",
@@ -5714,8 +5716,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"_source": {
 					"$ref": "#/definitions/SourceInfo",
@@ -5855,8 +5856,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"_source": {
 					"$ref": "#/definitions/SourceInfo",
@@ -6020,8 +6020,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"_source": {
 					"$ref": "#/definitions/SourceInfo",
@@ -6114,8 +6113,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"_source": {
 					"$ref": "#/definitions/SourceInfo",
@@ -6191,8 +6189,7 @@
 					"$ref": "#/definitions/MarkdownString"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				}
 			}
 		},
@@ -6383,8 +6380,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"rows": {
 					"type": "array",
@@ -6473,8 +6469,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"rows": {
 					"type": "array",
@@ -6563,8 +6558,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"rows": {
 					"type": "array",
@@ -7151,8 +7145,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"_source": {
 					"$ref": "#/definitions/SourceInfo",
@@ -7248,8 +7241,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"column_labels": {
 					"title": "TextColumnLabels",
@@ -7360,8 +7352,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"column_labels": {
 					"title": "TextColumnLabels",
@@ -7471,8 +7462,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"column_labels": {
 					"title": "Text2ColumnLabels",
@@ -7586,8 +7576,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"column_labels": {
 					"title": "Text3ColumnLabels",
@@ -7699,8 +7688,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"column_labels": {
 					"title": "TextColumnLabels",
@@ -7820,8 +7808,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"column_labels": {
 					"title": "Text2ColumnLabels",
@@ -7945,8 +7932,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"column_labels": {
 					"title": "Text3ColumnLabels",
@@ -8114,8 +8100,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"_source": {
 					"$ref": "#/definitions/SourceInfo",
@@ -9406,842 +9391,39 @@
 		"TagRule": {
 			"title": "TagRule",
 			"type": "object",
-			"remarks": "Deserialize as a discriminated union/polymorphic object type, using the `value_type` property as a discriminator.",
-			"required": ["value_type"],
+			"required": ["$schema", "applies_to"],
 			"properties": {
-				"value_type": {
-					"enum": [
-						"boolean",
-						"integer",
-						"atlas_entry",
-						"npc",
-						"oracle_rollable",
-						"asset",
-						"move",
-						"atlas_collection",
-						"npc_collection",
-						"oracle_collection",
-						"asset_collection",
-						"move_category",
-						"delve_site",
-						"delve_site_domain",
-						"delve_site_theme",
-						"rarity",
-						"truth",
-						"enum"
+				"$schema": {
+					"$ref": "#/definitions/TagSchema"
+				},
+				"applies_to": {
+					"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
+					"default": null,
+					"anyOf": [
+						{
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/TaggableNodeType"
+							}
+						},
+						{
+							"type": "null"
+						}
 					]
 				}
 			},
-			"additionalProperties": {},
-			"allOf": [
-				{
-					"if": {
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "boolean"
-							}
-						}
-					},
-					"then": {
-						"title": "TagRuleBoolean",
-						"type": "object",
-						"required": ["value_type", "description", "applies_to", "array"],
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "boolean"
-							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
-							"applies_to": {
-								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
-								"default": null,
-								"anyOf": [
-									{
-										"type": "array",
-										"items": {
-											"$ref": "#/definitions/TaggableNodeType"
-										}
-									},
-									{
-										"type": "null"
-									}
-								]
-							},
-							"array": {
-								"type": "boolean",
-								"default": false
-							}
-						}
-					}
-				},
-				{
-					"if": {
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "integer"
-							}
-						}
-					},
-					"then": {
-						"title": "TagRuleInteger",
-						"type": "object",
-						"required": ["value_type", "description", "applies_to", "array"],
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "integer"
-							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
-							"applies_to": {
-								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
-								"default": null,
-								"anyOf": [
-									{
-										"type": "array",
-										"items": {
-											"$ref": "#/definitions/TaggableNodeType"
-										}
-									},
-									{
-										"type": "null"
-									}
-								]
-							},
-							"array": {
-								"type": "boolean",
-								"default": false
-							}
-						}
-					}
-				},
-				{
-					"if": {
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "atlas_entry"
-							}
-						}
-					},
-					"then": {
-						"title": "TagRuleAtlasEntry",
-						"type": "object",
-						"required": ["value_type", "description", "applies_to", "wildcard"],
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "atlas_entry"
-							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
-							"applies_to": {
-								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
-								"default": null,
-								"anyOf": [
-									{
-										"type": "array",
-										"items": {
-											"$ref": "#/definitions/TaggableNodeType"
-										}
-									},
-									{
-										"type": "null"
-									}
-								]
-							},
-							"wildcard": {
-								"type": "boolean",
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"default": false
-							}
-						}
-					}
-				},
-				{
-					"if": {
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "npc"
-							}
-						}
-					},
-					"then": {
-						"title": "TagRuleNpc",
-						"type": "object",
-						"required": ["value_type", "description", "applies_to", "wildcard"],
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "npc"
-							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
-							"applies_to": {
-								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
-								"default": null,
-								"anyOf": [
-									{
-										"type": "array",
-										"items": {
-											"$ref": "#/definitions/TaggableNodeType"
-										}
-									},
-									{
-										"type": "null"
-									}
-								]
-							},
-							"wildcard": {
-								"type": "boolean",
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"default": false
-							}
-						}
-					}
-				},
-				{
-					"if": {
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "oracle_rollable"
-							}
-						}
-					},
-					"then": {
-						"title": "TagRuleOracleRollable",
-						"type": "object",
-						"required": ["value_type", "description", "applies_to", "wildcard"],
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "oracle_rollable"
-							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
-							"applies_to": {
-								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
-								"default": null,
-								"anyOf": [
-									{
-										"type": "array",
-										"items": {
-											"$ref": "#/definitions/TaggableNodeType"
-										}
-									},
-									{
-										"type": "null"
-									}
-								]
-							},
-							"wildcard": {
-								"type": "boolean",
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"default": false
-							}
-						}
-					}
-				},
-				{
-					"if": {
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "asset"
-							}
-						}
-					},
-					"then": {
-						"title": "TagRuleAsset",
-						"type": "object",
-						"required": ["value_type", "description", "applies_to", "wildcard"],
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "asset"
-							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
-							"applies_to": {
-								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
-								"default": null,
-								"anyOf": [
-									{
-										"type": "array",
-										"items": {
-											"$ref": "#/definitions/TaggableNodeType"
-										}
-									},
-									{
-										"type": "null"
-									}
-								]
-							},
-							"wildcard": {
-								"type": "boolean",
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"default": false
-							}
-						}
-					}
-				},
-				{
-					"if": {
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "move"
-							}
-						}
-					},
-					"then": {
-						"title": "TagRuleMove",
-						"type": "object",
-						"required": ["value_type", "description", "applies_to", "wildcard"],
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "move"
-							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
-							"applies_to": {
-								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
-								"default": null,
-								"anyOf": [
-									{
-										"type": "array",
-										"items": {
-											"$ref": "#/definitions/TaggableNodeType"
-										}
-									},
-									{
-										"type": "null"
-									}
-								]
-							},
-							"wildcard": {
-								"type": "boolean",
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"default": false
-							}
-						}
-					}
-				},
-				{
-					"if": {
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "atlas_collection"
-							}
-						}
-					},
-					"then": {
-						"title": "TagRuleAtlasCollection",
-						"type": "object",
-						"required": ["value_type", "description", "applies_to", "wildcard"],
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "atlas_collection"
-							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
-							"applies_to": {
-								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
-								"default": null,
-								"anyOf": [
-									{
-										"type": "array",
-										"items": {
-											"$ref": "#/definitions/TaggableNodeType"
-										}
-									},
-									{
-										"type": "null"
-									}
-								]
-							},
-							"wildcard": {
-								"type": "boolean",
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"default": false
-							}
-						}
-					}
-				},
-				{
-					"if": {
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "npc_collection"
-							}
-						}
-					},
-					"then": {
-						"title": "TagRuleNpcCollection",
-						"type": "object",
-						"required": ["value_type", "description", "applies_to", "wildcard"],
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "npc_collection"
-							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
-							"applies_to": {
-								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
-								"default": null,
-								"anyOf": [
-									{
-										"type": "array",
-										"items": {
-											"$ref": "#/definitions/TaggableNodeType"
-										}
-									},
-									{
-										"type": "null"
-									}
-								]
-							},
-							"wildcard": {
-								"type": "boolean",
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"default": false
-							}
-						}
-					}
-				},
-				{
-					"if": {
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "oracle_collection"
-							}
-						}
-					},
-					"then": {
-						"title": "TagRuleOracleCollection",
-						"type": "object",
-						"required": ["value_type", "description", "applies_to", "wildcard"],
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "oracle_collection"
-							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
-							"applies_to": {
-								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
-								"default": null,
-								"anyOf": [
-									{
-										"type": "array",
-										"items": {
-											"$ref": "#/definitions/TaggableNodeType"
-										}
-									},
-									{
-										"type": "null"
-									}
-								]
-							},
-							"wildcard": {
-								"type": "boolean",
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"default": false
-							}
-						}
-					}
-				},
-				{
-					"if": {
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "asset_collection"
-							}
-						}
-					},
-					"then": {
-						"title": "TagRuleAssetCollection",
-						"type": "object",
-						"required": ["value_type", "description", "applies_to", "wildcard"],
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "asset_collection"
-							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
-							"applies_to": {
-								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
-								"default": null,
-								"anyOf": [
-									{
-										"type": "array",
-										"items": {
-											"$ref": "#/definitions/TaggableNodeType"
-										}
-									},
-									{
-										"type": "null"
-									}
-								]
-							},
-							"wildcard": {
-								"type": "boolean",
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"default": false
-							}
-						}
-					}
-				},
-				{
-					"if": {
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "move_category"
-							}
-						}
-					},
-					"then": {
-						"title": "TagRuleMoveCategory",
-						"type": "object",
-						"required": ["value_type", "description", "applies_to", "wildcard"],
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "move_category"
-							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
-							"applies_to": {
-								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
-								"default": null,
-								"anyOf": [
-									{
-										"type": "array",
-										"items": {
-											"$ref": "#/definitions/TaggableNodeType"
-										}
-									},
-									{
-										"type": "null"
-									}
-								]
-							},
-							"wildcard": {
-								"type": "boolean",
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"default": false
-							}
-						}
-					}
-				},
-				{
-					"if": {
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "delve_site"
-							}
-						}
-					},
-					"then": {
-						"title": "TagRuleDelveSite",
-						"type": "object",
-						"required": ["value_type", "description", "applies_to", "wildcard"],
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "delve_site"
-							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
-							"applies_to": {
-								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
-								"default": null,
-								"anyOf": [
-									{
-										"type": "array",
-										"items": {
-											"$ref": "#/definitions/TaggableNodeType"
-										}
-									},
-									{
-										"type": "null"
-									}
-								]
-							},
-							"wildcard": {
-								"type": "boolean",
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"default": false
-							}
-						}
-					}
-				},
-				{
-					"if": {
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "delve_site_domain"
-							}
-						}
-					},
-					"then": {
-						"title": "TagRuleDelveSiteDomain",
-						"type": "object",
-						"required": ["value_type", "description", "applies_to", "wildcard"],
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "delve_site_domain"
-							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
-							"applies_to": {
-								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
-								"default": null,
-								"anyOf": [
-									{
-										"type": "array",
-										"items": {
-											"$ref": "#/definitions/TaggableNodeType"
-										}
-									},
-									{
-										"type": "null"
-									}
-								]
-							},
-							"wildcard": {
-								"type": "boolean",
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"default": false
-							}
-						}
-					}
-				},
-				{
-					"if": {
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "delve_site_theme"
-							}
-						}
-					},
-					"then": {
-						"title": "TagRuleDelveSiteTheme",
-						"type": "object",
-						"required": ["value_type", "description", "applies_to", "wildcard"],
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "delve_site_theme"
-							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
-							"applies_to": {
-								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
-								"default": null,
-								"anyOf": [
-									{
-										"type": "array",
-										"items": {
-											"$ref": "#/definitions/TaggableNodeType"
-										}
-									},
-									{
-										"type": "null"
-									}
-								]
-							},
-							"wildcard": {
-								"type": "boolean",
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"default": false
-							}
-						}
-					}
-				},
-				{
-					"if": {
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "rarity"
-							}
-						}
-					},
-					"then": {
-						"title": "TagRuleRarity",
-						"type": "object",
-						"required": ["value_type", "description", "applies_to", "wildcard"],
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "rarity"
-							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
-							"applies_to": {
-								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
-								"default": null,
-								"anyOf": [
-									{
-										"type": "array",
-										"items": {
-											"$ref": "#/definitions/TaggableNodeType"
-										}
-									},
-									{
-										"type": "null"
-									}
-								]
-							},
-							"wildcard": {
-								"type": "boolean",
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"default": false
-							}
-						}
-					}
-				},
-				{
-					"if": {
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "truth"
-							}
-						}
-					},
-					"then": {
-						"title": "TagRuleTruth",
-						"type": "object",
-						"required": ["value_type", "description", "applies_to", "wildcard"],
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "truth"
-							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
-							"applies_to": {
-								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
-								"default": null,
-								"anyOf": [
-									{
-										"type": "array",
-										"items": {
-											"$ref": "#/definitions/TaggableNodeType"
-										}
-									},
-									{
-										"type": "null"
-									}
-								]
-							},
-							"wildcard": {
-								"type": "boolean",
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.",
-								"default": false
-							}
-						}
-					}
-				},
-				{
-					"if": {
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "enum"
-							}
-						}
-					},
-					"then": {
-						"title": "TagRuleEnum",
-						"type": "object",
-						"required": [
-							"value_type",
-							"description",
-							"applies_to",
-							"array",
-							"enum"
-						],
-						"properties": {
-							"value_type": {
-								"type": "string",
-								"const": "enum"
-							},
-							"description": {
-								"$ref": "#/definitions/MarkdownString"
-							},
-							"applies_to": {
-								"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
-								"default": null,
-								"anyOf": [
-									{
-										"type": "array",
-										"items": {
-											"$ref": "#/definitions/TaggableNodeType"
-										}
-									},
-									{
-										"type": "null"
-									}
-								]
-							},
-							"array": {
-								"type": "boolean",
-								"default": false
-							},
-							"enum": {
-								"type": "array",
-								"items": {
-									"$ref": "#/definitions/DictKey"
-								}
-							}
-						}
-					}
-				}
-			]
+			"additionalProperties": {}
 		},
 		"Tags": {
 			"title": "Tags",
 			"type": "object",
 			"description": "A dictionary of tags, keyed by the RulesPackageId that the tags are from.",
 			"releaseStage": "experimental",
+			"properties": {
+				"_core": {
+					"$ref": "#/definitions/CoreTags"
+				}
+			},
 			"patternProperties": {
 				"^[a-z][a-z0-9_]*$": {
 					"title": "RulesPackageTags",
@@ -10257,28 +9439,22 @@
 			},
 			"key": "^[a-z][a-z0-9_]*$"
 		},
-		"TagsCore": {
-			"title": "TagsCore",
-			"type": "object",
-			"properties": {
-				"requires_allies": {
-					"type": "boolean",
-					"description": "This object requires allies to function, and is intended for co-op play, or guided play with allies. It is not appropriate for solo play."
+		"TagSchema": {
+			"$ref": "http://json-schema.org/draft-07/schema#",
+			"title": "TagSchema",
+			"description": "A JSON schema used to validate the tag data.",
+			"releaseStage": "experimental",
+			"examples": [
+				{
+					"type": "boolean"
 				},
-				"supernatural": {
-					"type": "boolean",
-					"description": "This object is supernatural in nature, and is ideal for settings that feature supernatural or mythic powers."
-				},
-				"technological": {
-					"type": "boolean",
-					"description": "This object is technological in nature, and is ideal for settings that feature remarkable technologies."
+				{
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/OracleRollableIdWildcard"
+					}
 				}
-			},
-			"patternProperties": {
-				"^[a-z][a-z0-9_]*$": {
-					"$ref": "#/definitions/Tag"
-				}
-			}
+			]
 		},
 		"TextField": {
 			"title": "TextField",
@@ -10769,8 +9945,7 @@
 					"$ref": "#/definitions/Tags"
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				},
 				"_source": {
 					"$ref": "#/definitions/SourceInfo",
@@ -10832,8 +10007,7 @@
 					}
 				},
 				"_comment": {
-					"type": "string",
-					"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
+					"$ref": "#/definitions/Documentation"
 				}
 			}
 		},

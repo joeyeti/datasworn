@@ -29,10 +29,7 @@ export interface Asset {
      * The unique Datasworn ID for this node.
      */
     _id: AssetId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -110,10 +107,7 @@ export interface AssetAbility {
      * The unique Datasworn ID for this node.
      */
     _id: AssetAbilityId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * A handful of asset abilities have a label/name, for instance classic Ironsworn companion assets. Most canonical assets omit this property.
      */
@@ -289,10 +283,7 @@ export interface AssetCollection {
      * The unique Datasworn ID for this node.
      */
     _id: AssetCollectionId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -512,10 +503,7 @@ export interface AtlasCollection {
      * The unique Datasworn ID for this node.
      */
     _id: AtlasCollectionId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -589,10 +577,7 @@ export interface AtlasEntry {
      * The unique Datasworn ID for this node.
      */
     _id: AtlasEntryId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     name: Label;
     /**
      * The name of this node as it appears on the page in the book, if it's different from `name`.
@@ -808,6 +793,20 @@ export interface ConditionMeterValueRef {
      */
     using: 'condition_meter';
 }
+export interface CoreTags {
+    /**
+     * This object is supernatural in nature, and is ideal for settings that feature supernatural or mythic powers.
+     */
+    supernatural?: boolean;
+    /**
+     * This object is technological in nature, and is ideal for settings that feature remarkable technologies.
+     */
+    technological?: boolean;
+    /**
+     * This object requires allies to function, and is intended for co-op play, or guided play with allies. It is not appropriate for solo play.
+     */
+    requires_allies?: boolean;
+}
 /**
  * A basic counter representing a non-rollable integer value. They usually start at 0, and may or may not have a maximum.
  * @remarks Semantics are similar to `<input type="number" step="1">`
@@ -860,10 +859,7 @@ export interface DelveSite {
      * The unique Datasworn ID for this node.
      */
     _id: DelveSiteId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -1039,10 +1035,7 @@ export interface DelveSiteDomain {
      * The unique Datasworn ID for this node.
      */
     _id: DelveSiteDomainId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -1316,10 +1309,7 @@ export interface DelveSiteTheme {
      * The unique Datasworn ID for this node.
      */
     _id: DelveSiteThemeId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -1599,15 +1589,16 @@ export interface DiceRange {
  */
 export type DictKey = string;
 /**
+ * Implementation hints or other developer-facing comments on this node. These should be omitted when representing an object for gameplay.
+ */
+export type Documentation = string;
+/**
  * An email address.
  */
 export type Email = string;
 export interface EmbeddedActionRollMove {
     _id: EmbeddedMoveId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -1652,10 +1643,7 @@ export type EmbeddedMoveId = AssetAbilityMoveId;
 export type EmbeddedMoveIdWildcard = AssetAbilityMoveIdWildcard;
 export interface EmbeddedNoRollMove {
     _id: EmbeddedMoveId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -1696,10 +1684,7 @@ export interface EmbeddedNoRollMove {
 }
 export interface EmbeddedOracleColumnText {
     _id: EmbeddedOracleRollableId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -1747,10 +1732,7 @@ export interface EmbeddedOracleColumnText {
 }
 export interface EmbeddedOracleColumnText2 {
     _id: EmbeddedOracleRollableId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -1798,10 +1780,7 @@ export interface EmbeddedOracleColumnText2 {
 }
 export interface EmbeddedOracleColumnText3 {
     _id: EmbeddedOracleRollableId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -1855,10 +1834,7 @@ export type EmbeddedOracleRollableId = AssetAbilityOracleRollableId | TruthOptio
 export type EmbeddedOracleRollableIdWildcard = AssetAbilityOracleRollableIdWildcard | TruthOptionOracleRollableIdWildcard | MoveOracleRollableIdWildcard;
 export interface EmbeddedOracleTableText {
     _id: EmbeddedOracleRollableId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -1919,10 +1895,7 @@ export interface EmbeddedOracleTableText {
 }
 export interface EmbeddedOracleTableText2 {
     _id: EmbeddedOracleRollableId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -1985,10 +1958,7 @@ export interface EmbeddedOracleTableText2 {
 }
 export interface EmbeddedOracleTableText3 {
     _id: EmbeddedOracleRollableId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -2042,10 +2012,7 @@ export interface EmbeddedOracleTableText3 {
 }
 export interface EmbeddedProgressRollMove {
     _id: EmbeddedMoveId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -2087,10 +2054,7 @@ export interface EmbeddedProgressRollMove {
 }
 export interface EmbeddedSpecialTrackMove {
     _id: EmbeddedMoveId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -2361,10 +2325,7 @@ export interface MoveActionRoll {
      * The unique Datasworn ID for this node.
      */
     _id: MoveId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -2434,10 +2395,7 @@ export interface MoveCategory {
      * The unique Datasworn ID for this node.
      */
     _id: MoveCategoryId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -2529,10 +2487,7 @@ export interface MoveNoRoll {
      * The unique Datasworn ID for this node.
      */
     _id: MoveId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -2654,10 +2609,7 @@ export interface MoveProgressRoll {
      * The unique Datasworn ID for this node.
      */
     _id: MoveId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -2740,10 +2692,7 @@ export interface MoveSpecialTrack {
      * The unique Datasworn ID for this node.
      */
     _id: MoveId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -2816,10 +2765,7 @@ export interface Npc {
      * The unique Datasworn ID for this node.
      */
     _id: NpcId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     name: Label;
     /**
      * The name of this node as it appears on the page in the book, if it's different from `name`.
@@ -2868,10 +2814,7 @@ export interface NpcCollection {
      * The unique Datasworn ID for this node.
      */
     _id: NpcCollectionId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -2975,10 +2918,7 @@ export interface NpcVariant {
      * The unique Datasworn ID for this node.
      */
     _id: NpcVariantId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     name: Label;
     /**
      * The suggested challenge rank for this NPC.
@@ -3028,10 +2968,7 @@ export interface OracleColumnText {
      * The unique Datasworn ID for this node.
      */
     _id: OracleRollableId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -3086,10 +3023,7 @@ export interface OracleColumnText2 {
      * The unique Datasworn ID for this node.
      */
     _id: OracleRollableId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -3144,10 +3078,7 @@ export interface OracleColumnText3 {
      * The unique Datasworn ID for this node.
      */
     _id: OracleRollableId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -3420,10 +3351,7 @@ export interface OracleTablesCollection {
      * The unique Datasworn ID for this node.
      */
     _id: OracleCollectionId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -3484,10 +3412,7 @@ export interface OracleTableSharedRolls {
      * The unique Datasworn ID for this node.
      */
     _id: OracleCollectionId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -3556,10 +3481,7 @@ export interface OracleTableSharedText {
      * The unique Datasworn ID for this node.
      */
     _id: OracleCollectionId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -3627,10 +3549,7 @@ export interface OracleTableSharedText2 {
      * The unique Datasworn ID for this node.
      */
     _id: OracleCollectionId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -3700,10 +3619,7 @@ export interface OracleTableSharedText3 {
      * The unique Datasworn ID for this node.
      */
     _id: OracleCollectionId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -3767,10 +3683,7 @@ export interface OracleTableText {
      * The unique Datasworn ID for this node.
      */
     _id: OracleRollableId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -3845,10 +3758,7 @@ export interface OracleTableText2 {
      * The unique Datasworn ID for this node.
      */
     _id: OracleRollableId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -3925,10 +3835,7 @@ export interface OracleTableText3 {
      * The unique Datasworn ID for this node.
      */
     _id: OracleRollableId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -4046,10 +3953,7 @@ export interface Rarity {
      * The unique Datasworn ID for this node.
      */
     _id: RarityId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -4612,261 +4516,37 @@ export type Suggestions = AnyIdWildcard[];
 export type SvgImageUrl = string;
 export type Tag = boolean | number | DictKey | DiceExpression | AtlasEntryId | NpcId | OracleRollableId | AssetId | MoveId | AtlasCollectionId | NpcCollectionId | OracleCollectionId | AssetCollectionId | MoveCategoryId | DelveSiteId | DelveSiteDomainId | DelveSiteThemeId | RarityId | TruthId | Array<AtlasEntryIdWildcard | NpcIdWildcard | OracleRollableIdWildcard | AssetIdWildcard | MoveIdWildcard | AtlasCollectionIdWildcard | NpcCollectionIdWildcard | OracleCollectionIdWildcard | AssetCollectionIdWildcard | MoveCategoryIdWildcard | DelveSiteIdWildcard | DelveSiteDomainIdWildcard | DelveSiteThemeIdWildcard | RarityIdWildcard | TruthIdWildcard>;
 export type TaggableNodeType = CollectableType | NonCollectableType | CollectionType | EmbedOnlyType;
-/**
- * @remarks Deserialize as a discriminated union/polymorphic object type, using the `value_type` property as a discriminator.
- */
-export type TagRule = {
+export interface TagRule {
     /**
      * Types of object that can receive this tag, or `null` if any type of object accepts it.
      * @default null
      */
     applies_to: TaggableNodeType[] | null;
-    description: MarkdownString;
-    /**
-     * @default false
-     */
-    array: boolean;
-    value_type: 'boolean';
-} | {
-    /**
-     * Types of object that can receive this tag, or `null` if any type of object accepts it.
-     * @default null
-     */
-    applies_to: TaggableNodeType[] | null;
-    description: MarkdownString;
-    /**
-     * @default false
-     */
-    array: boolean;
-    value_type: 'integer';
-} | {
-    /**
-     * Types of object that can receive this tag, or `null` if any type of object accepts it.
-     * @default null
-     */
-    applies_to: TaggableNodeType[] | null;
-    description: MarkdownString;
-    /**
-     * If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.
-     * @default false
-     */
-    wildcard: boolean;
-    value_type: 'atlas_entry';
-} | {
-    /**
-     * Types of object that can receive this tag, or `null` if any type of object accepts it.
-     * @default null
-     */
-    applies_to: TaggableNodeType[] | null;
-    description: MarkdownString;
-    /**
-     * If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.
-     * @default false
-     */
-    wildcard: boolean;
-    value_type: 'npc';
-} | {
-    /**
-     * Types of object that can receive this tag, or `null` if any type of object accepts it.
-     * @default null
-     */
-    applies_to: TaggableNodeType[] | null;
-    description: MarkdownString;
-    /**
-     * If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.
-     * @default false
-     */
-    wildcard: boolean;
-    value_type: 'oracle_rollable';
-} | {
-    /**
-     * Types of object that can receive this tag, or `null` if any type of object accepts it.
-     * @default null
-     */
-    applies_to: TaggableNodeType[] | null;
-    description: MarkdownString;
-    /**
-     * If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.
-     * @default false
-     */
-    wildcard: boolean;
-    value_type: 'asset';
-} | {
-    /**
-     * Types of object that can receive this tag, or `null` if any type of object accepts it.
-     * @default null
-     */
-    applies_to: TaggableNodeType[] | null;
-    description: MarkdownString;
-    /**
-     * If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.
-     * @default false
-     */
-    wildcard: boolean;
-    value_type: 'move';
-} | {
-    /**
-     * Types of object that can receive this tag, or `null` if any type of object accepts it.
-     * @default null
-     */
-    applies_to: TaggableNodeType[] | null;
-    description: MarkdownString;
-    /**
-     * If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.
-     * @default false
-     */
-    wildcard: boolean;
-    value_type: 'atlas_collection';
-} | {
-    /**
-     * Types of object that can receive this tag, or `null` if any type of object accepts it.
-     * @default null
-     */
-    applies_to: TaggableNodeType[] | null;
-    description: MarkdownString;
-    /**
-     * If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.
-     * @default false
-     */
-    wildcard: boolean;
-    value_type: 'npc_collection';
-} | {
-    /**
-     * Types of object that can receive this tag, or `null` if any type of object accepts it.
-     * @default null
-     */
-    applies_to: TaggableNodeType[] | null;
-    description: MarkdownString;
-    /**
-     * If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.
-     * @default false
-     */
-    wildcard: boolean;
-    value_type: 'oracle_collection';
-} | {
-    /**
-     * Types of object that can receive this tag, or `null` if any type of object accepts it.
-     * @default null
-     */
-    applies_to: TaggableNodeType[] | null;
-    description: MarkdownString;
-    /**
-     * If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.
-     * @default false
-     */
-    wildcard: boolean;
-    value_type: 'asset_collection';
-} | {
-    /**
-     * Types of object that can receive this tag, or `null` if any type of object accepts it.
-     * @default null
-     */
-    applies_to: TaggableNodeType[] | null;
-    description: MarkdownString;
-    /**
-     * If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.
-     * @default false
-     */
-    wildcard: boolean;
-    value_type: 'move_category';
-} | {
-    /**
-     * Types of object that can receive this tag, or `null` if any type of object accepts it.
-     * @default null
-     */
-    applies_to: TaggableNodeType[] | null;
-    description: MarkdownString;
-    /**
-     * If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.
-     * @default false
-     */
-    wildcard: boolean;
-    value_type: 'delve_site';
-} | {
-    /**
-     * Types of object that can receive this tag, or `null` if any type of object accepts it.
-     * @default null
-     */
-    applies_to: TaggableNodeType[] | null;
-    description: MarkdownString;
-    /**
-     * If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.
-     * @default false
-     */
-    wildcard: boolean;
-    value_type: 'delve_site_domain';
-} | {
-    /**
-     * Types of object that can receive this tag, or `null` if any type of object accepts it.
-     * @default null
-     */
-    applies_to: TaggableNodeType[] | null;
-    description: MarkdownString;
-    /**
-     * If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.
-     * @default false
-     */
-    wildcard: boolean;
-    value_type: 'delve_site_theme';
-} | {
-    /**
-     * Types of object that can receive this tag, or `null` if any type of object accepts it.
-     * @default null
-     */
-    applies_to: TaggableNodeType[] | null;
-    description: MarkdownString;
-    /**
-     * If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.
-     * @default false
-     */
-    wildcard: boolean;
-    value_type: 'rarity';
-} | {
-    /**
-     * Types of object that can receive this tag, or `null` if any type of object accepts it.
-     * @default null
-     */
-    applies_to: TaggableNodeType[] | null;
-    description: MarkdownString;
-    /**
-     * If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.
-     * @default false
-     */
-    wildcard: boolean;
-    value_type: 'truth';
-} | {
-    /**
-     * Types of object that can receive this tag, or `null` if any type of object accepts it.
-     * @default null
-     */
-    applies_to: TaggableNodeType[] | null;
-    description: MarkdownString;
-    /**
-     * @default false
-     */
-    array: boolean;
-    value_type: 'enum';
-    enum: DictKey[];
-};
+    $schema: TagSchema;
+}
 /**
  * A dictionary of tags, keyed by the RulesPackageId that the tags are from.
  * @experimental
  */
 export type Tags = Record<DictKey, Record<DictKey, Tag>>;
-export interface TagsCore {
-    /**
-     * This object is supernatural in nature, and is ideal for settings that feature supernatural or mythic powers.
-     */
-    supernatural?: boolean;
-    /**
-     * This object is technological in nature, and is ideal for settings that feature remarkable technologies.
-     */
-    technological?: boolean;
-    /**
-     * This object requires allies to function, and is intended for co-op play, or guided play with allies. It is not appropriate for solo play.
-     */
-    requires_allies?: boolean;
-}
+/**
+ * A JSON schema used to validate the tag data.
+ * @example ```javascript
+ * 	{
+ * 		type: "boolean"
+ * 	}
+ * ```
+ * @example ```javascript
+ * 	{
+ * 		type: "array",
+ * 		items: {
+ * 			$ref: "OracleRollableIdWildcard"
+ * 		}
+ * 	}
+ * ```
+ * @experimental
+ */
+export type TagSchema = unknown;
 /**
  * Represents an input that accepts plain text.
  * @remarks Semantics are similar to the HTML `<input type="text">` element.
@@ -5119,10 +4799,7 @@ export interface Truth {
      * The unique Datasworn ID for this node.
      */
     _id: TruthId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     /**
      * The primary name/label for this node.
      */
@@ -5184,10 +4861,7 @@ export interface TruthOption {
      * The unique Datasworn ID for this node.
      */
     _id: TruthOptionId;
-    /**
-     * Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.
-     */
-    _comment?: string;
+    _comment?: Documentation;
     roll: DiceRange;
     summary?: MarkdownString;
     description: MarkdownString;

@@ -25,7 +25,7 @@ assets:
         _source:
           <<: *Source
         tags:
-          core:
+          _core:
             supernatural: true
         <<: &CompanionAsset
           color: *CompanionAsset.color
@@ -82,7 +82,7 @@ assets:
         name: Chattering Skull
         type: asset
         tags:
-          core:
+          _core:
             supernatural: true
         _source:
           <<: *Source
@@ -165,7 +165,7 @@ assets:
         name: Dragon
         type: asset
         tags:
-          core:
+          _core:
             supernatural: true
         _source:
           <<: *Source
@@ -417,7 +417,7 @@ assets:
         name: The Kraken
         type: asset
         tags:
-          core:
+          _core:
             supernatural: true
         _source:
           <<: *Source

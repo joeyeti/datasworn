@@ -9,15 +9,11 @@ import { Computed } from '../Utils.js'
 import { setDescriptions } from '../utils/typebox.js'
 import { FlatIntersect } from '../utils/FlatIntersect.js'
 import type { TAnyId } from '../common/Id.js'
+import { Documentation } from '../common/Text.js'
 
 const IdNodeBase = Type.Object({
 	_id: Computed(Type.String()),
-	_comment: Type.Optional(
-		Type.String({
-			description:
-				'Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay.'
-		})
-	)
+	_comment: Type.Optional(Type.Ref(Documentation))
 })
 
 export function IdNode<TBase extends TObject>(

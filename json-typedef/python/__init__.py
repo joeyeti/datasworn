@@ -547,12 +547,7 @@ class Asset:
     """
 
     type: 'AssetType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     attachments: 'Optional[AssetAttachment]'
     canonical_name: 'Optional[Label]'
     """
@@ -603,7 +598,7 @@ class Asset:
             _from_json_data(Dict[str, AssetOptionField], data.get("options")),
             _from_json_data(bool, data.get("shared")),
             _from_json_data(AssetType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[AssetAttachment], data.get("attachments")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
@@ -673,12 +668,7 @@ class AssetAbility:
     The complete rules text of this asset ability.
     """
 
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     controls: 'Optional[Dict[str, AssetAbilityControlField]]'
     """
     Fields whose values are expected to change over the life of the asset.
@@ -721,7 +711,7 @@ class AssetAbility:
             _from_json_data(AssetAbilityID, data.get("_id")),
             _from_json_data(bool, data.get("enabled")),
             _from_json_data(MarkdownString, data.get("text")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Dict[str, AssetAbilityControlField]], data.get("controls")),
             _from_json_data(Optional[AssetEnhancement], data.get("enhance_asset")),
             _from_json_data(Optional[List[MoveEnhancement]], data.get("enhance_moves")),
@@ -1296,12 +1286,7 @@ class AssetCollection:
     """
 
     type: 'AssetCollectionType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -1356,7 +1341,7 @@ class AssetCollection:
             _from_json_data(Dict[str, Asset], data.get("contents")),
             _from_json_data(Label, data.get("name")),
             _from_json_data(AssetCollectionType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[MarkdownString], data.get("description")),
@@ -2474,12 +2459,7 @@ class AtlasCollection:
     """
 
     type: 'AtlasCollectionType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -2534,7 +2514,7 @@ class AtlasCollection:
             _from_json_data(Dict[str, AtlasEntry], data.get("contents")),
             _from_json_data(Label, data.get("name")),
             _from_json_data(AtlasCollectionType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[MarkdownString], data.get("description")),
@@ -2641,12 +2621,7 @@ class AtlasEntry:
     features: 'List[MarkdownString]'
     name: 'Label'
     type: 'AtlasEntryType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -2685,7 +2660,7 @@ class AtlasEntry:
             _from_json_data(List[MarkdownString], data.get("features")),
             _from_json_data(Label, data.get("name")),
             _from_json_data(AtlasEntryType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -3179,6 +3154,45 @@ class ConditionMeterValueRef:
         data["using"] = _to_json_data(self.using)
         return data
 
+@dataclass
+class CoreTags:
+    requires_allies: 'Optional[bool]'
+    """
+    This object requires allies to function, and is intended for co-op play, or
+    guided play with allies. It is not appropriate for solo play.
+    """
+
+    supernatural: 'Optional[bool]'
+    """
+    This object is supernatural in nature, and is ideal for settings that
+    feature supernatural or mythic powers.
+    """
+
+    technological: 'Optional[bool]'
+    """
+    This object is technological in nature, and is ideal for settings that
+    feature remarkable technologies.
+    """
+
+
+    @classmethod
+    def from_json_data(cls, data: Any) -> 'CoreTags':
+        return cls(
+            _from_json_data(Optional[bool], data.get("requires_allies")),
+            _from_json_data(Optional[bool], data.get("supernatural")),
+            _from_json_data(Optional[bool], data.get("technological")),
+        )
+
+    def to_json_data(self) -> Any:
+        data: Dict[str, Any] = {}
+        if self.requires_allies is not None:
+             data["requires_allies"] = _to_json_data(self.requires_allies)
+        if self.supernatural is not None:
+             data["supernatural"] = _to_json_data(self.supernatural)
+        if self.technological is not None:
+             data["technological"] = _to_json_data(self.technological)
+        return data
+
 class CounterFieldFieldType(Enum):
     COUNTER = "counter"
     @classmethod
@@ -3345,12 +3359,7 @@ class DelveSite:
     """
 
     type: 'DelveSiteType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -3401,7 +3410,7 @@ class DelveSite:
             _from_json_data(ChallengeRank, data.get("rank")),
             _from_json_data(DelveSiteThemeID, data.get("theme")),
             _from_json_data(DelveSiteType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[str], data.get("extra_card")),
@@ -3567,12 +3576,7 @@ class DelveSiteDomain:
     """
 
     type: 'DelveSiteDomainType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -3618,7 +3622,7 @@ class DelveSiteDomain:
             _from_json_data(List[DelveSiteDomainFeature], data.get("features")),
             _from_json_data(Label, data.get("name")),
             _from_json_data(DelveSiteDomainType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -3945,12 +3949,7 @@ class DelveSiteTheme:
     """
 
     type: 'DelveSiteThemeType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -3986,7 +3985,7 @@ class DelveSiteTheme:
             _from_json_data(List[DelveSiteThemeFeature], data.get("features")),
             _from_json_data(Label, data.get("name")),
             _from_json_data(DelveSiteThemeType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -4308,6 +4307,22 @@ class DictKey:
         return _to_json_data(self.value)
 
 @dataclass
+class Documentation:
+    """
+    Implementation hints or other developer-facing comments on this node. These
+    should be omitted when representing an object for gameplay.
+    """
+
+    value: 'str'
+
+    @classmethod
+    def from_json_data(cls, data: Any) -> 'Documentation':
+        return cls(_from_json_data(str, data))
+
+    def to_json_data(self) -> Any:
+        return _to_json_data(self.value)
+
+@dataclass
 class Email:
     """
     An email address.
@@ -4381,12 +4396,7 @@ class EmbeddedActionRollMove:
     """
 
     type: 'EmbeddedActionRollMoveType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -4418,7 +4428,7 @@ class EmbeddedActionRollMove:
             _from_json_data(MarkdownString, data.get("text")),
             _from_json_data(TriggerActionRoll, data.get("trigger")),
             _from_json_data(EmbeddedActionRollMoveType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -4505,12 +4515,7 @@ class EmbeddedMoveActionRoll(EmbeddedMove):
     """
 
     type: 'EmbeddedMoveActionRollType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -4542,7 +4547,7 @@ class EmbeddedMoveActionRoll(EmbeddedMove):
             _from_json_data(MarkdownString, data.get("text")),
             _from_json_data(TriggerActionRoll, data.get("trigger")),
             _from_json_data(EmbeddedMoveActionRollType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -4609,12 +4614,7 @@ class EmbeddedMoveNoRoll(EmbeddedMove):
     """
 
     type: 'EmbeddedMoveNoRollType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -4645,7 +4645,7 @@ class EmbeddedMoveNoRoll(EmbeddedMove):
             _from_json_data(MarkdownString, data.get("text")),
             _from_json_data(TriggerNoRoll, data.get("trigger")),
             _from_json_data(EmbeddedMoveNoRollType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -4717,12 +4717,7 @@ class EmbeddedMoveProgressRoll(EmbeddedMove):
     """
 
     type: 'EmbeddedMoveProgressRollType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -4755,7 +4750,7 @@ class EmbeddedMoveProgressRoll(EmbeddedMove):
             _from_json_data(ProgressTrackTypeInfo, data.get("tracks")),
             _from_json_data(TriggerProgressRoll, data.get("trigger")),
             _from_json_data(EmbeddedMoveProgressRollType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -4824,12 +4819,7 @@ class EmbeddedMoveSpecialTrack(EmbeddedMove):
     """
 
     type: 'EmbeddedMoveSpecialTrackType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -4861,7 +4851,7 @@ class EmbeddedMoveSpecialTrack(EmbeddedMove):
             _from_json_data(MarkdownString, data.get("text")),
             _from_json_data(TriggerSpecialTrack, data.get("trigger")),
             _from_json_data(EmbeddedMoveSpecialTrackType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -4960,12 +4950,7 @@ class EmbeddedNoRollMove:
     """
 
     type: 'EmbeddedNoRollMoveType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -4996,7 +4981,7 @@ class EmbeddedNoRollMove:
             _from_json_data(MarkdownString, data.get("text")),
             _from_json_data(TriggerNoRoll, data.get("trigger")),
             _from_json_data(EmbeddedNoRollMoveType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -5086,12 +5071,7 @@ class EmbeddedOracleColumnText:
     """
 
     type: 'EmbeddedOracleColumnTextType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -5128,7 +5108,7 @@ class EmbeddedOracleColumnText:
             _from_json_data(EmbeddedOracleColumnTextOracleType, data.get("oracle_type")),
             _from_json_data(List[OracleRollableRowText], data.get("rows")),
             _from_json_data(EmbeddedOracleColumnTextType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -5223,12 +5203,7 @@ class EmbeddedOracleColumnText2:
     """
 
     type: 'EmbeddedOracleColumnText2Type'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -5265,7 +5240,7 @@ class EmbeddedOracleColumnText2:
             _from_json_data(EmbeddedOracleColumnText2OracleType, data.get("oracle_type")),
             _from_json_data(List[OracleRollableRowText2], data.get("rows")),
             _from_json_data(EmbeddedOracleColumnText2Type, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -5360,12 +5335,7 @@ class EmbeddedOracleColumnText3:
     """
 
     type: 'EmbeddedOracleColumnText3Type'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -5402,7 +5372,7 @@ class EmbeddedOracleColumnText3:
             _from_json_data(EmbeddedOracleColumnText3OracleType, data.get("oracle_type")),
             _from_json_data(List[OracleRollableRowText3], data.get("rows")),
             _from_json_data(EmbeddedOracleColumnText3Type, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -5507,12 +5477,7 @@ class EmbeddedOracleRollableColumnText(EmbeddedOracleRollable):
     """
 
     type: 'EmbeddedOracleRollableColumnTextType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -5549,7 +5514,7 @@ class EmbeddedOracleRollableColumnText(EmbeddedOracleRollable):
             _from_json_data(Label, data.get("name")),
             _from_json_data(List[OracleRollableRowText], data.get("rows")),
             _from_json_data(EmbeddedOracleRollableColumnTextType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -5633,12 +5598,7 @@ class EmbeddedOracleRollableColumnText2(EmbeddedOracleRollable):
     """
 
     type: 'EmbeddedOracleRollableColumnText2Type'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -5675,7 +5635,7 @@ class EmbeddedOracleRollableColumnText2(EmbeddedOracleRollable):
             _from_json_data(Label, data.get("name")),
             _from_json_data(List[OracleRollableRowText2], data.get("rows")),
             _from_json_data(EmbeddedOracleRollableColumnText2Type, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -5759,12 +5719,7 @@ class EmbeddedOracleRollableColumnText3(EmbeddedOracleRollable):
     """
 
     type: 'EmbeddedOracleRollableColumnText3Type'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -5801,7 +5756,7 @@ class EmbeddedOracleRollableColumnText3(EmbeddedOracleRollable):
             _from_json_data(Label, data.get("name")),
             _from_json_data(List[OracleRollableRowText3], data.get("rows")),
             _from_json_data(EmbeddedOracleRollableColumnText3Type, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -5904,12 +5859,7 @@ class EmbeddedOracleRollableTableText(EmbeddedOracleRollable):
     """
 
     type: 'EmbeddedOracleRollableTableTextType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -5947,7 +5897,7 @@ class EmbeddedOracleRollableTableText(EmbeddedOracleRollable):
             _from_json_data(Label, data.get("name")),
             _from_json_data(List[OracleRollableRowText], data.get("rows")),
             _from_json_data(EmbeddedOracleRollableTableTextType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -6054,12 +6004,7 @@ class EmbeddedOracleRollableTableText2(EmbeddedOracleRollable):
     """
 
     type: 'EmbeddedOracleRollableTableText2Type'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -6097,7 +6042,7 @@ class EmbeddedOracleRollableTableText2(EmbeddedOracleRollable):
             _from_json_data(Label, data.get("name")),
             _from_json_data(List[OracleRollableRowText2], data.get("rows")),
             _from_json_data(EmbeddedOracleRollableTableText2Type, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -6207,12 +6152,7 @@ class EmbeddedOracleRollableTableText3(EmbeddedOracleRollable):
     """
 
     type: 'EmbeddedOracleRollableTableText3Type'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -6250,7 +6190,7 @@ class EmbeddedOracleRollableTableText3(EmbeddedOracleRollable):
             _from_json_data(Label, data.get("name")),
             _from_json_data(List[OracleRollableRowText3], data.get("rows")),
             _from_json_data(EmbeddedOracleRollableTableText3Type, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -6386,12 +6326,7 @@ class EmbeddedOracleTableText:
     """
 
     type: 'EmbeddedOracleTableTextType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -6429,7 +6364,7 @@ class EmbeddedOracleTableText:
             _from_json_data(EmbeddedOracleTableTextOracleType, data.get("oracle_type")),
             _from_json_data(List[OracleRollableRowText], data.get("rows")),
             _from_json_data(EmbeddedOracleTableTextType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -6547,12 +6482,7 @@ class EmbeddedOracleTableText2:
     """
 
     type: 'EmbeddedOracleTableText2Type'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -6590,7 +6520,7 @@ class EmbeddedOracleTableText2:
             _from_json_data(EmbeddedOracleTableText2OracleType, data.get("oracle_type")),
             _from_json_data(List[OracleRollableRowText2], data.get("rows")),
             _from_json_data(EmbeddedOracleTableText2Type, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -6711,12 +6641,7 @@ class EmbeddedOracleTableText3:
     """
 
     type: 'EmbeddedOracleTableText3Type'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -6754,7 +6679,7 @@ class EmbeddedOracleTableText3:
             _from_json_data(EmbeddedOracleTableText3OracleType, data.get("oracle_type")),
             _from_json_data(List[OracleRollableRowText3], data.get("rows")),
             _from_json_data(EmbeddedOracleTableText3Type, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -6843,12 +6768,7 @@ class EmbeddedProgressRollMove:
     """
 
     type: 'EmbeddedProgressRollMoveType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -6881,7 +6801,7 @@ class EmbeddedProgressRollMove:
             _from_json_data(ProgressTrackTypeInfo, data.get("tracks")),
             _from_json_data(TriggerProgressRoll, data.get("trigger")),
             _from_json_data(EmbeddedProgressRollMoveType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -6961,12 +6881,7 @@ class EmbeddedSpecialTrackMove:
     """
 
     type: 'EmbeddedSpecialTrackMoveType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -6998,7 +6913,7 @@ class EmbeddedSpecialTrackMove:
             _from_json_data(MarkdownString, data.get("text")),
             _from_json_data(TriggerSpecialTrack, data.get("trigger")),
             _from_json_data(EmbeddedSpecialTrackMoveType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -7539,12 +7454,7 @@ class MoveActionRoll0(Move):
     """
 
     type: 'MoveActionRollType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -7584,7 +7494,7 @@ class MoveActionRoll0(Move):
             _from_json_data(MarkdownString, data.get("text")),
             _from_json_data(TriggerActionRoll, data.get("trigger")),
             _from_json_data(MoveActionRollType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -7672,12 +7582,7 @@ class MoveNoRoll0(Move):
     """
 
     type: 'MoveNoRollType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -7716,7 +7621,7 @@ class MoveNoRoll0(Move):
             _from_json_data(MarkdownString, data.get("text")),
             _from_json_data(TriggerNoRoll, data.get("trigger")),
             _from_json_data(MoveNoRollType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -7811,12 +7716,7 @@ class MoveProgressRoll0(Move):
     """
 
     type: 'MoveProgressRollType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -7857,7 +7757,7 @@ class MoveProgressRoll0(Move):
             _from_json_data(ProgressTrackTypeInfo, data.get("tracks")),
             _from_json_data(TriggerProgressRoll, data.get("trigger")),
             _from_json_data(MoveProgressRollType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -7949,12 +7849,7 @@ class MoveSpecialTrack0(Move):
     """
 
     type: 'MoveSpecialTrackType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -7994,7 +7889,7 @@ class MoveSpecialTrack0(Move):
             _from_json_data(MarkdownString, data.get("text")),
             _from_json_data(TriggerSpecialTrack, data.get("trigger")),
             _from_json_data(MoveSpecialTrackType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -8093,12 +7988,7 @@ class MoveActionRoll:
     """
 
     type: 'MoveActionRollType0'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -8138,7 +8028,7 @@ class MoveActionRoll:
             _from_json_data(MarkdownString, data.get("text")),
             _from_json_data(TriggerActionRoll, data.get("trigger")),
             _from_json_data(MoveActionRollType0, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -8257,12 +8147,7 @@ class MoveCategory:
     """
 
     type: 'MoveCategoryType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -8317,7 +8202,7 @@ class MoveCategory:
             _from_json_data(Dict[str, Move], data.get("contents")),
             _from_json_data(Label, data.get("name")),
             _from_json_data(MoveCategoryType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[MarkdownString], data.get("description")),
@@ -8602,12 +8487,7 @@ class MoveNoRoll:
     """
 
     type: 'MoveNoRollType0'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -8646,7 +8526,7 @@ class MoveNoRoll:
             _from_json_data(MarkdownString, data.get("text")),
             _from_json_data(TriggerNoRoll, data.get("trigger")),
             _from_json_data(MoveNoRollType0, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -8912,12 +8792,7 @@ class MoveProgressRoll:
     """
 
     type: 'MoveProgressRollType0'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -8958,7 +8833,7 @@ class MoveProgressRoll:
             _from_json_data(ProgressTrackTypeInfo, data.get("tracks")),
             _from_json_data(TriggerProgressRoll, data.get("trigger")),
             _from_json_data(MoveProgressRollType0, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -9138,12 +9013,7 @@ class MoveSpecialTrack:
     """
 
     type: 'MoveSpecialTrackType0'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -9183,7 +9053,7 @@ class MoveSpecialTrack:
             _from_json_data(MarkdownString, data.get("text")),
             _from_json_data(TriggerSpecialTrack, data.get("trigger")),
             _from_json_data(MoveSpecialTrackType0, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -9325,12 +9195,7 @@ class Npc:
     tactics: 'List[MarkdownString]'
     type: 'NpcType'
     variants: 'Dict[str, NpcVariant]'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -9374,7 +9239,7 @@ class Npc:
             _from_json_data(List[MarkdownString], data.get("tactics")),
             _from_json_data(NpcType, data.get("type")),
             _from_json_data(Dict[str, NpcVariant], data.get("variants")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -9454,12 +9319,7 @@ class NpcCollection:
     """
 
     type: 'NpcCollectionType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -9514,7 +9374,7 @@ class NpcCollection:
             _from_json_data(Dict[str, Npc], data.get("contents")),
             _from_json_data(Label, data.get("name")),
             _from_json_data(NpcCollectionType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[MarkdownString], data.get("description")),
@@ -9655,12 +9515,7 @@ class NpcVariant:
     The suggested challenge rank for this NPC.
     """
 
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     summary: 'Optional[MarkdownString]'
 
     @classmethod
@@ -9671,7 +9526,7 @@ class NpcVariant:
             _from_json_data(Label, data.get("name")),
             _from_json_data(NpcNature, data.get("nature")),
             _from_json_data(ChallengeRank, data.get("rank")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[MarkdownString], data.get("summary")),
         )
 
@@ -9800,12 +9655,7 @@ class OracleCollectionTableSharedRolls(OracleCollection):
     """
 
     type: 'OracleCollectionTableSharedRollsType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -9861,7 +9711,7 @@ class OracleCollectionTableSharedRolls(OracleCollection):
             _from_json_data(Dict[str, OracleColumnText], data.get("contents")),
             _from_json_data(Label, data.get("name")),
             _from_json_data(OracleCollectionTableSharedRollsType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[MarkdownString], data.get("description")),
@@ -9956,12 +9806,7 @@ class OracleCollectionTableSharedText(OracleCollection):
     """
 
     type: 'OracleCollectionTableSharedTextType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -10017,7 +9862,7 @@ class OracleCollectionTableSharedText(OracleCollection):
             _from_json_data(Dict[str, OracleColumnText], data.get("contents")),
             _from_json_data(Label, data.get("name")),
             _from_json_data(OracleCollectionTableSharedTextType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[MarkdownString], data.get("description")),
@@ -10115,12 +9960,7 @@ class OracleCollectionTableSharedText2(OracleCollection):
     """
 
     type: 'OracleCollectionTableSharedText2Type'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -10176,7 +10016,7 @@ class OracleCollectionTableSharedText2(OracleCollection):
             _from_json_data(Dict[str, OracleColumnText2], data.get("contents")),
             _from_json_data(Label, data.get("name")),
             _from_json_data(OracleCollectionTableSharedText2Type, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[MarkdownString], data.get("description")),
@@ -10277,12 +10117,7 @@ class OracleCollectionTableSharedText3(OracleCollection):
     """
 
     type: 'OracleCollectionTableSharedText3Type'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -10338,7 +10173,7 @@ class OracleCollectionTableSharedText3(OracleCollection):
             _from_json_data(Dict[str, OracleColumnText3], data.get("contents")),
             _from_json_data(Label, data.get("name")),
             _from_json_data(OracleCollectionTableSharedText3Type, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[MarkdownString], data.get("description")),
@@ -10418,12 +10253,7 @@ class OracleCollectionTables(OracleCollection):
     """
 
     type: 'OracleCollectionTablesType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -10479,7 +10309,7 @@ class OracleCollectionTables(OracleCollection):
             _from_json_data(Dict[str, OracleRollableTable], data.get("contents")),
             _from_json_data(Label, data.get("name")),
             _from_json_data(OracleCollectionTablesType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[MarkdownString], data.get("description")),
@@ -10619,12 +10449,7 @@ class OracleColumnText:
     """
 
     type: 'OracleColumnTextType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -10667,7 +10492,7 @@ class OracleColumnText:
             _from_json_data(OracleColumnTextOracleType, data.get("oracle_type")),
             _from_json_data(List[OracleRollableRowText], data.get("rows")),
             _from_json_data(OracleColumnTextType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -10769,12 +10594,7 @@ class OracleColumnText2:
     """
 
     type: 'OracleColumnText2Type'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -10817,7 +10637,7 @@ class OracleColumnText2:
             _from_json_data(OracleColumnText2OracleType, data.get("oracle_type")),
             _from_json_data(List[OracleRollableRowText2], data.get("rows")),
             _from_json_data(OracleColumnText2Type, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -10919,12 +10739,7 @@ class OracleColumnText3:
     """
 
     type: 'OracleColumnText3Type'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -10967,7 +10782,7 @@ class OracleColumnText3:
             _from_json_data(OracleColumnText3OracleType, data.get("oracle_type")),
             _from_json_data(List[OracleRollableRowText3], data.get("rows")),
             _from_json_data(OracleColumnText3Type, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -11221,12 +11036,7 @@ class OracleRollableColumnText(OracleRollable):
     """
 
     type: 'OracleRollableColumnTextType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -11269,7 +11079,7 @@ class OracleRollableColumnText(OracleRollable):
             _from_json_data(Label, data.get("name")),
             _from_json_data(List[OracleRollableRowText], data.get("rows")),
             _from_json_data(OracleRollableColumnTextType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -11360,12 +11170,7 @@ class OracleRollableColumnText2(OracleRollable):
     """
 
     type: 'OracleRollableColumnText2Type'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -11408,7 +11213,7 @@ class OracleRollableColumnText2(OracleRollable):
             _from_json_data(Label, data.get("name")),
             _from_json_data(List[OracleRollableRowText2], data.get("rows")),
             _from_json_data(OracleRollableColumnText2Type, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -11499,12 +11304,7 @@ class OracleRollableColumnText3(OracleRollable):
     """
 
     type: 'OracleRollableColumnText3Type'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -11547,7 +11347,7 @@ class OracleRollableColumnText3(OracleRollable):
             _from_json_data(Label, data.get("name")),
             _from_json_data(List[OracleRollableRowText3], data.get("rows")),
             _from_json_data(OracleRollableColumnText3Type, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -11668,12 +11468,7 @@ class OracleRollableTableText(OracleRollable):
     """
 
     type: 'OracleRollableTableTextType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -11718,7 +11513,7 @@ class OracleRollableTableText(OracleRollable):
             _from_json_data(Label, data.get("name")),
             _from_json_data(List[OracleRollableRowText], data.get("rows")),
             _from_json_data(OracleRollableTableTextType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -11843,12 +11638,7 @@ class OracleRollableTableText2(OracleRollable):
     """
 
     type: 'OracleRollableTableText2Type'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -11893,7 +11683,7 @@ class OracleRollableTableText2(OracleRollable):
             _from_json_data(Label, data.get("name")),
             _from_json_data(List[OracleRollableRowText2], data.get("rows")),
             _from_json_data(OracleRollableTableText2Type, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -12021,12 +11811,7 @@ class OracleRollableTableText3(OracleRollable):
     """
 
     type: 'OracleRollableTableText3Type'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -12071,7 +11856,7 @@ class OracleRollableTableText3(OracleRollable):
             _from_json_data(Label, data.get("name")),
             _from_json_data(List[OracleRollableRowText3], data.get("rows")),
             _from_json_data(OracleRollableTableText3Type, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -12477,12 +12262,7 @@ class OracleRollableTableTableText(OracleRollableTable):
     """
 
     type: 'OracleRollableTableTableTextType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -12527,7 +12307,7 @@ class OracleRollableTableTableText(OracleRollableTable):
             _from_json_data(Label, data.get("name")),
             _from_json_data(List[OracleRollableRowText], data.get("rows")),
             _from_json_data(OracleRollableTableTableTextType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -12652,12 +12432,7 @@ class OracleRollableTableTableText2(OracleRollableTable):
     """
 
     type: 'OracleRollableTableTableText2Type'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -12702,7 +12477,7 @@ class OracleRollableTableTableText2(OracleRollableTable):
             _from_json_data(Label, data.get("name")),
             _from_json_data(List[OracleRollableRowText2], data.get("rows")),
             _from_json_data(OracleRollableTableTableText2Type, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -12830,12 +12605,7 @@ class OracleRollableTableTableText3(OracleRollableTable):
     """
 
     type: 'OracleRollableTableTableText3Type'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -12880,7 +12650,7 @@ class OracleRollableTableTableText3(OracleRollableTable):
             _from_json_data(Label, data.get("name")),
             _from_json_data(List[OracleRollableRowText3], data.get("rows")),
             _from_json_data(OracleRollableTableTableText3Type, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -12995,12 +12765,7 @@ class OracleTableSharedRolls:
 
     oracle_type: 'OracleTableSharedRollsOracleType'
     type: 'OracleTableSharedRollsType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -13056,7 +12821,7 @@ class OracleTableSharedRolls:
             _from_json_data(Label, data.get("name")),
             _from_json_data(OracleTableSharedRollsOracleType, data.get("oracle_type")),
             _from_json_data(OracleTableSharedRollsType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[MarkdownString], data.get("description")),
@@ -13162,12 +12927,7 @@ class OracleTableSharedText:
 
     oracle_type: 'OracleTableSharedTextOracleType'
     type: 'OracleTableSharedTextType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -13223,7 +12983,7 @@ class OracleTableSharedText:
             _from_json_data(Label, data.get("name")),
             _from_json_data(OracleTableSharedTextOracleType, data.get("oracle_type")),
             _from_json_data(OracleTableSharedTextType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[MarkdownString], data.get("description")),
@@ -13332,12 +13092,7 @@ class OracleTableSharedText2:
 
     oracle_type: 'OracleTableSharedText2OracleType'
     type: 'OracleTableSharedText2Type'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -13393,7 +13148,7 @@ class OracleTableSharedText2:
             _from_json_data(Label, data.get("name")),
             _from_json_data(OracleTableSharedText2OracleType, data.get("oracle_type")),
             _from_json_data(OracleTableSharedText2Type, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[MarkdownString], data.get("description")),
@@ -13505,12 +13260,7 @@ class OracleTableSharedText3:
 
     oracle_type: 'OracleTableSharedText3OracleType'
     type: 'OracleTableSharedText3Type'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -13566,7 +13316,7 @@ class OracleTableSharedText3:
             _from_json_data(Label, data.get("name")),
             _from_json_data(OracleTableSharedText3OracleType, data.get("oracle_type")),
             _from_json_data(OracleTableSharedText3Type, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[MarkdownString], data.get("description")),
@@ -13702,12 +13452,7 @@ class OracleTableText:
     """
 
     type: 'OracleTableTextType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -13752,7 +13497,7 @@ class OracleTableText:
             _from_json_data(OracleTableTextOracleType, data.get("oracle_type")),
             _from_json_data(List[OracleRollableRowText], data.get("rows")),
             _from_json_data(OracleTableTextType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -13888,12 +13633,7 @@ class OracleTableText2:
     """
 
     type: 'OracleTableText2Type'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -13938,7 +13678,7 @@ class OracleTableText2:
             _from_json_data(OracleTableText2OracleType, data.get("oracle_type")),
             _from_json_data(List[OracleRollableRowText2], data.get("rows")),
             _from_json_data(OracleTableText2Type, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -14077,12 +13817,7 @@ class OracleTableText3:
     """
 
     type: 'OracleTableText3Type'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -14127,7 +13862,7 @@ class OracleTableText3:
             _from_json_data(OracleTableText3OracleType, data.get("oracle_type")),
             _from_json_data(List[OracleRollableRowText3], data.get("rows")),
             _from_json_data(OracleTableText3Type, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -14216,12 +13951,7 @@ class OracleTablesCollection:
 
     oracle_type: 'OracleTablesCollectionOracleType'
     type: 'OracleTablesCollectionType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -14277,7 +14007,7 @@ class OracleTablesCollection:
             _from_json_data(Label, data.get("name")),
             _from_json_data(OracleTablesCollectionOracleType, data.get("oracle_type")),
             _from_json_data(OracleTablesCollectionType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[MarkdownString], data.get("description")),
@@ -14526,12 +14256,7 @@ class Rarity:
     spend 3 experience points to purchase a rarity.
     """
 
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -14567,7 +14292,7 @@ class Rarity:
             _from_json_data(Label, data.get("name")),
             _from_json_data(RarityType, data.get("type")),
             _from_json_data(int, data.get("xp_cost")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
@@ -15959,509 +15684,36 @@ class Tag:
 
 @dataclass
 class TagRule:
-    value_type: 'str'
+    schema: 'TagSchema'
+    applies_to: 'List[TaggableNodeType]'
 
     @classmethod
     def from_json_data(cls, data: Any) -> 'TagRule':
-        variants: Dict[str, Type[TagRule]] = {
-            "asset": TagRuleAsset,
-            "asset_collection": TagRuleAssetCollection,
-            "atlas_collection": TagRuleAtlasCollection,
-            "atlas_entry": TagRuleAtlasEntry,
-            "boolean": TagRuleBoolean,
-            "delve_site": TagRuleDelveSite,
-            "delve_site_domain": TagRuleDelveSiteDomain,
-            "delve_site_theme": TagRuleDelveSiteTheme,
-            "enum": TagRuleEnum,
-            "integer": TagRuleInteger,
-            "move": TagRuleMove,
-            "move_category": TagRuleMoveCategory,
-            "npc": TagRuleNpc,
-            "npc_collection": TagRuleNpcCollection,
-            "oracle_collection": TagRuleOracleCollection,
-            "oracle_rollable": TagRuleOracleRollable,
-            "rarity": TagRuleRarity,
-            "truth": TagRuleTruth,
-        }
-
-        return variants[data["value_type"]].from_json_data(data)
-
-    def to_json_data(self) -> Any:
-        pass
-
-@dataclass
-class TagRuleAsset(TagRule):
-    applies_to: 'List[TaggableNodeType]'
-    description: 'MarkdownString'
-    wildcard: 'bool'
-    """
-    If `true`, this field accepts an array of wildcard ID strings. If `false`,
-    this field accepts a single non-wildcard ID string.
-    """
-
-
-    @classmethod
-    def from_json_data(cls, data: Any) -> 'TagRuleAsset':
         return cls(
-            "asset",
+            _from_json_data(TagSchema, data.get("$schema")),
             _from_json_data(List[TaggableNodeType], data.get("applies_to")),
-            _from_json_data(MarkdownString, data.get("description")),
-            _from_json_data(bool, data.get("wildcard")),
         )
 
     def to_json_data(self) -> Any:
-        data = { "value_type": "asset" }
+        data: Dict[str, Any] = {}
+        data["$schema"] = _to_json_data(self.schema)
         data["applies_to"] = _to_json_data(self.applies_to)
-        data["description"] = _to_json_data(self.description)
-        data["wildcard"] = _to_json_data(self.wildcard)
         return data
 
 @dataclass
-class TagRuleAssetCollection(TagRule):
-    applies_to: 'List[TaggableNodeType]'
-    description: 'MarkdownString'
-    wildcard: 'bool'
+class TagSchema:
     """
-    If `true`, this field accepts an array of wildcard ID strings. If `false`,
-    this field accepts a single non-wildcard ID string.
+    A JSON schema used to validate the tag data.
     """
 
+    value: 'Any'
 
     @classmethod
-    def from_json_data(cls, data: Any) -> 'TagRuleAssetCollection':
-        return cls(
-            "asset_collection",
-            _from_json_data(List[TaggableNodeType], data.get("applies_to")),
-            _from_json_data(MarkdownString, data.get("description")),
-            _from_json_data(bool, data.get("wildcard")),
-        )
+    def from_json_data(cls, data: Any) -> 'TagSchema':
+        return cls(_from_json_data(Any, data))
 
     def to_json_data(self) -> Any:
-        data = { "value_type": "asset_collection" }
-        data["applies_to"] = _to_json_data(self.applies_to)
-        data["description"] = _to_json_data(self.description)
-        data["wildcard"] = _to_json_data(self.wildcard)
-        return data
-
-@dataclass
-class TagRuleAtlasCollection(TagRule):
-    applies_to: 'List[TaggableNodeType]'
-    description: 'MarkdownString'
-    wildcard: 'bool'
-    """
-    If `true`, this field accepts an array of wildcard ID strings. If `false`,
-    this field accepts a single non-wildcard ID string.
-    """
-
-
-    @classmethod
-    def from_json_data(cls, data: Any) -> 'TagRuleAtlasCollection':
-        return cls(
-            "atlas_collection",
-            _from_json_data(List[TaggableNodeType], data.get("applies_to")),
-            _from_json_data(MarkdownString, data.get("description")),
-            _from_json_data(bool, data.get("wildcard")),
-        )
-
-    def to_json_data(self) -> Any:
-        data = { "value_type": "atlas_collection" }
-        data["applies_to"] = _to_json_data(self.applies_to)
-        data["description"] = _to_json_data(self.description)
-        data["wildcard"] = _to_json_data(self.wildcard)
-        return data
-
-@dataclass
-class TagRuleAtlasEntry(TagRule):
-    applies_to: 'List[TaggableNodeType]'
-    description: 'MarkdownString'
-    wildcard: 'bool'
-    """
-    If `true`, this field accepts an array of wildcard ID strings. If `false`,
-    this field accepts a single non-wildcard ID string.
-    """
-
-
-    @classmethod
-    def from_json_data(cls, data: Any) -> 'TagRuleAtlasEntry':
-        return cls(
-            "atlas_entry",
-            _from_json_data(List[TaggableNodeType], data.get("applies_to")),
-            _from_json_data(MarkdownString, data.get("description")),
-            _from_json_data(bool, data.get("wildcard")),
-        )
-
-    def to_json_data(self) -> Any:
-        data = { "value_type": "atlas_entry" }
-        data["applies_to"] = _to_json_data(self.applies_to)
-        data["description"] = _to_json_data(self.description)
-        data["wildcard"] = _to_json_data(self.wildcard)
-        return data
-
-@dataclass
-class TagRuleBoolean(TagRule):
-    applies_to: 'List[TaggableNodeType]'
-    array: 'bool'
-    description: 'MarkdownString'
-
-    @classmethod
-    def from_json_data(cls, data: Any) -> 'TagRuleBoolean':
-        return cls(
-            "boolean",
-            _from_json_data(List[TaggableNodeType], data.get("applies_to")),
-            _from_json_data(bool, data.get("array")),
-            _from_json_data(MarkdownString, data.get("description")),
-        )
-
-    def to_json_data(self) -> Any:
-        data = { "value_type": "boolean" }
-        data["applies_to"] = _to_json_data(self.applies_to)
-        data["array"] = _to_json_data(self.array)
-        data["description"] = _to_json_data(self.description)
-        return data
-
-@dataclass
-class TagRuleDelveSite(TagRule):
-    applies_to: 'List[TaggableNodeType]'
-    description: 'MarkdownString'
-    wildcard: 'bool'
-    """
-    If `true`, this field accepts an array of wildcard ID strings. If `false`,
-    this field accepts a single non-wildcard ID string.
-    """
-
-
-    @classmethod
-    def from_json_data(cls, data: Any) -> 'TagRuleDelveSite':
-        return cls(
-            "delve_site",
-            _from_json_data(List[TaggableNodeType], data.get("applies_to")),
-            _from_json_data(MarkdownString, data.get("description")),
-            _from_json_data(bool, data.get("wildcard")),
-        )
-
-    def to_json_data(self) -> Any:
-        data = { "value_type": "delve_site" }
-        data["applies_to"] = _to_json_data(self.applies_to)
-        data["description"] = _to_json_data(self.description)
-        data["wildcard"] = _to_json_data(self.wildcard)
-        return data
-
-@dataclass
-class TagRuleDelveSiteDomain(TagRule):
-    applies_to: 'List[TaggableNodeType]'
-    description: 'MarkdownString'
-    wildcard: 'bool'
-    """
-    If `true`, this field accepts an array of wildcard ID strings. If `false`,
-    this field accepts a single non-wildcard ID string.
-    """
-
-
-    @classmethod
-    def from_json_data(cls, data: Any) -> 'TagRuleDelveSiteDomain':
-        return cls(
-            "delve_site_domain",
-            _from_json_data(List[TaggableNodeType], data.get("applies_to")),
-            _from_json_data(MarkdownString, data.get("description")),
-            _from_json_data(bool, data.get("wildcard")),
-        )
-
-    def to_json_data(self) -> Any:
-        data = { "value_type": "delve_site_domain" }
-        data["applies_to"] = _to_json_data(self.applies_to)
-        data["description"] = _to_json_data(self.description)
-        data["wildcard"] = _to_json_data(self.wildcard)
-        return data
-
-@dataclass
-class TagRuleDelveSiteTheme(TagRule):
-    applies_to: 'List[TaggableNodeType]'
-    description: 'MarkdownString'
-    wildcard: 'bool'
-    """
-    If `true`, this field accepts an array of wildcard ID strings. If `false`,
-    this field accepts a single non-wildcard ID string.
-    """
-
-
-    @classmethod
-    def from_json_data(cls, data: Any) -> 'TagRuleDelveSiteTheme':
-        return cls(
-            "delve_site_theme",
-            _from_json_data(List[TaggableNodeType], data.get("applies_to")),
-            _from_json_data(MarkdownString, data.get("description")),
-            _from_json_data(bool, data.get("wildcard")),
-        )
-
-    def to_json_data(self) -> Any:
-        data = { "value_type": "delve_site_theme" }
-        data["applies_to"] = _to_json_data(self.applies_to)
-        data["description"] = _to_json_data(self.description)
-        data["wildcard"] = _to_json_data(self.wildcard)
-        return data
-
-@dataclass
-class TagRuleEnum(TagRule):
-    applies_to: 'List[TaggableNodeType]'
-    array: 'bool'
-    description: 'MarkdownString'
-    enum: 'List[DictKey]'
-
-    @classmethod
-    def from_json_data(cls, data: Any) -> 'TagRuleEnum':
-        return cls(
-            "enum",
-            _from_json_data(List[TaggableNodeType], data.get("applies_to")),
-            _from_json_data(bool, data.get("array")),
-            _from_json_data(MarkdownString, data.get("description")),
-            _from_json_data(List[DictKey], data.get("enum")),
-        )
-
-    def to_json_data(self) -> Any:
-        data = { "value_type": "enum" }
-        data["applies_to"] = _to_json_data(self.applies_to)
-        data["array"] = _to_json_data(self.array)
-        data["description"] = _to_json_data(self.description)
-        data["enum"] = _to_json_data(self.enum)
-        return data
-
-@dataclass
-class TagRuleInteger(TagRule):
-    applies_to: 'List[TaggableNodeType]'
-    array: 'bool'
-    description: 'MarkdownString'
-
-    @classmethod
-    def from_json_data(cls, data: Any) -> 'TagRuleInteger':
-        return cls(
-            "integer",
-            _from_json_data(List[TaggableNodeType], data.get("applies_to")),
-            _from_json_data(bool, data.get("array")),
-            _from_json_data(MarkdownString, data.get("description")),
-        )
-
-    def to_json_data(self) -> Any:
-        data = { "value_type": "integer" }
-        data["applies_to"] = _to_json_data(self.applies_to)
-        data["array"] = _to_json_data(self.array)
-        data["description"] = _to_json_data(self.description)
-        return data
-
-@dataclass
-class TagRuleMove(TagRule):
-    applies_to: 'List[TaggableNodeType]'
-    description: 'MarkdownString'
-    wildcard: 'bool'
-    """
-    If `true`, this field accepts an array of wildcard ID strings. If `false`,
-    this field accepts a single non-wildcard ID string.
-    """
-
-
-    @classmethod
-    def from_json_data(cls, data: Any) -> 'TagRuleMove':
-        return cls(
-            "move",
-            _from_json_data(List[TaggableNodeType], data.get("applies_to")),
-            _from_json_data(MarkdownString, data.get("description")),
-            _from_json_data(bool, data.get("wildcard")),
-        )
-
-    def to_json_data(self) -> Any:
-        data = { "value_type": "move" }
-        data["applies_to"] = _to_json_data(self.applies_to)
-        data["description"] = _to_json_data(self.description)
-        data["wildcard"] = _to_json_data(self.wildcard)
-        return data
-
-@dataclass
-class TagRuleMoveCategory(TagRule):
-    applies_to: 'List[TaggableNodeType]'
-    description: 'MarkdownString'
-    wildcard: 'bool'
-    """
-    If `true`, this field accepts an array of wildcard ID strings. If `false`,
-    this field accepts a single non-wildcard ID string.
-    """
-
-
-    @classmethod
-    def from_json_data(cls, data: Any) -> 'TagRuleMoveCategory':
-        return cls(
-            "move_category",
-            _from_json_data(List[TaggableNodeType], data.get("applies_to")),
-            _from_json_data(MarkdownString, data.get("description")),
-            _from_json_data(bool, data.get("wildcard")),
-        )
-
-    def to_json_data(self) -> Any:
-        data = { "value_type": "move_category" }
-        data["applies_to"] = _to_json_data(self.applies_to)
-        data["description"] = _to_json_data(self.description)
-        data["wildcard"] = _to_json_data(self.wildcard)
-        return data
-
-@dataclass
-class TagRuleNpc(TagRule):
-    applies_to: 'List[TaggableNodeType]'
-    description: 'MarkdownString'
-    wildcard: 'bool'
-    """
-    If `true`, this field accepts an array of wildcard ID strings. If `false`,
-    this field accepts a single non-wildcard ID string.
-    """
-
-
-    @classmethod
-    def from_json_data(cls, data: Any) -> 'TagRuleNpc':
-        return cls(
-            "npc",
-            _from_json_data(List[TaggableNodeType], data.get("applies_to")),
-            _from_json_data(MarkdownString, data.get("description")),
-            _from_json_data(bool, data.get("wildcard")),
-        )
-
-    def to_json_data(self) -> Any:
-        data = { "value_type": "npc" }
-        data["applies_to"] = _to_json_data(self.applies_to)
-        data["description"] = _to_json_data(self.description)
-        data["wildcard"] = _to_json_data(self.wildcard)
-        return data
-
-@dataclass
-class TagRuleNpcCollection(TagRule):
-    applies_to: 'List[TaggableNodeType]'
-    description: 'MarkdownString'
-    wildcard: 'bool'
-    """
-    If `true`, this field accepts an array of wildcard ID strings. If `false`,
-    this field accepts a single non-wildcard ID string.
-    """
-
-
-    @classmethod
-    def from_json_data(cls, data: Any) -> 'TagRuleNpcCollection':
-        return cls(
-            "npc_collection",
-            _from_json_data(List[TaggableNodeType], data.get("applies_to")),
-            _from_json_data(MarkdownString, data.get("description")),
-            _from_json_data(bool, data.get("wildcard")),
-        )
-
-    def to_json_data(self) -> Any:
-        data = { "value_type": "npc_collection" }
-        data["applies_to"] = _to_json_data(self.applies_to)
-        data["description"] = _to_json_data(self.description)
-        data["wildcard"] = _to_json_data(self.wildcard)
-        return data
-
-@dataclass
-class TagRuleOracleCollection(TagRule):
-    applies_to: 'List[TaggableNodeType]'
-    description: 'MarkdownString'
-    wildcard: 'bool'
-    """
-    If `true`, this field accepts an array of wildcard ID strings. If `false`,
-    this field accepts a single non-wildcard ID string.
-    """
-
-
-    @classmethod
-    def from_json_data(cls, data: Any) -> 'TagRuleOracleCollection':
-        return cls(
-            "oracle_collection",
-            _from_json_data(List[TaggableNodeType], data.get("applies_to")),
-            _from_json_data(MarkdownString, data.get("description")),
-            _from_json_data(bool, data.get("wildcard")),
-        )
-
-    def to_json_data(self) -> Any:
-        data = { "value_type": "oracle_collection" }
-        data["applies_to"] = _to_json_data(self.applies_to)
-        data["description"] = _to_json_data(self.description)
-        data["wildcard"] = _to_json_data(self.wildcard)
-        return data
-
-@dataclass
-class TagRuleOracleRollable(TagRule):
-    applies_to: 'List[TaggableNodeType]'
-    description: 'MarkdownString'
-    wildcard: 'bool'
-    """
-    If `true`, this field accepts an array of wildcard ID strings. If `false`,
-    this field accepts a single non-wildcard ID string.
-    """
-
-
-    @classmethod
-    def from_json_data(cls, data: Any) -> 'TagRuleOracleRollable':
-        return cls(
-            "oracle_rollable",
-            _from_json_data(List[TaggableNodeType], data.get("applies_to")),
-            _from_json_data(MarkdownString, data.get("description")),
-            _from_json_data(bool, data.get("wildcard")),
-        )
-
-    def to_json_data(self) -> Any:
-        data = { "value_type": "oracle_rollable" }
-        data["applies_to"] = _to_json_data(self.applies_to)
-        data["description"] = _to_json_data(self.description)
-        data["wildcard"] = _to_json_data(self.wildcard)
-        return data
-
-@dataclass
-class TagRuleRarity(TagRule):
-    applies_to: 'List[TaggableNodeType]'
-    description: 'MarkdownString'
-    wildcard: 'bool'
-    """
-    If `true`, this field accepts an array of wildcard ID strings. If `false`,
-    this field accepts a single non-wildcard ID string.
-    """
-
-
-    @classmethod
-    def from_json_data(cls, data: Any) -> 'TagRuleRarity':
-        return cls(
-            "rarity",
-            _from_json_data(List[TaggableNodeType], data.get("applies_to")),
-            _from_json_data(MarkdownString, data.get("description")),
-            _from_json_data(bool, data.get("wildcard")),
-        )
-
-    def to_json_data(self) -> Any:
-        data = { "value_type": "rarity" }
-        data["applies_to"] = _to_json_data(self.applies_to)
-        data["description"] = _to_json_data(self.description)
-        data["wildcard"] = _to_json_data(self.wildcard)
-        return data
-
-@dataclass
-class TagRuleTruth(TagRule):
-    applies_to: 'List[TaggableNodeType]'
-    description: 'MarkdownString'
-    wildcard: 'bool'
-    """
-    If `true`, this field accepts an array of wildcard ID strings. If `false`,
-    this field accepts a single non-wildcard ID string.
-    """
-
-
-    @classmethod
-    def from_json_data(cls, data: Any) -> 'TagRuleTruth':
-        return cls(
-            "truth",
-            _from_json_data(List[TaggableNodeType], data.get("applies_to")),
-            _from_json_data(MarkdownString, data.get("description")),
-            _from_json_data(bool, data.get("wildcard")),
-        )
-
-    def to_json_data(self) -> Any:
-        data = { "value_type": "truth" }
-        data["applies_to"] = _to_json_data(self.applies_to)
-        data["description"] = _to_json_data(self.description)
-        data["wildcard"] = _to_json_data(self.wildcard)
-        return data
+        return _to_json_data(self.value)
 
 class TaggableNodeType(Enum):
     ABILITY = "ability"
@@ -16507,45 +15759,6 @@ class Tags:
 
     def to_json_data(self) -> Any:
         return _to_json_data(self.value)
-
-@dataclass
-class TagsCore:
-    requires_allies: 'Optional[bool]'
-    """
-    This object requires allies to function, and is intended for co-op play, or
-    guided play with allies. It is not appropriate for solo play.
-    """
-
-    supernatural: 'Optional[bool]'
-    """
-    This object is supernatural in nature, and is ideal for settings that
-    feature supernatural or mythic powers.
-    """
-
-    technological: 'Optional[bool]'
-    """
-    This object is technological in nature, and is ideal for settings that
-    feature remarkable technologies.
-    """
-
-
-    @classmethod
-    def from_json_data(cls, data: Any) -> 'TagsCore':
-        return cls(
-            _from_json_data(Optional[bool], data.get("requires_allies")),
-            _from_json_data(Optional[bool], data.get("supernatural")),
-            _from_json_data(Optional[bool], data.get("technological")),
-        )
-
-    def to_json_data(self) -> Any:
-        data: Dict[str, Any] = {}
-        if self.requires_allies is not None:
-             data["requires_allies"] = _to_json_data(self.requires_allies)
-        if self.supernatural is not None:
-             data["supernatural"] = _to_json_data(self.supernatural)
-        if self.technological is not None:
-             data["technological"] = _to_json_data(self.technological)
-        return data
 
 class TextFieldFieldType(Enum):
     TEXT = "text"
@@ -17118,12 +16331,7 @@ class Truth:
 
     options: 'List[TruthOption]'
     type: 'TruthType'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     canonical_name: 'Optional[Label]'
     """
     The name of this node as it appears on the page in the book, if it's
@@ -17170,7 +16378,7 @@ class Truth:
             _from_json_data(Label, data.get("name")),
             _from_json_data(List[TruthOption], data.get("options")),
             _from_json_data(TruthType, data.get("type")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
             _from_json_data(Optional[List[EntityPrompt]], data.get("factions")),
@@ -17252,12 +16460,7 @@ class TruthOption:
     description: 'MarkdownString'
     quest_starter: 'MarkdownString'
     roll: 'DiceRange'
-    comment: 'Optional[str]'
-    """
-    Implementation hints or other developer-facing comments on this node. These
-    should be omitted when presenting the node for gameplay.
-    """
-
+    comment: 'Optional[Documentation]'
     oracles: 'Optional[Dict[str, EmbeddedOracleRollable]]'
     summary: 'Optional[MarkdownString]'
 
@@ -17268,7 +16471,7 @@ class TruthOption:
             _from_json_data(MarkdownString, data.get("description")),
             _from_json_data(MarkdownString, data.get("quest_starter")),
             _from_json_data(DiceRange, data.get("roll")),
-            _from_json_data(Optional[str], data.get("_comment")),
+            _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Dict[str, EmbeddedOracleRollable]], data.get("oracles")),
             _from_json_data(Optional[MarkdownString], data.get("summary")),
         )

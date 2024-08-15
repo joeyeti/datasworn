@@ -168,7 +168,7 @@ module Datasworn
     attr_accessor options: Hash[String, AssetOptionField]
     attr_accessor shared: bool
     attr_accessor type: AssetType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor attachments: AssetAttachment?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
@@ -188,7 +188,7 @@ module Datasworn
     attr_accessor id: AssetAbilityID
     attr_accessor enabled: bool
     attr_accessor text: MarkdownString
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor controls: Hash[String, AssetAbilityControlField]?
     attr_accessor enhance_asset: AssetEnhancement?
     attr_accessor enhance_moves: Array[MoveEnhancement]?
@@ -391,7 +391,7 @@ module Datasworn
     attr_accessor contents: Hash[String, Asset]
     attr_accessor name: Label
     attr_accessor type: AssetCollectionType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor description: MarkdownString?
@@ -735,7 +735,7 @@ module Datasworn
     attr_accessor contents: Hash[String, AtlasEntry]
     attr_accessor name: Label
     attr_accessor type: AtlasCollectionType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor description: MarkdownString?
@@ -781,7 +781,7 @@ module Datasworn
     attr_accessor features: Array[MarkdownString]
     attr_accessor name: Label
     attr_accessor type: AtlasEntryType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -968,6 +968,15 @@ module Datasworn
     def to_json_data: () -> untyped
   end
 
+  class CoreTags
+    attr_accessor requires_allies: bool?
+    attr_accessor supernatural: bool?
+    attr_accessor technological: bool?
+
+    def self.from_json_data: (untyped) -> CoreTags
+    def to_json_data: () -> untyped
+  end
+
   class CounterFieldFieldType
     attr_accessor value: String
 
@@ -1034,7 +1043,7 @@ module Datasworn
     attr_accessor rank: ChallengeRank
     attr_accessor theme: DelveSiteThemeID
     attr_accessor type: DelveSiteType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor extra_card: String?
@@ -1103,7 +1112,7 @@ module Datasworn
     attr_accessor features: Array[DelveSiteDomainFeature]
     attr_accessor name: Label
     attr_accessor type: DelveSiteDomainType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -1221,7 +1230,7 @@ module Datasworn
     attr_accessor features: Array[DelveSiteThemeFeature]
     attr_accessor name: Label
     attr_accessor type: DelveSiteThemeType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -1330,6 +1339,13 @@ module Datasworn
     def to_json_data: () -> untyped
   end
 
+  class Documentation
+    attr_accessor value: String
+
+    def self.from_json_data: (untyped) -> Documentation
+    def to_json_data: () -> untyped
+  end
+
   class Email
     attr_accessor value: String
 
@@ -1379,7 +1395,7 @@ module Datasworn
     attr_accessor text: MarkdownString
     attr_accessor trigger: TriggerActionRoll
     attr_accessor type: EmbeddedActionRollMoveType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -1415,7 +1431,7 @@ module Datasworn
     attr_accessor text: MarkdownString
     attr_accessor trigger: TriggerActionRoll
     attr_accessor type: EmbeddedMoveActionRollType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -1443,7 +1459,7 @@ module Datasworn
     attr_accessor text: MarkdownString
     attr_accessor trigger: TriggerNoRoll
     attr_accessor type: EmbeddedMoveNoRollType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -1473,7 +1489,7 @@ module Datasworn
     attr_accessor tracks: ProgressTrackTypeInfo
     attr_accessor trigger: TriggerProgressRoll
     attr_accessor type: EmbeddedMoveProgressRollType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -1502,7 +1518,7 @@ module Datasworn
     attr_accessor text: MarkdownString
     attr_accessor trigger: TriggerSpecialTrack
     attr_accessor type: EmbeddedMoveSpecialTrackType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -1554,7 +1570,7 @@ module Datasworn
     attr_accessor text: MarkdownString
     attr_accessor trigger: TriggerNoRoll
     attr_accessor type: EmbeddedNoRollMoveType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -1599,7 +1615,7 @@ module Datasworn
     attr_accessor oracle_type: EmbeddedOracleColumnTextOracleType
     attr_accessor rows: Array[OracleRollableRowText]
     attr_accessor type: EmbeddedOracleColumnTextType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -1646,7 +1662,7 @@ module Datasworn
     attr_accessor oracle_type: EmbeddedOracleColumnText2OracleType
     attr_accessor rows: Array[OracleRollableRowText2]
     attr_accessor type: EmbeddedOracleColumnText2Type
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -1693,7 +1709,7 @@ module Datasworn
     attr_accessor oracle_type: EmbeddedOracleColumnText3OracleType
     attr_accessor rows: Array[OracleRollableRowText3]
     attr_accessor type: EmbeddedOracleColumnText3Type
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -1737,7 +1753,7 @@ module Datasworn
     attr_accessor name: Label
     attr_accessor rows: Array[OracleRollableRowText]
     attr_accessor type: EmbeddedOracleRollableColumnTextType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -1774,7 +1790,7 @@ module Datasworn
     attr_accessor name: Label
     attr_accessor rows: Array[OracleRollableRowText2]
     attr_accessor type: EmbeddedOracleRollableColumnText2Type
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -1811,7 +1827,7 @@ module Datasworn
     attr_accessor name: Label
     attr_accessor rows: Array[OracleRollableRowText3]
     attr_accessor type: EmbeddedOracleRollableColumnText3Type
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -1857,7 +1873,7 @@ module Datasworn
     attr_accessor name: Label
     attr_accessor rows: Array[OracleRollableRowText]
     attr_accessor type: EmbeddedOracleRollableTableTextType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -1904,7 +1920,7 @@ module Datasworn
     attr_accessor name: Label
     attr_accessor rows: Array[OracleRollableRowText2]
     attr_accessor type: EmbeddedOracleRollableTableText2Type
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -1952,7 +1968,7 @@ module Datasworn
     attr_accessor name: Label
     attr_accessor rows: Array[OracleRollableRowText3]
     attr_accessor type: EmbeddedOracleRollableTableText3Type
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -2022,7 +2038,7 @@ module Datasworn
     attr_accessor oracle_type: EmbeddedOracleTableTextOracleType
     attr_accessor rows: Array[OracleRollableRowText]
     attr_accessor type: EmbeddedOracleTableTextType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -2079,7 +2095,7 @@ module Datasworn
     attr_accessor oracle_type: EmbeddedOracleTableText2OracleType
     attr_accessor rows: Array[OracleRollableRowText2]
     attr_accessor type: EmbeddedOracleTableText2Type
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -2137,7 +2153,7 @@ module Datasworn
     attr_accessor oracle_type: EmbeddedOracleTableText3OracleType
     attr_accessor rows: Array[OracleRollableRowText3]
     attr_accessor type: EmbeddedOracleTableText3Type
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -2179,7 +2195,7 @@ module Datasworn
     attr_accessor tracks: ProgressTrackTypeInfo
     attr_accessor trigger: TriggerProgressRoll
     attr_accessor type: EmbeddedProgressRollMoveType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -2218,7 +2234,7 @@ module Datasworn
     attr_accessor text: MarkdownString
     attr_accessor trigger: TriggerSpecialTrack
     attr_accessor type: EmbeddedSpecialTrackMoveType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -2381,7 +2397,7 @@ module Datasworn
     attr_accessor text: MarkdownString
     attr_accessor trigger: TriggerActionRoll
     attr_accessor type: MoveActionRollType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -2412,7 +2428,7 @@ module Datasworn
     attr_accessor text: MarkdownString
     attr_accessor trigger: TriggerNoRoll
     attr_accessor type: MoveNoRollType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -2445,7 +2461,7 @@ module Datasworn
     attr_accessor tracks: ProgressTrackTypeInfo
     attr_accessor trigger: TriggerProgressRoll
     attr_accessor type: MoveProgressRollType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -2477,7 +2493,7 @@ module Datasworn
     attr_accessor text: MarkdownString
     attr_accessor trigger: TriggerSpecialTrack
     attr_accessor type: MoveSpecialTrackType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -2519,7 +2535,7 @@ module Datasworn
     attr_accessor text: MarkdownString
     attr_accessor trigger: TriggerActionRoll
     attr_accessor type: MoveActionRollType0
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -2567,7 +2583,7 @@ module Datasworn
     attr_accessor contents: Hash[String, Move]
     attr_accessor name: Label
     attr_accessor type: MoveCategoryType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor description: MarkdownString?
@@ -2677,7 +2693,7 @@ module Datasworn
     attr_accessor text: MarkdownString
     attr_accessor trigger: TriggerNoRoll
     attr_accessor type: MoveNoRollType0
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -2783,7 +2799,7 @@ module Datasworn
     attr_accessor tracks: ProgressTrackTypeInfo
     attr_accessor trigger: TriggerProgressRoll
     attr_accessor type: MoveProgressRollType0
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -2855,7 +2871,7 @@ module Datasworn
     attr_accessor text: MarkdownString
     attr_accessor trigger: TriggerSpecialTrack
     attr_accessor type: MoveSpecialTrackType0
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -2921,7 +2937,7 @@ module Datasworn
     attr_accessor tactics: Array[MarkdownString]
     attr_accessor type: NpcType
     attr_accessor variants: Hash[String, NpcVariant]
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -2953,7 +2969,7 @@ module Datasworn
     attr_accessor contents: Hash[String, Npc]
     attr_accessor name: Label
     attr_accessor type: NpcCollectionType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor description: MarkdownString?
@@ -3010,7 +3026,7 @@ module Datasworn
     attr_accessor name: Label
     attr_accessor nature: NpcNature
     attr_accessor rank: ChallengeRank
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor summary: MarkdownString?
 
     def self.from_json_data: (untyped) -> NpcVariant
@@ -3061,7 +3077,7 @@ module Datasworn
     attr_accessor contents: Hash[String, OracleColumnText]
     attr_accessor name: Label
     attr_accessor type: OracleCollectionTableSharedRollsType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor description: MarkdownString?
@@ -3100,7 +3116,7 @@ module Datasworn
     attr_accessor contents: Hash[String, OracleColumnText]
     attr_accessor name: Label
     attr_accessor type: OracleCollectionTableSharedTextType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor description: MarkdownString?
@@ -3140,7 +3156,7 @@ module Datasworn
     attr_accessor contents: Hash[String, OracleColumnText2]
     attr_accessor name: Label
     attr_accessor type: OracleCollectionTableSharedText2Type
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor description: MarkdownString?
@@ -3181,7 +3197,7 @@ module Datasworn
     attr_accessor contents: Hash[String, OracleColumnText3]
     attr_accessor name: Label
     attr_accessor type: OracleCollectionTableSharedText3Type
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor description: MarkdownString?
@@ -3213,7 +3229,7 @@ module Datasworn
     attr_accessor contents: Hash[String, OracleRollableTable]
     attr_accessor name: Label
     attr_accessor type: OracleCollectionTablesType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor description: MarkdownString?
@@ -3276,7 +3292,7 @@ module Datasworn
     attr_accessor oracle_type: OracleColumnTextOracleType
     attr_accessor rows: Array[OracleRollableRowText]
     attr_accessor type: OracleColumnTextType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -3324,7 +3340,7 @@ module Datasworn
     attr_accessor oracle_type: OracleColumnText2OracleType
     attr_accessor rows: Array[OracleRollableRowText2]
     attr_accessor type: OracleColumnText2Type
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -3372,7 +3388,7 @@ module Datasworn
     attr_accessor oracle_type: OracleColumnText3OracleType
     attr_accessor rows: Array[OracleRollableRowText3]
     attr_accessor type: OracleColumnText3Type
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -3455,7 +3471,7 @@ module Datasworn
     attr_accessor name: Label
     attr_accessor rows: Array[OracleRollableRowText]
     attr_accessor type: OracleRollableColumnTextType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -3493,7 +3509,7 @@ module Datasworn
     attr_accessor name: Label
     attr_accessor rows: Array[OracleRollableRowText2]
     attr_accessor type: OracleRollableColumnText2Type
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -3531,7 +3547,7 @@ module Datasworn
     attr_accessor name: Label
     attr_accessor rows: Array[OracleRollableRowText3]
     attr_accessor type: OracleRollableColumnText3Type
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -3579,7 +3595,7 @@ module Datasworn
     attr_accessor name: Label
     attr_accessor rows: Array[OracleRollableRowText]
     attr_accessor type: OracleRollableTableTextType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -3628,7 +3644,7 @@ module Datasworn
     attr_accessor name: Label
     attr_accessor rows: Array[OracleRollableRowText2]
     attr_accessor type: OracleRollableTableText2Type
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -3678,7 +3694,7 @@ module Datasworn
     attr_accessor name: Label
     attr_accessor rows: Array[OracleRollableRowText3]
     attr_accessor type: OracleRollableTableText3Type
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -3812,7 +3828,7 @@ module Datasworn
     attr_accessor name: Label
     attr_accessor rows: Array[OracleRollableRowText]
     attr_accessor type: OracleRollableTableTableTextType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -3861,7 +3877,7 @@ module Datasworn
     attr_accessor name: Label
     attr_accessor rows: Array[OracleRollableRowText2]
     attr_accessor type: OracleRollableTableTableText2Type
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -3911,7 +3927,7 @@ module Datasworn
     attr_accessor name: Label
     attr_accessor rows: Array[OracleRollableRowText3]
     attr_accessor type: OracleRollableTableTableText3Type
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -3959,7 +3975,7 @@ module Datasworn
     attr_accessor name: Label
     attr_accessor oracle_type: OracleTableSharedRollsOracleType
     attr_accessor type: OracleTableSharedRollsType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor description: MarkdownString?
@@ -4008,7 +4024,7 @@ module Datasworn
     attr_accessor name: Label
     attr_accessor oracle_type: OracleTableSharedTextOracleType
     attr_accessor type: OracleTableSharedTextType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor description: MarkdownString?
@@ -4058,7 +4074,7 @@ module Datasworn
     attr_accessor name: Label
     attr_accessor oracle_type: OracleTableSharedText2OracleType
     attr_accessor type: OracleTableSharedText2Type
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor description: MarkdownString?
@@ -4109,7 +4125,7 @@ module Datasworn
     attr_accessor name: Label
     attr_accessor oracle_type: OracleTableSharedText3OracleType
     attr_accessor type: OracleTableSharedText3Type
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor description: MarkdownString?
@@ -4168,7 +4184,7 @@ module Datasworn
     attr_accessor oracle_type: OracleTableTextOracleType
     attr_accessor rows: Array[OracleRollableRowText]
     attr_accessor type: OracleTableTextType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -4227,7 +4243,7 @@ module Datasworn
     attr_accessor oracle_type: OracleTableText2OracleType
     attr_accessor rows: Array[OracleRollableRowText2]
     attr_accessor type: OracleTableText2Type
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -4287,7 +4303,7 @@ module Datasworn
     attr_accessor oracle_type: OracleTableText3OracleType
     attr_accessor rows: Array[OracleRollableRowText3]
     attr_accessor type: OracleTableText3Type
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -4328,7 +4344,7 @@ module Datasworn
     attr_accessor name: Label
     attr_accessor oracle_type: OracleTablesCollectionOracleType
     attr_accessor type: OracleTablesCollectionType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor description: MarkdownString?
@@ -4421,7 +4437,7 @@ module Datasworn
     attr_accessor name: Label
     attr_accessor type: RarityType
     attr_accessor xp_cost: Integer
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor icon: SvgImageURL?
@@ -4928,172 +4944,17 @@ module Datasworn
   end
 
   class TagRule
-    attr_accessor value_type: String
+    attr_accessor schema: TagSchema
+    attr_accessor applies_to: Array[TaggableNodeType]
 
     def self.from_json_data: (untyped) -> TagRule
     def to_json_data: () -> untyped
   end
 
-  class TagRuleAsset < TagRule
-    attr_accessor applies_to: Array[TaggableNodeType]
-    attr_accessor description: MarkdownString
-    attr_accessor wildcard: bool
+  class TagSchema
+    attr_accessor value: untyped
 
-    def self.from_json_data: (untyped) -> TagRuleAsset
-    def to_json_data: () -> untyped
-  end
-
-  class TagRuleAssetCollection < TagRule
-    attr_accessor applies_to: Array[TaggableNodeType]
-    attr_accessor description: MarkdownString
-    attr_accessor wildcard: bool
-
-    def self.from_json_data: (untyped) -> TagRuleAssetCollection
-    def to_json_data: () -> untyped
-  end
-
-  class TagRuleAtlasCollection < TagRule
-    attr_accessor applies_to: Array[TaggableNodeType]
-    attr_accessor description: MarkdownString
-    attr_accessor wildcard: bool
-
-    def self.from_json_data: (untyped) -> TagRuleAtlasCollection
-    def to_json_data: () -> untyped
-  end
-
-  class TagRuleAtlasEntry < TagRule
-    attr_accessor applies_to: Array[TaggableNodeType]
-    attr_accessor description: MarkdownString
-    attr_accessor wildcard: bool
-
-    def self.from_json_data: (untyped) -> TagRuleAtlasEntry
-    def to_json_data: () -> untyped
-  end
-
-  class TagRuleBoolean < TagRule
-    attr_accessor applies_to: Array[TaggableNodeType]
-    attr_accessor array: bool
-    attr_accessor description: MarkdownString
-
-    def self.from_json_data: (untyped) -> TagRuleBoolean
-    def to_json_data: () -> untyped
-  end
-
-  class TagRuleDelveSite < TagRule
-    attr_accessor applies_to: Array[TaggableNodeType]
-    attr_accessor description: MarkdownString
-    attr_accessor wildcard: bool
-
-    def self.from_json_data: (untyped) -> TagRuleDelveSite
-    def to_json_data: () -> untyped
-  end
-
-  class TagRuleDelveSiteDomain < TagRule
-    attr_accessor applies_to: Array[TaggableNodeType]
-    attr_accessor description: MarkdownString
-    attr_accessor wildcard: bool
-
-    def self.from_json_data: (untyped) -> TagRuleDelveSiteDomain
-    def to_json_data: () -> untyped
-  end
-
-  class TagRuleDelveSiteTheme < TagRule
-    attr_accessor applies_to: Array[TaggableNodeType]
-    attr_accessor description: MarkdownString
-    attr_accessor wildcard: bool
-
-    def self.from_json_data: (untyped) -> TagRuleDelveSiteTheme
-    def to_json_data: () -> untyped
-  end
-
-  class TagRuleEnum < TagRule
-    attr_accessor applies_to: Array[TaggableNodeType]
-    attr_accessor array: bool
-    attr_accessor description: MarkdownString
-    attr_accessor enum: Array[DictKey]
-
-    def self.from_json_data: (untyped) -> TagRuleEnum
-    def to_json_data: () -> untyped
-  end
-
-  class TagRuleInteger < TagRule
-    attr_accessor applies_to: Array[TaggableNodeType]
-    attr_accessor array: bool
-    attr_accessor description: MarkdownString
-
-    def self.from_json_data: (untyped) -> TagRuleInteger
-    def to_json_data: () -> untyped
-  end
-
-  class TagRuleMove < TagRule
-    attr_accessor applies_to: Array[TaggableNodeType]
-    attr_accessor description: MarkdownString
-    attr_accessor wildcard: bool
-
-    def self.from_json_data: (untyped) -> TagRuleMove
-    def to_json_data: () -> untyped
-  end
-
-  class TagRuleMoveCategory < TagRule
-    attr_accessor applies_to: Array[TaggableNodeType]
-    attr_accessor description: MarkdownString
-    attr_accessor wildcard: bool
-
-    def self.from_json_data: (untyped) -> TagRuleMoveCategory
-    def to_json_data: () -> untyped
-  end
-
-  class TagRuleNpc < TagRule
-    attr_accessor applies_to: Array[TaggableNodeType]
-    attr_accessor description: MarkdownString
-    attr_accessor wildcard: bool
-
-    def self.from_json_data: (untyped) -> TagRuleNpc
-    def to_json_data: () -> untyped
-  end
-
-  class TagRuleNpcCollection < TagRule
-    attr_accessor applies_to: Array[TaggableNodeType]
-    attr_accessor description: MarkdownString
-    attr_accessor wildcard: bool
-
-    def self.from_json_data: (untyped) -> TagRuleNpcCollection
-    def to_json_data: () -> untyped
-  end
-
-  class TagRuleOracleCollection < TagRule
-    attr_accessor applies_to: Array[TaggableNodeType]
-    attr_accessor description: MarkdownString
-    attr_accessor wildcard: bool
-
-    def self.from_json_data: (untyped) -> TagRuleOracleCollection
-    def to_json_data: () -> untyped
-  end
-
-  class TagRuleOracleRollable < TagRule
-    attr_accessor applies_to: Array[TaggableNodeType]
-    attr_accessor description: MarkdownString
-    attr_accessor wildcard: bool
-
-    def self.from_json_data: (untyped) -> TagRuleOracleRollable
-    def to_json_data: () -> untyped
-  end
-
-  class TagRuleRarity < TagRule
-    attr_accessor applies_to: Array[TaggableNodeType]
-    attr_accessor description: MarkdownString
-    attr_accessor wildcard: bool
-
-    def self.from_json_data: (untyped) -> TagRuleRarity
-    def to_json_data: () -> untyped
-  end
-
-  class TagRuleTruth < TagRule
-    attr_accessor applies_to: Array[TaggableNodeType]
-    attr_accessor description: MarkdownString
-    attr_accessor wildcard: bool
-
-    def self.from_json_data: (untyped) -> TagRuleTruth
+    def self.from_json_data: (untyped) -> TagSchema
     def to_json_data: () -> untyped
   end
 
@@ -5131,15 +4992,6 @@ module Datasworn
     attr_accessor value: Hash[String, Hash[String, Tag]]
 
     def self.from_json_data: (untyped) -> Tags
-    def to_json_data: () -> untyped
-  end
-
-  class TagsCore
-    attr_accessor requires_allies: bool?
-    attr_accessor supernatural: bool?
-    attr_accessor technological: bool?
-
-    def self.from_json_data: (untyped) -> TagsCore
     def to_json_data: () -> untyped
   end
 
@@ -5321,7 +5173,7 @@ module Datasworn
     attr_accessor name: Label
     attr_accessor options: Array[TruthOption]
     attr_accessor type: TruthType
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor canonical_name: Label?
     attr_accessor color: CSSColor?
     attr_accessor factions: Array[EntityPrompt]?
@@ -5355,7 +5207,7 @@ module Datasworn
     attr_accessor description: MarkdownString
     attr_accessor quest_starter: MarkdownString
     attr_accessor roll: DiceRange
-    attr_accessor comment: String?
+    attr_accessor comment: Documentation?
     attr_accessor oracles: Hash[String, EmbeddedOracleRollable]?
     attr_accessor summary: MarkdownString?
 

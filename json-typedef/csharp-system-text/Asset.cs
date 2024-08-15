@@ -62,13 +62,9 @@ namespace Datasworn
         [JsonPropertyName("type")]
         public AssetType Type_ { get; set; }
 
-        /// <summary>
-        /// Implementation hints or other developer-facing comments on this
-        /// node. These should be omitted when presenting the node for gameplay.
-        /// </summary>
         [JsonPropertyName("_comment")]
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
-        public string Comment { get; set; }
+        public Documentation? Comment { get; set; }
 
         [JsonPropertyName("attachments")]
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]

@@ -442,10 +442,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -530,10 +527,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"name": {
 					"ref": "Label",
@@ -947,10 +941,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -1731,10 +1722,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -1843,10 +1831,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -2170,6 +2155,28 @@
 				"description": "A reference to the value of a standard player condition meter."
 			}
 		},
+		"CoreTags": {
+			"optionalProperties": {
+				"supernatural": {
+					"type": "boolean",
+					"metadata": {
+						"description": "This object is supernatural in nature, and is ideal for settings that feature supernatural or mythic powers."
+					}
+				},
+				"technological": {
+					"type": "boolean",
+					"metadata": {
+						"description": "This object is technological in nature, and is ideal for settings that feature remarkable technologies."
+					}
+				},
+				"requires_allies": {
+					"type": "boolean",
+					"metadata": {
+						"description": "This object requires allies to function, and is intended for co-op play, or guided play with allies. It is not appropriate for solo play."
+					}
+				}
+			}
+		},
 		"CounterField": {
 			"properties": {
 				"label": {
@@ -2286,10 +2293,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -2431,10 +2435,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -2679,10 +2680,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -2905,6 +2903,12 @@
 				"pattern": "^[a-z][a-z0-9_]*$"
 			}
 		},
+		"Documentation": {
+			"type": "string",
+			"metadata": {
+				"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when representing an object for gameplay."
+			}
+		},
 		"Email": {
 			"type": "string",
 			"metadata": {
@@ -2953,10 +2957,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -3033,10 +3034,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -3107,10 +3105,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -3190,10 +3185,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -3267,10 +3259,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -3352,10 +3341,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -3425,10 +3411,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -3514,10 +3497,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -3603,10 +3583,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -3702,10 +3679,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -3801,10 +3775,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -3903,10 +3874,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -3989,10 +3957,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -4075,10 +4040,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -4161,10 +4123,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -4268,10 +4227,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -4370,10 +4326,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -4475,10 +4428,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -4577,10 +4527,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -4657,10 +4604,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -5062,10 +5006,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -5164,10 +5105,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -5275,10 +5213,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -5380,10 +5315,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -5490,10 +5422,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -5613,10 +5542,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -5828,10 +5754,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -6026,10 +5949,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -6168,10 +6088,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -6316,10 +6233,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -6417,10 +6331,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -6557,10 +6468,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"summary": {
 					"ref": "MarkdownString"
@@ -6626,10 +6534,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -6740,10 +6645,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -6851,10 +6753,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -6965,10 +6864,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -7082,10 +6978,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -7205,10 +7098,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -7308,10 +7198,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -7408,10 +7295,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -7570,10 +7454,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -7689,10 +7570,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -7811,10 +7689,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -7911,10 +7786,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -8011,10 +7883,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -8108,10 +7977,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -8416,10 +8282,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -8535,10 +8398,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -8657,10 +8517,7 @@
 					},
 					"optionalProperties": {
 						"_comment": {
-							"type": "string",
-							"metadata": {
-								"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-							}
+							"ref": "Documentation"
 						},
 						"canonical_name": {
 							"ref": "Label",
@@ -8798,10 +8655,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -8915,10 +8769,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -9029,10 +8880,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -9146,10 +8994,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -9266,10 +9111,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -9389,10 +9231,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -9511,10 +9350,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -9636,10 +9472,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -9822,10 +9655,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -10771,327 +10601,14 @@
 			]
 		},
 		"TagRule": {
-			"discriminator": "value_type",
-			"mapping": {
-				"boolean": {
-					"properties": {
-						"applies_to": {
-							"elements": {
-								"ref": "TaggableNodeType"
-							}
-						},
-						"description": {
-							"ref": "MarkdownString"
-						},
-						"array": {
-							"type": "boolean"
-						}
+			"properties": {
+				"applies_to": {
+					"elements": {
+						"ref": "TaggableNodeType"
 					}
 				},
-				"integer": {
-					"properties": {
-						"applies_to": {
-							"elements": {
-								"ref": "TaggableNodeType"
-							}
-						},
-						"description": {
-							"ref": "MarkdownString"
-						},
-						"array": {
-							"type": "boolean"
-						}
-					}
-				},
-				"atlas_entry": {
-					"properties": {
-						"applies_to": {
-							"elements": {
-								"ref": "TaggableNodeType"
-							}
-						},
-						"description": {
-							"ref": "MarkdownString"
-						},
-						"wildcard": {
-							"type": "boolean",
-							"metadata": {
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string."
-							}
-						}
-					}
-				},
-				"npc": {
-					"properties": {
-						"applies_to": {
-							"elements": {
-								"ref": "TaggableNodeType"
-							}
-						},
-						"description": {
-							"ref": "MarkdownString"
-						},
-						"wildcard": {
-							"type": "boolean",
-							"metadata": {
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string."
-							}
-						}
-					}
-				},
-				"oracle_rollable": {
-					"properties": {
-						"applies_to": {
-							"elements": {
-								"ref": "TaggableNodeType"
-							}
-						},
-						"description": {
-							"ref": "MarkdownString"
-						},
-						"wildcard": {
-							"type": "boolean",
-							"metadata": {
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string."
-							}
-						}
-					}
-				},
-				"asset": {
-					"properties": {
-						"applies_to": {
-							"elements": {
-								"ref": "TaggableNodeType"
-							}
-						},
-						"description": {
-							"ref": "MarkdownString"
-						},
-						"wildcard": {
-							"type": "boolean",
-							"metadata": {
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string."
-							}
-						}
-					}
-				},
-				"move": {
-					"properties": {
-						"applies_to": {
-							"elements": {
-								"ref": "TaggableNodeType"
-							}
-						},
-						"description": {
-							"ref": "MarkdownString"
-						},
-						"wildcard": {
-							"type": "boolean",
-							"metadata": {
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string."
-							}
-						}
-					}
-				},
-				"atlas_collection": {
-					"properties": {
-						"applies_to": {
-							"elements": {
-								"ref": "TaggableNodeType"
-							}
-						},
-						"description": {
-							"ref": "MarkdownString"
-						},
-						"wildcard": {
-							"type": "boolean",
-							"metadata": {
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string."
-							}
-						}
-					}
-				},
-				"npc_collection": {
-					"properties": {
-						"applies_to": {
-							"elements": {
-								"ref": "TaggableNodeType"
-							}
-						},
-						"description": {
-							"ref": "MarkdownString"
-						},
-						"wildcard": {
-							"type": "boolean",
-							"metadata": {
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string."
-							}
-						}
-					}
-				},
-				"oracle_collection": {
-					"properties": {
-						"applies_to": {
-							"elements": {
-								"ref": "TaggableNodeType"
-							}
-						},
-						"description": {
-							"ref": "MarkdownString"
-						},
-						"wildcard": {
-							"type": "boolean",
-							"metadata": {
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string."
-							}
-						}
-					}
-				},
-				"asset_collection": {
-					"properties": {
-						"applies_to": {
-							"elements": {
-								"ref": "TaggableNodeType"
-							}
-						},
-						"description": {
-							"ref": "MarkdownString"
-						},
-						"wildcard": {
-							"type": "boolean",
-							"metadata": {
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string."
-							}
-						}
-					}
-				},
-				"move_category": {
-					"properties": {
-						"applies_to": {
-							"elements": {
-								"ref": "TaggableNodeType"
-							}
-						},
-						"description": {
-							"ref": "MarkdownString"
-						},
-						"wildcard": {
-							"type": "boolean",
-							"metadata": {
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string."
-							}
-						}
-					}
-				},
-				"delve_site": {
-					"properties": {
-						"applies_to": {
-							"elements": {
-								"ref": "TaggableNodeType"
-							}
-						},
-						"description": {
-							"ref": "MarkdownString"
-						},
-						"wildcard": {
-							"type": "boolean",
-							"metadata": {
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string."
-							}
-						}
-					}
-				},
-				"delve_site_domain": {
-					"properties": {
-						"applies_to": {
-							"elements": {
-								"ref": "TaggableNodeType"
-							}
-						},
-						"description": {
-							"ref": "MarkdownString"
-						},
-						"wildcard": {
-							"type": "boolean",
-							"metadata": {
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string."
-							}
-						}
-					}
-				},
-				"delve_site_theme": {
-					"properties": {
-						"applies_to": {
-							"elements": {
-								"ref": "TaggableNodeType"
-							}
-						},
-						"description": {
-							"ref": "MarkdownString"
-						},
-						"wildcard": {
-							"type": "boolean",
-							"metadata": {
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string."
-							}
-						}
-					}
-				},
-				"rarity": {
-					"properties": {
-						"applies_to": {
-							"elements": {
-								"ref": "TaggableNodeType"
-							}
-						},
-						"description": {
-							"ref": "MarkdownString"
-						},
-						"wildcard": {
-							"type": "boolean",
-							"metadata": {
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string."
-							}
-						}
-					}
-				},
-				"truth": {
-					"properties": {
-						"applies_to": {
-							"elements": {
-								"ref": "TaggableNodeType"
-							}
-						},
-						"description": {
-							"ref": "MarkdownString"
-						},
-						"wildcard": {
-							"type": "boolean",
-							"metadata": {
-								"description": "If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string."
-							}
-						}
-					}
-				},
-				"enum": {
-					"properties": {
-						"applies_to": {
-							"elements": {
-								"ref": "TaggableNodeType"
-							}
-						},
-						"description": {
-							"ref": "MarkdownString"
-						},
-						"array": {
-							"type": "boolean"
-						},
-						"enum": {
-							"elements": {
-								"ref": "DictKey"
-							}
-						}
-					}
+				"$schema": {
+					"ref": "TagSchema"
 				}
 			}
 		},
@@ -11109,26 +10626,20 @@
 				"description": "A dictionary of tags, keyed by the RulesPackageId that the tags are from."
 			}
 		},
-		"TagsCore": {
-			"optionalProperties": {
-				"supernatural": {
-					"type": "boolean",
-					"metadata": {
-						"description": "This object is supernatural in nature, and is ideal for settings that feature supernatural or mythic powers."
+		"TagSchema": {
+			"metadata": {
+				"description": "A JSON schema used to validate the tag data.",
+				"examples": [
+					{
+						"type": "boolean"
+					},
+					{
+						"type": "array",
+						"items": {
+							"$ref": "OracleRollableIdWildcard"
+						}
 					}
-				},
-				"technological": {
-					"type": "boolean",
-					"metadata": {
-						"description": "This object is technological in nature, and is ideal for settings that feature remarkable technologies."
-					}
-				},
-				"requires_allies": {
-					"type": "boolean",
-					"metadata": {
-						"description": "This object requires allies to function, and is intended for co-op play, or guided play with allies. It is not appropriate for solo play."
-					}
-				}
+				]
 			}
 		},
 		"TextField": {
@@ -11530,10 +11041,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"canonical_name": {
 					"ref": "Label",
@@ -11625,10 +11133,7 @@
 			},
 			"optionalProperties": {
 				"_comment": {
-					"type": "string",
-					"metadata": {
-						"description": "Implementation hints or other developer-facing comments on this node. These should be omitted when presenting the node for gameplay."
-					}
+					"ref": "Documentation"
 				},
 				"summary": {
 					"ref": "MarkdownString"

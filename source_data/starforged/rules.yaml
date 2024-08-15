@@ -110,43 +110,43 @@ rules:
       description: Expertise, knowledge, and observation.
   tags:
     region:
-      description: This content applies to a specific region of the Forge.
       applies_to: [oracle_rollable, row]
-      value_type: enum
-      enum:
+      $schema:
+        description: This content applies to a specific region of the Forge.
+        enum:
         - terminus
         - outlands
         - expanse
     location:
-      description: This content applies specifically to planetside, orbital, or deep space environments.
       applies_to: [oracle_rollable, row]
-      value_type: enum
-      enum:
+      $schema:
+        description: This content applies specifically to planetside, orbital, or deep space environments.
+        enum:
         - planetside
         - orbital
         - deep_space
     environment:
-      description: This content applies to a specific creature environment.
       applies_to: [oracle_rollable,row]
-      value_type: enum
-      enum:
+      $schema:
+        description: This content applies to a specific creature environment.
+        enum:
         - space
         - interior
         - land
         - liquid
         - air
     faction_type:
-      description: This content applies to a specific type of faction.
       applies_to: [oracle_rollable,row]
-      value_type: enum
-      enum:
+      $schema:
+        description: This content applies to a specific type of faction.
+        enum:
         - dominion
         - guild
         - fringe_group
     life:
-      description: This content applies specifically to life-bearing or lifeless worlds.
-      value_type: enum
       applies_to: [oracle_rollable,row]
-      enum:
+      $schema:
+        description: This content applies specifically to life-bearing or lifeless worlds.
+        enum:
         - lifebearing
         - lifeless

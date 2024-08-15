@@ -2,29 +2,46 @@
 
 package Datasworn;
 
-import com.fasterxml.jackson.annotation.JsonSubTypes;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import java.util.List;
 
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "value_type")
-@JsonSubTypes({
-    @JsonSubTypes.Type(name = "asset", value = TagRuleAsset.class),
-    @JsonSubTypes.Type(name = "asset_collection", value = TagRuleAssetCollection.class),
-    @JsonSubTypes.Type(name = "atlas_collection", value = TagRuleAtlasCollection.class),
-    @JsonSubTypes.Type(name = "atlas_entry", value = TagRuleAtlasEntry.class),
-    @JsonSubTypes.Type(name = "boolean", value = TagRuleBoolean.class),
-    @JsonSubTypes.Type(name = "delve_site", value = TagRuleDelveSite.class),
-    @JsonSubTypes.Type(name = "delve_site_domain", value = TagRuleDelveSiteDomain.class),
-    @JsonSubTypes.Type(name = "delve_site_theme", value = TagRuleDelveSiteTheme.class),
-    @JsonSubTypes.Type(name = "enum", value = TagRuleEnum.class),
-    @JsonSubTypes.Type(name = "integer", value = TagRuleInteger.class),
-    @JsonSubTypes.Type(name = "move", value = TagRuleMove.class),
-    @JsonSubTypes.Type(name = "move_category", value = TagRuleMoveCategory.class),
-    @JsonSubTypes.Type(name = "npc", value = TagRuleNpc.class),
-    @JsonSubTypes.Type(name = "npc_collection", value = TagRuleNpcCollection.class),
-    @JsonSubTypes.Type(name = "oracle_collection", value = TagRuleOracleCollection.class),
-    @JsonSubTypes.Type(name = "oracle_rollable", value = TagRuleOracleRollable.class),
-    @JsonSubTypes.Type(name = "rarity", value = TagRuleRarity.class),
-    @JsonSubTypes.Type(name = "truth", value = TagRuleTruth.class),
-})
-public abstract class TagRule {
+@JsonSerialize
+public class TagRule {
+    @JsonProperty("$schema")
+    private TagSchema schema;
+
+    @JsonProperty("applies_to")
+    private List<TaggableNodeType> appliesTo;
+
+    public TagRule() {
+    }
+
+    /**
+     * Getter for schema.<p>
+     */
+    public TagSchema getSchema() {
+        return schema;
+    }
+
+    /**
+     * Setter for schema.<p>
+     */
+    public void setSchema(TagSchema schema) {
+        this.schema = schema;
+    }
+
+    /**
+     * Getter for appliesTo.<p>
+     */
+    public List<TaggableNodeType> getAppliesTo() {
+        return appliesTo;
+    }
+
+    /**
+     * Setter for appliesTo.<p>
+     */
+    public void setAppliesTo(List<TaggableNodeType> appliesTo) {
+        this.appliesTo = appliesTo;
+    }
 }

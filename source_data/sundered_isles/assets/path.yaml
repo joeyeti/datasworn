@@ -67,7 +67,7 @@ assets:
         tags:
           starforged:
             recommended: true
-          core:
+          _core:
             technological: true
         abilities:
           - enabled: true
@@ -290,7 +290,7 @@ assets:
         tags:
           starforged:
             recommended: true
-          core:
+          _core:
             supernatural: true
         abilities:
           - enabled: true
@@ -416,7 +416,7 @@ assets:
         tags:
           starforged:
             recommended: true
-          core:
+          _core:
             supernatural: true
         abilities:
           - enabled: true
@@ -782,7 +782,7 @@ assets:
         tags:
           starforged:
             recommended: true
-          core:
+          _core:
             supernatural: true
         options:
           form:
@@ -931,7 +931,7 @@ assets:
         tags:
           starforged:
             recommended: true
-          core:
+          _core:
             supernatural: true
         abilities:
           - enabled: true
@@ -1132,7 +1132,7 @@ assets:
         name: Windbinder
         type: asset
         tags:
-          core:
+          _core:
             supernatural: true
         _source:
           <<: *Source

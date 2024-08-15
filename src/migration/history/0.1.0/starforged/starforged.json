@@ -181,39 +181,39 @@
 		},
 		"tags": {
 			"region": {
-				"value_type": "enum",
-				"description": "This content applies to a specific region of the Forge.",
-				"applies_to": ["oracle_rollable", "row"],
-				"array": false,
-				"enum": ["terminus", "outlands", "expanse"]
+				"$schema": {
+					"description": "This content applies to a specific region of the Forge.",
+					"enum": ["terminus", "outlands", "expanse"]
+				},
+				"applies_to": ["oracle_rollable", "row"]
 			},
 			"environment": {
-				"value_type": "enum",
-				"description": "This content applies to a specific creature environment.",
-				"applies_to": ["oracle_rollable", "row"],
-				"array": false,
-				"enum": ["space", "interior", "land", "liquid", "air"]
+				"$schema": {
+					"description": "This content applies to a specific creature environment.",
+					"enum": ["space", "interior", "land", "liquid", "air"]
+				},
+				"applies_to": ["oracle_rollable", "row"]
 			},
 			"faction_type": {
-				"value_type": "enum",
-				"description": "This content applies to a specific type of faction.",
-				"applies_to": ["oracle_rollable", "row"],
-				"array": false,
-				"enum": ["dominion", "guild", "fringe_group"]
+				"$schema": {
+					"description": "This content applies to a specific type of faction.",
+					"enum": ["dominion", "guild", "fringe_group"]
+				},
+				"applies_to": ["oracle_rollable", "row"]
 			},
 			"life": {
-				"value_type": "enum",
-				"description": "This content applies specifically to life-bearing or lifeless worlds.",
-				"applies_to": ["oracle_rollable", "row"],
-				"array": false,
-				"enum": ["lifebearing", "lifeless"]
+				"$schema": {
+					"description": "This content applies specifically to life-bearing or lifeless worlds.",
+					"enum": ["lifebearing", "lifeless"]
+				},
+				"applies_to": ["oracle_rollable", "row"]
 			},
 			"location": {
-				"value_type": "enum",
-				"description": "This content applies specifically to planetside, orbital, or deep space environments.",
-				"applies_to": ["oracle_rollable", "row"],
-				"array": false,
-				"enum": ["planetside", "orbital", "deep_space"]
+				"$schema": {
+					"description": "This content applies specifically to planetside, orbital, or deep space environments.",
+					"enum": ["planetside", "orbital", "deep_space"]
+				},
+				"applies_to": ["oracle_rollable", "row"]
 			}
 		}
 	},
@@ -56063,7 +56063,7 @@
 						}
 					},
 					"tags": {
-						"core": {
+						"_core": {
 							"technological": true
 						},
 						"sundered_isles": {
@@ -56292,7 +56292,7 @@
 					],
 					"controls": {},
 					"tags": {
-						"core": {
+						"_core": {
 							"technological": true
 						},
 						"sundered_isles": {
@@ -57014,7 +57014,7 @@
 					],
 					"controls": {},
 					"tags": {
-						"core": {
+						"_core": {
 							"technological": true
 						},
 						"sundered_isles": {
@@ -57195,7 +57195,7 @@
 					],
 					"controls": {},
 					"tags": {
-						"core": {
+						"_core": {
 							"supernatural": true
 						},
 						"sundered_isles": {
@@ -57428,7 +57428,7 @@
 					],
 					"controls": {},
 					"tags": {
-						"core": {
+						"_core": {
 							"supernatural": true
 						},
 						"sundered_isles": {
@@ -57737,7 +57737,7 @@
 						}
 					},
 					"tags": {
-						"core": {
+						"_core": {
 							"supernatural": true
 						},
 						"sundered_isles": {
@@ -57921,7 +57921,7 @@
 					],
 					"controls": {},
 					"tags": {
-						"core": {
+						"_core": {
 							"technological": true
 						},
 						"sundered_isles": {
@@ -58260,7 +58260,7 @@
 					],
 					"controls": {},
 					"tags": {
-						"core": {
+						"_core": {
 							"supernatural": true
 						},
 						"sundered_isles": {
@@ -58547,7 +58547,7 @@
 					],
 					"controls": {},
 					"tags": {
-						"core": {
+						"_core": {
 							"supernatural": true
 						},
 						"sundered_isles": {
@@ -59775,7 +59775,7 @@
 					],
 					"controls": {},
 					"tags": {
-						"core": {
+						"_core": {
 							"supernatural": true
 						},
 						"sundered_isles": {
@@ -59896,7 +59896,7 @@
 					],
 					"controls": {},
 					"tags": {
-						"core": {
+						"_core": {
 							"supernatural": true
 						},
 						"sundered_isles": {

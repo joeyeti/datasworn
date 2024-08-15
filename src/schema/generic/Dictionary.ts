@@ -7,6 +7,7 @@ import {
 } from '@sinclair/typebox'
 
 import Id from '../common/Id.js'
+import { omit } from 'lodash-es'
 
 export const DictionaryBrand = Symbol('Dictionary')
 

@@ -155,7 +155,7 @@ assets:
         name: Diving Bell
         type: asset
         tags:
-          core:
+          _core:
             technological: true
         _source:
           <<: *Source
@@ -201,7 +201,7 @@ assets:
         name: Flying Machine
         type: asset
         tags:
-          core:
+          _core:
             technological: true
         _source:
           <<: *Source
