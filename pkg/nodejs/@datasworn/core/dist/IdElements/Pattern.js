@@ -6,10 +6,10 @@ const CONST_js_1 = require("./CONST.js");
  */
 var Pattern;
 (function (Pattern) {
-    const DictKeyBase = /[a-z][a-z_]*/;
+    const DictKeyBase = /[a-z][a-z0-9_]*/;
     Pattern.DictKeyElement = DictKeyBase;
     Pattern.DictKey = new RegExp(`^${DictKeyBase.source}$`);
-    const RulesPackageBase = new RegExp(`[a-z][a-z0-9_]{${CONST_js_1.PACKAGE_ID_LENGTH_MIN},}`);
+    const RulesPackageBase = DictKeyBase;
     Pattern.RulesPackageElement = RulesPackageBase;
     Pattern.RulesPackageId = new RegExp(`^${RulesPackageBase.source}$`);
     Pattern.IndexElement = /\d+/;

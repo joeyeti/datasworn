@@ -6,9 +6,6 @@ export const COLLECTION_DEPTH_MAX = 4 as const
 export type COLLECTION_DEPTH_MAX = typeof COLLECTION_DEPTH_MAX
 export const COLLECTION_DEPTH_MIN = 1 as const
 export type COLLECTION_DEPTH_MIN = typeof COLLECTION_DEPTH_MIN
-export const PACKAGE_ID_LENGTH_MIN = 3 as const
-export type PACKAGE_ID_LENGTH_MIN = typeof PACKAGE_ID_LENGTH_MIN
-
 export const MdLinkPrefix = 'datasworn' as const
 export type MdLinkPrefix = typeof MdLinkPrefix
 

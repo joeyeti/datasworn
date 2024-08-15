@@ -295,7 +295,7 @@ export type AssetAbilityControlField =
 /**
  * A unique ID representing an AssetAbility object.
  * @pattern ```javascript
- * /^asset\.ability:([a-z][a-z0-9_]{3,}(?:\/[a-z][a-z_]*){2,5})\.(\d+)$/
+ * /^asset\.ability:([a-z][a-z0-9_]*(?:\/[a-z][a-z0-9_]*){2,5})\.(\d+)$/
  * ```
  */
 export type AssetAbilityId = string
@@ -303,7 +303,7 @@ export type AssetAbilityId = string
 /**
  * A wildcarded AssetAbilityId that can be used to match multiple AssetAbility objects.
  * @pattern ```javascript
- * /^asset\.ability:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)(?:\/(?:[a-z][a-z_]*|\*|\*\*)){2,5})\.(\d+|\*)$/
+ * /^asset\.ability:((?:[a-z][a-z0-9_]*|\*|\*\*)(?:\/(?:[a-z][a-z0-9_]*|\*|\*\*)){2,5})\.(\d+|\*)$/
  * ```
  */
 export type AssetAbilityIdWildcard = string
@@ -311,7 +311,7 @@ export type AssetAbilityIdWildcard = string
 /**
  * A unique ID representing an AssetAbilityMove object.
  * @pattern ```javascript
- * /^asset\.ability\.move:([a-z][a-z0-9_]{3,}(?:\/[a-z][a-z_]*){2,5})\.(\d+)\.([a-z][a-z_]*|\*)$/
+ * /^asset\.ability\.move:([a-z][a-z0-9_]*(?:\/[a-z][a-z0-9_]*){2,5})\.(\d+)\.([a-z][a-z0-9_]*|\*)$/
  * ```
  */
 export type AssetAbilityMoveId = string
@@ -319,7 +319,7 @@ export type AssetAbilityMoveId = string
 /**
  * A wildcarded AssetAbilityMoveId that can be used to match multiple AssetAbilityMove objects.
  * @pattern ```javascript
- * /^asset\.ability\.move:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)(?:\/(?:[a-z][a-z_]*|\*|\*\*)){2,5})\.(\d+|\*)\.([a-z][a-z_]*|\*)$/
+ * /^asset\.ability\.move:((?:[a-z][a-z0-9_]*|\*|\*\*)(?:\/(?:[a-z][a-z0-9_]*|\*|\*\*)){2,5})\.(\d+|\*)\.([a-z][a-z0-9_]*|\*)$/
  * ```
  */
 export type AssetAbilityMoveIdWildcard = string
@@ -332,7 +332,7 @@ export type AssetAbilityOptionField = TextField
 /**
  * A unique ID representing an AssetAbilityOracleRollable object.
  * @pattern ```javascript
- * /^asset\.ability\.oracle_rollable:([a-z][a-z0-9_]{3,}(?:\/[a-z][a-z_]*){2,5})\.(\d+)\.([a-z][a-z_]*|\*)$/
+ * /^asset\.ability\.oracle_rollable:([a-z][a-z0-9_]*(?:\/[a-z][a-z0-9_]*){2,5})\.(\d+)\.([a-z][a-z0-9_]*|\*)$/
  * ```
  */
 export type AssetAbilityOracleRollableId = string
@@ -340,7 +340,7 @@ export type AssetAbilityOracleRollableId = string
 /**
  * A wildcarded AssetAbilityOracleRollableId that can be used to match multiple AssetAbilityOracleRollable objects.
  * @pattern ```javascript
- * /^asset\.ability\.oracle_rollable:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)(?:\/(?:[a-z][a-z_]*|\*|\*\*)){2,5})\.(\d+|\*)\.([a-z][a-z_]*|\*)$/
+ * /^asset\.ability\.oracle_rollable:((?:[a-z][a-z0-9_]*|\*|\*\*)(?:\/(?:[a-z][a-z0-9_]*|\*|\*\*)){2,5})\.(\d+|\*)\.([a-z][a-z0-9_]*|\*)$/
  * ```
  */
 export type AssetAbilityOracleRollableIdWildcard = string
@@ -348,7 +348,7 @@ export type AssetAbilityOracleRollableIdWildcard = string
 /**
  * A unique ID representing an AssetAbilityOracleRollableRow object.
  * @pattern ```javascript
- * /^asset\.ability\.oracle_rollable\.row:([a-z][a-z0-9_]{3,}(?:\/[a-z][a-z_]*){2,5})\.(\d+)\.([a-z][a-z_]*|\*)\.(\d+)$/
+ * /^asset\.ability\.oracle_rollable\.row:([a-z][a-z0-9_]*(?:\/[a-z][a-z0-9_]*){2,5})\.(\d+)\.([a-z][a-z0-9_]*|\*)\.(\d+)$/
  * ```
  */
 export type AssetAbilityOracleRollableRowId = string
@@ -356,7 +356,7 @@ export type AssetAbilityOracleRollableRowId = string
 /**
  * A wildcarded AssetAbilityOracleRollableRowId that can be used to match multiple AssetAbilityOracleRollableRow objects.
  * @pattern ```javascript
- * /^asset\.ability\.oracle_rollable\.row:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)(?:\/(?:[a-z][a-z_]*|\*|\*\*)){2,5})\.(\d+|\*)\.([a-z][a-z_]*|\*)\.(\d+|\*)$/
+ * /^asset\.ability\.oracle_rollable\.row:((?:[a-z][a-z0-9_]*|\*|\*\*)(?:\/(?:[a-z][a-z0-9_]*|\*|\*\*)){2,5})\.(\d+|\*)\.([a-z][a-z0-9_]*|\*)\.(\d+|\*)$/
  * ```
  */
 export type AssetAbilityOracleRollableRowIdWildcard = string
@@ -488,7 +488,7 @@ export interface AssetCollection {
 /**
  * A unique ID representing an AssetCollection object.
  * @pattern ```javascript
- * /^asset_collection:([a-z][a-z0-9_]{3,}(?:\/[a-z][a-z_]*){1,4})$/
+ * /^asset_collection:([a-z][a-z0-9_]*(?:\/[a-z][a-z0-9_]*){1,4})$/
  * ```
  */
 export type AssetCollectionId = string
@@ -496,7 +496,7 @@ export type AssetCollectionId = string
 /**
  * A wildcarded AssetCollectionId that can be used to match multiple AssetCollection objects.
  * @pattern ```javascript
- * /^asset_collection:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)(?:\/(?:[a-z][a-z_]*|\*|\*\*)){1,4})$/
+ * /^asset_collection:((?:[a-z][a-z0-9_]*|\*|\*\*)(?:\/(?:[a-z][a-z0-9_]*|\*|\*\*)){1,4})$/
  * ```
  */
 export type AssetCollectionIdWildcard = string
@@ -629,7 +629,7 @@ export interface AssetEnhancement {
 /**
  * A unique ID representing an Asset object.
  * @pattern ```javascript
- * /^asset:([a-z][a-z0-9_]{3,}(?:\/[a-z][a-z_]*){2,5})$/
+ * /^asset:([a-z][a-z0-9_]*(?:\/[a-z][a-z0-9_]*){2,5})$/
  * ```
  */
 export type AssetId = string
@@ -637,7 +637,7 @@ export type AssetId = string
 /**
  * A wildcarded AssetId that can be used to match multiple Asset objects.
  * @pattern ```javascript
- * /^asset:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)(?:\/(?:[a-z][a-z_]*|\*|\*\*)){2,5})$/
+ * /^asset:((?:[a-z][a-z0-9_]*|\*|\*\*)(?:\/(?:[a-z][a-z0-9_]*|\*|\*\*)){2,5})$/
  * ```
  */
 export type AssetIdWildcard = string
@@ -734,7 +734,7 @@ export interface AtlasCollection {
 /**
  * A unique ID representing an AtlasCollection object.
  * @pattern ```javascript
- * /^atlas_collection:([a-z][a-z0-9_]{3,}(?:\/[a-z][a-z_]*){1,4})$/
+ * /^atlas_collection:([a-z][a-z0-9_]*(?:\/[a-z][a-z0-9_]*){1,4})$/
  * ```
  */
 export type AtlasCollectionId = string
@@ -742,7 +742,7 @@ export type AtlasCollectionId = string
 /**
  * A wildcarded AtlasCollectionId that can be used to match multiple AtlasCollection objects.
  * @pattern ```javascript
- * /^atlas_collection:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)(?:\/(?:[a-z][a-z_]*|\*|\*\*)){1,4})$/
+ * /^atlas_collection:((?:[a-z][a-z0-9_]*|\*|\*\*)(?:\/(?:[a-z][a-z0-9_]*|\*|\*\*)){1,4})$/
  * ```
  */
 export type AtlasCollectionIdWildcard = string
@@ -794,7 +794,7 @@ export interface AtlasEntry {
 /**
  * A unique ID representing an AtlasEntry object.
  * @pattern ```javascript
- * /^atlas_entry:([a-z][a-z0-9_]{3,}(?:\/[a-z][a-z_]*){2,5})$/
+ * /^atlas_entry:([a-z][a-z0-9_]*(?:\/[a-z][a-z0-9_]*){2,5})$/
  * ```
  */
 export type AtlasEntryId = string
@@ -802,7 +802,7 @@ export type AtlasEntryId = string
 /**
  * A wildcarded AtlasEntryId that can be used to match multiple AtlasEntry objects.
  * @pattern ```javascript
- * /^atlas_entry:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)(?:\/(?:[a-z][a-z_]*|\*|\*\*)){2,5})$/
+ * /^atlas_entry:((?:[a-z][a-z0-9_]*|\*|\*\*)(?:\/(?:[a-z][a-z0-9_]*|\*|\*\*)){2,5})$/
  * ```
  */
 export type AtlasEntryIdWildcard = string
@@ -1222,7 +1222,7 @@ export type DelveSiteDenizenFrequency =
 /**
  * A unique ID representing a DelveSiteDenizen object.
  * @pattern ```javascript
- * /^delve_site\.denizen:([a-z][a-z0-9_]{3,}\/[a-z][a-z_]*)\.(\d+)$/
+ * /^delve_site\.denizen:([a-z][a-z0-9_]*\/[a-z][a-z0-9_]*)\.(\d+)$/
  * ```
  */
 export type DelveSiteDenizenId = string
@@ -1230,7 +1230,7 @@ export type DelveSiteDenizenId = string
 /**
  * A wildcarded DelveSiteDenizenId that can be used to match multiple DelveSiteDenizen objects.
  * @pattern ```javascript
- * /^delve_site\.denizen:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)\/[a-z][a-z_]*|\/\*|\/\*\*)\.(\d+|\*)$/
+ * /^delve_site\.denizen:((?:[a-z][a-z0-9_]*|\*|\*\*)\/[a-z][a-z0-9_]*|\/\*|\/\*\*)\.(\d+|\*)$/
  * ```
  */
 export type DelveSiteDenizenIdWildcard = string
@@ -1428,7 +1428,7 @@ export interface DelveSiteDomainDanger {
 /**
  * A unique ID representing a DelveSiteDomainDanger object.
  * @pattern ```javascript
- * /^delve_site_domain\.danger:([a-z][a-z0-9_]{3,}\/[a-z][a-z_]*)\.(\d+)$/
+ * /^delve_site_domain\.danger:([a-z][a-z0-9_]*\/[a-z][a-z0-9_]*)\.(\d+)$/
  * ```
  */
 export type DelveSiteDomainDangerId = string
@@ -1436,7 +1436,7 @@ export type DelveSiteDomainDangerId = string
 /**
  * A wildcarded DelveSiteDomainDangerId that can be used to match multiple DelveSiteDomainDanger objects.
  * @pattern ```javascript
- * /^delve_site_domain\.danger:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)\/[a-z][a-z_]*|\/\*|\/\*\*)\.(\d+|\*)$/
+ * /^delve_site_domain\.danger:((?:[a-z][a-z0-9_]*|\*|\*\*)\/[a-z][a-z0-9_]*|\/\*|\/\*\*)\.(\d+|\*)$/
  * ```
  */
 export type DelveSiteDomainDangerIdWildcard = string
@@ -1480,7 +1480,7 @@ export interface DelveSiteDomainFeature {
 /**
  * A unique ID representing a DelveSiteDomainFeature object.
  * @pattern ```javascript
- * /^delve_site_domain\.feature:([a-z][a-z0-9_]{3,}\/[a-z][a-z_]*)\.(\d+)$/
+ * /^delve_site_domain\.feature:([a-z][a-z0-9_]*\/[a-z][a-z0-9_]*)\.(\d+)$/
  * ```
  */
 export type DelveSiteDomainFeatureId = string
@@ -1488,7 +1488,7 @@ export type DelveSiteDomainFeatureId = string
 /**
  * A wildcarded DelveSiteDomainFeatureId that can be used to match multiple DelveSiteDomainFeature objects.
  * @pattern ```javascript
- * /^delve_site_domain\.feature:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)\/[a-z][a-z_]*|\/\*|\/\*\*)\.(\d+|\*)$/
+ * /^delve_site_domain\.feature:((?:[a-z][a-z0-9_]*|\*|\*\*)\/[a-z][a-z0-9_]*|\/\*|\/\*\*)\.(\d+|\*)$/
  * ```
  */
 export type DelveSiteDomainFeatureIdWildcard = string
@@ -1496,7 +1496,7 @@ export type DelveSiteDomainFeatureIdWildcard = string
 /**
  * A unique ID representing a DelveSiteDomain object.
  * @pattern ```javascript
- * /^delve_site_domain:([a-z][a-z0-9_]{3,}\/[a-z][a-z_]*)$/
+ * /^delve_site_domain:([a-z][a-z0-9_]*\/[a-z][a-z0-9_]*)$/
  * ```
  */
 export type DelveSiteDomainId = string
@@ -1504,7 +1504,7 @@ export type DelveSiteDomainId = string
 /**
  * A wildcarded DelveSiteDomainId that can be used to match multiple DelveSiteDomain objects.
  * @pattern ```javascript
- * /^delve_site_domain:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)\/[a-z][a-z_]*|\/\*|\/\*\*)$/
+ * /^delve_site_domain:((?:[a-z][a-z0-9_]*|\*|\*\*)\/[a-z][a-z0-9_]*|\/\*|\/\*\*)$/
  * ```
  */
 export type DelveSiteDomainIdWildcard = string
@@ -1512,7 +1512,7 @@ export type DelveSiteDomainIdWildcard = string
 /**
  * A unique ID representing a DelveSite object.
  * @pattern ```javascript
- * /^delve_site:([a-z][a-z0-9_]{3,}\/[a-z][a-z_]*)$/
+ * /^delve_site:([a-z][a-z0-9_]*\/[a-z][a-z0-9_]*)$/
  * ```
  */
 export type DelveSiteId = string
@@ -1520,7 +1520,7 @@ export type DelveSiteId = string
 /**
  * A wildcarded DelveSiteId that can be used to match multiple DelveSite objects.
  * @pattern ```javascript
- * /^delve_site:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)\/[a-z][a-z_]*|\/\*|\/\*\*)$/
+ * /^delve_site:((?:[a-z][a-z0-9_]*|\*|\*\*)\/[a-z][a-z0-9_]*|\/\*|\/\*\*)$/
  * ```
  */
 export type DelveSiteIdWildcard = string
@@ -1714,7 +1714,7 @@ export interface DelveSiteThemeDanger {
 /**
  * A unique ID representing a DelveSiteThemeDanger object.
  * @pattern ```javascript
- * /^delve_site_theme\.danger:([a-z][a-z0-9_]{3,}\/[a-z][a-z_]*)\.(\d+)$/
+ * /^delve_site_theme\.danger:([a-z][a-z0-9_]*\/[a-z][a-z0-9_]*)\.(\d+)$/
  * ```
  */
 export type DelveSiteThemeDangerId = string
@@ -1722,7 +1722,7 @@ export type DelveSiteThemeDangerId = string
 /**
  * A wildcarded DelveSiteThemeDangerId that can be used to match multiple DelveSiteThemeDanger objects.
  * @pattern ```javascript
- * /^delve_site_theme\.danger:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)\/[a-z][a-z_]*|\/\*|\/\*\*)\.(\d+|\*)$/
+ * /^delve_site_theme\.danger:((?:[a-z][a-z0-9_]*|\*|\*\*)\/[a-z][a-z0-9_]*|\/\*|\/\*\*)\.(\d+|\*)$/
  * ```
  */
 export type DelveSiteThemeDangerIdWildcard = string
@@ -1766,7 +1766,7 @@ export interface DelveSiteThemeFeature {
 /**
  * A unique ID representing a DelveSiteThemeFeature object.
  * @pattern ```javascript
- * /^delve_site_theme\.feature:([a-z][a-z0-9_]{3,}\/[a-z][a-z_]*)\.(\d+)$/
+ * /^delve_site_theme\.feature:([a-z][a-z0-9_]*\/[a-z][a-z0-9_]*)\.(\d+)$/
  * ```
  */
 export type DelveSiteThemeFeatureId = string
@@ -1774,7 +1774,7 @@ export type DelveSiteThemeFeatureId = string
 /**
  * A wildcarded DelveSiteThemeFeatureId that can be used to match multiple DelveSiteThemeFeature objects.
  * @pattern ```javascript
- * /^delve_site_theme\.feature:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)\/[a-z][a-z_]*|\/\*|\/\*\*)\.(\d+|\*)$/
+ * /^delve_site_theme\.feature:((?:[a-z][a-z0-9_]*|\*|\*\*)\/[a-z][a-z0-9_]*|\/\*|\/\*\*)\.(\d+|\*)$/
  * ```
  */
 export type DelveSiteThemeFeatureIdWildcard = string
@@ -1782,7 +1782,7 @@ export type DelveSiteThemeFeatureIdWildcard = string
 /**
  * A unique ID representing a DelveSiteTheme object.
  * @pattern ```javascript
- * /^delve_site_theme:([a-z][a-z0-9_]{3,}\/[a-z][a-z_]*)$/
+ * /^delve_site_theme:([a-z][a-z0-9_]*\/[a-z][a-z0-9_]*)$/
  * ```
  */
 export type DelveSiteThemeId = string
@@ -1790,7 +1790,7 @@ export type DelveSiteThemeId = string
 /**
  * A wildcarded DelveSiteThemeId that can be used to match multiple DelveSiteTheme objects.
  * @pattern ```javascript
- * /^delve_site_theme:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)\/[a-z][a-z_]*|\/\*|\/\*\*)$/
+ * /^delve_site_theme:((?:[a-z][a-z0-9_]*|\*|\*\*)\/[a-z][a-z0-9_]*|\/\*|\/\*\*)$/
  * ```
  */
 export type DelveSiteThemeIdWildcard = string
@@ -1824,7 +1824,7 @@ export interface DiceRange {
  * A `snake_case` key used in a Datasworn dictionary object.
  * @remarks If you need to generate a key from a user-provided label, it's recommended to use a 'slugify' function/library, e.g. https://www.npmjs.com/package/slugify for NodeJS.
  * @pattern ```javascript
- * /^[a-z][a-z_]*$/
+ * /^[a-z][a-z0-9_]*$/
  * ```
  */
 export type DictKey = string
@@ -2523,7 +2523,7 @@ export interface Expansion {
 /**
  * The ID of a Datasworn package that relies on an external package to provide its ruleset.
  * @pattern ```javascript
- * /^[a-z][a-z0-9_]{3,}$/
+ * /^[a-z][a-z0-9_]*$/
  * ```
  * @example "delve"
  * @example "sundered_isles"
@@ -2782,7 +2782,7 @@ export interface MoveCategory {
 /**
  * A unique ID representing a MoveCategory object.
  * @pattern ```javascript
- * /^move_category:([a-z][a-z0-9_]{3,}(?:\/[a-z][a-z_]*){1,4})$/
+ * /^move_category:([a-z][a-z0-9_]*(?:\/[a-z][a-z0-9_]*){1,4})$/
  * ```
  */
 export type MoveCategoryId = string
@@ -2790,7 +2790,7 @@ export type MoveCategoryId = string
 /**
  * A wildcarded MoveCategoryId that can be used to match multiple MoveCategory objects.
  * @pattern ```javascript
- * /^move_category:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)(?:\/(?:[a-z][a-z_]*|\*|\*\*)){1,4})$/
+ * /^move_category:((?:[a-z][a-z0-9_]*|\*|\*\*)(?:\/(?:[a-z][a-z0-9_]*|\*|\*\*)){1,4})$/
  * ```
  */
 export type MoveCategoryIdWildcard = string
@@ -2807,7 +2807,7 @@ export type MoveEnhancement =
 /**
  * A unique ID representing a Move object.
  * @pattern ```javascript
- * /^move:([a-z][a-z0-9_]{3,}(?:\/[a-z][a-z_]*){2,5})$/
+ * /^move:([a-z][a-z0-9_]*(?:\/[a-z][a-z0-9_]*){2,5})$/
  * ```
  */
 export type MoveId = string
@@ -2815,7 +2815,7 @@ export type MoveId = string
 /**
  * A wildcarded MoveId that can be used to match multiple Move objects.
  * @pattern ```javascript
- * /^move:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)(?:\/(?:[a-z][a-z_]*|\*|\*\*)){2,5})$/
+ * /^move:((?:[a-z][a-z0-9_]*|\*|\*\*)(?:\/(?:[a-z][a-z0-9_]*|\*|\*\*)){2,5})$/
  * ```
  */
 export type MoveIdWildcard = string
@@ -2903,7 +2903,7 @@ export interface MoveNoRollEnhancement {
 /**
  * A unique ID representing a MoveOracleRollable object.
  * @pattern ```javascript
- * /^move\.oracle_rollable:([a-z][a-z0-9_]{3,}(?:\/[a-z][a-z_]*){2,5})\.([a-z][a-z_]*|\*)$/
+ * /^move\.oracle_rollable:([a-z][a-z0-9_]*(?:\/[a-z][a-z0-9_]*){2,5})\.([a-z][a-z0-9_]*|\*)$/
  * ```
  */
 export type MoveOracleRollableId = string
@@ -2911,7 +2911,7 @@ export type MoveOracleRollableId = string
 /**
  * A wildcarded MoveOracleRollableId that can be used to match multiple MoveOracleRollable objects.
  * @pattern ```javascript
- * /^move\.oracle_rollable:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)(?:\/(?:[a-z][a-z_]*|\*|\*\*)){2,5})\.([a-z][a-z_]*|\*)$/
+ * /^move\.oracle_rollable:((?:[a-z][a-z0-9_]*|\*|\*\*)(?:\/(?:[a-z][a-z0-9_]*|\*|\*\*)){2,5})\.([a-z][a-z0-9_]*|\*)$/
  * ```
  */
 export type MoveOracleRollableIdWildcard = string
@@ -2919,7 +2919,7 @@ export type MoveOracleRollableIdWildcard = string
 /**
  * A unique ID representing a MoveOracleRollableRow object.
  * @pattern ```javascript
- * /^move\.oracle_rollable\.row:([a-z][a-z0-9_]{3,}(?:\/[a-z][a-z_]*){2,5})\.([a-z][a-z_]*|\*)\.(\d+)$/
+ * /^move\.oracle_rollable\.row:([a-z][a-z0-9_]*(?:\/[a-z][a-z0-9_]*){2,5})\.([a-z][a-z0-9_]*|\*)\.(\d+)$/
  * ```
  */
 export type MoveOracleRollableRowId = string
@@ -2927,7 +2927,7 @@ export type MoveOracleRollableRowId = string
 /**
  * A wildcarded MoveOracleRollableRowId that can be used to match multiple MoveOracleRollableRow objects.
  * @pattern ```javascript
- * /^move\.oracle_rollable\.row:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)(?:\/(?:[a-z][a-z_]*|\*|\*\*)){2,5})\.([a-z][a-z_]*|\*)\.(\d+|\*)$/
+ * /^move\.oracle_rollable\.row:((?:[a-z][a-z0-9_]*|\*|\*\*)(?:\/(?:[a-z][a-z0-9_]*|\*|\*\*)){2,5})\.([a-z][a-z0-9_]*|\*)\.(\d+|\*)$/
  * ```
  */
 export type MoveOracleRollableRowIdWildcard = string
@@ -3250,7 +3250,7 @@ export interface NpcCollection {
 /**
  * A unique ID representing a NpcCollection object.
  * @pattern ```javascript
- * /^npc_collection:([a-z][a-z0-9_]{3,}(?:\/[a-z][a-z_]*){1,4})$/
+ * /^npc_collection:([a-z][a-z0-9_]*(?:\/[a-z][a-z0-9_]*){1,4})$/
  * ```
  */
 export type NpcCollectionId = string
@@ -3258,7 +3258,7 @@ export type NpcCollectionId = string
 /**
  * A wildcarded NpcCollectionId that can be used to match multiple NpcCollection objects.
  * @pattern ```javascript
- * /^npc_collection:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)(?:\/(?:[a-z][a-z_]*|\*|\*\*)){1,4})$/
+ * /^npc_collection:((?:[a-z][a-z0-9_]*|\*|\*\*)(?:\/(?:[a-z][a-z0-9_]*|\*|\*\*)){1,4})$/
  * ```
  */
 export type NpcCollectionIdWildcard = string
@@ -3266,7 +3266,7 @@ export type NpcCollectionIdWildcard = string
 /**
  * A unique ID representing a Npc object.
  * @pattern ```javascript
- * /^npc:([a-z][a-z0-9_]{3,}(?:\/[a-z][a-z_]*){2,5})$/
+ * /^npc:([a-z][a-z0-9_]*(?:\/[a-z][a-z0-9_]*){2,5})$/
  * ```
  */
 export type NpcId = string
@@ -3274,7 +3274,7 @@ export type NpcId = string
 /**
  * A wildcarded NpcId that can be used to match multiple Npc objects.
  * @pattern ```javascript
- * /^npc:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)(?:\/(?:[a-z][a-z_]*|\*|\*\*)){2,5})$/
+ * /^npc:((?:[a-z][a-z0-9_]*|\*|\*\*)(?:\/(?:[a-z][a-z0-9_]*|\*|\*\*)){2,5})$/
  * ```
  */
 export type NpcIdWildcard = string
@@ -3321,7 +3321,7 @@ export interface NpcVariant {
 /**
  * A unique ID representing a NpcVariant object.
  * @pattern ```javascript
- * /^npc\.variant:([a-z][a-z0-9_]{3,}(?:\/[a-z][a-z_]*){2,5})\.([a-z][a-z_]*|\*)$/
+ * /^npc\.variant:([a-z][a-z0-9_]*(?:\/[a-z][a-z0-9_]*){2,5})\.([a-z][a-z0-9_]*|\*)$/
  * ```
  */
 export type NpcVariantId = string
@@ -3329,7 +3329,7 @@ export type NpcVariantId = string
 /**
  * A wildcarded NpcVariantId that can be used to match multiple NpcVariant objects.
  * @pattern ```javascript
- * /^npc\.variant:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)(?:\/(?:[a-z][a-z_]*|\*|\*\*)){2,5})\.([a-z][a-z_]*|\*)$/
+ * /^npc\.variant:((?:[a-z][a-z0-9_]*|\*|\*\*)(?:\/(?:[a-z][a-z0-9_]*|\*|\*\*)){2,5})\.([a-z][a-z0-9_]*|\*)$/
  * ```
  */
 export type NpcVariantIdWildcard = string
@@ -3347,7 +3347,7 @@ export type OracleCollection =
 /**
  * A unique ID representing an OracleCollection object.
  * @pattern ```javascript
- * /^oracle_collection:([a-z][a-z0-9_]{3,}(?:\/[a-z][a-z_]*){1,4})$/
+ * /^oracle_collection:([a-z][a-z0-9_]*(?:\/[a-z][a-z0-9_]*){1,4})$/
  * ```
  */
 export type OracleCollectionId = string
@@ -3355,7 +3355,7 @@ export type OracleCollectionId = string
 /**
  * A wildcarded OracleCollectionId that can be used to match multiple OracleCollection objects.
  * @pattern ```javascript
- * /^oracle_collection:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)(?:\/(?:[a-z][a-z_]*|\*|\*\*)){1,4})$/
+ * /^oracle_collection:((?:[a-z][a-z0-9_]*|\*|\*\*)(?:\/(?:[a-z][a-z0-9_]*|\*|\*\*)){1,4})$/
  * ```
  */
 export type OracleCollectionIdWildcard = string
@@ -3597,7 +3597,7 @@ export type OracleRollable =
 /**
  * A unique ID representing an OracleRollable object.
  * @pattern ```javascript
- * /^oracle_rollable:([a-z][a-z0-9_]{3,}(?:\/[a-z][a-z_]*){2,5})$/
+ * /^oracle_rollable:([a-z][a-z0-9_]*(?:\/[a-z][a-z0-9_]*){2,5})$/
  * ```
  */
 export type OracleRollableId = string
@@ -3605,7 +3605,7 @@ export type OracleRollableId = string
 /**
  * A wildcarded OracleRollableId that can be used to match multiple OracleRollable objects.
  * @pattern ```javascript
- * /^oracle_rollable:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)(?:\/(?:[a-z][a-z_]*|\*|\*\*)){2,5})$/
+ * /^oracle_rollable:((?:[a-z][a-z0-9_]*|\*|\*\*)(?:\/(?:[a-z][a-z0-9_]*|\*|\*\*)){2,5})$/
  * ```
  */
 export type OracleRollableIdWildcard = string
@@ -3618,7 +3618,7 @@ export type OracleRollableRow =
 /**
  * A unique ID representing an OracleRollableRow object.
  * @pattern ```javascript
- * /^oracle_rollable\.row:([a-z][a-z0-9_]{3,}(?:\/[a-z][a-z_]*){2,5})\.(\d+)$/
+ * /^oracle_rollable\.row:([a-z][a-z0-9_]*(?:\/[a-z][a-z0-9_]*){2,5})\.(\d+)$/
  * ```
  */
 export type OracleRollableRowId = string
@@ -3626,7 +3626,7 @@ export type OracleRollableRowId = string
 /**
  * A wildcarded OracleRollableRowId that can be used to match multiple OracleRollableRow objects.
  * @pattern ```javascript
- * /^oracle_rollable\.row:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)(?:\/(?:[a-z][a-z_]*|\*|\*\*)){2,5})\.(\d+|\*)$/
+ * /^oracle_rollable\.row:((?:[a-z][a-z0-9_]*|\*|\*\*)(?:\/(?:[a-z][a-z0-9_]*|\*|\*\*)){2,5})\.(\d+|\*)$/
  * ```
  */
 export type OracleRollableRowIdWildcard = string
@@ -4494,7 +4494,7 @@ export interface Rarity {
 /**
  * A unique ID representing a Rarity object.
  * @pattern ```javascript
- * /^rarity:([a-z][a-z0-9_]{3,}\/[a-z][a-z_]*)$/
+ * /^rarity:([a-z][a-z0-9_]*\/[a-z][a-z0-9_]*)$/
  * ```
  */
 export type RarityId = string
@@ -4502,7 +4502,7 @@ export type RarityId = string
 /**
  * A wildcarded RarityId that can be used to match multiple Rarity objects.
  * @pattern ```javascript
- * /^rarity:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)\/[a-z][a-z_]*|\/\*|\/\*\*)$/
+ * /^rarity:((?:[a-z][a-z0-9_]*|\*|\*\*)\/[a-z][a-z0-9_]*|\/\*|\/\*\*)$/
  * ```
  */
 export type RarityIdWildcard = string
@@ -4672,7 +4672,7 @@ export interface Ruleset {
 /**
  * The ID of standalone Datasworn package that describes its own ruleset.
  * @pattern ```javascript
- * /^[a-z][a-z0-9_]{3,}$/
+ * /^[a-z][a-z0-9_]*$/
  * ```
  * @example "classic"
  * @example "starforged"
@@ -5695,7 +5695,7 @@ export interface Truth {
 /**
  * A unique ID representing a Truth object.
  * @pattern ```javascript
- * /^truth:([a-z][a-z0-9_]{3,}\/[a-z][a-z_]*)$/
+ * /^truth:([a-z][a-z0-9_]*\/[a-z][a-z0-9_]*)$/
  * ```
  */
 export type TruthId = string
@@ -5703,7 +5703,7 @@ export type TruthId = string
 /**
  * A wildcarded TruthId that can be used to match multiple Truth objects.
  * @pattern ```javascript
- * /^truth:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)\/[a-z][a-z_]*|\/\*|\/\*\*)$/
+ * /^truth:((?:[a-z][a-z0-9_]*|\*|\*\*)\/[a-z][a-z0-9_]*|\/\*|\/\*\*)$/
  * ```
  */
 export type TruthIdWildcard = string
@@ -5731,7 +5731,7 @@ export interface TruthOption {
 /**
  * A unique ID representing a TruthOption object.
  * @pattern ```javascript
- * /^truth\.option:([a-z][a-z0-9_]{3,}\/[a-z][a-z_]*)\.(\d+)$/
+ * /^truth\.option:([a-z][a-z0-9_]*\/[a-z][a-z0-9_]*)\.(\d+)$/
  * ```
  */
 export type TruthOptionId = string
@@ -5739,7 +5739,7 @@ export type TruthOptionId = string
 /**
  * A wildcarded TruthOptionId that can be used to match multiple TruthOption objects.
  * @pattern ```javascript
- * /^truth\.option:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)\/[a-z][a-z_]*|\/\*|\/\*\*)\.(\d+|\*)$/
+ * /^truth\.option:((?:[a-z][a-z0-9_]*|\*|\*\*)\/[a-z][a-z0-9_]*|\/\*|\/\*\*)\.(\d+|\*)$/
  * ```
  */
 export type TruthOptionIdWildcard = string
@@ -5747,7 +5747,7 @@ export type TruthOptionIdWildcard = string
 /**
  * A unique ID representing a TruthOptionOracleRollable object.
  * @pattern ```javascript
- * /^truth\.option\.oracle_rollable:([a-z][a-z0-9_]{3,}\/[a-z][a-z_]*)\.(\d+)\.([a-z][a-z_]*|\*)$/
+ * /^truth\.option\.oracle_rollable:([a-z][a-z0-9_]*\/[a-z][a-z0-9_]*)\.(\d+)\.([a-z][a-z0-9_]*|\*)$/
  * ```
  */
 export type TruthOptionOracleRollableId = string
@@ -5755,7 +5755,7 @@ export type TruthOptionOracleRollableId = string
 /**
  * A wildcarded TruthOptionOracleRollableId that can be used to match multiple TruthOptionOracleRollable objects.
  * @pattern ```javascript
- * /^truth\.option\.oracle_rollable:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)\/[a-z][a-z_]*|\/\*|\/\*\*)\.(\d+|\*)\.([a-z][a-z_]*|\*)$/
+ * /^truth\.option\.oracle_rollable:((?:[a-z][a-z0-9_]*|\*|\*\*)\/[a-z][a-z0-9_]*|\/\*|\/\*\*)\.(\d+|\*)\.([a-z][a-z0-9_]*|\*)$/
  * ```
  */
 export type TruthOptionOracleRollableIdWildcard = string
@@ -5763,7 +5763,7 @@ export type TruthOptionOracleRollableIdWildcard = string
 /**
  * A unique ID representing a TruthOptionOracleRollableRow object.
  * @pattern ```javascript
- * /^truth\.option\.oracle_rollable\.row:([a-z][a-z0-9_]{3,}\/[a-z][a-z_]*)\.(\d+)\.([a-z][a-z_]*|\*)\.(\d+)$/
+ * /^truth\.option\.oracle_rollable\.row:([a-z][a-z0-9_]*\/[a-z][a-z0-9_]*)\.(\d+)\.([a-z][a-z0-9_]*|\*)\.(\d+)$/
  * ```
  */
 export type TruthOptionOracleRollableRowId = string
@@ -5771,7 +5771,7 @@ export type TruthOptionOracleRollableRowId = string
 /**
  * A wildcarded TruthOptionOracleRollableRowId that can be used to match multiple TruthOptionOracleRollableRow objects.
  * @pattern ```javascript
- * /^truth\.option\.oracle_rollable\.row:((?:[a-z][a-z0-9_]{3,}|\*|\*\*)\/[a-z][a-z_]*|\/\*|\/\*\*)\.(\d+|\*)\.([a-z][a-z_]*|\*)\.(\d+|\*)$/
+ * /^truth\.option\.oracle_rollable\.row:((?:[a-z][a-z0-9_]*|\*|\*\*)\/[a-z][a-z0-9_]*|\/\*|\/\*\*)\.(\d+|\*)\.([a-z][a-z0-9_]*|\*)\.(\d+|\*)$/
  * ```
  */
 export type TruthOptionOracleRollableRowIdWildcard = string

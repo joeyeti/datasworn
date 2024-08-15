@@ -4906,6 +4906,2634 @@
 			"name": "Name",
 			"oracle_type": "tables",
 			"contents": {
+				"ironlander": {
+					"_id": "oracle_rollable:classic/name/ironlander",
+					"type": "oracle_rollable",
+					"name": "Ironlander Names",
+					"canonical_name": "Oracle 13: Ironlander Names",
+					"oracle_type": "table_text",
+					"dice": "1d200",
+					"summary": "Use this oracle to quickly generate a name for an Ironlander character. Surnames are not used in the Ironlands, and names are often gender-neutral.",
+					"_comment": "Presented as two d100 tables in the book, but I can't see a good reason to duplicate that.",
+					"column_labels": {
+						"roll": "Roll",
+						"text": "Result"
+					},
+					"rows": [
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.0",
+							"roll": {
+								"min": 1,
+								"max": 1
+							},
+							"text": "Solana",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.1",
+							"roll": {
+								"min": 2,
+								"max": 2
+							},
+							"text": "Keelan",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.2",
+							"roll": {
+								"min": 3,
+								"max": 3
+							},
+							"text": "Cadigan",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.3",
+							"roll": {
+								"min": 4,
+								"max": 4
+							},
+							"text": "Sola",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.4",
+							"roll": {
+								"min": 5,
+								"max": 5
+							},
+							"text": "Kodroth",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.5",
+							"roll": {
+								"min": 6,
+								"max": 6
+							},
+							"text": "Kione",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.6",
+							"roll": {
+								"min": 7,
+								"max": 7
+							},
+							"text": "Katja",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.7",
+							"roll": {
+								"min": 8,
+								"max": 8
+							},
+							"text": "Tio",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.8",
+							"roll": {
+								"min": 9,
+								"max": 9
+							},
+							"text": "Artiga",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.9",
+							"roll": {
+								"min": 10,
+								"max": 10
+							},
+							"text": "Eos",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.10",
+							"roll": {
+								"min": 11,
+								"max": 11
+							},
+							"text": "Bastien",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.11",
+							"roll": {
+								"min": 12,
+								"max": 12
+							},
+							"text": "Elli",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.12",
+							"roll": {
+								"min": 13,
+								"max": 13
+							},
+							"text": "Maura",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.13",
+							"roll": {
+								"min": 14,
+								"max": 14
+							},
+							"text": "Haleema",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.14",
+							"roll": {
+								"min": 15,
+								"max": 15
+							},
+							"text": "Abella",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.15",
+							"roll": {
+								"min": 16,
+								"max": 16
+							},
+							"text": "Morter",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.16",
+							"roll": {
+								"min": 17,
+								"max": 17
+							},
+							"text": "Wulan",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.17",
+							"roll": {
+								"min": 18,
+								"max": 18
+							},
+							"text": "Mai",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.18",
+							"roll": {
+								"min": 19,
+								"max": 19
+							},
+							"text": "Farina",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.19",
+							"roll": {
+								"min": 20,
+								"max": 20
+							},
+							"text": "Pearce",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.20",
+							"roll": {
+								"min": 21,
+								"max": 21
+							},
+							"text": "Wynne",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.21",
+							"roll": {
+								"min": 22,
+								"max": 22
+							},
+							"text": "Haf",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.22",
+							"roll": {
+								"min": 23,
+								"max": 23
+							},
+							"text": "Aeddon",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.23",
+							"roll": {
+								"min": 24,
+								"max": 24
+							},
+							"text": "Khinara",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.24",
+							"roll": {
+								"min": 25,
+								"max": 25
+							},
+							"text": "Milla",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.25",
+							"roll": {
+								"min": 26,
+								"max": 26
+							},
+							"text": "Nakata",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.26",
+							"roll": {
+								"min": 27,
+								"max": 27
+							},
+							"text": "Kynan",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.27",
+							"roll": {
+								"min": 28,
+								"max": 28
+							},
+							"text": "Kiah",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.28",
+							"roll": {
+								"min": 29,
+								"max": 29
+							},
+							"text": "Jaggar",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.29",
+							"roll": {
+								"min": 30,
+								"max": 30
+							},
+							"text": "Beca",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.30",
+							"roll": {
+								"min": 31,
+								"max": 31
+							},
+							"text": "Ikram",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.31",
+							"roll": {
+								"min": 32,
+								"max": 32
+							},
+							"text": "Melia",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.32",
+							"roll": {
+								"min": 33,
+								"max": 33
+							},
+							"text": "Sidan",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.33",
+							"roll": {
+								"min": 34,
+								"max": 34
+							},
+							"text": "Deshi",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.34",
+							"roll": {
+								"min": 35,
+								"max": 35
+							},
+							"text": "Tessa",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.35",
+							"roll": {
+								"min": 36,
+								"max": 36
+							},
+							"text": "Sibila",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.36",
+							"roll": {
+								"min": 37,
+								"max": 37
+							},
+							"text": "Morien",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.37",
+							"roll": {
+								"min": 38,
+								"max": 38
+							},
+							"text": "Mona",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.38",
+							"roll": {
+								"min": 39,
+								"max": 39
+							},
+							"text": "Padma",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.39",
+							"roll": {
+								"min": 40,
+								"max": 40
+							},
+							"text": "Avella",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.40",
+							"roll": {
+								"min": 41,
+								"max": 41
+							},
+							"text": "Naila",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.41",
+							"roll": {
+								"min": 42,
+								"max": 42
+							},
+							"text": "Lio",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.42",
+							"roll": {
+								"min": 43,
+								"max": 43
+							},
+							"text": "Cera",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.43",
+							"roll": {
+								"min": 44,
+								"max": 44
+							},
+							"text": "Ithela",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.44",
+							"roll": {
+								"min": 45,
+								"max": 45
+							},
+							"text": "Zhan",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.45",
+							"roll": {
+								"min": 46,
+								"max": 46
+							},
+							"text": "Kaivan",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.46",
+							"roll": {
+								"min": 47,
+								"max": 47
+							},
+							"text": "Valeri",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.47",
+							"roll": {
+								"min": 48,
+								"max": 48
+							},
+							"text": "Hirsham",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.48",
+							"roll": {
+								"min": 49,
+								"max": 49
+							},
+							"text": "Pemba",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.49",
+							"roll": {
+								"min": 50,
+								"max": 50
+							},
+							"text": "Edda",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.50",
+							"roll": {
+								"min": 51,
+								"max": 51
+							},
+							"text": "Lestara",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.51",
+							"roll": {
+								"min": 52,
+								"max": 52
+							},
+							"text": "Lago",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.52",
+							"roll": {
+								"min": 53,
+								"max": 53
+							},
+							"text": "Elstan",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.53",
+							"roll": {
+								"min": 54,
+								"max": 54
+							},
+							"text": "Saskia",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.54",
+							"roll": {
+								"min": 55,
+								"max": 55
+							},
+							"text": "Kabeera",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.55",
+							"roll": {
+								"min": 56,
+								"max": 56
+							},
+							"text": "Caldas",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.56",
+							"roll": {
+								"min": 57,
+								"max": 57
+							},
+							"text": "Nisus",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.57",
+							"roll": {
+								"min": 58,
+								"max": 58
+							},
+							"text": "Serene",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.58",
+							"roll": {
+								"min": 59,
+								"max": 59
+							},
+							"text": "Chenda",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.59",
+							"roll": {
+								"min": 60,
+								"max": 60
+							},
+							"text": "Themon",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.60",
+							"roll": {
+								"min": 61,
+								"max": 61
+							},
+							"text": "Erin",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.61",
+							"roll": {
+								"min": 62,
+								"max": 62
+							},
+							"text": "Alban",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.62",
+							"roll": {
+								"min": 63,
+								"max": 63
+							},
+							"text": "Parcell",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.63",
+							"roll": {
+								"min": 64,
+								"max": 64
+							},
+							"text": "Jelma",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.64",
+							"roll": {
+								"min": 65,
+								"max": 65
+							},
+							"text": "Willa",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.65",
+							"roll": {
+								"min": 66,
+								"max": 66
+							},
+							"text": "Nadira",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.66",
+							"roll": {
+								"min": 67,
+								"max": 67
+							},
+							"text": "Gwen",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.67",
+							"roll": {
+								"min": 68,
+								"max": 68
+							},
+							"text": "Amara",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.68",
+							"roll": {
+								"min": 69,
+								"max": 69
+							},
+							"text": "Masias",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.69",
+							"roll": {
+								"min": 70,
+								"max": 70
+							},
+							"text": "Kanno",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.70",
+							"roll": {
+								"min": 71,
+								"max": 71
+							},
+							"text": "Razeena",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.71",
+							"roll": {
+								"min": 72,
+								"max": 72
+							},
+							"text": "Mira",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.72",
+							"roll": {
+								"min": 73,
+								"max": 73
+							},
+							"text": "Perella",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.73",
+							"roll": {
+								"min": 74,
+								"max": 74
+							},
+							"text": "Myrick",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.74",
+							"roll": {
+								"min": 75,
+								"max": 75
+							},
+							"text": "Qamar",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.75",
+							"roll": {
+								"min": 76,
+								"max": 76
+							},
+							"text": "Kormak",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.76",
+							"roll": {
+								"min": 77,
+								"max": 77
+							},
+							"text": "Zura",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.77",
+							"roll": {
+								"min": 78,
+								"max": 78
+							},
+							"text": "Zanita",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.78",
+							"roll": {
+								"min": 79,
+								"max": 79
+							},
+							"text": "Brynn",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.79",
+							"roll": {
+								"min": 80,
+								"max": 80
+							},
+							"text": "Tegan",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.80",
+							"roll": {
+								"min": 81,
+								"max": 81
+							},
+							"text": "Pendry",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.81",
+							"roll": {
+								"min": 82,
+								"max": 82
+							},
+							"text": "Quinn",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.82",
+							"roll": {
+								"min": 83,
+								"max": 83
+							},
+							"text": "Fanir",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.83",
+							"roll": {
+								"min": 84,
+								"max": 84
+							},
+							"text": "Glain",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.84",
+							"roll": {
+								"min": 85,
+								"max": 85
+							},
+							"text": "Emelyn",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.85",
+							"roll": {
+								"min": 86,
+								"max": 86
+							},
+							"text": "Kendi",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.86",
+							"roll": {
+								"min": 87,
+								"max": 87
+							},
+							"text": "Althus",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.87",
+							"roll": {
+								"min": 88,
+								"max": 88
+							},
+							"text": "Leela",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.88",
+							"roll": {
+								"min": 89,
+								"max": 89
+							},
+							"text": "Ishana",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.89",
+							"roll": {
+								"min": 90,
+								"max": 90
+							},
+							"text": "Flint",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.90",
+							"roll": {
+								"min": 91,
+								"max": 91
+							},
+							"text": "Delkash",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.91",
+							"roll": {
+								"min": 92,
+								"max": 92
+							},
+							"text": "Nia",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.92",
+							"roll": {
+								"min": 93,
+								"max": 93
+							},
+							"text": "Nan",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.93",
+							"roll": {
+								"min": 94,
+								"max": 94
+							},
+							"text": "Keeara",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.94",
+							"roll": {
+								"min": 95,
+								"max": 95
+							},
+							"text": "Katania",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.95",
+							"roll": {
+								"min": 96,
+								"max": 96
+							},
+							"text": "Morell",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.96",
+							"roll": {
+								"min": 97,
+								"max": 97
+							},
+							"text": "Temir",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.97",
+							"roll": {
+								"min": 98,
+								"max": 98
+							},
+							"text": "Bas",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.98",
+							"roll": {
+								"min": 99,
+								"max": 99
+							},
+							"text": "Sabine",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.99",
+							"roll": {
+								"min": 100,
+								"max": 100
+							},
+							"text": "Tallus",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.100",
+							"roll": {
+								"min": 101,
+								"max": 101
+							},
+							"text": "Segura",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.101",
+							"roll": {
+								"min": 102,
+								"max": 102
+							},
+							"text": "Gethin",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.102",
+							"roll": {
+								"min": 103,
+								"max": 103
+							},
+							"text": "Bataar",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.103",
+							"roll": {
+								"min": 104,
+								"max": 104
+							},
+							"text": "Basira",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.104",
+							"roll": {
+								"min": 105,
+								"max": 105
+							},
+							"text": "Joa",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.105",
+							"roll": {
+								"min": 106,
+								"max": 106
+							},
+							"text": "Glynn",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.106",
+							"roll": {
+								"min": 107,
+								"max": 107
+							},
+							"text": "Toran",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.107",
+							"roll": {
+								"min": 108,
+								"max": 108
+							},
+							"text": "Arasen",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.108",
+							"roll": {
+								"min": 109,
+								"max": 109
+							},
+							"text": "Kuron",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.109",
+							"roll": {
+								"min": 110,
+								"max": 110
+							},
+							"text": "Griff",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.110",
+							"roll": {
+								"min": 111,
+								"max": 111
+							},
+							"text": "Owena",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.111",
+							"roll": {
+								"min": 112,
+								"max": 112
+							},
+							"text": "Adda",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.112",
+							"roll": {
+								"min": 113,
+								"max": 113
+							},
+							"text": "Euros",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.113",
+							"roll": {
+								"min": 114,
+								"max": 114
+							},
+							"text": "Kova",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.114",
+							"roll": {
+								"min": 115,
+								"max": 115
+							},
+							"text": "Kara",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.115",
+							"roll": {
+								"min": 116,
+								"max": 116
+							},
+							"text": "Morgan",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.116",
+							"roll": {
+								"min": 117,
+								"max": 117
+							},
+							"text": "Nanda",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.117",
+							"roll": {
+								"min": 118,
+								"max": 118
+							},
+							"text": "Tamara",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.118",
+							"roll": {
+								"min": 119,
+								"max": 119
+							},
+							"text": "Asha",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.119",
+							"roll": {
+								"min": 120,
+								"max": 120
+							},
+							"text": "Delos",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.120",
+							"roll": {
+								"min": 121,
+								"max": 121
+							},
+							"text": "Torgan",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.121",
+							"roll": {
+								"min": 122,
+								"max": 122
+							},
+							"text": "Makari",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.122",
+							"roll": {
+								"min": 123,
+								"max": 123
+							},
+							"text": "Selva",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.123",
+							"roll": {
+								"min": 124,
+								"max": 124
+							},
+							"text": "Kimura",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.124",
+							"roll": {
+								"min": 125,
+								"max": 125
+							},
+							"text": "Rhian",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.125",
+							"roll": {
+								"min": 126,
+								"max": 126
+							},
+							"text": "Tristan",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.126",
+							"roll": {
+								"min": 127,
+								"max": 127
+							},
+							"text": "Siorra",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.127",
+							"roll": {
+								"min": 128,
+								"max": 128
+							},
+							"text": "Sayer",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.128",
+							"roll": {
+								"min": 129,
+								"max": 129
+							},
+							"text": "Cortina",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.129",
+							"roll": {
+								"min": 130,
+								"max": 130
+							},
+							"text": "Vesna",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.130",
+							"roll": {
+								"min": 131,
+								"max": 131
+							},
+							"text": "Kataka",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.131",
+							"roll": {
+								"min": 132,
+								"max": 132
+							},
+							"text": "Keyshia",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.132",
+							"roll": {
+								"min": 133,
+								"max": 133
+							},
+							"text": "Mila",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.133",
+							"roll": {
+								"min": 134,
+								"max": 134
+							},
+							"text": "Lili",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.134",
+							"roll": {
+								"min": 135,
+								"max": 135
+							},
+							"text": "Vigo",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.135",
+							"roll": {
+								"min": 136,
+								"max": 136
+							},
+							"text": "Sadia",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.136",
+							"roll": {
+								"min": 137,
+								"max": 137
+							},
+							"text": "Malik",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.137",
+							"roll": {
+								"min": 138,
+								"max": 138
+							},
+							"text": "Dag",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.138",
+							"roll": {
+								"min": 139,
+								"max": 139
+							},
+							"text": "Kuno",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.139",
+							"roll": {
+								"min": 140,
+								"max": 140
+							},
+							"text": "Reva",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.140",
+							"roll": {
+								"min": 141,
+								"max": 141
+							},
+							"text": "Kai",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.141",
+							"roll": {
+								"min": 142,
+								"max": 142
+							},
+							"text": "Kalina",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.142",
+							"roll": {
+								"min": 143,
+								"max": 143
+							},
+							"text": "Jihan",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.143",
+							"roll": {
+								"min": 144,
+								"max": 144
+							},
+							"text": "Hennion",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.144",
+							"roll": {
+								"min": 145,
+								"max": 145
+							},
+							"text": "Abram",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.145",
+							"roll": {
+								"min": 146,
+								"max": 146
+							},
+							"text": "Aida",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.146",
+							"roll": {
+								"min": 147,
+								"max": 147
+							},
+							"text": "Myrtle",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.147",
+							"roll": {
+								"min": 148,
+								"max": 148
+							},
+							"text": "Nekun",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.148",
+							"roll": {
+								"min": 149,
+								"max": 149
+							},
+							"text": "Menna",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.149",
+							"roll": {
+								"min": 150,
+								"max": 150
+							},
+							"text": "Tahir",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.150",
+							"roll": {
+								"min": 151,
+								"max": 151
+							},
+							"text": "Sarria",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.151",
+							"roll": {
+								"min": 152,
+								"max": 152
+							},
+							"text": "Nakura",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.152",
+							"roll": {
+								"min": 153,
+								"max": 153
+							},
+							"text": "Akiya",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.153",
+							"roll": {
+								"min": 154,
+								"max": 154
+							},
+							"text": "Talan",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.154",
+							"roll": {
+								"min": 155,
+								"max": 155
+							},
+							"text": "Mattick",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.155",
+							"roll": {
+								"min": 156,
+								"max": 156
+							},
+							"text": "Okoth",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.156",
+							"roll": {
+								"min": 157,
+								"max": 157
+							},
+							"text": "Khulan",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.157",
+							"roll": {
+								"min": 158,
+								"max": 158
+							},
+							"text": "Verena",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.158",
+							"roll": {
+								"min": 159,
+								"max": 159
+							},
+							"text": "Beltran",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.159",
+							"roll": {
+								"min": 160,
+								"max": 160
+							},
+							"text": "Del",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.160",
+							"roll": {
+								"min": 161,
+								"max": 161
+							},
+							"text": "Ranna",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.161",
+							"roll": {
+								"min": 162,
+								"max": 162
+							},
+							"text": "Alina",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.162",
+							"roll": {
+								"min": 163,
+								"max": 163
+							},
+							"text": "Muna",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.163",
+							"roll": {
+								"min": 164,
+								"max": 164
+							},
+							"text": "Mura",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.164",
+							"roll": {
+								"min": 165,
+								"max": 165
+							},
+							"text": "Torrens",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.165",
+							"roll": {
+								"min": 166,
+								"max": 166
+							},
+							"text": "Yuda",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.166",
+							"roll": {
+								"min": 167,
+								"max": 167
+							},
+							"text": "Nazmi",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.167",
+							"roll": {
+								"min": 168,
+								"max": 168
+							},
+							"text": "Ghalen",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.168",
+							"roll": {
+								"min": 169,
+								"max": 169
+							},
+							"text": "Sarda",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.169",
+							"roll": {
+								"min": 170,
+								"max": 170
+							},
+							"text": "Shona",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.170",
+							"roll": {
+								"min": 171,
+								"max": 171
+							},
+							"text": "Kalidas",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.171",
+							"roll": {
+								"min": 172,
+								"max": 172
+							},
+							"text": "Wena",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.172",
+							"roll": {
+								"min": 173,
+								"max": 173
+							},
+							"text": "Sendra",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.173",
+							"roll": {
+								"min": 174,
+								"max": 174
+							},
+							"text": "Kori",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.174",
+							"roll": {
+								"min": 175,
+								"max": 175
+							},
+							"text": "Setara",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.175",
+							"roll": {
+								"min": 176,
+								"max": 176
+							},
+							"text": "Lucia",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.176",
+							"roll": {
+								"min": 177,
+								"max": 177
+							},
+							"text": "Maya",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.177",
+							"roll": {
+								"min": 178,
+								"max": 178
+							},
+							"text": "Reema",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.178",
+							"roll": {
+								"min": 179,
+								"max": 179
+							},
+							"text": "Yorath",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.179",
+							"roll": {
+								"min": 180,
+								"max": 180
+							},
+							"text": "Rhoddri",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.180",
+							"roll": {
+								"min": 181,
+								"max": 181
+							},
+							"text": "Shekhar",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.181",
+							"roll": {
+								"min": 182,
+								"max": 182
+							},
+							"text": "Servan",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.182",
+							"roll": {
+								"min": 183,
+								"max": 183
+							},
+							"text": "Reese",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.183",
+							"roll": {
+								"min": 184,
+								"max": 184
+							},
+							"text": "Kenrick",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.184",
+							"roll": {
+								"min": 185,
+								"max": 185
+							},
+							"text": "Indirra",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.185",
+							"roll": {
+								"min": 186,
+								"max": 186
+							},
+							"text": "Giliana",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.186",
+							"roll": {
+								"min": 187,
+								"max": 187
+							},
+							"text": "Jebran",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.187",
+							"roll": {
+								"min": 188,
+								"max": 188
+							},
+							"text": "Kotama",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.188",
+							"roll": {
+								"min": 189,
+								"max": 189
+							},
+							"text": "Fara",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.189",
+							"roll": {
+								"min": 190,
+								"max": 190
+							},
+							"text": "Katrin",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.190",
+							"roll": {
+								"min": 191,
+								"max": 191
+							},
+							"text": "Namba",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.191",
+							"roll": {
+								"min": 192,
+								"max": 192
+							},
+							"text": "Lona",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.192",
+							"roll": {
+								"min": 193,
+								"max": 193
+							},
+							"text": "Taylah",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.193",
+							"roll": {
+								"min": 194,
+								"max": 194
+							},
+							"text": "Kato",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.194",
+							"roll": {
+								"min": 195,
+								"max": 195
+							},
+							"text": "Esra",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.195",
+							"roll": {
+								"min": 196,
+								"max": 196
+							},
+							"text": "Eleri",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.196",
+							"roll": {
+								"min": 197,
+								"max": 197
+							},
+							"text": "Irsia",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.197",
+							"roll": {
+								"min": 198,
+								"max": 198
+							},
+							"text": "Kayu",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.198",
+							"roll": {
+								"min": 199,
+								"max": 199
+							},
+							"text": "Bevan",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						},
+						{
+							"_id": "oracle_rollable.row:classic/name/ironlander.199",
+							"roll": {
+								"min": 200,
+								"max": 200
+							},
+							"text": "Chandra",
+							"_i18n": {
+								"text": {
+									"part_of_speech": "proper_noun"
+								}
+							}
+						}
+					],
+					"_source": {
+						"title": "Ironsworn Rulebook",
+						"authors": [
+							{
+								"name": "Shawn Tomkin"
+							}
+						],
+						"date": "2019-06-05",
+						"license": "https://creativecommons.org/licenses/by/4.0",
+						"page": 184,
+						"url": "https://ironswornrpg.com"
+					}
+				},
 				"elf": {
 					"_id": "oracle_rollable:classic/name/elf",
 					"type": "oracle_rollable",
@@ -5585,2681 +8213,6 @@
 				}
 			},
 			"collections": {
-				"ironlander": {
-					"_id": "oracle_collection:classic/name/ironlander",
-					"type": "oracle_collection",
-					"name": "Ironlander Names",
-					"canonical_name": "Oracle 13: Ironlander Names",
-					"oracle_type": "tables",
-					"summary": "Use this oracle to quickly generate a name for an Ironlander character. Roll on either table. Surnames are not used in the Ironlands, and names are often gender-neutral.",
-					"contents": {
-						"a": {
-							"_id": "oracle_rollable:classic/name/ironlander/a",
-							"type": "oracle_rollable",
-							"name": "Table A",
-							"canonical_name": "Ironlander Names",
-							"oracle_type": "table_text",
-							"dice": "1d100",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
-							"rows": [
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.0",
-									"roll": {
-										"min": 1,
-										"max": 1
-									},
-									"text": "Solana",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.1",
-									"roll": {
-										"min": 2,
-										"max": 2
-									},
-									"text": "Keelan",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.2",
-									"roll": {
-										"min": 3,
-										"max": 3
-									},
-									"text": "Cadigan",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.3",
-									"roll": {
-										"min": 4,
-										"max": 4
-									},
-									"text": "Sola",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.4",
-									"roll": {
-										"min": 5,
-										"max": 5
-									},
-									"text": "Kodroth",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.5",
-									"roll": {
-										"min": 6,
-										"max": 6
-									},
-									"text": "Kione",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.6",
-									"roll": {
-										"min": 7,
-										"max": 7
-									},
-									"text": "Katja",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.7",
-									"roll": {
-										"min": 8,
-										"max": 8
-									},
-									"text": "Tio",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.8",
-									"roll": {
-										"min": 9,
-										"max": 9
-									},
-									"text": "Artiga",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.9",
-									"roll": {
-										"min": 10,
-										"max": 10
-									},
-									"text": "Eos",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.10",
-									"roll": {
-										"min": 11,
-										"max": 11
-									},
-									"text": "Bastien",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.11",
-									"roll": {
-										"min": 12,
-										"max": 12
-									},
-									"text": "Elli",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.12",
-									"roll": {
-										"min": 13,
-										"max": 13
-									},
-									"text": "Maura",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.13",
-									"roll": {
-										"min": 14,
-										"max": 14
-									},
-									"text": "Haleema",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.14",
-									"roll": {
-										"min": 15,
-										"max": 15
-									},
-									"text": "Abella",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.15",
-									"roll": {
-										"min": 16,
-										"max": 16
-									},
-									"text": "Morter",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.16",
-									"roll": {
-										"min": 17,
-										"max": 17
-									},
-									"text": "Wulan",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.17",
-									"roll": {
-										"min": 18,
-										"max": 18
-									},
-									"text": "Mai",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.18",
-									"roll": {
-										"min": 19,
-										"max": 19
-									},
-									"text": "Farina",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.19",
-									"roll": {
-										"min": 20,
-										"max": 20
-									},
-									"text": "Pearce",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.20",
-									"roll": {
-										"min": 21,
-										"max": 21
-									},
-									"text": "Wynne",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.21",
-									"roll": {
-										"min": 22,
-										"max": 22
-									},
-									"text": "Haf",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.22",
-									"roll": {
-										"min": 23,
-										"max": 23
-									},
-									"text": "Aeddon",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.23",
-									"roll": {
-										"min": 24,
-										"max": 24
-									},
-									"text": "Khinara",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.24",
-									"roll": {
-										"min": 25,
-										"max": 25
-									},
-									"text": "Milla",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.25",
-									"roll": {
-										"min": 26,
-										"max": 26
-									},
-									"text": "Nakata",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.26",
-									"roll": {
-										"min": 27,
-										"max": 27
-									},
-									"text": "Kynan",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.27",
-									"roll": {
-										"min": 28,
-										"max": 28
-									},
-									"text": "Kiah",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.28",
-									"roll": {
-										"min": 29,
-										"max": 29
-									},
-									"text": "Jaggar",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.29",
-									"roll": {
-										"min": 30,
-										"max": 30
-									},
-									"text": "Beca",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.30",
-									"roll": {
-										"min": 31,
-										"max": 31
-									},
-									"text": "Ikram",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.31",
-									"roll": {
-										"min": 32,
-										"max": 32
-									},
-									"text": "Melia",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.32",
-									"roll": {
-										"min": 33,
-										"max": 33
-									},
-									"text": "Sidan",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.33",
-									"roll": {
-										"min": 34,
-										"max": 34
-									},
-									"text": "Deshi",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.34",
-									"roll": {
-										"min": 35,
-										"max": 35
-									},
-									"text": "Tessa",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.35",
-									"roll": {
-										"min": 36,
-										"max": 36
-									},
-									"text": "Sibila",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.36",
-									"roll": {
-										"min": 37,
-										"max": 37
-									},
-									"text": "Morien",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.37",
-									"roll": {
-										"min": 38,
-										"max": 38
-									},
-									"text": "Mona",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.38",
-									"roll": {
-										"min": 39,
-										"max": 39
-									},
-									"text": "Padma",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.39",
-									"roll": {
-										"min": 40,
-										"max": 40
-									},
-									"text": "Avella",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.40",
-									"roll": {
-										"min": 41,
-										"max": 41
-									},
-									"text": "Naila",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.41",
-									"roll": {
-										"min": 42,
-										"max": 42
-									},
-									"text": "Lio",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.42",
-									"roll": {
-										"min": 43,
-										"max": 43
-									},
-									"text": "Cera",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.43",
-									"roll": {
-										"min": 44,
-										"max": 44
-									},
-									"text": "Ithela",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.44",
-									"roll": {
-										"min": 45,
-										"max": 45
-									},
-									"text": "Zhan",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.45",
-									"roll": {
-										"min": 46,
-										"max": 46
-									},
-									"text": "Kaivan",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.46",
-									"roll": {
-										"min": 47,
-										"max": 47
-									},
-									"text": "Valeri",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.47",
-									"roll": {
-										"min": 48,
-										"max": 48
-									},
-									"text": "Hirsham",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.48",
-									"roll": {
-										"min": 49,
-										"max": 49
-									},
-									"text": "Pemba",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.49",
-									"roll": {
-										"min": 50,
-										"max": 50
-									},
-									"text": "Edda",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.50",
-									"roll": {
-										"min": 51,
-										"max": 51
-									},
-									"text": "Lestara",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.51",
-									"roll": {
-										"min": 52,
-										"max": 52
-									},
-									"text": "Lago",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.52",
-									"roll": {
-										"min": 53,
-										"max": 53
-									},
-									"text": "Elstan",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.53",
-									"roll": {
-										"min": 54,
-										"max": 54
-									},
-									"text": "Saskia",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.54",
-									"roll": {
-										"min": 55,
-										"max": 55
-									},
-									"text": "Kabeera",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.55",
-									"roll": {
-										"min": 56,
-										"max": 56
-									},
-									"text": "Caldas",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.56",
-									"roll": {
-										"min": 57,
-										"max": 57
-									},
-									"text": "Nisus",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.57",
-									"roll": {
-										"min": 58,
-										"max": 58
-									},
-									"text": "Serene",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.58",
-									"roll": {
-										"min": 59,
-										"max": 59
-									},
-									"text": "Chenda",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.59",
-									"roll": {
-										"min": 60,
-										"max": 60
-									},
-									"text": "Themon",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.60",
-									"roll": {
-										"min": 61,
-										"max": 61
-									},
-									"text": "Erin",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.61",
-									"roll": {
-										"min": 62,
-										"max": 62
-									},
-									"text": "Alban",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.62",
-									"roll": {
-										"min": 63,
-										"max": 63
-									},
-									"text": "Parcell",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.63",
-									"roll": {
-										"min": 64,
-										"max": 64
-									},
-									"text": "Jelma",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.64",
-									"roll": {
-										"min": 65,
-										"max": 65
-									},
-									"text": "Willa",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.65",
-									"roll": {
-										"min": 66,
-										"max": 66
-									},
-									"text": "Nadira",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.66",
-									"roll": {
-										"min": 67,
-										"max": 67
-									},
-									"text": "Gwen",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.67",
-									"roll": {
-										"min": 68,
-										"max": 68
-									},
-									"text": "Amara",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.68",
-									"roll": {
-										"min": 69,
-										"max": 69
-									},
-									"text": "Masias",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.69",
-									"roll": {
-										"min": 70,
-										"max": 70
-									},
-									"text": "Kanno",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.70",
-									"roll": {
-										"min": 71,
-										"max": 71
-									},
-									"text": "Razeena",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.71",
-									"roll": {
-										"min": 72,
-										"max": 72
-									},
-									"text": "Mira",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.72",
-									"roll": {
-										"min": 73,
-										"max": 73
-									},
-									"text": "Perella",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.73",
-									"roll": {
-										"min": 74,
-										"max": 74
-									},
-									"text": "Myrick",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.74",
-									"roll": {
-										"min": 75,
-										"max": 75
-									},
-									"text": "Qamar",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.75",
-									"roll": {
-										"min": 76,
-										"max": 76
-									},
-									"text": "Kormak",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.76",
-									"roll": {
-										"min": 77,
-										"max": 77
-									},
-									"text": "Zura",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.77",
-									"roll": {
-										"min": 78,
-										"max": 78
-									},
-									"text": "Zanita",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.78",
-									"roll": {
-										"min": 79,
-										"max": 79
-									},
-									"text": "Brynn",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.79",
-									"roll": {
-										"min": 80,
-										"max": 80
-									},
-									"text": "Tegan",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.80",
-									"roll": {
-										"min": 81,
-										"max": 81
-									},
-									"text": "Pendry",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.81",
-									"roll": {
-										"min": 82,
-										"max": 82
-									},
-									"text": "Quinn",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.82",
-									"roll": {
-										"min": 83,
-										"max": 83
-									},
-									"text": "Fanir",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.83",
-									"roll": {
-										"min": 84,
-										"max": 84
-									},
-									"text": "Glain",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.84",
-									"roll": {
-										"min": 85,
-										"max": 85
-									},
-									"text": "Emelyn",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.85",
-									"roll": {
-										"min": 86,
-										"max": 86
-									},
-									"text": "Kendi",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.86",
-									"roll": {
-										"min": 87,
-										"max": 87
-									},
-									"text": "Althus",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.87",
-									"roll": {
-										"min": 88,
-										"max": 88
-									},
-									"text": "Leela",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.88",
-									"roll": {
-										"min": 89,
-										"max": 89
-									},
-									"text": "Ishana",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.89",
-									"roll": {
-										"min": 90,
-										"max": 90
-									},
-									"text": "Flint",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.90",
-									"roll": {
-										"min": 91,
-										"max": 91
-									},
-									"text": "Delkash",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.91",
-									"roll": {
-										"min": 92,
-										"max": 92
-									},
-									"text": "Nia",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.92",
-									"roll": {
-										"min": 93,
-										"max": 93
-									},
-									"text": "Nan",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.93",
-									"roll": {
-										"min": 94,
-										"max": 94
-									},
-									"text": "Keeara",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.94",
-									"roll": {
-										"min": 95,
-										"max": 95
-									},
-									"text": "Katania",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.95",
-									"roll": {
-										"min": 96,
-										"max": 96
-									},
-									"text": "Morell",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.96",
-									"roll": {
-										"min": 97,
-										"max": 97
-									},
-									"text": "Temir",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.97",
-									"roll": {
-										"min": 98,
-										"max": 98
-									},
-									"text": "Bas",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.98",
-									"roll": {
-										"min": 99,
-										"max": 99
-									},
-									"text": "Sabine",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/a.99",
-									"roll": {
-										"min": 100,
-										"max": 100
-									},
-									"text": "Tallus",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								}
-							],
-							"_source": {
-								"title": "Ironsworn Rulebook",
-								"authors": [
-									{
-										"name": "Shawn Tomkin"
-									}
-								],
-								"date": "2019-06-05",
-								"license": "https://creativecommons.org/licenses/by/4.0",
-								"page": 184,
-								"url": "https://ironswornrpg.com"
-							}
-						},
-						"b": {
-							"_id": "oracle_rollable:classic/name/ironlander/b",
-							"type": "oracle_rollable",
-							"name": "Table B",
-							"canonical_name": "Ironlander Names",
-							"oracle_type": "table_text",
-							"dice": "1d100",
-							"column_labels": {
-								"roll": "Roll",
-								"text": "Result"
-							},
-							"rows": [
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.0",
-									"roll": {
-										"min": 1,
-										"max": 1
-									},
-									"text": "Segura",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.1",
-									"roll": {
-										"min": 2,
-										"max": 2
-									},
-									"text": "Gethin",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.2",
-									"roll": {
-										"min": 3,
-										"max": 3
-									},
-									"text": "Bataar",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.3",
-									"roll": {
-										"min": 4,
-										"max": 4
-									},
-									"text": "Basira",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.4",
-									"roll": {
-										"min": 5,
-										"max": 5
-									},
-									"text": "Joa",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.5",
-									"roll": {
-										"min": 6,
-										"max": 6
-									},
-									"text": "Glynn",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.6",
-									"roll": {
-										"min": 7,
-										"max": 7
-									},
-									"text": "Toran",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.7",
-									"roll": {
-										"min": 8,
-										"max": 8
-									},
-									"text": "Arasen",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.8",
-									"roll": {
-										"min": 9,
-										"max": 9
-									},
-									"text": "Kuron",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.9",
-									"roll": {
-										"min": 10,
-										"max": 10
-									},
-									"text": "Griff",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.10",
-									"roll": {
-										"min": 11,
-										"max": 11
-									},
-									"text": "Owena",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.11",
-									"roll": {
-										"min": 12,
-										"max": 12
-									},
-									"text": "Adda",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.12",
-									"roll": {
-										"min": 13,
-										"max": 13
-									},
-									"text": "Euros",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.13",
-									"roll": {
-										"min": 14,
-										"max": 14
-									},
-									"text": "Kova",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.14",
-									"roll": {
-										"min": 15,
-										"max": 15
-									},
-									"text": "Kara",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.15",
-									"roll": {
-										"min": 16,
-										"max": 16
-									},
-									"text": "Morgan",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.16",
-									"roll": {
-										"min": 17,
-										"max": 17
-									},
-									"text": "Nanda",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.17",
-									"roll": {
-										"min": 18,
-										"max": 18
-									},
-									"text": "Tamara",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.18",
-									"roll": {
-										"min": 19,
-										"max": 19
-									},
-									"text": "Asha",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.19",
-									"roll": {
-										"min": 20,
-										"max": 20
-									},
-									"text": "Delos",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.20",
-									"roll": {
-										"min": 21,
-										"max": 21
-									},
-									"text": "Torgan",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.21",
-									"roll": {
-										"min": 22,
-										"max": 22
-									},
-									"text": "Makari",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.22",
-									"roll": {
-										"min": 23,
-										"max": 23
-									},
-									"text": "Selva",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.23",
-									"roll": {
-										"min": 24,
-										"max": 24
-									},
-									"text": "Kimura",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.24",
-									"roll": {
-										"min": 25,
-										"max": 25
-									},
-									"text": "Rhian",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.25",
-									"roll": {
-										"min": 26,
-										"max": 26
-									},
-									"text": "Tristan",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.26",
-									"roll": {
-										"min": 27,
-										"max": 27
-									},
-									"text": "Siorra",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.27",
-									"roll": {
-										"min": 28,
-										"max": 28
-									},
-									"text": "Sayer",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.28",
-									"roll": {
-										"min": 29,
-										"max": 29
-									},
-									"text": "Cortina",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.29",
-									"roll": {
-										"min": 30,
-										"max": 30
-									},
-									"text": "Vesna",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.30",
-									"roll": {
-										"min": 31,
-										"max": 31
-									},
-									"text": "Kataka",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.31",
-									"roll": {
-										"min": 32,
-										"max": 32
-									},
-									"text": "Keyshia",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.32",
-									"roll": {
-										"min": 33,
-										"max": 33
-									},
-									"text": "Mila",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.33",
-									"roll": {
-										"min": 34,
-										"max": 34
-									},
-									"text": "Lili",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.34",
-									"roll": {
-										"min": 35,
-										"max": 35
-									},
-									"text": "Vigo",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.35",
-									"roll": {
-										"min": 36,
-										"max": 36
-									},
-									"text": "Sadia",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.36",
-									"roll": {
-										"min": 37,
-										"max": 37
-									},
-									"text": "Malik",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.37",
-									"roll": {
-										"min": 38,
-										"max": 38
-									},
-									"text": "Dag",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.38",
-									"roll": {
-										"min": 39,
-										"max": 39
-									},
-									"text": "Kuno",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.39",
-									"roll": {
-										"min": 40,
-										"max": 40
-									},
-									"text": "Reva",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.40",
-									"roll": {
-										"min": 41,
-										"max": 41
-									},
-									"text": "Kai",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.41",
-									"roll": {
-										"min": 42,
-										"max": 42
-									},
-									"text": "Kalina",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.42",
-									"roll": {
-										"min": 43,
-										"max": 43
-									},
-									"text": "Jihan",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.43",
-									"roll": {
-										"min": 44,
-										"max": 44
-									},
-									"text": "Hennion",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.44",
-									"roll": {
-										"min": 45,
-										"max": 45
-									},
-									"text": "Abram",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.45",
-									"roll": {
-										"min": 46,
-										"max": 46
-									},
-									"text": "Aida",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.46",
-									"roll": {
-										"min": 47,
-										"max": 47
-									},
-									"text": "Myrtle",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.47",
-									"roll": {
-										"min": 48,
-										"max": 48
-									},
-									"text": "Nekun",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.48",
-									"roll": {
-										"min": 49,
-										"max": 49
-									},
-									"text": "Menna",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.49",
-									"roll": {
-										"min": 50,
-										"max": 50
-									},
-									"text": "Tahir",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.50",
-									"roll": {
-										"min": 51,
-										"max": 51
-									},
-									"text": "Sarria",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.51",
-									"roll": {
-										"min": 52,
-										"max": 52
-									},
-									"text": "Nakura",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.52",
-									"roll": {
-										"min": 53,
-										"max": 53
-									},
-									"text": "Akiya",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.53",
-									"roll": {
-										"min": 54,
-										"max": 54
-									},
-									"text": "Talan",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.54",
-									"roll": {
-										"min": 55,
-										"max": 55
-									},
-									"text": "Mattick",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.55",
-									"roll": {
-										"min": 56,
-										"max": 56
-									},
-									"text": "Okoth",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.56",
-									"roll": {
-										"min": 57,
-										"max": 57
-									},
-									"text": "Khulan",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.57",
-									"roll": {
-										"min": 58,
-										"max": 58
-									},
-									"text": "Verena",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.58",
-									"roll": {
-										"min": 59,
-										"max": 59
-									},
-									"text": "Beltran",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.59",
-									"roll": {
-										"min": 60,
-										"max": 60
-									},
-									"text": "Del",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.60",
-									"roll": {
-										"min": 61,
-										"max": 61
-									},
-									"text": "Ranna",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.61",
-									"roll": {
-										"min": 62,
-										"max": 62
-									},
-									"text": "Alina",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.62",
-									"roll": {
-										"min": 63,
-										"max": 63
-									},
-									"text": "Muna",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.63",
-									"roll": {
-										"min": 64,
-										"max": 64
-									},
-									"text": "Mura",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.64",
-									"roll": {
-										"min": 65,
-										"max": 65
-									},
-									"text": "Torrens",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.65",
-									"roll": {
-										"min": 66,
-										"max": 66
-									},
-									"text": "Yuda",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.66",
-									"roll": {
-										"min": 67,
-										"max": 67
-									},
-									"text": "Nazmi",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.67",
-									"roll": {
-										"min": 68,
-										"max": 68
-									},
-									"text": "Ghalen",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.68",
-									"roll": {
-										"min": 69,
-										"max": 69
-									},
-									"text": "Sarda",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.69",
-									"roll": {
-										"min": 70,
-										"max": 70
-									},
-									"text": "Shona",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.70",
-									"roll": {
-										"min": 71,
-										"max": 71
-									},
-									"text": "Kalidas",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.71",
-									"roll": {
-										"min": 72,
-										"max": 72
-									},
-									"text": "Wena",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.72",
-									"roll": {
-										"min": 73,
-										"max": 73
-									},
-									"text": "Sendra",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.73",
-									"roll": {
-										"min": 74,
-										"max": 74
-									},
-									"text": "Kori",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.74",
-									"roll": {
-										"min": 75,
-										"max": 75
-									},
-									"text": "Setara",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.75",
-									"roll": {
-										"min": 76,
-										"max": 76
-									},
-									"text": "Lucia",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.76",
-									"roll": {
-										"min": 77,
-										"max": 77
-									},
-									"text": "Maya",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.77",
-									"roll": {
-										"min": 78,
-										"max": 78
-									},
-									"text": "Reema",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.78",
-									"roll": {
-										"min": 79,
-										"max": 79
-									},
-									"text": "Yorath",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.79",
-									"roll": {
-										"min": 80,
-										"max": 80
-									},
-									"text": "Rhoddri",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.80",
-									"roll": {
-										"min": 81,
-										"max": 81
-									},
-									"text": "Shekhar",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.81",
-									"roll": {
-										"min": 82,
-										"max": 82
-									},
-									"text": "Servan",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.82",
-									"roll": {
-										"min": 83,
-										"max": 83
-									},
-									"text": "Reese",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.83",
-									"roll": {
-										"min": 84,
-										"max": 84
-									},
-									"text": "Kenrick",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.84",
-									"roll": {
-										"min": 85,
-										"max": 85
-									},
-									"text": "Indirra",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.85",
-									"roll": {
-										"min": 86,
-										"max": 86
-									},
-									"text": "Giliana",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.86",
-									"roll": {
-										"min": 87,
-										"max": 87
-									},
-									"text": "Jebran",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.87",
-									"roll": {
-										"min": 88,
-										"max": 88
-									},
-									"text": "Kotama",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.88",
-									"roll": {
-										"min": 89,
-										"max": 89
-									},
-									"text": "Fara",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.89",
-									"roll": {
-										"min": 90,
-										"max": 90
-									},
-									"text": "Katrin",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.90",
-									"roll": {
-										"min": 91,
-										"max": 91
-									},
-									"text": "Namba",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.91",
-									"roll": {
-										"min": 92,
-										"max": 92
-									},
-									"text": "Lona",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.92",
-									"roll": {
-										"min": 93,
-										"max": 93
-									},
-									"text": "Taylah",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.93",
-									"roll": {
-										"min": 94,
-										"max": 94
-									},
-									"text": "Kato",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.94",
-									"roll": {
-										"min": 95,
-										"max": 95
-									},
-									"text": "Esra",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.95",
-									"roll": {
-										"min": 96,
-										"max": 96
-									},
-									"text": "Eleri",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.96",
-									"roll": {
-										"min": 97,
-										"max": 97
-									},
-									"text": "Irsia",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.97",
-									"roll": {
-										"min": 98,
-										"max": 98
-									},
-									"text": "Kayu",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.98",
-									"roll": {
-										"min": 99,
-										"max": 99
-									},
-									"text": "Bevan",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								},
-								{
-									"_id": "oracle_rollable.row:classic/name/ironlander/b.99",
-									"roll": {
-										"min": 100,
-										"max": 100
-									},
-									"text": "Chandra",
-									"_i18n": {
-										"text": {
-											"part_of_speech": "proper_noun"
-										}
-									}
-								}
-							],
-							"_source": {
-								"title": "Ironsworn Rulebook",
-								"authors": [
-									{
-										"name": "Shawn Tomkin"
-									}
-								],
-								"date": "2019-06-05",
-								"license": "https://creativecommons.org/licenses/by/4.0",
-								"page": 185,
-								"url": "https://ironswornrpg.com"
-							}
-						}
-					},
-					"collections": {},
-					"_source": {
-						"title": "Ironsworn Rulebook",
-						"authors": [
-							{
-								"name": "Shawn Tomkin"
-							}
-						],
-						"date": "2019-06-05",
-						"license": "https://creativecommons.org/licenses/by/4.0",
-						"page": 184,
-						"url": "https://ironswornrpg.com"
-					}
-				},
 				"other": {
 					"_id": "oracle_collection:classic/name/other",
 					"type": "oracle_collection",

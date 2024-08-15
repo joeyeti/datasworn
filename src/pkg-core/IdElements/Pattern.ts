@@ -1,20 +1,17 @@
 import {
-	PACKAGE_ID_LENGTH_MIN,
 	PathKeySep,
 	COLLECTION_DEPTH_MIN,
-	COLLECTION_DEPTH_MAX,
+	COLLECTION_DEPTH_MAX
 } from './CONST.js'
 
 /**
  * Regular expressions used to validate Datasworn ID elements.
  */
 namespace Pattern {
-	const DictKeyBase = /[a-z][a-z_]*/
+	const DictKeyBase = /[a-z][a-z0-9_]*/
 	export const DictKeyElement = DictKeyBase
 	export const DictKey = new RegExp(`^${DictKeyBase.source}$`)
-	const RulesPackageBase = new RegExp(
-		`[a-z][a-z0-9_]{${PACKAGE_ID_LENGTH_MIN},}`
-	)
+	const RulesPackageBase = DictKeyBase
 	export const RulesPackageElement = RulesPackageBase
 	export const RulesPackageId = new RegExp(`^${RulesPackageBase.source}$`)
 

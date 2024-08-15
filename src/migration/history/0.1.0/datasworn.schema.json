@@ -401,7 +401,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/AssetOptionField"
 						}
 					}
@@ -436,7 +436,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/AssetControlField"
 						}
 					}
@@ -482,7 +482,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/AssetAbilityOptionField"
 						}
 					}
@@ -497,7 +497,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/AssetAbilityControlField"
 						}
 					}
@@ -508,7 +508,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/EmbeddedOracleRollable",
 							"title": "AssetAbilityOracleRollable"
 						}
@@ -539,7 +539,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/EmbeddedMove",
 							"title": "AssetAbilityMove"
 						}
@@ -617,25 +617,25 @@
 			"title": "AssetAbilityId",
 			"type": "string",
 			"description": "A unique ID representing an AssetAbility object.",
-			"pattern": "^asset\\.ability:([a-z][a-z0-9_]{3,}(?:\\/[a-z][a-z_]*){2,5})\\.(\\d+)$"
+			"pattern": "^asset\\.ability:([a-z][a-z0-9_]*(?:\\/[a-z][a-z0-9_]*){2,5})\\.(\\d+)$"
 		},
 		"AssetAbilityIdWildcard": {
 			"title": "AssetAbilityIdWildcard",
 			"type": "string",
 			"description": "A wildcarded AssetAbilityId that can be used to match multiple AssetAbility objects.",
-			"pattern": "^asset\\.ability:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)(?:\\/(?:[a-z][a-z_]*|\\*|\\*\\*)){2,5})\\.(\\d+|\\*)$"
+			"pattern": "^asset\\.ability:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})\\.(\\d+|\\*)$"
 		},
 		"AssetAbilityMoveId": {
 			"title": "AssetAbilityMoveId",
 			"type": "string",
 			"description": "A unique ID representing an AssetAbilityMove object.",
-			"pattern": "^asset\\.ability\\.move:([a-z][a-z0-9_]{3,}(?:\\/[a-z][a-z_]*){2,5})\\.(\\d+)\\.([a-z][a-z_]*|\\*)$"
+			"pattern": "^asset\\.ability\\.move:([a-z][a-z0-9_]*(?:\\/[a-z][a-z0-9_]*){2,5})\\.(\\d+)\\.([a-z][a-z0-9_]*|\\*)$"
 		},
 		"AssetAbilityMoveIdWildcard": {
 			"title": "AssetAbilityMoveIdWildcard",
 			"type": "string",
 			"description": "A wildcarded AssetAbilityMoveId that can be used to match multiple AssetAbilityMove objects.",
-			"pattern": "^asset\\.ability\\.move:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)(?:\\/(?:[a-z][a-z_]*|\\*|\\*\\*)){2,5})\\.(\\d+|\\*)\\.([a-z][a-z_]*|\\*)$"
+			"pattern": "^asset\\.ability\\.move:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})\\.(\\d+|\\*)\\.([a-z][a-z0-9_]*|\\*)$"
 		},
 		"AssetAbilityOptionField": {
 			"title": "AssetAbilityOptionField",
@@ -668,25 +668,25 @@
 			"title": "AssetAbilityOracleRollableId",
 			"type": "string",
 			"description": "A unique ID representing an AssetAbilityOracleRollable object.",
-			"pattern": "^asset\\.ability\\.oracle_rollable:([a-z][a-z0-9_]{3,}(?:\\/[a-z][a-z_]*){2,5})\\.(\\d+)\\.([a-z][a-z_]*|\\*)$"
+			"pattern": "^asset\\.ability\\.oracle_rollable:([a-z][a-z0-9_]*(?:\\/[a-z][a-z0-9_]*){2,5})\\.(\\d+)\\.([a-z][a-z0-9_]*|\\*)$"
 		},
 		"AssetAbilityOracleRollableIdWildcard": {
 			"title": "AssetAbilityOracleRollableIdWildcard",
 			"type": "string",
 			"description": "A wildcarded AssetAbilityOracleRollableId that can be used to match multiple AssetAbilityOracleRollable objects.",
-			"pattern": "^asset\\.ability\\.oracle_rollable:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)(?:\\/(?:[a-z][a-z_]*|\\*|\\*\\*)){2,5})\\.(\\d+|\\*)\\.([a-z][a-z_]*|\\*)$"
+			"pattern": "^asset\\.ability\\.oracle_rollable:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})\\.(\\d+|\\*)\\.([a-z][a-z0-9_]*|\\*)$"
 		},
 		"AssetAbilityOracleRollableRowId": {
 			"title": "AssetAbilityOracleRollableRowId",
 			"type": "string",
 			"description": "A unique ID representing an AssetAbilityOracleRollableRow object.",
-			"pattern": "^asset\\.ability\\.oracle_rollable\\.row:([a-z][a-z0-9_]{3,}(?:\\/[a-z][a-z_]*){2,5})\\.(\\d+)\\.([a-z][a-z_]*|\\*)\\.(\\d+)$"
+			"pattern": "^asset\\.ability\\.oracle_rollable\\.row:([a-z][a-z0-9_]*(?:\\/[a-z][a-z0-9_]*){2,5})\\.(\\d+)\\.([a-z][a-z0-9_]*|\\*)\\.(\\d+)$"
 		},
 		"AssetAbilityOracleRollableRowIdWildcard": {
 			"title": "AssetAbilityOracleRollableRowIdWildcard",
 			"type": "string",
 			"description": "A wildcarded AssetAbilityOracleRollableRowId that can be used to match multiple AssetAbilityOracleRollableRow objects.",
-			"pattern": "^asset\\.ability\\.oracle_rollable\\.row:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)(?:\\/(?:[a-z][a-z_]*|\\*|\\*\\*)){2,5})\\.(\\d+|\\*)\\.([a-z][a-z_]*|\\*)\\.(\\d+|\\*)$"
+			"pattern": "^asset\\.ability\\.oracle_rollable\\.row:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})\\.(\\d+|\\*)\\.([a-z][a-z0-9_]*|\\*)\\.(\\d+|\\*)$"
 		},
 		"AssetAttachment": {
 			"title": "AssetAttachment",
@@ -857,7 +857,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/Asset"
 						}
 					}
@@ -867,7 +867,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/AssetCollection"
 						}
 					}
@@ -892,13 +892,13 @@
 			"title": "AssetCollectionId",
 			"type": "string",
 			"description": "A unique ID representing an AssetCollection object.",
-			"pattern": "^asset_collection:([a-z][a-z0-9_]{3,}(?:\\/[a-z][a-z_]*){1,4})$"
+			"pattern": "^asset_collection:([a-z][a-z0-9_]*(?:\\/[a-z][a-z0-9_]*){1,4})$"
 		},
 		"AssetCollectionIdWildcard": {
 			"title": "AssetCollectionIdWildcard",
 			"type": "string",
 			"description": "A wildcarded AssetCollectionId that can be used to match multiple AssetCollection objects.",
-			"pattern": "^asset_collection:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)(?:\\/(?:[a-z][a-z_]*|\\*|\\*\\*)){1,4})$"
+			"pattern": "^asset_collection:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){1,4})$"
 		},
 		"AssetConditionMeter": {
 			"title": "AssetConditionMeter",
@@ -951,7 +951,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/AssetConditionMeterControlField"
 						}
 					}
@@ -1201,7 +1201,7 @@
 					"description": "Controls are condition meters, clocks, counters, and other asset input fields whose values are expected to change throughout the life of the asset.",
 					"remarks": "Deserialize as a dictionary object.",
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/AssetControlFieldEnhancement"
 						}
 					}
@@ -1215,13 +1215,13 @@
 			"title": "AssetId",
 			"type": "string",
 			"description": "A unique ID representing an Asset object.",
-			"pattern": "^asset:([a-z][a-z0-9_]{3,}(?:\\/[a-z][a-z_]*){2,5})$"
+			"pattern": "^asset:([a-z][a-z0-9_]*(?:\\/[a-z][a-z0-9_]*){2,5})$"
 		},
 		"AssetIdWildcard": {
 			"title": "AssetIdWildcard",
 			"type": "string",
 			"description": "A wildcarded AssetId that can be used to match multiple Asset objects.",
-			"pattern": "^asset:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)(?:\\/(?:[a-z][a-z_]*|\\*|\\*\\*)){2,5})$"
+			"pattern": "^asset:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})$"
 		},
 		"AssetOptionField": {
 			"title": "AssetOptionField",
@@ -1372,7 +1372,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/AtlasEntry"
 						}
 					}
@@ -1382,7 +1382,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/AtlasCollection"
 						}
 					}
@@ -1407,13 +1407,13 @@
 			"title": "AtlasCollectionId",
 			"type": "string",
 			"description": "A unique ID representing an AtlasCollection object.",
-			"pattern": "^atlas_collection:([a-z][a-z0-9_]{3,}(?:\\/[a-z][a-z_]*){1,4})$"
+			"pattern": "^atlas_collection:([a-z][a-z0-9_]*(?:\\/[a-z][a-z0-9_]*){1,4})$"
 		},
 		"AtlasCollectionIdWildcard": {
 			"title": "AtlasCollectionIdWildcard",
 			"type": "string",
 			"description": "A wildcarded AtlasCollectionId that can be used to match multiple AtlasCollection objects.",
-			"pattern": "^atlas_collection:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)(?:\\/(?:[a-z][a-z_]*|\\*|\\*\\*)){1,4})$"
+			"pattern": "^atlas_collection:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){1,4})$"
 		},
 		"AtlasEntry": {
 			"title": "AtlasEntry",
@@ -1496,13 +1496,13 @@
 			"title": "AtlasEntryId",
 			"type": "string",
 			"description": "A unique ID representing an AtlasEntry object.",
-			"pattern": "^atlas_entry:([a-z][a-z0-9_]{3,}(?:\\/[a-z][a-z_]*){2,5})$"
+			"pattern": "^atlas_entry:([a-z][a-z0-9_]*(?:\\/[a-z][a-z0-9_]*){2,5})$"
 		},
 		"AtlasEntryIdWildcard": {
 			"title": "AtlasEntryIdWildcard",
 			"type": "string",
 			"description": "A wildcarded AtlasEntryId that can be used to match multiple AtlasEntry objects.",
-			"pattern": "^atlas_entry:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)(?:\\/(?:[a-z][a-z_]*|\\*|\\*\\*)){2,5})$"
+			"pattern": "^atlas_entry:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})$"
 		},
 		"AttachedAssetControlValueRef": {
 			"title": "AttachedAssetControlValueRef",
@@ -2285,13 +2285,13 @@
 			"title": "DelveSiteDenizenId",
 			"type": "string",
 			"description": "A unique ID representing a DelveSiteDenizen object.",
-			"pattern": "^delve_site\\.denizen:([a-z][a-z0-9_]{3,}\\/[a-z][a-z_]*)\\.(\\d+)$"
+			"pattern": "^delve_site\\.denizen:([a-z][a-z0-9_]*\\/[a-z][a-z0-9_]*)\\.(\\d+)$"
 		},
 		"DelveSiteDenizenIdWildcard": {
 			"title": "DelveSiteDenizenIdWildcard",
 			"type": "string",
 			"description": "A wildcarded DelveSiteDenizenId that can be used to match multiple DelveSiteDenizen objects.",
-			"pattern": "^delve_site\\.denizen:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)\\/[a-z][a-z_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)$"
+			"pattern": "^delve_site\\.denizen:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)$"
 		},
 		"DelveSiteDomain": {
 			"title": "DelveSiteDomain",
@@ -2827,13 +2827,13 @@
 			"title": "DelveSiteDomainDangerId",
 			"type": "string",
 			"description": "A unique ID representing a DelveSiteDomainDanger object.",
-			"pattern": "^delve_site_domain\\.danger:([a-z][a-z0-9_]{3,}\\/[a-z][a-z_]*)\\.(\\d+)$"
+			"pattern": "^delve_site_domain\\.danger:([a-z][a-z0-9_]*\\/[a-z][a-z0-9_]*)\\.(\\d+)$"
 		},
 		"DelveSiteDomainDangerIdWildcard": {
 			"title": "DelveSiteDomainDangerIdWildcard",
 			"type": "string",
 			"description": "A wildcarded DelveSiteDomainDangerId that can be used to match multiple DelveSiteDomainDanger objects.",
-			"pattern": "^delve_site_domain\\.danger:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)\\/[a-z][a-z_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)$"
+			"pattern": "^delve_site_domain\\.danger:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)$"
 		},
 		"DelveSiteDomainFeature": {
 			"title": "DelveSiteDomainFeature",
@@ -2895,37 +2895,37 @@
 			"title": "DelveSiteDomainFeatureId",
 			"type": "string",
 			"description": "A unique ID representing a DelveSiteDomainFeature object.",
-			"pattern": "^delve_site_domain\\.feature:([a-z][a-z0-9_]{3,}\\/[a-z][a-z_]*)\\.(\\d+)$"
+			"pattern": "^delve_site_domain\\.feature:([a-z][a-z0-9_]*\\/[a-z][a-z0-9_]*)\\.(\\d+)$"
 		},
 		"DelveSiteDomainFeatureIdWildcard": {
 			"title": "DelveSiteDomainFeatureIdWildcard",
 			"type": "string",
 			"description": "A wildcarded DelveSiteDomainFeatureId that can be used to match multiple DelveSiteDomainFeature objects.",
-			"pattern": "^delve_site_domain\\.feature:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)\\/[a-z][a-z_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)$"
+			"pattern": "^delve_site_domain\\.feature:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)$"
 		},
 		"DelveSiteDomainId": {
 			"title": "DelveSiteDomainId",
 			"type": "string",
 			"description": "A unique ID representing a DelveSiteDomain object.",
-			"pattern": "^delve_site_domain:([a-z][a-z0-9_]{3,}\\/[a-z][a-z_]*)$"
+			"pattern": "^delve_site_domain:([a-z][a-z0-9_]*\\/[a-z][a-z0-9_]*)$"
 		},
 		"DelveSiteDomainIdWildcard": {
 			"title": "DelveSiteDomainIdWildcard",
 			"type": "string",
 			"description": "A wildcarded DelveSiteDomainId that can be used to match multiple DelveSiteDomain objects.",
-			"pattern": "^delve_site_domain:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)\\/[a-z][a-z_]*|\\/\\*|\\/\\*\\*)$"
+			"pattern": "^delve_site_domain:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)$"
 		},
 		"DelveSiteId": {
 			"title": "DelveSiteId",
 			"type": "string",
 			"description": "A unique ID representing a DelveSite object.",
-			"pattern": "^delve_site:([a-z][a-z0-9_]{3,}\\/[a-z][a-z_]*)$"
+			"pattern": "^delve_site:([a-z][a-z0-9_]*\\/[a-z][a-z0-9_]*)$"
 		},
 		"DelveSiteIdWildcard": {
 			"title": "DelveSiteIdWildcard",
 			"type": "string",
 			"description": "A wildcarded DelveSiteId that can be used to match multiple DelveSite objects.",
-			"pattern": "^delve_site:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)\\/[a-z][a-z_]*|\\/\\*|\\/\\*\\*)$"
+			"pattern": "^delve_site:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)$"
 		},
 		"DelveSiteTheme": {
 			"title": "DelveSiteTheme",
@@ -3457,13 +3457,13 @@
 			"title": "DelveSiteThemeDangerId",
 			"type": "string",
 			"description": "A unique ID representing a DelveSiteThemeDanger object.",
-			"pattern": "^delve_site_theme\\.danger:([a-z][a-z0-9_]{3,}\\/[a-z][a-z_]*)\\.(\\d+)$"
+			"pattern": "^delve_site_theme\\.danger:([a-z][a-z0-9_]*\\/[a-z][a-z0-9_]*)\\.(\\d+)$"
 		},
 		"DelveSiteThemeDangerIdWildcard": {
 			"title": "DelveSiteThemeDangerIdWildcard",
 			"type": "string",
 			"description": "A wildcarded DelveSiteThemeDangerId that can be used to match multiple DelveSiteThemeDanger objects.",
-			"pattern": "^delve_site_theme\\.danger:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)\\/[a-z][a-z_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)$"
+			"pattern": "^delve_site_theme\\.danger:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)$"
 		},
 		"DelveSiteThemeFeature": {
 			"title": "DelveSiteThemeFeature",
@@ -3525,25 +3525,25 @@
 			"title": "DelveSiteThemeFeatureId",
 			"type": "string",
 			"description": "A unique ID representing a DelveSiteThemeFeature object.",
-			"pattern": "^delve_site_theme\\.feature:([a-z][a-z0-9_]{3,}\\/[a-z][a-z_]*)\\.(\\d+)$"
+			"pattern": "^delve_site_theme\\.feature:([a-z][a-z0-9_]*\\/[a-z][a-z0-9_]*)\\.(\\d+)$"
 		},
 		"DelveSiteThemeFeatureIdWildcard": {
 			"title": "DelveSiteThemeFeatureIdWildcard",
 			"type": "string",
 			"description": "A wildcarded DelveSiteThemeFeatureId that can be used to match multiple DelveSiteThemeFeature objects.",
-			"pattern": "^delve_site_theme\\.feature:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)\\/[a-z][a-z_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)$"
+			"pattern": "^delve_site_theme\\.feature:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)$"
 		},
 		"DelveSiteThemeId": {
 			"title": "DelveSiteThemeId",
 			"type": "string",
 			"description": "A unique ID representing a DelveSiteTheme object.",
-			"pattern": "^delve_site_theme:([a-z][a-z0-9_]{3,}\\/[a-z][a-z_]*)$"
+			"pattern": "^delve_site_theme:([a-z][a-z0-9_]*\\/[a-z][a-z0-9_]*)$"
 		},
 		"DelveSiteThemeIdWildcard": {
 			"title": "DelveSiteThemeIdWildcard",
 			"type": "string",
 			"description": "A wildcarded DelveSiteThemeId that can be used to match multiple DelveSiteTheme objects.",
-			"pattern": "^delve_site_theme:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)\\/[a-z][a-z_]*|\\/\\*|\\/\\*\\*)$"
+			"pattern": "^delve_site_theme:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)$"
 		},
 		"DiceExpression": {
 			"title": "DiceExpression",
@@ -3573,7 +3573,7 @@
 			"type": "string",
 			"description": "A `snake_case` key used in a Datasworn dictionary object.",
 			"remarks": "If you need to generate a key from a user-provided label, it's recommended to use a 'slugify' function/library, e.g. https://www.npmjs.com/package/slugify for NodeJS.",
-			"pattern": "^[a-z][a-z_]*$"
+			"pattern": "^[a-z][a-z0-9_]*$"
 		},
 		"Email": {
 			"title": "Email",
@@ -4794,7 +4794,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/OracleTablesCollection"
 						}
 					}
@@ -4805,7 +4805,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/AssetCollection"
 						}
 					}
@@ -4816,7 +4816,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/AtlasCollection"
 						}
 					}
@@ -4827,7 +4827,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/MoveCategory"
 						}
 					}
@@ -4838,7 +4838,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/NpcCollection"
 						}
 					}
@@ -4849,7 +4849,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/Rarity"
 						}
 					}
@@ -4860,7 +4860,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/DelveSite"
 						}
 					}
@@ -4871,7 +4871,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/DelveSiteDomain"
 						}
 					}
@@ -4882,7 +4882,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/DelveSiteTheme"
 						}
 					}
@@ -4893,7 +4893,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/Truth"
 						}
 					}
@@ -4906,7 +4906,7 @@
 			"type": "string",
 			"description": "The ID of a Datasworn package that relies on an external package to provide its ruleset.",
 			"examples": ["delve", "sundered_isles"],
-			"pattern": "^[a-z][a-z0-9_]{3,}$"
+			"pattern": "^[a-z][a-z0-9_]*$"
 		},
 		"I18nHint": {
 			"title": "I18nHint",
@@ -4970,7 +4970,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/ImpactRule"
 						}
 					}
@@ -5181,7 +5181,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/EmbeddedOracleRollable",
 							"title": "MoveOracleRollable"
 						}
@@ -5302,7 +5302,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/Move"
 						}
 					}
@@ -5312,7 +5312,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/MoveCategory"
 						}
 					}
@@ -5337,13 +5337,13 @@
 			"title": "MoveCategoryId",
 			"type": "string",
 			"description": "A unique ID representing a MoveCategory object.",
-			"pattern": "^move_category:([a-z][a-z0-9_]{3,}(?:\\/[a-z][a-z_]*){1,4})$"
+			"pattern": "^move_category:([a-z][a-z0-9_]*(?:\\/[a-z][a-z0-9_]*){1,4})$"
 		},
 		"MoveCategoryIdWildcard": {
 			"title": "MoveCategoryIdWildcard",
 			"type": "string",
 			"description": "A wildcarded MoveCategoryId that can be used to match multiple MoveCategory objects.",
-			"pattern": "^move_category:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)(?:\\/(?:[a-z][a-z_]*|\\*|\\*\\*)){1,4})$"
+			"pattern": "^move_category:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){1,4})$"
 		},
 		"MoveEnhancement": {
 			"title": "MoveEnhancement",
@@ -5415,13 +5415,13 @@
 			"title": "MoveId",
 			"type": "string",
 			"description": "A unique ID representing a Move object.",
-			"pattern": "^move:([a-z][a-z0-9_]{3,}(?:\\/[a-z][a-z_]*){2,5})$"
+			"pattern": "^move:([a-z][a-z0-9_]*(?:\\/[a-z][a-z0-9_]*){2,5})$"
 		},
 		"MoveIdWildcard": {
 			"title": "MoveIdWildcard",
 			"type": "string",
 			"description": "A wildcarded MoveId that can be used to match multiple Move objects.",
-			"pattern": "^move:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)(?:\\/(?:[a-z][a-z_]*|\\*|\\*\\*)){2,5})$"
+			"pattern": "^move:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})$"
 		},
 		"MoveNoRoll": {
 			"title": "MoveNoRoll",
@@ -5501,7 +5501,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/EmbeddedOracleRollable",
 							"title": "MoveOracleRollable"
 						}
@@ -5564,25 +5564,25 @@
 			"title": "MoveOracleRollableId",
 			"type": "string",
 			"description": "A unique ID representing a MoveOracleRollable object.",
-			"pattern": "^move\\.oracle_rollable:([a-z][a-z0-9_]{3,}(?:\\/[a-z][a-z_]*){2,5})\\.([a-z][a-z_]*|\\*)$"
+			"pattern": "^move\\.oracle_rollable:([a-z][a-z0-9_]*(?:\\/[a-z][a-z0-9_]*){2,5})\\.([a-z][a-z0-9_]*|\\*)$"
 		},
 		"MoveOracleRollableIdWildcard": {
 			"title": "MoveOracleRollableIdWildcard",
 			"type": "string",
 			"description": "A wildcarded MoveOracleRollableId that can be used to match multiple MoveOracleRollable objects.",
-			"pattern": "^move\\.oracle_rollable:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)(?:\\/(?:[a-z][a-z_]*|\\*|\\*\\*)){2,5})\\.([a-z][a-z_]*|\\*)$"
+			"pattern": "^move\\.oracle_rollable:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})\\.([a-z][a-z0-9_]*|\\*)$"
 		},
 		"MoveOracleRollableRowId": {
 			"title": "MoveOracleRollableRowId",
 			"type": "string",
 			"description": "A unique ID representing a MoveOracleRollableRow object.",
-			"pattern": "^move\\.oracle_rollable\\.row:([a-z][a-z0-9_]{3,}(?:\\/[a-z][a-z_]*){2,5})\\.([a-z][a-z_]*|\\*)\\.(\\d+)$"
+			"pattern": "^move\\.oracle_rollable\\.row:([a-z][a-z0-9_]*(?:\\/[a-z][a-z0-9_]*){2,5})\\.([a-z][a-z0-9_]*|\\*)\\.(\\d+)$"
 		},
 		"MoveOracleRollableRowIdWildcard": {
 			"title": "MoveOracleRollableRowIdWildcard",
 			"type": "string",
 			"description": "A wildcarded MoveOracleRollableRowId that can be used to match multiple MoveOracleRollableRow objects.",
-			"pattern": "^move\\.oracle_rollable\\.row:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)(?:\\/(?:[a-z][a-z_]*|\\*|\\*\\*)){2,5})\\.([a-z][a-z_]*|\\*)\\.(\\d+|\\*)$"
+			"pattern": "^move\\.oracle_rollable\\.row:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})\\.([a-z][a-z0-9_]*|\\*)\\.(\\d+|\\*)$"
 		},
 		"MoveOutcome": {
 			"title": "MoveOutcome",
@@ -5701,7 +5701,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/EmbeddedOracleRollable",
 							"title": "MoveOracleRollable"
 						}
@@ -5842,7 +5842,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/EmbeddedOracleRollable",
 							"title": "MoveOracleRollable"
 						}
@@ -5999,7 +5999,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/NpcVariant"
 						}
 					}
@@ -6092,7 +6092,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/Npc"
 						}
 					}
@@ -6102,7 +6102,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/NpcCollection"
 						}
 					}
@@ -6127,25 +6127,25 @@
 			"title": "NpcCollectionId",
 			"type": "string",
 			"description": "A unique ID representing a NpcCollection object.",
-			"pattern": "^npc_collection:([a-z][a-z0-9_]{3,}(?:\\/[a-z][a-z_]*){1,4})$"
+			"pattern": "^npc_collection:([a-z][a-z0-9_]*(?:\\/[a-z][a-z0-9_]*){1,4})$"
 		},
 		"NpcCollectionIdWildcard": {
 			"title": "NpcCollectionIdWildcard",
 			"type": "string",
 			"description": "A wildcarded NpcCollectionId that can be used to match multiple NpcCollection objects.",
-			"pattern": "^npc_collection:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)(?:\\/(?:[a-z][a-z_]*|\\*|\\*\\*)){1,4})$"
+			"pattern": "^npc_collection:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){1,4})$"
 		},
 		"NpcId": {
 			"title": "NpcId",
 			"type": "string",
 			"description": "A unique ID representing a Npc object.",
-			"pattern": "^npc:([a-z][a-z0-9_]{3,}(?:\\/[a-z][a-z_]*){2,5})$"
+			"pattern": "^npc:([a-z][a-z0-9_]*(?:\\/[a-z][a-z0-9_]*){2,5})$"
 		},
 		"NpcIdWildcard": {
 			"title": "NpcIdWildcard",
 			"type": "string",
 			"description": "A wildcarded NpcId that can be used to match multiple Npc objects.",
-			"pattern": "^npc:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)(?:\\/(?:[a-z][a-z_]*|\\*|\\*\\*)){2,5})$"
+			"pattern": "^npc:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})$"
 		},
 		"NpcNature": {
 			"$ref": "#/definitions/Label",
@@ -6200,13 +6200,13 @@
 			"title": "NpcVariantId",
 			"type": "string",
 			"description": "A unique ID representing a NpcVariant object.",
-			"pattern": "^npc\\.variant:([a-z][a-z0-9_]{3,}(?:\\/[a-z][a-z_]*){2,5})\\.([a-z][a-z_]*|\\*)$"
+			"pattern": "^npc\\.variant:([a-z][a-z0-9_]*(?:\\/[a-z][a-z0-9_]*){2,5})\\.([a-z][a-z0-9_]*|\\*)$"
 		},
 		"NpcVariantIdWildcard": {
 			"title": "NpcVariantIdWildcard",
 			"type": "string",
 			"description": "A wildcarded NpcVariantId that can be used to match multiple NpcVariant objects.",
-			"pattern": "^npc\\.variant:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)(?:\\/(?:[a-z][a-z_]*|\\*|\\*\\*)){2,5})\\.([a-z][a-z_]*|\\*)$"
+			"pattern": "^npc\\.variant:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})\\.([a-z][a-z0-9_]*|\\*)$"
 		},
 		"OracleCollection": {
 			"title": "OracleCollection",
@@ -6297,13 +6297,13 @@
 			"title": "OracleCollectionId",
 			"type": "string",
 			"description": "A unique ID representing an OracleCollection object.",
-			"pattern": "^oracle_collection:([a-z][a-z0-9_]{3,}(?:\\/[a-z][a-z_]*){1,4})$"
+			"pattern": "^oracle_collection:([a-z][a-z0-9_]*(?:\\/[a-z][a-z0-9_]*){1,4})$"
 		},
 		"OracleCollectionIdWildcard": {
 			"title": "OracleCollectionIdWildcard",
 			"type": "string",
 			"description": "A wildcarded OracleCollectionId that can be used to match multiple OracleCollection objects.",
-			"pattern": "^oracle_collection:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)(?:\\/(?:[a-z][a-z_]*|\\*|\\*\\*)){1,4})$"
+			"pattern": "^oracle_collection:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){1,4})$"
 		},
 		"OracleColumnText": {
 			"title": "OracleColumnText",
@@ -6742,13 +6742,13 @@
 			"title": "OracleRollableId",
 			"type": "string",
 			"description": "A unique ID representing an OracleRollable object.",
-			"pattern": "^oracle_rollable:([a-z][a-z0-9_]{3,}(?:\\/[a-z][a-z_]*){2,5})$"
+			"pattern": "^oracle_rollable:([a-z][a-z0-9_]*(?:\\/[a-z][a-z0-9_]*){2,5})$"
 		},
 		"OracleRollableIdWildcard": {
 			"title": "OracleRollableIdWildcard",
 			"type": "string",
 			"description": "A wildcarded OracleRollableId that can be used to match multiple OracleRollable objects.",
-			"pattern": "^oracle_rollable:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)(?:\\/(?:[a-z][a-z_]*|\\*|\\*\\*)){2,5})$"
+			"pattern": "^oracle_rollable:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})$"
 		},
 		"OracleRollableRow": {
 			"title": "OracleRollableRow",
@@ -6768,13 +6768,13 @@
 			"title": "OracleRollableRowId",
 			"type": "string",
 			"description": "A unique ID representing an OracleRollableRow object.",
-			"pattern": "^oracle_rollable\\.row:([a-z][a-z0-9_]{3,}(?:\\/[a-z][a-z_]*){2,5})\\.(\\d+)$"
+			"pattern": "^oracle_rollable\\.row:([a-z][a-z0-9_]*(?:\\/[a-z][a-z0-9_]*){2,5})\\.(\\d+)$"
 		},
 		"OracleRollableRowIdWildcard": {
 			"title": "OracleRollableRowIdWildcard",
 			"type": "string",
 			"description": "A wildcarded OracleRollableRowId that can be used to match multiple OracleRollableRow objects.",
-			"pattern": "^oracle_rollable\\.row:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)(?:\\/(?:[a-z][a-z_]*|\\*|\\*\\*)){2,5})\\.(\\d+|\\*)$"
+			"pattern": "^oracle_rollable\\.row:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})\\.(\\d+|\\*)$"
 		},
 		"OracleRollableRowText": {
 			"title": "OracleRollableRowText",
@@ -7129,7 +7129,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/OracleRollableTable"
 						}
 					}
@@ -7139,7 +7139,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/OracleCollection"
 						}
 					}
@@ -7236,7 +7236,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/OracleColumnText"
 						}
 					}
@@ -7348,7 +7348,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/OracleColumnText"
 						}
 					}
@@ -7459,7 +7459,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/OracleColumnText2"
 						}
 					}
@@ -7574,7 +7574,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/OracleColumnText3"
 						}
 					}
@@ -8044,7 +8044,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"type": "object",
 							"properties": {}
 						}
@@ -8127,13 +8127,13 @@
 			"title": "RarityId",
 			"type": "string",
 			"description": "A unique ID representing a Rarity object.",
-			"pattern": "^rarity:([a-z][a-z0-9_]{3,}\\/[a-z][a-z_]*)$"
+			"pattern": "^rarity:([a-z][a-z0-9_]*\\/[a-z][a-z0-9_]*)$"
 		},
 		"RarityIdWildcard": {
 			"title": "RarityIdWildcard",
 			"type": "string",
 			"description": "A wildcarded RarityId that can be used to match multiple Rarity objects.",
-			"pattern": "^rarity:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)\\/[a-z][a-z_]*|\\/\\*|\\/\\*\\*)$"
+			"pattern": "^rarity:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)$"
 		},
 		"RollableValue": {
 			"title": "RollableValue",
@@ -8268,7 +8268,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/ConditionMeterRule"
 						}
 					}
@@ -8279,7 +8279,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/StatRule"
 						}
 					}
@@ -8290,7 +8290,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/ImpactCategory"
 						}
 					}
@@ -8301,7 +8301,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/SpecialTrackRule"
 						}
 					}
@@ -8312,7 +8312,7 @@
 					"releaseStage": "experimental",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/TagRule"
 						}
 					}
@@ -8410,7 +8410,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/OracleTablesCollection"
 						}
 					}
@@ -8421,7 +8421,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/AssetCollection"
 						}
 					}
@@ -8432,7 +8432,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/AtlasCollection"
 						}
 					}
@@ -8443,7 +8443,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/MoveCategory"
 						}
 					}
@@ -8454,7 +8454,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/NpcCollection"
 						}
 					}
@@ -8465,7 +8465,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/Rarity"
 						}
 					}
@@ -8476,7 +8476,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/DelveSite"
 						}
 					}
@@ -8487,7 +8487,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/DelveSiteDomain"
 						}
 					}
@@ -8498,7 +8498,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/DelveSiteTheme"
 						}
 					}
@@ -8509,7 +8509,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/Truth"
 						}
 					}
@@ -8522,7 +8522,7 @@
 			"type": "string",
 			"description": "The ID of standalone Datasworn package that describes its own ruleset.",
 			"examples": ["classic", "starforged"],
-			"pattern": "^[a-z][a-z0-9_]{3,}$"
+			"pattern": "^[a-z][a-z0-9_]*$"
 		},
 		"RulesExpansion": {
 			"title": "RulesExpansion",
@@ -8536,7 +8536,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/ConditionMeterRule"
 						}
 					}
@@ -8547,7 +8547,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/StatRule"
 						}
 					}
@@ -8558,7 +8558,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/ImpactCategory"
 						}
 					}
@@ -8569,7 +8569,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/SpecialTrackRule"
 						}
 					}
@@ -8580,7 +8580,7 @@
 					"releaseStage": "experimental",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/TagRule"
 						}
 					}
@@ -8658,7 +8658,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"type": "object",
 							"remarks": "Deserialize as a discriminated union/polymorphic object type, using the `choice_type` property as a discriminator.",
 							"required": ["choice_type"],
@@ -8761,7 +8761,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/SelectEnhancementFieldChoice"
 						}
 					}
@@ -8787,7 +8787,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/SelectValueFieldChoice"
 						}
 					}
@@ -10243,19 +10243,19 @@
 			"description": "A dictionary of tags, keyed by the RulesPackageId that the tags are from.",
 			"releaseStage": "experimental",
 			"patternProperties": {
-				"^[a-z][a-z0-9_]{3,}$": {
+				"^[a-z][a-z0-9_]*$": {
 					"title": "RulesPackageTags",
 					"type": "object",
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/Tag"
 						}
 					}
 				}
 			},
-			"key": "^[a-z][a-z0-9_]{3,}$"
+			"key": "^[a-z][a-z0-9_]*$"
 		},
 		"TagsCore": {
 			"title": "TagsCore",
@@ -10275,7 +10275,7 @@
 				}
 			},
 			"patternProperties": {
-				"^[a-z][a-z_]*$": {
+				"^[a-z][a-z0-9_]*$": {
 					"$ref": "#/definitions/Tag"
 				}
 			}
@@ -10790,13 +10790,13 @@
 			"title": "TruthId",
 			"type": "string",
 			"description": "A unique ID representing a Truth object.",
-			"pattern": "^truth:([a-z][a-z0-9_]{3,}\\/[a-z][a-z_]*)$"
+			"pattern": "^truth:([a-z][a-z0-9_]*\\/[a-z][a-z0-9_]*)$"
 		},
 		"TruthIdWildcard": {
 			"title": "TruthIdWildcard",
 			"type": "string",
 			"description": "A wildcarded TruthId that can be used to match multiple Truth objects.",
-			"pattern": "^truth:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)\\/[a-z][a-z_]*|\\/\\*|\\/\\*\\*)$"
+			"pattern": "^truth:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)$"
 		},
 		"TruthOption": {
 			"title": "TruthOption",
@@ -10825,7 +10825,7 @@
 					"remarks": "Deserialize as a dictionary object.",
 					"default": {},
 					"patternProperties": {
-						"^[a-z][a-z_]*$": {
+						"^[a-z][a-z0-9_]*$": {
 							"$ref": "#/definitions/EmbeddedOracleRollable",
 							"title": "TruthOptionOracleRollable"
 						}
@@ -10841,37 +10841,37 @@
 			"title": "TruthOptionId",
 			"type": "string",
 			"description": "A unique ID representing a TruthOption object.",
-			"pattern": "^truth\\.option:([a-z][a-z0-9_]{3,}\\/[a-z][a-z_]*)\\.(\\d+)$"
+			"pattern": "^truth\\.option:([a-z][a-z0-9_]*\\/[a-z][a-z0-9_]*)\\.(\\d+)$"
 		},
 		"TruthOptionIdWildcard": {
 			"title": "TruthOptionIdWildcard",
 			"type": "string",
 			"description": "A wildcarded TruthOptionId that can be used to match multiple TruthOption objects.",
-			"pattern": "^truth\\.option:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)\\/[a-z][a-z_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)$"
+			"pattern": "^truth\\.option:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)$"
 		},
 		"TruthOptionOracleRollableId": {
 			"title": "TruthOptionOracleRollableId",
 			"type": "string",
 			"description": "A unique ID representing a TruthOptionOracleRollable object.",
-			"pattern": "^truth\\.option\\.oracle_rollable:([a-z][a-z0-9_]{3,}\\/[a-z][a-z_]*)\\.(\\d+)\\.([a-z][a-z_]*|\\*)$"
+			"pattern": "^truth\\.option\\.oracle_rollable:([a-z][a-z0-9_]*\\/[a-z][a-z0-9_]*)\\.(\\d+)\\.([a-z][a-z0-9_]*|\\*)$"
 		},
 		"TruthOptionOracleRollableIdWildcard": {
 			"title": "TruthOptionOracleRollableIdWildcard",
 			"type": "string",
 			"description": "A wildcarded TruthOptionOracleRollableId that can be used to match multiple TruthOptionOracleRollable objects.",
-			"pattern": "^truth\\.option\\.oracle_rollable:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)\\/[a-z][a-z_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)\\.([a-z][a-z_]*|\\*)$"
+			"pattern": "^truth\\.option\\.oracle_rollable:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)\\.([a-z][a-z0-9_]*|\\*)$"
 		},
 		"TruthOptionOracleRollableRowId": {
 			"title": "TruthOptionOracleRollableRowId",
 			"type": "string",
 			"description": "A unique ID representing a TruthOptionOracleRollableRow object.",
-			"pattern": "^truth\\.option\\.oracle_rollable\\.row:([a-z][a-z0-9_]{3,}\\/[a-z][a-z_]*)\\.(\\d+)\\.([a-z][a-z_]*|\\*)\\.(\\d+)$"
+			"pattern": "^truth\\.option\\.oracle_rollable\\.row:([a-z][a-z0-9_]*\\/[a-z][a-z0-9_]*)\\.(\\d+)\\.([a-z][a-z0-9_]*|\\*)\\.(\\d+)$"
 		},
 		"TruthOptionOracleRollableRowIdWildcard": {
 			"title": "TruthOptionOracleRollableRowIdWildcard",
 			"type": "string",
 			"description": "A wildcarded TruthOptionOracleRollableRowId that can be used to match multiple TruthOptionOracleRollableRow objects.",
-			"pattern": "^truth\\.option\\.oracle_rollable\\.row:((?:[a-z][a-z0-9_]{3,}|\\*|\\*\\*)\\/[a-z][a-z_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)\\.([a-z][a-z_]*|\\*)\\.(\\d+|\\*)$"
+			"pattern": "^truth\\.option\\.oracle_rollable\\.row:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)\\.([a-z][a-z0-9_]*|\\*)\\.(\\d+|\\*)$"
 		},
 		"WebpImageUrl": {
 			"title": "WebpImageUrl",
