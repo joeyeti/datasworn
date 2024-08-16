@@ -4,7 +4,8 @@ import type {
 	Simplify,
 	JsonTypeDef,
 	Inherits,
-	Namespace
+	Namespace,
+	Typescript
 } from '../schema/Symbols.js'
 import type { Metadata } from './json-typedef/typedef.js'
 import { DiceExpression } from '../schema/common/Rolls.js'
@@ -48,6 +49,7 @@ declare module '@sinclair/typebox' {
 		[Inherits]?: TypeCodeGenData[]
 		/** A less complex alternate version of the schema for use with code generation tools. */
 		[Simplify]?: TSchema
+		[Typescript]?: (identifier: string, schema: TSchema) => string
 		[JsonTypeDef]?: {
 			/** JTD schema to override the automatic conversion. Schema metadata will automatically be inherited from the JSON schema. */
 			schema?: TSchema & { [Kind]: `TypeDef:${string}` }

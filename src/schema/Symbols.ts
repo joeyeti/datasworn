@@ -1,5 +1,5 @@
-/**  */
-export const TypescriptType = Symbol('TypescriptType')
+/** Override type for typescript code generation. */
+export const Typescript = Symbol('Typescript')
 
 /** Hints type relationships between schemata. */
 export const Extends = Symbol('Extends')

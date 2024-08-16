@@ -26,7 +26,7 @@ import type { Join, PascalCase, Split } from 'type-fest'
 import { JsonTypeDef } from '../schema/Symbols.js'
 import JtdType from '../scripts/json-typedef/typedef.js'
 import { TypeGuard } from '../pkg-core/IdElements/index.js'
-import { snakeCase } from 'lodash-es'
+import { escapeRegExp, snakeCase } from 'lodash-es'
 
 type RegexGroupType =
 	| 'none'
@@ -72,7 +72,9 @@ abstract class PathSymbol<Origin, Key extends keyof Origin = keyof Origin> {
 namespace PathSymbol {
 	export class RulesPackage extends PathSymbol<null> {
 		static readonly WILDCARD = new RegExp(
-			`(?:${Pattern.RulesPackageElement.source}|\\${WildcardString}|\\${WildcardString}\\${WildcardString})`
+			// TODO: proper handling for standalone RulesPackage globstars
+			// `(?:${Pattern.RulesPackageElement.source}|\\${WildcardString}|\\${WildcardString}\\${WildcardString})`
+			`(?:${Pattern.RulesPackageElement.source}|${escapeRegExp(WildcardString)})`
 		)
 
 		get pattern() {

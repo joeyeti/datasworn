@@ -1,18 +1,13 @@
 import { Type, type Static } from '@sinclair/typebox'
-import { keyBy } from 'lodash-es'
 import TypeId from '../../pkg-core/IdElements/TypeId.js'
 import JtdType from '../../scripts/json-typedef/typedef.js'
 import { Dictionary } from '../generic/Dictionary.js'
 import { JsonTypeDef } from '../Symbols.js'
-import { UnionEnum, Nullable, DiscriminatedUnion } from '../Utils.js'
+import { UnionEnum, Nullable } from '../Utils.js'
 import Id, { RulesetId } from '../common/Id.js'
-import { Documentation, MarkdownString } from '../common/Text.js'
 import { DiceExpression } from '../common/Rolls.js'
-import { canonicalTags } from '../tags/canonicalTags.js'
-import { Assign } from '../utils/FlatIntersect.js'
 import { pascalCase, type PascalCase } from '../utils/string.js'
-import { $schema } from '../../scripts/const.js'
-import type { TSchema } from '@sinclair/typebox'
+import { TagSchema, SafeValueSchema } from './TagSchema.js'
 
 type NodeSchemaName<T extends string> = PascalCase<T>
 type EmbeddedNodeSchemaName<T extends string> = `Embedded${PascalCase<T>}`
@@ -134,17 +129,19 @@ export type TaggableNodeType = Static<typeof TaggableNodeType>
 // 	(tag) => tag.properties.value_type.const
 // )
 
-export const TagSchema = Type.Ref($schema, {
-	description: 'A JSON schema used to validate the tag data.',
-	releaseStage: 'experimental',
-	examples: [Type.Boolean(), Type.Array(Type.Ref('OracleRollableIdWildcard'))],
+const safeSchema = Type.Union([
+	// ONE OF:
+	// * a pr
+	// type: ['string', 'integer', 'number', 'boolean' ]
+	// * an enum of integer values
+	// * an enum of string values
+	// * a reference (relative to datasworn schema)
+	// * type object where all properties are a SafeSchema
+	// * has type:
+	// n
+])
 
-	[JsonTypeDef]: { schema: JtdType.Any() },
-	// TODO: consider doing an intersection here to prevent types from getting too silly?
-	// * "type" must be a string value (possibly restricted further)
-	// * prohibit "anyOf", "oneOf",
-	$id: 'TagSchema'
-})
+export { TagSchema, SafeValueSchema }
 
 export const TagRule = Type.Object(
 	{

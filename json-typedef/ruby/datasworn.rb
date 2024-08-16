@@ -13029,6 +13029,22 @@ module Datasworn
     end
   end
 
+  # A JSON schema representing a single value (or reference) that's possible
+  # to represent
+  class SafeValueSchema
+    attr_accessor :value
+
+    def self.from_json_data(data)
+      out = SafeValueSchema.new
+      out.value = Datasworn.from_json_data(Object, data)
+      out
+    end
+
+    def to_json_data
+      Datasworn.to_json_data(value)
+    end
+  end
+
   class SelectEnhancementFieldChoice0
     attr_accessor :choice_type
 
@@ -13937,7 +13953,7 @@ module Datasworn
     end
   end
 
-  # A JSON schema used to validate the tag data.
+  # A JSON schema used to validate the tag data, with a mandatory description.
   class TagSchema
     attr_accessor :value
 

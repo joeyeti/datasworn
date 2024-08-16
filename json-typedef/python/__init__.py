@@ -14856,6 +14856,22 @@ class RulesetID:
         return _to_json_data(self.value)
 
 @dataclass
+class SafeValueSchema:
+    """
+    A JSON schema representing a single value (or reference) that's possible
+    to represent
+    """
+
+    value: 'Any'
+
+    @classmethod
+    def from_json_data(cls, data: Any) -> 'SafeValueSchema':
+        return cls(_from_json_data(Any, data))
+
+    def to_json_data(self) -> Any:
+        return _to_json_data(self.value)
+
+@dataclass
 class SelectEnhancementFieldChoice0:
     choice_type: 'str'
 
@@ -15703,7 +15719,7 @@ class TagRule:
 @dataclass
 class TagSchema:
     """
-    A JSON schema used to validate the tag data.
+    A JSON schema used to validate the tag data, with a mandatory description.
     """
 
     value: 'Any'

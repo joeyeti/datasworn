@@ -768,7 +768,7 @@
 			"title": "AssetAbilityIdWildcard",
 			"type": "string",
 			"description": "A wildcarded AssetAbilityId that can be used to match multiple AssetAbility objects.",
-			"pattern": "^asset\\.ability:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})\\.(\\d+|\\*)$"
+			"pattern": "^asset\\.ability:((?:[a-z][a-z0-9_]*|\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})\\.(\\d+|\\*)$"
 		},
 		"AssetAbilityMoveId": {
 			"title": "AssetAbilityMoveId",
@@ -780,7 +780,7 @@
 			"title": "AssetAbilityMoveIdWildcard",
 			"type": "string",
 			"description": "A wildcarded AssetAbilityMoveId that can be used to match multiple AssetAbilityMove objects.",
-			"pattern": "^asset\\.ability\\.move:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})\\.(\\d+|\\*)\\.([a-z][a-z0-9_]*|\\*)$"
+			"pattern": "^asset\\.ability\\.move:((?:[a-z][a-z0-9_]*|\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})\\.(\\d+|\\*)\\.([a-z][a-z0-9_]*|\\*)$"
 		},
 		"AssetAbilityOptionField": {
 			"title": "AssetAbilityOptionField",
@@ -819,7 +819,7 @@
 			"title": "AssetAbilityOracleRollableIdWildcard",
 			"type": "string",
 			"description": "A wildcarded AssetAbilityOracleRollableId that can be used to match multiple AssetAbilityOracleRollable objects.",
-			"pattern": "^asset\\.ability\\.oracle_rollable:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})\\.(\\d+|\\*)\\.([a-z][a-z0-9_]*|\\*)$"
+			"pattern": "^asset\\.ability\\.oracle_rollable:((?:[a-z][a-z0-9_]*|\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})\\.(\\d+|\\*)\\.([a-z][a-z0-9_]*|\\*)$"
 		},
 		"AssetAbilityOracleRollableRowId": {
 			"title": "AssetAbilityOracleRollableRowId",
@@ -831,7 +831,7 @@
 			"title": "AssetAbilityOracleRollableRowIdWildcard",
 			"type": "string",
 			"description": "A wildcarded AssetAbilityOracleRollableRowId that can be used to match multiple AssetAbilityOracleRollableRow objects.",
-			"pattern": "^asset\\.ability\\.oracle_rollable\\.row:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})\\.(\\d+|\\*)\\.([a-z][a-z0-9_]*|\\*)\\.(\\d+|\\*)$"
+			"pattern": "^asset\\.ability\\.oracle_rollable\\.row:((?:[a-z][a-z0-9_]*|\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})\\.(\\d+|\\*)\\.([a-z][a-z0-9_]*|\\*)\\.(\\d+|\\*)$"
 		},
 		"AssetAttachment": {
 			"title": "AssetAttachment",
@@ -1034,7 +1034,7 @@
 			"title": "AssetCollectionIdWildcard",
 			"type": "string",
 			"description": "A wildcarded AssetCollectionId that can be used to match multiple AssetCollection objects.",
-			"pattern": "^asset_collection:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){1,4})$"
+			"pattern": "^asset_collection:((?:[a-z][a-z0-9_]*|\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){1,4})$"
 		},
 		"AssetConditionMeter": {
 			"title": "AssetConditionMeter",
@@ -1353,7 +1353,7 @@
 			"title": "AssetIdWildcard",
 			"type": "string",
 			"description": "A wildcarded AssetId that can be used to match multiple Asset objects.",
-			"pattern": "^asset:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})$"
+			"pattern": "^asset:((?:[a-z][a-z0-9_]*|\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})$"
 		},
 		"AssetOptionField": {
 			"title": "AssetOptionField",
@@ -1546,7 +1546,7 @@
 			"title": "AtlasCollectionIdWildcard",
 			"type": "string",
 			"description": "A wildcarded AtlasCollectionId that can be used to match multiple AtlasCollection objects.",
-			"pattern": "^atlas_collection:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){1,4})$"
+			"pattern": "^atlas_collection:((?:[a-z][a-z0-9_]*|\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){1,4})$"
 		},
 		"AtlasEntry": {
 			"title": "AtlasEntry",
@@ -1635,7 +1635,7 @@
 			"title": "AtlasEntryIdWildcard",
 			"type": "string",
 			"description": "A wildcarded AtlasEntryId that can be used to match multiple AtlasEntry objects.",
-			"pattern": "^atlas_entry:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})$"
+			"pattern": "^atlas_entry:((?:[a-z][a-z0-9_]*|\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})$"
 		},
 		"AttachedAssetControlValueRef": {
 			"title": "AttachedAssetControlValueRef",
@@ -2444,7 +2444,7 @@
 			"title": "DelveSiteDenizenIdWildcard",
 			"type": "string",
 			"description": "A wildcarded DelveSiteDenizenId that can be used to match multiple DelveSiteDenizen objects.",
-			"pattern": "^delve_site\\.denizen:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)$"
+			"pattern": "^delve_site\\.denizen:((?:[a-z][a-z0-9_]*|\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)$"
 		},
 		"DelveSiteDomain": {
 			"title": "DelveSiteDomain",
@@ -2987,7 +2987,7 @@
 			"title": "DelveSiteDomainDangerIdWildcard",
 			"type": "string",
 			"description": "A wildcarded DelveSiteDomainDangerId that can be used to match multiple DelveSiteDomainDanger objects.",
-			"pattern": "^delve_site_domain\\.danger:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)$"
+			"pattern": "^delve_site_domain\\.danger:((?:[a-z][a-z0-9_]*|\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)$"
 		},
 		"DelveSiteDomainFeature": {
 			"title": "DelveSiteDomainFeature",
@@ -3056,7 +3056,7 @@
 			"title": "DelveSiteDomainFeatureIdWildcard",
 			"type": "string",
 			"description": "A wildcarded DelveSiteDomainFeatureId that can be used to match multiple DelveSiteDomainFeature objects.",
-			"pattern": "^delve_site_domain\\.feature:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)$"
+			"pattern": "^delve_site_domain\\.feature:((?:[a-z][a-z0-9_]*|\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)$"
 		},
 		"DelveSiteDomainId": {
 			"title": "DelveSiteDomainId",
@@ -3068,7 +3068,7 @@
 			"title": "DelveSiteDomainIdWildcard",
 			"type": "string",
 			"description": "A wildcarded DelveSiteDomainId that can be used to match multiple DelveSiteDomain objects.",
-			"pattern": "^delve_site_domain:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)$"
+			"pattern": "^delve_site_domain:((?:[a-z][a-z0-9_]*|\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)$"
 		},
 		"DelveSiteId": {
 			"title": "DelveSiteId",
@@ -3080,7 +3080,7 @@
 			"title": "DelveSiteIdWildcard",
 			"type": "string",
 			"description": "A wildcarded DelveSiteId that can be used to match multiple DelveSite objects.",
-			"pattern": "^delve_site:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)$"
+			"pattern": "^delve_site:((?:[a-z][a-z0-9_]*|\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)$"
 		},
 		"DelveSiteTheme": {
 			"title": "DelveSiteTheme",
@@ -3619,7 +3619,7 @@
 			"title": "DelveSiteThemeDangerIdWildcard",
 			"type": "string",
 			"description": "A wildcarded DelveSiteThemeDangerId that can be used to match multiple DelveSiteThemeDanger objects.",
-			"pattern": "^delve_site_theme\\.danger:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)$"
+			"pattern": "^delve_site_theme\\.danger:((?:[a-z][a-z0-9_]*|\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)$"
 		},
 		"DelveSiteThemeFeature": {
 			"title": "DelveSiteThemeFeature",
@@ -3688,7 +3688,7 @@
 			"title": "DelveSiteThemeFeatureIdWildcard",
 			"type": "string",
 			"description": "A wildcarded DelveSiteThemeFeatureId that can be used to match multiple DelveSiteThemeFeature objects.",
-			"pattern": "^delve_site_theme\\.feature:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)$"
+			"pattern": "^delve_site_theme\\.feature:((?:[a-z][a-z0-9_]*|\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)$"
 		},
 		"DelveSiteThemeId": {
 			"title": "DelveSiteThemeId",
@@ -3700,7 +3700,7 @@
 			"title": "DelveSiteThemeIdWildcard",
 			"type": "string",
 			"description": "A wildcarded DelveSiteThemeId that can be used to match multiple DelveSiteTheme objects.",
-			"pattern": "^delve_site_theme:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)$"
+			"pattern": "^delve_site_theme:((?:[a-z][a-z0-9_]*|\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)$"
 		},
 		"DiceExpression": {
 			"title": "DiceExpression",
@@ -5438,7 +5438,7 @@
 			"title": "MoveCategoryIdWildcard",
 			"type": "string",
 			"description": "A wildcarded MoveCategoryId that can be used to match multiple MoveCategory objects.",
-			"pattern": "^move_category:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){1,4})$"
+			"pattern": "^move_category:((?:[a-z][a-z0-9_]*|\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){1,4})$"
 		},
 		"MoveEnhancement": {
 			"title": "MoveEnhancement",
@@ -5516,7 +5516,7 @@
 			"title": "MoveIdWildcard",
 			"type": "string",
 			"description": "A wildcarded MoveId that can be used to match multiple Move objects.",
-			"pattern": "^move:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})$"
+			"pattern": "^move:((?:[a-z][a-z0-9_]*|\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})$"
 		},
 		"MoveNoRoll": {
 			"title": "MoveNoRoll",
@@ -5656,7 +5656,7 @@
 			"title": "MoveOracleRollableIdWildcard",
 			"type": "string",
 			"description": "A wildcarded MoveOracleRollableId that can be used to match multiple MoveOracleRollable objects.",
-			"pattern": "^move\\.oracle_rollable:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})\\.([a-z][a-z0-9_]*|\\*)$"
+			"pattern": "^move\\.oracle_rollable:((?:[a-z][a-z0-9_]*|\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})\\.([a-z][a-z0-9_]*|\\*)$"
 		},
 		"MoveOracleRollableRowId": {
 			"title": "MoveOracleRollableRowId",
@@ -5668,7 +5668,7 @@
 			"title": "MoveOracleRollableRowIdWildcard",
 			"type": "string",
 			"description": "A wildcarded MoveOracleRollableRowId that can be used to match multiple MoveOracleRollableRow objects.",
-			"pattern": "^move\\.oracle_rollable\\.row:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})\\.([a-z][a-z0-9_]*|\\*)\\.(\\d+|\\*)$"
+			"pattern": "^move\\.oracle_rollable\\.row:((?:[a-z][a-z0-9_]*|\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})\\.([a-z][a-z0-9_]*|\\*)\\.(\\d+|\\*)$"
 		},
 		"MoveOutcome": {
 			"title": "MoveOutcome",
@@ -6217,7 +6217,7 @@
 			"title": "NpcCollectionIdWildcard",
 			"type": "string",
 			"description": "A wildcarded NpcCollectionId that can be used to match multiple NpcCollection objects.",
-			"pattern": "^npc_collection:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){1,4})$"
+			"pattern": "^npc_collection:((?:[a-z][a-z0-9_]*|\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){1,4})$"
 		},
 		"NpcId": {
 			"title": "NpcId",
@@ -6229,7 +6229,7 @@
 			"title": "NpcIdWildcard",
 			"type": "string",
 			"description": "A wildcarded NpcId that can be used to match multiple Npc objects.",
-			"pattern": "^npc:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})$"
+			"pattern": "^npc:((?:[a-z][a-z0-9_]*|\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})$"
 		},
 		"NpcNature": {
 			"$ref": "#/definitions/Label",
@@ -6290,7 +6290,7 @@
 			"title": "NpcVariantIdWildcard",
 			"type": "string",
 			"description": "A wildcarded NpcVariantId that can be used to match multiple NpcVariant objects.",
-			"pattern": "^npc\\.variant:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})\\.([a-z][a-z0-9_]*|\\*)$"
+			"pattern": "^npc\\.variant:((?:[a-z][a-z0-9_]*|\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})\\.([a-z][a-z0-9_]*|\\*)$"
 		},
 		"OracleCollection": {
 			"title": "OracleCollection",
@@ -6387,7 +6387,7 @@
 			"title": "OracleCollectionIdWildcard",
 			"type": "string",
 			"description": "A wildcarded OracleCollectionId that can be used to match multiple OracleCollection objects.",
-			"pattern": "^oracle_collection:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){1,4})$"
+			"pattern": "^oracle_collection:((?:[a-z][a-z0-9_]*|\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){1,4})$"
 		},
 		"OracleColumnText": {
 			"title": "OracleColumnText",
@@ -6833,7 +6833,7 @@
 			"title": "OracleRollableIdWildcard",
 			"type": "string",
 			"description": "A wildcarded OracleRollableId that can be used to match multiple OracleRollable objects.",
-			"pattern": "^oracle_rollable:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})$"
+			"pattern": "^oracle_rollable:((?:[a-z][a-z0-9_]*|\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})$"
 		},
 		"OracleRollableRow": {
 			"title": "OracleRollableRow",
@@ -6859,7 +6859,7 @@
 			"title": "OracleRollableRowIdWildcard",
 			"type": "string",
 			"description": "A wildcarded OracleRollableRowId that can be used to match multiple OracleRollableRow objects.",
-			"pattern": "^oracle_rollable\\.row:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})\\.(\\d+|\\*)$"
+			"pattern": "^oracle_rollable\\.row:((?:[a-z][a-z0-9_]*|\\*)(?:\\/(?:[a-z][a-z0-9_]*|\\*|\\*\\*)){2,5})\\.(\\d+|\\*)$"
 		},
 		"OracleRollableRowText": {
 			"title": "OracleRollableRowText",
@@ -8164,7 +8164,7 @@
 			"title": "RarityIdWildcard",
 			"type": "string",
 			"description": "A wildcarded RarityId that can be used to match multiple Rarity objects.",
-			"pattern": "^rarity:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)$"
+			"pattern": "^rarity:((?:[a-z][a-z0-9_]*|\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)$"
 		},
 		"RollableValue": {
 			"title": "RollableValue",
@@ -8649,6 +8649,83 @@
 				},
 				{
 					"$ref": "#/definitions/ExpansionId"
+				}
+			]
+		},
+		"SafeValueSchema": {
+			"title": "SafeValueSchema",
+			"description": "A JSON schema representing a single value (or reference) that's possible to represent ",
+			"releaseStage": "experimental",
+			"anyOf": [
+				{
+					"type": "object",
+					"required": ["$ref"],
+					"properties": {
+						"$ref": {
+							"type": "string",
+							"pattern": "^#\\/definitions\\/[A-Z][A-z0-9]*$"
+						}
+					},
+					"additionalProperties": {}
+				},
+				{
+					"type": "object",
+					"required": ["enum"],
+					"properties": {
+						"enum": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/DictKey"
+							}
+						}
+					},
+					"additionalProperties": {}
+				},
+				{
+					"type": "object",
+					"required": ["enum"],
+					"properties": {
+						"enum": {
+							"type": "array",
+							"items": {
+								"type": "integer"
+							}
+						}
+					},
+					"additionalProperties": {}
+				},
+				{
+					"type": "object",
+					"required": ["type"],
+					"properties": {
+						"type": {
+							"type": "string",
+							"const": "boolean"
+						}
+					},
+					"additionalProperties": {}
+				},
+				{
+					"type": "object",
+					"required": ["type"],
+					"properties": {
+						"type": {
+							"type": "string",
+							"const": "number"
+						}
+					},
+					"additionalProperties": {}
+				},
+				{
+					"type": "object",
+					"required": ["type"],
+					"properties": {
+						"type": {
+							"type": "string",
+							"const": "integer"
+						}
+					},
+					"additionalProperties": {}
 				}
 			]
 		},
@@ -9483,18 +9560,111 @@
 			"key": "^[a-z][a-z0-9_]*$"
 		},
 		"TagSchema": {
-			"$ref": "http://json-schema.org/draft-07/schema#",
 			"title": "TagSchema",
-			"description": "A JSON schema used to validate the tag data.",
+			"description": "A JSON schema used to validate the tag data, with a mandatory description.",
 			"releaseStage": "experimental",
 			"examples": [
 				{
+					"description": "An example tag with a simple true/false value.",
 					"type": "boolean"
 				},
 				{
+					"description": "An example tag with an array of oracle rollable ID wildcards.",
 					"type": "array",
 					"items": {
 						"$ref": "#/definitions/OracleRollableIdWildcard"
+					}
+				}
+			],
+			"allOf": [
+				{
+					"$ref": "http://json-schema.org/draft-07/schema#"
+				},
+				{
+					"type": "object",
+					"required": ["description"],
+					"properties": {
+						"description": {
+							"$ref": "#/definitions/Documentation"
+						}
+					},
+					"additionalProperties": {}
+				},
+				{
+					"anyOf": [
+						{
+							"$ref": "#/definitions/SafeValueSchema"
+						},
+						{
+							"type": "object",
+							"required": ["type", "properties"],
+							"properties": {
+								"type": {
+									"type": "string",
+									"const": "object"
+								},
+								"properties": {
+									"type": "object",
+									"patternProperties": {
+										"^[a-z][a-z0-9_]*$": {
+											"$ref": "#/definitions/SafeValueSchema"
+										}
+									}
+								}
+							},
+							"additionalProperties": {}
+						},
+						{
+							"type": "object",
+							"required": ["type", "items"],
+							"properties": {
+								"type": {
+									"type": "string",
+									"const": "array"
+								},
+								"items": {
+									"$ref": "#/definitions/SafeValueSchema"
+								}
+							},
+							"additionalProperties": {}
+						}
+					]
+				},
+				{
+					"not": {
+						"type": "object",
+						"required": [
+							"$defs",
+							"$id",
+							"$schema",
+							"additionalItems",
+							"additionalProperties",
+							"allOf",
+							"anyOf",
+							"definitions",
+							"dependencies",
+							"else",
+							"if",
+							"not",
+							"oneOf",
+							"then"
+						],
+						"properties": {
+							"$defs": {},
+							"$id": {},
+							"$schema": {},
+							"additionalItems": {},
+							"additionalProperties": {},
+							"allOf": {},
+							"anyOf": {},
+							"definitions": {},
+							"dependencies": {},
+							"else": {},
+							"if": {},
+							"not": {},
+							"oneOf": {},
+							"then": {}
+						}
 					}
 				}
 			]
@@ -10028,7 +10198,7 @@
 			"title": "TruthIdWildcard",
 			"type": "string",
 			"description": "A wildcarded TruthId that can be used to match multiple Truth objects.",
-			"pattern": "^truth:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)$"
+			"pattern": "^truth:((?:[a-z][a-z0-9_]*|\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)$"
 		},
 		"TruthOption": {
 			"title": "TruthOption",
@@ -10079,7 +10249,7 @@
 			"title": "TruthOptionIdWildcard",
 			"type": "string",
 			"description": "A wildcarded TruthOptionId that can be used to match multiple TruthOption objects.",
-			"pattern": "^truth\\.option:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)$"
+			"pattern": "^truth\\.option:((?:[a-z][a-z0-9_]*|\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)$"
 		},
 		"TruthOptionOracleRollableId": {
 			"title": "TruthOptionOracleRollableId",
@@ -10091,7 +10261,7 @@
 			"title": "TruthOptionOracleRollableIdWildcard",
 			"type": "string",
 			"description": "A wildcarded TruthOptionOracleRollableId that can be used to match multiple TruthOptionOracleRollable objects.",
-			"pattern": "^truth\\.option\\.oracle_rollable:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)\\.([a-z][a-z0-9_]*|\\*)$"
+			"pattern": "^truth\\.option\\.oracle_rollable:((?:[a-z][a-z0-9_]*|\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)\\.([a-z][a-z0-9_]*|\\*)$"
 		},
 		"TruthOptionOracleRollableRowId": {
 			"title": "TruthOptionOracleRollableRowId",
@@ -10103,7 +10273,7 @@
 			"title": "TruthOptionOracleRollableRowIdWildcard",
 			"type": "string",
 			"description": "A wildcarded TruthOptionOracleRollableRowId that can be used to match multiple TruthOptionOracleRollableRow objects.",
-			"pattern": "^truth\\.option\\.oracle_rollable\\.row:((?:[a-z][a-z0-9_]*|\\*|\\*\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)\\.([a-z][a-z0-9_]*|\\*)\\.(\\d+|\\*)$"
+			"pattern": "^truth\\.option\\.oracle_rollable\\.row:((?:[a-z][a-z0-9_]*|\\*)\\/[a-z][a-z0-9_]*|\\/\\*|\\/\\*\\*)\\.(\\d+|\\*)\\.([a-z][a-z0-9_]*|\\*)\\.(\\d+|\\*)$"
 		},
 		"WebpImageUrl": {
 			"title": "WebpImageUrl",

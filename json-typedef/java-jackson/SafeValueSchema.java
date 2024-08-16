@@ -6,17 +6,18 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * A JSON schema used to validate the tag data, with a mandatory description.
+ * A JSON schema representing a single value (or reference) that's possible
+ * to represent
  */
-public class TagSchema {
+public class SafeValueSchema {
     @JsonValue
     private Object value;
 
-    public TagSchema() {
+    public SafeValueSchema() {
     }
 
     @JsonCreator
-    public TagSchema(Object value) {
+    public SafeValueSchema(Object value) {
         this.value = value;
     }
 

@@ -8,12 +8,13 @@
 			"src/**/*.ts",
 			"src/**/*.js",
 			"pkg/nodejs/**/*.d.ts",
-			"pkg/nodejs/**/*.json",
 			"src/migration/history/*/*.d.ts",
-			"src/migration/history/*/*.json",
-			"src/migration/history/*/*.schema.json",
+			".vscode/**/*.json",
 			"datasworn/**/*.json",
-			"source_data/**/*.json"
+			"json-typedef/**/*.json",
+			"pkg/**/*.json",
+			"source_data/**/*.json",
+			"src/**/*.json"
 		],
 		"ignore": [
 			"**/dist",

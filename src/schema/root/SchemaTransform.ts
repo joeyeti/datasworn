@@ -15,13 +15,19 @@ import {
 	type TString,
 	type TTuple,
 	type TUnion,
-	type TRegExp
+	type TRegExp,
+	type TNot
 } from '@sinclair/typebox'
 import type { TUnionEnum } from '../utils/UnionEnum.js'
 import type { TUnionOneOf } from '../utils/UnionOneOf.js'
-import type { TDiscriminatedUnion } from '../utils/DiscriminatedUnion.js'
+import type {
+	TDiscriminatedUnion,
+	TDiscriminatorMap
+} from '../utils/DiscriminatedUnion.js'
 import type { TNullable } from '../Utils.js'
 import { omitBy } from 'lodash-es'
+
+
 
 export const SchemaKind = [
 	'Array',
@@ -38,12 +44,14 @@ export const SchemaKind = [
 	'Tuple',
 	'Union',
 	'RegExp',
+	'Not',
 	// custom types
 	'UnionOneOf',
 	'UnionEnum',
 	'DiscriminatedUnion',
 	'Nullable'
 ] as const
+
 
 interface SchemaKindMap extends Record<SchemaKind, TSchema> {
 	Array: TArray
@@ -60,10 +68,11 @@ interface SchemaKindMap extends Record<SchemaKind, TSchema> {
 	Tuple: TTuple
 	Union: TUnion
 	RegExp: TRegExp
+	Not: TNot
 	// custom types
 	UnionOneOf: TUnionOneOf<TSchema[]>
 	UnionEnum: TUnionEnum
-	DiscriminatedUnion: TDiscriminatedUnion<TObject[], string>
+	DiscriminatedUnion: TDiscriminatedUnion<TDiscriminatorMap, string>
 	Nullable: TNullable
 }
 

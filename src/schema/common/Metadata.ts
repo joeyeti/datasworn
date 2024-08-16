@@ -1,6 +1,6 @@
 import { type Static, Type } from '@sinclair/typebox'
 import { Nullable } from '../utils/Nullable.js'
-import { JsonTypeDef, TypescriptType } from '../Symbols.js'
+import { JsonTypeDef, Typescript } from '../Symbols.js'
 import JtdType from '../../scripts/json-typedef/typedef.js'
 import { Label } from './Text.js'
 

@@ -23,6 +23,7 @@ import {
 } from '../../schema/Utils.js'
 import Log from '../utils/Log.js'
 import { $schema } from '../const.js'
+import { Typescript } from '../../schema/Symbols.js'
 
 export function extractDefs(defs: Record<string, TSchema>) {
 	return mapValues(defs, (v, k) => renderDefinition(k, v))
@@ -238,6 +239,8 @@ function toTags(tags: Record<string, string | undefined>) {
 
 function renderDefinition(identifier: string, schema: TSchema) {
 	switch (true) {
+		case Typescript in schema:
+			return schema[Typescript]?.(identifier, schema)
 		case TypeGuard.IsObject(schema):
 			return renderInterface(identifier, schema)
 		default:
@@ -250,7 +253,7 @@ function renderJsValue(value: unknown): string {
 	switch (true) {
 		case Array.isArray(value):
 			result =
-				value.length === 0 ? `[]` : `[ ${value.map(renderJsValue).join(', ')} ]`
+				value.length === 0 ? '[]' : `[ ${value.map(renderJsValue).join(', ')} ]`
 			break
 		case isUndefined(value):
 			result = 'undefined'
@@ -262,7 +265,7 @@ function renderJsValue(value: unknown): string {
 		case typeof value === 'object':
 			result =
 				Object.keys(value as any).length === 0
-					? `{}`
+					? '{}'
 					: `{\n${indent(
 							map(value as any, (v, k) => `${k}: ${renderJsValue(v)}`).join(
 								',\n'

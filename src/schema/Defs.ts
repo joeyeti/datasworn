@@ -30,8 +30,8 @@ function validateSchemaDefinitions(defs: Record<string, TSchema>) {
 
 	// lazy way to iterate over all values
 	void JSON.stringify(defs, (k, v) => {
-		if (k === '$ref') usedRefs.add(v)
-		if (k === '$id') availableRefs.add(v)
+		if (k === '$ref' && typeof v === 'string') usedRefs.add(v)
+		if (k === '$id' && typeof v === 'string') availableRefs.add(v)
 		return v
 	})
 
