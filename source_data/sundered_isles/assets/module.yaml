@@ -76,14 +76,6 @@ assets:
             label: broken
             field_type: card_flip
             disables_asset: true
-          hull:
-            label: hull
-            field_type: condition_meter
-            max: 4
-            value: 4
-            moves:
-              recover:
-                - move:starforged/recover/repair
       chase_guns:
         name: Chase Guns
         type: asset
@@ -91,10 +83,7 @@ assets:
           <<: *Source
         <<: &ModuleAsset
           <<: *ModuleAssetBase
-          broken: &Broken
-            label: broken
-            field_type: card_flip
-            disables_asset: true
+          broken: *Broken
         abilities:
         - enabled: true
           text: |-
@@ -573,6 +562,7 @@ assets:
             label: hull
             field_type: condition_meter
             max: 4
+            value: 4
             moves:
               recover:
               - move:starforged/recover/repair

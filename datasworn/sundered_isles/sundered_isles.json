@@ -62216,18 +62216,6 @@
 							"value": false,
 							"is_impact": false,
 							"disables_asset": true
-						},
-						"hull": {
-							"label": "hull",
-							"field_type": "condition_meter",
-							"rollable": true,
-							"min": 0,
-							"max": 4,
-							"value": 4,
-							"controls": {},
-							"moves": {
-								"recover": ["move:starforged/recover/repair"]
-							}
 						}
 					},
 					"_source": {
@@ -63378,7 +63366,7 @@
 							"rollable": true,
 							"min": 0,
 							"max": 4,
-							"value": 0,
+							"value": 4,
 							"controls": {},
 							"moves": {
 								"recover": ["move:starforged/recover/repair"]
