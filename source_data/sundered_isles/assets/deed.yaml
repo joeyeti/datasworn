@@ -133,9 +133,10 @@ assets:
             label: power
             field_type: condition_meter
             max: 4
+            value: 4
             moves:
               recover:
-                - move:starforged/recover/sojourn
+                    - move:starforged/recover/sojourn
             controls:
               wrecked:
                 field_type: checkbox
