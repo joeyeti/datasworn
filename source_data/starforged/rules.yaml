@@ -110,7 +110,7 @@ rules:
       description: Expertise, knowledge, and observation.
   tags:
     region:
-      applies_to: [oracle_rollable, row]
+      node_types: [oracle_rollable, row]
       $schema:
         description: This content applies to a specific region of the Forge.
         enum:
@@ -118,7 +118,7 @@ rules:
         - outlands
         - expanse
     location:
-      applies_to: [oracle_rollable, row]
+      node_types: [oracle_rollable, row]
       $schema:
         description: This content applies specifically to planetside, orbital, or deep space environments.
         enum:
@@ -126,7 +126,7 @@ rules:
         - orbital
         - deep_space
     environment:
-      applies_to: [oracle_rollable,row]
+      node_types: [oracle_rollable,row]
       $schema:
         description: This content applies to a specific creature environment.
         enum:
@@ -136,7 +136,7 @@ rules:
         - liquid
         - air
     faction_type:
-      applies_to: [oracle_rollable,row]
+      node_types: [oracle_rollable,row]
       $schema:
         description: This content applies to a specific type of faction.
         enum:
@@ -144,7 +144,7 @@ rules:
         - guild
         - fringe_group
     life:
-      applies_to: [oracle_rollable,row]
+      node_types: [oracle_rollable,row]
       $schema:
         description: This content applies specifically to life-bearing or lifeless worlds.
         enum:

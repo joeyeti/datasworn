@@ -7,8 +7,9 @@ using System.Text.Json.Serialization;
 namespace Datasworn
 {
     /// <summary>
-    /// A JSON schema used to validate the tag data, with a mandatory
-    /// description.
+    /// JSON schema used to validate the tag data, with a mandatory description.
+    /// Only a subset of all possible JSON schema are allowed, including
+    /// references to some Datasworn types.
     /// </summary>
     [JsonConverter(typeof(TagSchemaJsonConverter))]
     public class TagSchema

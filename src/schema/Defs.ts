@@ -1,4 +1,4 @@
-import { TypeGuard, type TSchema } from '@sinclair/typebox'
+import { Type, TypeGuard, type TSchema, type TUnion } from '@sinclair/typebox'
 import * as Assets from './Assets.js'
 import * as Atlas from './Atlas.js'
 import * as DelveSites from './DelveSites.js'
@@ -23,6 +23,10 @@ import Log from '../scripts/utils/Log.js'
 import { pickBy } from 'lodash-es'
 import { DefsKey } from '../scripts/const.js'
 import { DiceRange } from './common/Range.js'
+import type { TObject, TString } from '@sinclair/typebox'
+import { isValidTagSchema } from './rules/TagSchema.js'
+import type { JSONSchema7 } from 'json-schema'
+import { UnionEnum } from './Utils.js'
 
 function validateSchemaDefinitions(defs: Record<string, TSchema>) {
 	const usedRefs = new Set<string>()
@@ -103,5 +107,21 @@ const entries: [string, TSchema][] = Object.values<TSchema>(defsBase).map(
 const Defs: Defs = Object.fromEntries(
 	entries.sort(([a], [b]) => a.localeCompare(b))
 )
+
+// special: update the '$ref' subschema of SafeValue schema so that it's an enum of all  Datasworn schemata references that are valid for use in tags.
+
+const schemaToUpdate = Rules.TagSchema
+
+const enumValues: string[] = []
+
+for (const k in Defs) {
+	const def = Defs[k]
+	if (def?.title?.includes('Tag') || def?.$id?.includes('Tag')) continue
+	if (isValidTagSchema(def)) enumValues.push(`#/${DefsKey}/${k}`)
+}
+
+const union = Rules.TagSchema.allOf[0]
+const dataswornRef = union.anyOf[0]
+union.anyOf[0] = Type.Object({ $ref: UnionEnum(enumValues) })
 
 export default Defs

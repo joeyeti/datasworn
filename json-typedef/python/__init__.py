@@ -14856,22 +14856,6 @@ class RulesetID:
         return _to_json_data(self.value)
 
 @dataclass
-class SafeValueSchema:
-    """
-    A JSON schema representing a single value (or reference) that's possible
-    to represent
-    """
-
-    value: 'Any'
-
-    @classmethod
-    def from_json_data(cls, data: Any) -> 'SafeValueSchema':
-        return cls(_from_json_data(Any, data))
-
-    def to_json_data(self) -> Any:
-        return _to_json_data(self.value)
-
-@dataclass
 class SelectEnhancementFieldChoice0:
     choice_type: 'str'
 
@@ -15701,25 +15685,31 @@ class Tag:
 @dataclass
 class TagRule:
     schema: 'TagSchema'
-    applies_to: 'List[TaggableNodeType]'
+    """
+    The JSON schema for this tag value.
+    """
+
+    node_types: 'List[TaggableNodeType]'
 
     @classmethod
     def from_json_data(cls, data: Any) -> 'TagRule':
         return cls(
             _from_json_data(TagSchema, data.get("$schema")),
-            _from_json_data(List[TaggableNodeType], data.get("applies_to")),
+            _from_json_data(List[TaggableNodeType], data.get("node_types")),
         )
 
     def to_json_data(self) -> Any:
         data: Dict[str, Any] = {}
         data["$schema"] = _to_json_data(self.schema)
-        data["applies_to"] = _to_json_data(self.applies_to)
+        data["node_types"] = _to_json_data(self.node_types)
         return data
 
 @dataclass
 class TagSchema:
     """
-    A JSON schema used to validate the tag data, with a mandatory description.
+    JSON schema used to validate the tag data, with a mandatory description.
+    Only a subset of all possible JSON schema are allowed, including references
+    to some Datasworn types.
     """
 
     value: 'Any'

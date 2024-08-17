@@ -17,7 +17,7 @@ const TagsStarforged = {
 const TagsDelve = {} satisfies Record<string, TSchema>
 type TagParams = {
 	schema: TSchema
-	applies_to: []
+	node_types: []
 }
 // TODO:
 const TagsSunderedIsles = {

@@ -106,7 +106,7 @@ function generateTagSchemas(
 	forEach(tags, (tag, tagKey) => {
 		const schema = generateTagSchema(rulesPackage, tagKey, tag)
 		tagSchemas[schema.$id] = schema
-		const pushTo = isNull(tag.applies_to) ? anyType : tag.applies_to
+		const pushTo = isNull(tag.node_types) ? anyType : tag.node_types
 
 		pushTo.forEach((objectType) =>
 			set(
@@ -158,13 +158,13 @@ console.log(
 	generateTagSchemas('sundered_isles', {
 		cursed_version_of: {
 			description: 'This oracle is the cursed version of another oracle.',
-			applies_to: ['oracle_rollable'],
+			node_types: ['oracle_rollable'],
 			value_type: 'oracle_rollable',
 			wildcard: true
 		},
 		cursed_by: {
 			description: 'This oracle has a cursed version.',
-			applies_to: ['oracle_rollable'],
+			node_types: ['oracle_rollable'],
 			value_type: 'oracle_rollable',
 			wildcard: false
 		}

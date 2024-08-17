@@ -13029,22 +13029,6 @@ module Datasworn
     end
   end
 
-  # A JSON schema representing a single value (or reference) that's possible
-  # to represent
-  class SafeValueSchema
-    attr_accessor :value
-
-    def self.from_json_data(data)
-      out = SafeValueSchema.new
-      out.value = Datasworn.from_json_data(Object, data)
-      out
-    end
-
-    def to_json_data
-      Datasworn.to_json_data(value)
-    end
-  end
-
   class SelectEnhancementFieldChoice0
     attr_accessor :choice_type
 
@@ -13935,25 +13919,28 @@ module Datasworn
   end
 
   class TagRule
+    # The JSON schema for this tag value.
     attr_accessor :schema
-    attr_accessor :applies_to
+    attr_accessor :node_types
 
     def self.from_json_data(data)
       out = TagRule.new
       out.schema = Datasworn::from_json_data(TagSchema, data["$schema"])
-      out.applies_to = Datasworn::from_json_data(Array[TaggableNodeType], data["applies_to"])
+      out.node_types = Datasworn::from_json_data(Array[TaggableNodeType], data["node_types"])
       out
     end
 
     def to_json_data
       data = {}
       data["$schema"] = Datasworn::to_json_data(schema)
-      data["applies_to"] = Datasworn::to_json_data(applies_to)
+      data["node_types"] = Datasworn::to_json_data(node_types)
       data
     end
   end
 
-  # A JSON schema used to validate the tag data, with a mandatory description.
+  # JSON schema used to validate the tag data, with a mandatory description.
+  # Only a subset of all possible JSON schema are allowed, including references
+  # to some Datasworn types.
   class TagSchema
     attr_accessor :value
 

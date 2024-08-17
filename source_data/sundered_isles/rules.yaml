@@ -44,51 +44,50 @@ rules:
   #         prevents_recovery:
   #           - supply_hold
   tags:
-    cursed_version_of:
-      applies_to: [oracle_rollable]
+    curse:
+      node_types: [oracle_rollable]
       $schema:
-        type: array
-        description: This oracle is the cursed version of one or more oracles. Note that any wildcard matches with their own `cursed_version_of` tag should be ignored (and can safely be be omitted from curse die behavior altogether).
-        items:
-          $ref: '#/definitions/OracleRollableWildcardId'
-    curse_behavior:
-      applies_to: [oracle_rollable]
+        type: object
+        description: This oracle is the cursed version of one or more oracles. Ignore matches for its own ID -- an oracle can't curse itself.
+        properties:
+          oracles:
+            type: array
+            items:
+              $ref: '#/definitions/OracleRollableIdWildcard'
+            description: ID wildcards to match the oracles cursed by this oracle. Ignore matches for this oracle -- an oracle can't curse itself.
+          behavior:
+            description: |-
+              * `replace_result`: Replace the original table result with the cursed table result, using the original table roll value.
+              * `add_result`: Roll again on the cursed table, combining it with the original table result.
+            enum:
+              - add_result
+              - replace_result
+    cursed_by:
+      node_types: [oracle_rollable]
       $schema:
-        description: |-
-          Only relevant if the `cursed_version_of` tag is present.
-            * `replace_result`: Replace the original table result with the cursed table result, using the original table roll value.
-            * `add_result`: Roll again on the cursed table, combining it with the original table result.
-        enum:
-          - add_result
-          - replace_result
-          # TODO: "see_text" for other behavior?
-          # ugh, should this be paired with cursed_by instead? a lot of this seems to be tied to original table
+        description: This oracle has a cursed version. This is provided to represent the print version of the table, but may not be a reliable indicator if custom content is available; you may want to check for `curse` tags, too.
+        $ref: '#/definitions/OracleRollableId'
     requires_allies:
       $schema:
         description: This object requires allies to function, and is intended only for co-op play, or guided play with allies. It is not appropriate for solo play.
         type: boolean
-    cursed_by:
-      applies_to: [oracle_rollable]
-      $schema:
-        description: This oracle has a cursed version.
-        $ref: '#/definitions/OracleRollableId'
     supernatural:
       $schema:
         description: This object is supernatural in nature, and is ideal for settings that feature supernatural or mythic powers.
         type: boolean
-      applies_to: [asset, row]
+      node_types: [asset, row]
     technological:
       $schema:
         description: This object is technological in nature, and is ideal for settings that feature remarkable technologies.
         type: boolean
-      applies_to: [asset, row]
+      node_types: [asset, row]
     starforged_friendly:
       $schema:
         description: This asset is ideal for use in Starforged.
         type: boolean
-      applies_to: [asset]
+      node_types: [asset]
     region:
-      applies_to: [oracle_rollable, row]
+      node_types: [oracle_rollable, row]
       $schema:
         description: This oracle table or row relates to a specific region of the Sundered Isles.
         enum:
@@ -96,7 +95,7 @@ rules:
           - margins
           - reaches
     overland_region:
-      applies_to: [oracle_rollable, row]
+      node_types: [oracle_rollable, row]
       # TODO: is there a way to make this extensible? seems likely to be expanded by 3rd-party content
       $schema:
         description: This oracle table or row relates to a specific overland region type.
@@ -113,7 +112,7 @@ rules:
           - woodland
           - cursed
     location:
-      applies_to: [oracle_rollable, row]
+      node_types: [oracle_rollable, row]
       $schema:
         description: This oracle table or row relates to a location type.
         enum:
@@ -126,17 +125,17 @@ rules:
           - swamp
           - river # shipwreck only -- described similarly to waterside, but this is a cleaner match for shipwreck oracle keys
     faction_type:
-      applies_to: [oracle_rollable, row]
+      node_types: [oracle_rollable, row]
       $schema:
-        description: This oracle table or row relates to a specific type of faction.
+        description: This oracle table or row relates to a specific faction type.
         enum:
           - society
           - organization
           - empire
     ship_size:
-      applies_to: [oracle_rollable, row]
+      node_types: [oracle_rollable, row]
       $schema:
-        description: This oracle table or row relates to a specific size of ship.
+        description: This oracle table or row relates to a specific ship size.
         enum:
           - small
           - medium
@@ -146,7 +145,7 @@ rules:
           - fleet
           - armada
     treasure_size:
-      applies_to: [oracle_rollable, row]
+      node_types: [oracle_rollable, row]
       $schema:
         description: This oracle table or row relates to a specific size of treasure.
         enum:

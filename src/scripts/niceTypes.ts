@@ -90,7 +90,7 @@ export function simplifyRecursive(schema: TSchema, allowNumberEnums = false) {
 
 // const replacer = (k, v) => {
 // 	if (k === '$id') return undefined
-// 	if (k === '$ref' && typeof v === 'string') return '#/definitions/' + v
+// 	if (k === '$ref' && typeof v === 'string') return `#/${DefsKey}/` + v
 
 // 	return v
 // }

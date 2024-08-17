@@ -7,10 +7,13 @@ namespace Datasworn
 {
     public class TagRule
     {
+        /// <summary>
+        /// The JSON schema for this tag value.
+        /// </summary>
         [JsonPropertyName("$schema")]
         public TagSchema Schema { get; set; }
 
-        [JsonPropertyName("applies_to")]
-        public IList<TaggableNodeType> AppliesTo { get; set; }
+        [JsonPropertyName("node_types")]
+        public IList<TaggableNodeType> NodeTypes { get; set; }
     }
 }

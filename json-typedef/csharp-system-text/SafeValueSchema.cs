@@ -8,7 +8,7 @@ namespace Datasworn
 {
     /// <summary>
     /// A JSON schema representing a single value (or reference) that's possible
-    /// to represent
+    /// to represent in most languages.
     /// </summary>
     [JsonConverter(typeof(SafeValueSchemaJsonConverter))]
     public class SafeValueSchema

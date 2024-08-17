@@ -98,8 +98,8 @@ export type ProgressRollMethod = Static<typeof ProgressRollMethod>
 export const MoveOutcome = Type.Object(
 	{
 		text: Type.Ref(Text.MarkdownString, {
-			pattern: /On a __(strong hit|weak hit|miss)__/.source,
-			type: 'string'
+			// pattern: /On a __(strong hit|weak hit|miss)__/.source,
+			// type: 'string'
 		}),
 		oracle_rolls: Type.Optional(Type.Array(Type.Ref<TOracleRoll>('OracleRoll')))
 		// count_as: Type.Optional(Type.Ref(MoveOutcomeType))

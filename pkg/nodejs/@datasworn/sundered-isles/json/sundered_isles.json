@@ -23,38 +23,41 @@
 					"description": "This oracle table or row relates to a specific region of the Sundered Isles.",
 					"enum": ["myriads", "margins", "reaches"]
 				},
-				"applies_to": ["oracle_rollable", "row"]
+				"node_types": ["oracle_rollable", "row"]
 			},
-			"curse_behavior": {
+			"curse": {
 				"$schema": {
-					"description": "Only relevant if the `cursed_version_of` tag is present.\n  * `replace_result`: Replace the original table result with the cursed table result, using the original table roll value.\n  * `add_result`: Roll again on the cursed table, combining it with the original table result.",
-					"enum": ["add_result", "replace_result"]
+					"type": "object",
+					"description": "This oracle is the cursed version of one or more oracles. Ignore matches for its own ID -- an oracle can't curse itself.",
+					"properties": {
+						"oracles": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/OracleRollableIdWildcard"
+							},
+							"description": "ID wildcards to match the oracles cursed by this oracle. Ignore matches for this oracle -- an oracle can't curse itself."
+						},
+						"behavior": {
+							"description": "* `replace_result`: Replace the original table result with the cursed table result, using the original table roll value.\n* `add_result`: Roll again on the cursed table, combining it with the original table result.",
+							"enum": ["add_result", "replace_result"]
+						}
+					}
 				},
-				"applies_to": ["oracle_rollable"]
+				"node_types": ["oracle_rollable"]
 			},
 			"cursed_by": {
 				"$schema": {
-					"description": "This oracle has a cursed version.",
+					"description": "This oracle has a cursed version. This is provided to represent the print version of the table, but may not be a reliable indicator if custom content is available; you may want to check for `curse` tags, too.",
 					"$ref": "#/definitions/OracleRollableId"
 				},
-				"applies_to": ["oracle_rollable"]
-			},
-			"cursed_version_of": {
-				"$schema": {
-					"type": "array",
-					"description": "This oracle is the cursed version of one or more oracles. Note that any wildcard matches with their own `cursed_version_of` tag should be ignored (and can safely be be omitted from curse die behavior altogether).",
-					"items": {
-						"$ref": "#/definitions/OracleRollableWildcardId"
-					}
-				},
-				"applies_to": ["oracle_rollable"]
+				"node_types": ["oracle_rollable"]
 			},
 			"faction_type": {
 				"$schema": {
-					"description": "This oracle table or row relates to a specific type of faction.",
+					"description": "This oracle table or row relates to a specific faction type.",
 					"enum": ["society", "organization", "empire"]
 				},
-				"applies_to": ["oracle_rollable", "row"]
+				"node_types": ["oracle_rollable", "row"]
 			},
 			"location": {
 				"$schema": {
@@ -70,7 +73,7 @@
 						"river"
 					]
 				},
-				"applies_to": ["oracle_rollable", "row"]
+				"node_types": ["oracle_rollable", "row"]
 			},
 			"overland_region": {
 				"$schema": {
@@ -89,18 +92,18 @@
 						"cursed"
 					]
 				},
-				"applies_to": ["oracle_rollable", "row"]
+				"node_types": ["oracle_rollable", "row"]
 			},
 			"requires_allies": {
 				"$schema": {
 					"type": "boolean",
 					"description": "This object requires allies to function, and is intended only for co-op play, or guided play with allies. It is not appropriate for solo play."
 				},
-				"applies_to": null
+				"node_types": null
 			},
 			"ship_size": {
 				"$schema": {
-					"description": "This oracle table or row relates to a specific size of ship.",
+					"description": "This oracle table or row relates to a specific ship size.",
 					"enum": [
 						"small",
 						"medium",
@@ -111,35 +114,35 @@
 						"armada"
 					]
 				},
-				"applies_to": ["oracle_rollable", "row"]
+				"node_types": ["oracle_rollable", "row"]
 			},
 			"starforged_friendly": {
 				"$schema": {
 					"type": "boolean",
 					"description": "This asset is ideal for use in Starforged."
 				},
-				"applies_to": ["asset"]
+				"node_types": ["asset"]
 			},
 			"supernatural": {
 				"$schema": {
 					"type": "boolean",
 					"description": "This object is supernatural in nature, and is ideal for settings that feature supernatural or mythic powers."
 				},
-				"applies_to": ["asset", "row"]
+				"node_types": ["asset", "row"]
 			},
 			"technological": {
 				"$schema": {
 					"type": "boolean",
 					"description": "This object is technological in nature, and is ideal for settings that feature remarkable technologies."
 				},
-				"applies_to": ["asset", "row"]
+				"node_types": ["asset", "row"]
 			},
 			"treasure_size": {
 				"$schema": {
 					"description": "This oracle table or row relates to a specific size of treasure.",
 					"enum": ["small", "medium", "large", "vast"]
 				},
-				"applies_to": ["oracle_rollable", "row"]
+				"node_types": ["oracle_rollable", "row"]
 			}
 		}
 	},

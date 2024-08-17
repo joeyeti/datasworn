@@ -6,7 +6,9 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * A JSON schema used to validate the tag data, with a mandatory description.
+ * JSON schema used to validate the tag data, with a mandatory description. Only
+ * a subset of all possible JSON schema are allowed, including references to
+ * some Datasworn types.
  */
 public class TagSchema {
     @JsonValue

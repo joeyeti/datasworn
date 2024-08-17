@@ -11,14 +11,15 @@ public class TagRule {
     @JsonProperty("$schema")
     private TagSchema schema;
 
-    @JsonProperty("applies_to")
-    private List<TaggableNodeType> appliesTo;
+    @JsonProperty("node_types")
+    private List<TaggableNodeType> nodeTypes;
 
     public TagRule() {
     }
 
     /**
      * Getter for schema.<p>
+     * The JSON schema for this tag value.
      */
     public TagSchema getSchema() {
         return schema;
@@ -26,22 +27,23 @@ public class TagRule {
 
     /**
      * Setter for schema.<p>
+     * The JSON schema for this tag value.
      */
     public void setSchema(TagSchema schema) {
         this.schema = schema;
     }
 
     /**
-     * Getter for appliesTo.<p>
+     * Getter for nodeTypes.<p>
      */
-    public List<TaggableNodeType> getAppliesTo() {
-        return appliesTo;
+    public List<TaggableNodeType> getNodeTypes() {
+        return nodeTypes;
     }
 
     /**
-     * Setter for appliesTo.<p>
+     * Setter for nodeTypes.<p>
      */
-    public void setAppliesTo(List<TaggableNodeType> appliesTo) {
-        this.appliesTo = appliesTo;
+    public void setNodeTypes(List<TaggableNodeType> nodeTypes) {
+        this.nodeTypes = nodeTypes;
     }
 }

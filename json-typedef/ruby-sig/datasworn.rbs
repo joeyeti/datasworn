@@ -4603,13 +4603,6 @@ module Datasworn
     def to_json_data: () -> untyped
   end
 
-  class SafeValueSchema
-    attr_accessor value: untyped
-
-    def self.from_json_data: (untyped) -> SafeValueSchema
-    def to_json_data: () -> untyped
-  end
-
   class SelectEnhancementFieldChoice0
     attr_accessor choice_type: String
 
@@ -4952,7 +4945,7 @@ module Datasworn
 
   class TagRule
     attr_accessor schema: TagSchema
-    attr_accessor applies_to: Array[TaggableNodeType]
+    attr_accessor node_types: Array[TaggableNodeType]
 
     def self.from_json_data: (untyped) -> TagRule
     def to_json_data: () -> untyped

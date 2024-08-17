@@ -6,18 +6,18 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * A JSON schema representing a single value (or reference) that's possible to
- * represent in most languages.
+ * A JSON schema representing a single value that's possible to represent in
+ * common programming languages.
  */
-public class SafeValueSchema {
+public class SafeSchema {
     @JsonValue
     private Object value;
 
-    public SafeValueSchema() {
+    public SafeSchema() {
     }
 
     @JsonCreator
-    public SafeValueSchema(Object value) {
+    public SafeSchema(Object value) {
         this.value = value;
     }
 

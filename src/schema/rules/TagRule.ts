@@ -1,4 +1,4 @@
-import { Type, type Static } from '@sinclair/typebox'
+import { Type, type Static, type TSchema } from '@sinclair/typebox'
 import TypeId from '../../pkg-core/IdElements/TypeId.js'
 import JtdType from '../../scripts/json-typedef/typedef.js'
 import { Dictionary } from '../generic/Dictionary.js'
@@ -7,7 +7,7 @@ import { UnionEnum, Nullable } from '../Utils.js'
 import Id, { RulesetId } from '../common/Id.js'
 import { DiceExpression } from '../common/Rolls.js'
 import { pascalCase, type PascalCase } from '../utils/string.js'
-import { TagSchema, SafeValueSchema } from './TagSchema.js'
+import { TagSchema } from './TagSchema.js'
 
 type NodeSchemaName<T extends string> = PascalCase<T>
 type EmbeddedNodeSchemaName<T extends string> = `Embedded${PascalCase<T>}`
@@ -77,83 +77,23 @@ export const TaggableNodeType = Type.Union(
 )
 export type TaggableNodeType = Static<typeof TaggableNodeType>
 
-// these are all pretty close to JSON schema already. is it worth taking them all the way?
-
-// or should we favor abstraction to a limited set of datasworn constructs instead?
-
-// const TagRuleBase = Type.Object({
-// 	applies_to: Nullable(Type.Array(Type.Ref(TaggableNodeType)), {
-// 		description:
-// 			'Types of object that can receive this tag, or `null` if any type of object accepts it.',
-// 		default: null
-// 	}),
-// 	description: Type.Ref(MarkdownString)
-// })
-
-// const typedTags = keyBy(
-// 	[
-// 		...(['boolean', 'integer'] as const).map((type) =>
-// 			Assign(
-// 				TagRuleBase,
-// 				Type.Object({
-// 					array: Type.Boolean({ default: false }),
-// 					value_type: Type.Literal(type)
-// 				})
-// 			)
-// 		),
-// 		...TypeId.Primary.map((type) =>
-// 			Assign(
-// 				TagRuleBase,
-// 				Type.Object({
-// 					wildcard: Type.Boolean({
-// 						default: false,
-// 						description:
-// 							'If `true`, this field accepts an array of wildcard ID strings. If `false`, this field accepts a single non-wildcard ID string.'
-// 					}),
-// 					value_type: Type.Literal(type)
-// 				})
-// 			)
-// 		),
-// 		Assign(
-// 			TagRuleBase,
-// 			Type.Object({
-// 				array: Type.Boolean({ default: false }),
-// 				value_type: Type.Literal('enum'),
-// 				enum: Type.Array(Type.Ref(Id.DictKey))
-// 			})
-// 		)
-// 	].map((tag) => ({
-// 		...tag,
-// 		title: 'TagRule' + pascalCase(tag.properties.value_type.const)
-// 	})),
-// 	(tag) => tag.properties.value_type.const
-// )
-
-const safeSchema = Type.Union([
-	// ONE OF:
-	// * a pr
-	// type: ['string', 'integer', 'number', 'boolean' ]
-	// * an enum of integer values
-	// * an enum of string values
-	// * a reference (relative to datasworn schema)
-	// * type object where all properties are a SafeSchema
-	// * has type:
-	// n
-])
-
-export { TagSchema, SafeValueSchema }
+export { TagSchema }
 
 export const TagRule = Type.Object(
 	{
-		applies_to: Nullable(Type.Array(Type.Ref(TaggableNodeType)), {
+		node_types: Nullable(Type.Array(Type.Ref(TaggableNodeType)), {
 			description:
 				'Types of object that can receive this tag, or `null` if any type of object accepts it.',
 			default: null
 		}),
-		$schema: Type.Ref(TagSchema)
+		$schema: Type.Ref(TagSchema, {
+			description: 'The JSON schema for this tag value.'
+		})
 	},
-	{ $id: 'TagRule', additionalProperties: false }
+	{ $id: 'TagRule' }
 )
+
+
 
 // export const TagRule = DiscriminatedUnion(typedTags, 'value_type', {
 // 	$id: 'TagRule'

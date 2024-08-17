@@ -5863,10 +5863,7 @@
 		"MoveOutcome": {
 			"properties": {
 				"text": {
-					"ref": "MarkdownString",
-					"metadata": {
-						"pattern": "On a __(strong hit|weak hit|miss)__"
-					}
+					"ref": "MarkdownString"
 				}
 			},
 			"optionalProperties": {
@@ -10092,11 +10089,6 @@
 		"RulesPackageId": {
 			"type": "string"
 		},
-		"SafeValueSchema": {
-			"metadata": {
-				"description": "A JSON schema representing a single value (or reference) that's possible to represent "
-			}
-		},
 		"SelectEnhancementField": {
 			"properties": {
 				"label": {
@@ -10607,13 +10599,16 @@
 		},
 		"TagRule": {
 			"properties": {
-				"applies_to": {
+				"node_types": {
 					"elements": {
 						"ref": "TaggableNodeType"
 					}
 				},
 				"$schema": {
-					"ref": "TagSchema"
+					"ref": "TagSchema",
+					"metadata": {
+						"description": "The JSON schema for this tag value."
+					}
 				}
 			}
 		},
@@ -10633,7 +10628,7 @@
 		},
 		"TagSchema": {
 			"metadata": {
-				"description": "A JSON schema used to validate the tag data, with a mandatory description.",
+				"description": "JSON schema used to validate the tag data, with a mandatory description. Only a subset of all possible JSON schema are allowed, including references to some Datasworn types.",
 				"examples": [
 					{
 						"description": "An example tag with a simple true/false value.",
@@ -10678,8 +10673,7 @@
 				"text": {
 					"ref": "MarkdownString",
 					"metadata": {
-						"description": "A markdown string containing the primary trigger text for this move.\n\nSecondary trigger text (for specific stats or uses of an asset ability) may be described in individual trigger conditions.",
-						"pattern": ".*\\.{3}"
+						"description": "A markdown string containing the primary trigger text for this move.\n\nSecondary trigger text (for specific stats or uses of an asset ability) may be described in individual trigger conditions."
 					}
 				},
 				"conditions": {
@@ -10786,8 +10780,7 @@
 				"text": {
 					"ref": "MarkdownString",
 					"metadata": {
-						"description": "A markdown string containing the primary trigger text for this move.\n\nSecondary trigger text (for specific stats or uses of an asset ability) may be described in individual trigger conditions.",
-						"pattern": ".*\\.{3}"
+						"description": "A markdown string containing the primary trigger text for this move.\n\nSecondary trigger text (for specific stats or uses of an asset ability) may be described in individual trigger conditions."
 					}
 				},
 				"conditions": {
@@ -10837,8 +10830,7 @@
 				"text": {
 					"ref": "MarkdownString",
 					"metadata": {
-						"description": "A markdown string containing the primary trigger text for this move.\n\nSecondary trigger text (for specific stats or uses of an asset ability) may be described in individual trigger conditions.",
-						"pattern": ".*\\.{3}"
+						"description": "A markdown string containing the primary trigger text for this move.\n\nSecondary trigger text (for specific stats or uses of an asset ability) may be described in individual trigger conditions."
 					}
 				},
 				"conditions": {
@@ -10923,8 +10915,7 @@
 				"text": {
 					"ref": "MarkdownString",
 					"metadata": {
-						"description": "A markdown string containing the primary trigger text for this move.\n\nSecondary trigger text (for specific stats or uses of an asset ability) may be described in individual trigger conditions.",
-						"pattern": ".*\\.{3}"
+						"description": "A markdown string containing the primary trigger text for this move.\n\nSecondary trigger text (for specific stats or uses of an asset ability) may be described in individual trigger conditions."
 					}
 				},
 				"conditions": {

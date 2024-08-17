@@ -2596,11 +2596,6 @@ export type MoveOracleRollableRowId = string;
  */
 export type MoveOracleRollableRowIdWildcard = string;
 export interface MoveOutcome {
-    /**
-     * @pattern ```javascript
-     * /On a __(strong hit|weak hit|miss)__/
-     * ```
-     */
     text: MarkdownString;
     oracle_rolls?: OracleRoll[];
 }
@@ -4229,28 +4224,6 @@ export interface RulesExpansion {
 export type RulesPackage = Ruleset | Expansion;
 export type RulesPackageId = RulesetId | ExpansionId;
 /**
- * A JSON schema representing a single value (or reference) that's possible to represent
- * @experimental
- */
-export type SafeValueSchema = {
-    /**
-     * @pattern ```javascript
-     * /^#\/definitions\/[A-Z][A-z0-9]*$/
-     * ```
-     */
-    $ref: string;
-} | {
-    enum: DictKey[];
-} | {
-    enum: number[];
-} | {
-    type: 'boolean';
-} | {
-    type: 'number';
-} | {
-    type: 'integer';
-};
-/**
  * Select from player and/or asset enhancements. Use it to describe modal abilities. For examples, see Ironclad (classic Ironsworn) and Windbinder (Sundered Isles).
  * @remarks Semantics are similar to the HTML `<select>` element
  */
@@ -4556,7 +4529,10 @@ export interface TagRule {
      * Types of object that can receive this tag, or `null` if any type of object accepts it.
      * @default null
      */
-    applies_to?: TaggableNodeType[] | null;
+    node_types?: TaggableNodeType[] | null;
+    /**
+     * The JSON schema for this tag value.
+     */
     $schema: TagSchema;
 }
 /**
@@ -4590,9 +4566,6 @@ export interface TriggerActionRoll {
      * A markdown string containing the primary trigger text for this move.
      *
      * Secondary trigger text (for specific stats or uses of an asset ability) may be described in individual trigger conditions.
-     * @pattern ```javascript
-     * /.*\.{3}/
-     * ```
      */
     text: MarkdownString;
     /**
@@ -4660,9 +4633,6 @@ export interface TriggerNoRoll {
      * A markdown string containing the primary trigger text for this move.
      *
      * Secondary trigger text (for specific stats or uses of an asset ability) may be described in individual trigger conditions.
-     * @pattern ```javascript
-     * /.*\.{3}/
-     * ```
      */
     text: MarkdownString;
     /**
@@ -4701,9 +4671,6 @@ export interface TriggerProgressRoll {
      * A markdown string containing the primary trigger text for this move.
      *
      * Secondary trigger text (for specific stats or uses of an asset ability) may be described in individual trigger conditions.
-     * @pattern ```javascript
-     * /.*\.{3}/
-     * ```
      */
     text: MarkdownString;
     /**
@@ -4756,9 +4723,6 @@ export interface TriggerSpecialTrack {
      * A markdown string containing the primary trigger text for this move.
      *
      * Secondary trigger text (for specific stats or uses of an asset ability) may be described in individual trigger conditions.
-     * @pattern ```javascript
-     * /.*\.{3}/
-     * ```
      */
     text: MarkdownString;
     /**

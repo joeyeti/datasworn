@@ -131,6 +131,7 @@ function extractType(schema: TSchema): string {
 		case TypeGuard.IsObject(schema):
 			return extractObjectLiteralType(schema as any)
 		case TypeGuard.IsUnion(schema):
+		case schema[Kind] === 'Union':
 		case TNullable(schema):
 			return uniq(schema.anyOf.map(extractType)).join(' | ')
 		case TypeGuard.IsRecord(schema): {

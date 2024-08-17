@@ -8912,10 +8912,6 @@ pub struct Ruleset {
 /// The ID of standalone Datasworn package that describes its own ruleset.
 pub type RulesetId = String;
 
-/// A JSON schema representing a single value (or reference) that's possible
-/// to represent
-pub type SafeValueSchema = Option<Value>;
-
 #[derive(Serialize, Deserialize)]
 #[serde(tag = "choice_type")]
 pub enum SelectEnhancementFieldChoice0 {
@@ -9356,14 +9352,17 @@ pub type Tag = Option<Value>;
 
 #[derive(Serialize, Deserialize)]
 pub struct TagRule {
+    /// The JSON schema for this tag value.
     #[serde(rename = "$schema")]
     pub schema: TagSchema,
 
-    #[serde(rename = "applies_to")]
-    pub appliesTo: Vec<TaggableNodeType>,
+    #[serde(rename = "node_types")]
+    pub nodeTypes: Vec<TaggableNodeType>,
 }
 
-/// A JSON schema used to validate the tag data, with a mandatory description.
+/// JSON schema used to validate the tag data, with a mandatory description.
+/// Only a subset of all possible JSON schema are allowed, including references
+/// to some Datasworn types.
 pub type TagSchema = Option<Value>;
 
 #[derive(Serialize, Deserialize)]

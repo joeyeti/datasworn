@@ -6930,10 +6930,6 @@ type Ruleset struct {
 // The ID of standalone Datasworn package that describes its own ruleset.
 type RulesetID = string
 
-// A JSON schema representing a single value (or reference) that's possible
-// to represent
-type SafeValueSchema = interface{}
-
 type SelectEnhancementFieldChoice0 struct {
 	ChoiceType string
 
@@ -7365,12 +7361,15 @@ type SvgImageURL = string
 type Tag = interface{}
 
 type TagRule struct {
+	// The JSON schema for this tag value.
 	Schema TagSchema `json:"$schema"`
 
-	AppliesTo []TaggableNodeType `json:"applies_to"`
+	NodeTypes []TaggableNodeType `json:"node_types"`
 }
 
-// A JSON schema used to validate the tag data, with a mandatory description.
+// JSON schema used to validate the tag data, with a mandatory description. Only
+// a subset of all possible JSON schema are allowed, including references to
+// some Datasworn types.
 type TagSchema = interface{}
 
 type TaggableNodeType string

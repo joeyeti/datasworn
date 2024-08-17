@@ -5592,9 +5592,7 @@
 			"required": ["text"],
 			"properties": {
 				"text": {
-					"$ref": "#/definitions/MarkdownString",
-					"type": "string",
-					"pattern": "On a __(strong hit|weak hit|miss)__"
+					"$ref": "#/definitions/MarkdownString"
 				},
 				"oracle_rolls": {
 					"type": "array",
@@ -8624,77 +8622,6 @@
 				}
 			]
 		},
-		"SafeValueSchema": {
-			"title": "SafeValueSchema",
-			"description": "A JSON schema representing a single value (or reference) that's possible to represent ",
-			"releaseStage": "experimental",
-			"anyOf": [
-				{
-					"type": "object",
-					"required": ["$ref"],
-					"properties": {
-						"$ref": {
-							"type": "string",
-							"pattern": "^#\\/definitions\\/[A-Z][A-z0-9]*$"
-						}
-					}
-				},
-				{
-					"type": "object",
-					"required": ["enum"],
-					"properties": {
-						"enum": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/DictKey"
-							}
-						}
-					}
-				},
-				{
-					"type": "object",
-					"required": ["enum"],
-					"properties": {
-						"enum": {
-							"type": "array",
-							"items": {
-								"type": "integer"
-							}
-						}
-					}
-				},
-				{
-					"type": "object",
-					"required": ["type"],
-					"properties": {
-						"type": {
-							"type": "string",
-							"const": "boolean"
-						}
-					}
-				},
-				{
-					"type": "object",
-					"required": ["type"],
-					"properties": {
-						"type": {
-							"type": "string",
-							"const": "number"
-						}
-					}
-				},
-				{
-					"type": "object",
-					"required": ["type"],
-					"properties": {
-						"type": {
-							"type": "string",
-							"const": "integer"
-						}
-					}
-				}
-			]
-		},
 		"SelectEnhancementField": {
 			"title": "SelectEnhancementField",
 			"type": "object",
@@ -9462,12 +9389,13 @@
 		"TagRule": {
 			"title": "TagRule",
 			"type": "object",
-			"required": ["$schema", "applies_to"],
+			"required": ["$schema", "node_types"],
 			"properties": {
 				"$schema": {
-					"$ref": "#/definitions/TagSchema"
+					"$ref": "#/definitions/TagSchema",
+					"description": "The JSON schema for this tag value."
 				},
-				"applies_to": {
+				"node_types": {
 					"description": "Types of object that can receive this tag, or `null` if any type of object accepts it.",
 					"default": null,
 					"anyOf": [
@@ -9482,8 +9410,7 @@
 						}
 					]
 				}
-			},
-			"additionalProperties": {}
+			}
 		},
 		"Tags": {
 			"title": "Tags",
@@ -9512,7 +9439,7 @@
 		},
 		"TagSchema": {
 			"title": "TagSchema",
-			"description": "A JSON schema used to validate the tag data, with a mandatory description.",
+			"description": "JSON schema used to validate the tag data, with a mandatory description. Only a subset of all possible JSON schema are allowed, including references to some Datasworn types.",
 			"releaseStage": "experimental",
 			"examples": [
 				{
@@ -9529,23 +9456,186 @@
 			],
 			"allOf": [
 				{
-					"$ref": "http://json-schema.org/draft-07/schema#"
-				},
-				{
-					"type": "object",
-					"required": ["description"],
-					"properties": {
-						"description": {
-							"$ref": "#/definitions/Documentation"
-						}
-					}
-				},
-				{
 					"anyOf": [
 						{
-							"$ref": "#/definitions/SafeValueSchema"
+							"type": "object",
+							"required": ["$ref"],
+							"properties": {
+								"$ref": {
+									"enum": [
+										"#/definitions/ActionRollMethod",
+										"#/definitions/AnyId",
+										"#/definitions/AnyIdWildcard",
+										"#/definitions/AnyMoveId",
+										"#/definitions/AnyMoveIdWildcard",
+										"#/definitions/AnyOracleRollableId",
+										"#/definitions/AnyOracleRollableIdWildcard",
+										"#/definitions/AnyOracleRollableRowId",
+										"#/definitions/AnyOracleRollableRowIdWildcard",
+										"#/definitions/AssetAbilityId",
+										"#/definitions/AssetAbilityIdWildcard",
+										"#/definitions/AssetAbilityMoveId",
+										"#/definitions/AssetAbilityMoveIdWildcard",
+										"#/definitions/AssetAbilityOracleRollableId",
+										"#/definitions/AssetAbilityOracleRollableIdWildcard",
+										"#/definitions/AssetAbilityOracleRollableRowId",
+										"#/definitions/AssetAbilityOracleRollableRowIdWildcard",
+										"#/definitions/AssetCollectionId",
+										"#/definitions/AssetCollectionIdWildcard",
+										"#/definitions/AssetId",
+										"#/definitions/AssetIdWildcard",
+										"#/definitions/AtlasCollectionId",
+										"#/definitions/AtlasCollectionIdWildcard",
+										"#/definitions/AtlasEntryId",
+										"#/definitions/AtlasEntryIdWildcard",
+										"#/definitions/ChallengeRank",
+										"#/definitions/CollectableType",
+										"#/definitions/CollectionType",
+										"#/definitions/CssColor",
+										"#/definitions/DelveSiteDenizenFrequency",
+										"#/definitions/DelveSiteDenizenId",
+										"#/definitions/DelveSiteDenizenIdWildcard",
+										"#/definitions/DelveSiteDomainDangerId",
+										"#/definitions/DelveSiteDomainDangerIdWildcard",
+										"#/definitions/DelveSiteDomainFeatureId",
+										"#/definitions/DelveSiteDomainFeatureIdWildcard",
+										"#/definitions/DelveSiteDomainId",
+										"#/definitions/DelveSiteDomainIdWildcard",
+										"#/definitions/DelveSiteId",
+										"#/definitions/DelveSiteIdWildcard",
+										"#/definitions/DelveSiteThemeDangerId",
+										"#/definitions/DelveSiteThemeDangerIdWildcard",
+										"#/definitions/DelveSiteThemeFeatureId",
+										"#/definitions/DelveSiteThemeFeatureIdWildcard",
+										"#/definitions/DelveSiteThemeId",
+										"#/definitions/DelveSiteThemeIdWildcard",
+										"#/definitions/DiceExpression",
+										"#/definitions/DictKey",
+										"#/definitions/Documentation",
+										"#/definitions/Email",
+										"#/definitions/EmbeddedMoveId",
+										"#/definitions/EmbeddedMoveIdWildcard",
+										"#/definitions/EmbeddedOracleRollableId",
+										"#/definitions/EmbeddedOracleRollableIdWildcard",
+										"#/definitions/EmbedOnlyType",
+										"#/definitions/ExpansionId",
+										"#/definitions/Label",
+										"#/definitions/MarkdownString",
+										"#/definitions/MarkdownTemplateString",
+										"#/definitions/MoveCategoryId",
+										"#/definitions/MoveCategoryIdWildcard",
+										"#/definitions/MoveId",
+										"#/definitions/MoveIdWildcard",
+										"#/definitions/MoveOracleRollableId",
+										"#/definitions/MoveOracleRollableIdWildcard",
+										"#/definitions/MoveOracleRollableRowId",
+										"#/definitions/MoveOracleRollableRowIdWildcard",
+										"#/definitions/MoveRollType",
+										"#/definitions/NonCollectableType",
+										"#/definitions/NpcCollectionId",
+										"#/definitions/NpcCollectionIdWildcard",
+										"#/definitions/NpcId",
+										"#/definitions/NpcIdWildcard",
+										"#/definitions/NpcVariantId",
+										"#/definitions/NpcVariantIdWildcard",
+										"#/definitions/OracleCollectionId",
+										"#/definitions/OracleCollectionIdWildcard",
+										"#/definitions/OracleDuplicateBehavior",
+										"#/definitions/OracleRollableId",
+										"#/definitions/OracleRollableIdWildcard",
+										"#/definitions/OracleRollableRowId",
+										"#/definitions/OracleRollableRowIdWildcard",
+										"#/definitions/PageNumber",
+										"#/definitions/PartOfSpeech",
+										"#/definitions/ProgressRollMethod",
+										"#/definitions/RarityId",
+										"#/definitions/RarityIdWildcard",
+										"#/definitions/RulesetId",
+										"#/definitions/RulesPackageId",
+										"#/definitions/SemanticVersion",
+										"#/definitions/SpecialTrackRollMethod",
+										"#/definitions/SvgImageUrl",
+										"#/definitions/TruthId",
+										"#/definitions/TruthIdWildcard",
+										"#/definitions/TruthOptionId",
+										"#/definitions/TruthOptionIdWildcard",
+										"#/definitions/TruthOptionOracleRollableId",
+										"#/definitions/TruthOptionOracleRollableIdWildcard",
+										"#/definitions/TruthOptionOracleRollableRowId",
+										"#/definitions/TruthOptionOracleRollableRowIdWildcard",
+										"#/definitions/WebpImageUrl",
+										"#/definitions/WebUrl"
+									]
+								}
+							}
 						},
 						{
+							"title": "TagSchemaStringEnum",
+							"type": "object",
+							"required": ["enum"],
+							"properties": {
+								"enum": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/DictKey"
+									}
+								}
+							},
+							"additionalProperties": {}
+						},
+						{
+							"title": "TagSchemaIntegerEnum",
+							"type": "object",
+							"required": ["enum"],
+							"properties": {
+								"enum": {
+									"type": "array",
+									"items": {
+										"type": "integer"
+									}
+								}
+							},
+							"additionalProperties": {}
+						},
+						{
+							"title": "TagSchemaBoolean",
+							"type": "object",
+							"description": "Schema for a true or false value.",
+							"required": ["type"],
+							"properties": {
+								"type": {
+									"type": "string",
+									"const": "boolean"
+								}
+							},
+							"additionalProperties": {}
+						},
+						{
+							"title": "TagSchemaInteger",
+							"type": "object",
+							"required": ["type"],
+							"properties": {
+								"type": {
+									"type": "string",
+									"const": "integer"
+								}
+							},
+							"additionalProperties": {}
+						},
+						{
+							"title": "TagSchemaFloat",
+							"type": "object",
+							"required": ["type"],
+							"properties": {
+								"type": {
+									"type": "string",
+									"const": "number"
+								}
+							},
+							"additionalProperties": {}
+						},
+						{
+							"title": "TagSchemaObject",
 							"type": "object",
 							"required": ["type", "properties"],
 							"properties": {
@@ -9557,13 +9647,15 @@
 									"type": "object",
 									"patternProperties": {
 										"^[a-z][a-z0-9_]*$": {
-											"$ref": "#/definitions/SafeValueSchema"
+											"$ref": "#/definitions/TagSchema"
 										}
 									}
 								}
-							}
+							},
+							"additionalProperties": {}
 						},
 						{
+							"title": "TagSchemaArray",
 							"type": "object",
 							"required": ["type", "items"],
 							"properties": {
@@ -9572,48 +9664,15 @@
 									"const": "array"
 								},
 								"items": {
-									"$ref": "#/definitions/SafeValueSchema"
+									"$ref": "#/definitions/TagSchema"
 								}
-							}
+							},
+							"additionalProperties": {}
 						}
 					]
 				},
 				{
-					"not": {
-						"type": "object",
-						"required": [
-							"$defs",
-							"$id",
-							"$schema",
-							"additionalItems",
-							"additionalProperties",
-							"allOf",
-							"anyOf",
-							"definitions",
-							"dependencies",
-							"else",
-							"if",
-							"not",
-							"oneOf",
-							"then"
-						],
-						"properties": {
-							"$defs": {},
-							"$id": {},
-							"$schema": {},
-							"additionalItems": {},
-							"additionalProperties": {},
-							"allOf": {},
-							"anyOf": {},
-							"definitions": {},
-							"dependencies": {},
-							"else": {},
-							"if": {},
-							"not": {},
-							"oneOf": {},
-							"then": {}
-						}
-					}
+					"$ref": "http://json-schema.org/draft-07/schema#"
 				}
 			]
 		},
@@ -9665,8 +9724,7 @@
 				"text": {
 					"$ref": "#/definitions/MarkdownString",
 					"type": "string",
-					"description": "A markdown string containing the primary trigger text for this move.\n\nSecondary trigger text (for specific stats or uses of an asset ability) may be described in individual trigger conditions.",
-					"pattern": ".*\\.{3}"
+					"description": "A markdown string containing the primary trigger text for this move.\n\nSecondary trigger text (for specific stats or uses of an asset ability) may be described in individual trigger conditions."
 				}
 			}
 		},
@@ -9785,8 +9843,7 @@
 				"text": {
 					"$ref": "#/definitions/MarkdownString",
 					"type": "string",
-					"description": "A markdown string containing the primary trigger text for this move.\n\nSecondary trigger text (for specific stats or uses of an asset ability) may be described in individual trigger conditions.",
-					"pattern": ".*\\.{3}"
+					"description": "A markdown string containing the primary trigger text for this move.\n\nSecondary trigger text (for specific stats or uses of an asset ability) may be described in individual trigger conditions."
 				}
 			}
 		},
@@ -9843,8 +9900,7 @@
 				"text": {
 					"$ref": "#/definitions/MarkdownString",
 					"type": "string",
-					"description": "A markdown string containing the primary trigger text for this move.\n\nSecondary trigger text (for specific stats or uses of an asset ability) may be described in individual trigger conditions.",
-					"pattern": ".*\\.{3}"
+					"description": "A markdown string containing the primary trigger text for this move.\n\nSecondary trigger text (for specific stats or uses of an asset ability) may be described in individual trigger conditions."
 				}
 			}
 		},
@@ -9945,8 +10001,7 @@
 				"text": {
 					"$ref": "#/definitions/MarkdownString",
 					"type": "string",
-					"description": "A markdown string containing the primary trigger text for this move.\n\nSecondary trigger text (for specific stats or uses of an asset ability) may be described in individual trigger conditions.",
-					"pattern": ".*\\.{3}"
+					"description": "A markdown string containing the primary trigger text for this move.\n\nSecondary trigger text (for specific stats or uses of an asset ability) may be described in individual trigger conditions."
 				}
 			}
 		},
