@@ -3079,13 +3079,13 @@ module Datasworn
     # node, including the author and licensing information.
     attr_accessor :source
     attr_accessor :dangers
-
-    # The description text that appears below the title on the card.
-    attr_accessor :description
     attr_accessor :features
 
     # The primary name/label for this node.
     attr_accessor :name
+
+    # The text that appears below the title on the card.
+    attr_accessor :summary
     attr_accessor :type
     attr_accessor :comment
 
@@ -3095,6 +3095,9 @@ module Datasworn
 
     # A thematic color associated with this node.
     attr_accessor :color
+
+    # Optional extended description text.
+    attr_accessor :descriptipn
 
     # An SVG icon associated with this collection.
     attr_accessor :icon
@@ -3119,13 +3122,14 @@ module Datasworn
       out.id = Datasworn::from_json_data(DelveSiteDomainID, data["_id"])
       out.source = Datasworn::from_json_data(SourceInfo, data["_source"])
       out.dangers = Datasworn::from_json_data(Array[DelveSiteDomainDanger], data["dangers"])
-      out.description = Datasworn::from_json_data(MarkdownString, data["description"])
       out.features = Datasworn::from_json_data(Array[DelveSiteDomainFeature], data["features"])
       out.name = Datasworn::from_json_data(Label, data["name"])
+      out.summary = Datasworn::from_json_data(MarkdownString, data["summary"])
       out.type = Datasworn::from_json_data(DelveSiteDomainType, data["type"])
       out.comment = Datasworn::from_json_data(Documentation, data["_comment"])
       out.canonical_name = Datasworn::from_json_data(Label, data["canonical_name"])
       out.color = Datasworn::from_json_data(CSSColor, data["color"])
+      out.descriptipn = Datasworn::from_json_data(MarkdownString, data["descriptipn"])
       out.icon = Datasworn::from_json_data(SvgImageURL, data["icon"])
       out.images = Datasworn::from_json_data(Array[WebpImageURL], data["images"])
       out.name_oracle = Datasworn::from_json_data(OracleRollableID, data["name_oracle"])
@@ -3140,13 +3144,14 @@ module Datasworn
       data["_id"] = Datasworn::to_json_data(id)
       data["_source"] = Datasworn::to_json_data(source)
       data["dangers"] = Datasworn::to_json_data(dangers)
-      data["description"] = Datasworn::to_json_data(description)
       data["features"] = Datasworn::to_json_data(features)
       data["name"] = Datasworn::to_json_data(name)
+      data["summary"] = Datasworn::to_json_data(summary)
       data["type"] = Datasworn::to_json_data(type)
       data["_comment"] = Datasworn::to_json_data(comment) unless comment.nil?
       data["canonical_name"] = Datasworn::to_json_data(canonical_name) unless canonical_name.nil?
       data["color"] = Datasworn::to_json_data(color) unless color.nil?
+      data["descriptipn"] = Datasworn::to_json_data(descriptipn) unless descriptipn.nil?
       data["icon"] = Datasworn::to_json_data(icon) unless icon.nil?
       data["images"] = Datasworn::to_json_data(images) unless images.nil?
       data["name_oracle"] = Datasworn::to_json_data(name_oracle) unless name_oracle.nil?
@@ -3412,13 +3417,13 @@ module Datasworn
     # node, including the author and licensing information.
     attr_accessor :source
     attr_accessor :dangers
-
-    # The description text that appears below the title on the card.
-    attr_accessor :description
     attr_accessor :features
 
     # The primary name/label for this node.
     attr_accessor :name
+
+    # The text that appears below the title on the card.
+    attr_accessor :summary
     attr_accessor :type
     attr_accessor :comment
 
@@ -3428,6 +3433,9 @@ module Datasworn
 
     # A thematic color associated with this node.
     attr_accessor :color
+
+    # Optional extended description text.
+    attr_accessor :descriptipn
 
     # An SVG icon associated with this collection.
     attr_accessor :icon
@@ -3444,13 +3452,14 @@ module Datasworn
       out.id = Datasworn::from_json_data(DelveSiteThemeID, data["_id"])
       out.source = Datasworn::from_json_data(SourceInfo, data["_source"])
       out.dangers = Datasworn::from_json_data(Array[DelveSiteThemeDanger], data["dangers"])
-      out.description = Datasworn::from_json_data(MarkdownString, data["description"])
       out.features = Datasworn::from_json_data(Array[DelveSiteThemeFeature], data["features"])
       out.name = Datasworn::from_json_data(Label, data["name"])
+      out.summary = Datasworn::from_json_data(MarkdownString, data["summary"])
       out.type = Datasworn::from_json_data(DelveSiteThemeType, data["type"])
       out.comment = Datasworn::from_json_data(Documentation, data["_comment"])
       out.canonical_name = Datasworn::from_json_data(Label, data["canonical_name"])
       out.color = Datasworn::from_json_data(CSSColor, data["color"])
+      out.descriptipn = Datasworn::from_json_data(MarkdownString, data["descriptipn"])
       out.icon = Datasworn::from_json_data(SvgImageURL, data["icon"])
       out.images = Datasworn::from_json_data(Array[WebpImageURL], data["images"])
       out.replaces = Datasworn::from_json_data(Array[DelveSiteThemeIDWildcard], data["replaces"])
@@ -3464,13 +3473,14 @@ module Datasworn
       data["_id"] = Datasworn::to_json_data(id)
       data["_source"] = Datasworn::to_json_data(source)
       data["dangers"] = Datasworn::to_json_data(dangers)
-      data["description"] = Datasworn::to_json_data(description)
       data["features"] = Datasworn::to_json_data(features)
       data["name"] = Datasworn::to_json_data(name)
+      data["summary"] = Datasworn::to_json_data(summary)
       data["type"] = Datasworn::to_json_data(type)
       data["_comment"] = Datasworn::to_json_data(comment) unless comment.nil?
       data["canonical_name"] = Datasworn::to_json_data(canonical_name) unless canonical_name.nil?
       data["color"] = Datasworn::to_json_data(color) unless color.nil?
+      data["descriptipn"] = Datasworn::to_json_data(descriptipn) unless descriptipn.nil?
       data["icon"] = Datasworn::to_json_data(icon) unless icon.nil?
       data["images"] = Datasworn::to_json_data(images) unless images.nil?
       data["replaces"] = Datasworn::to_json_data(replaces) unless replaces.nil?

@@ -2313,9 +2313,9 @@
 				"_id",
 				"type",
 				"name",
+				"summary",
 				"features",
 				"dangers",
-				"description",
 				"_source"
 			],
 			"properties": {
@@ -2360,6 +2360,10 @@
 						"$ref": "#/definitions/WebpImageUrl",
 						"description": "Extra images associated with this node."
 					}
+				},
+				"summary": {
+					"$ref": "#/definitions/MarkdownString",
+					"description": "The text that appears below the title on the card."
 				},
 				"features": {
 					"allOf": [
@@ -2771,10 +2775,6 @@
 						}
 					]
 				},
-				"description": {
-					"$ref": "#/definitions/MarkdownString",
-					"description": "The description text that appears below the title on the card."
-				},
 				"suggestions": {
 					"$ref": "#/definitions/Suggestions"
 				},
@@ -2787,6 +2787,10 @@
 				"_source": {
 					"$ref": "#/definitions/SourceInfo",
 					"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
+				},
+				"descriptipn": {
+					"$ref": "#/definitions/MarkdownString",
+					"description": "Optional extended description text."
 				}
 			}
 		},
@@ -2958,9 +2962,9 @@
 				"_id",
 				"type",
 				"name",
+				"summary",
 				"features",
 				"dangers",
-				"description",
 				"_source"
 			],
 			"properties": {
@@ -3001,6 +3005,10 @@
 						"$ref": "#/definitions/WebpImageUrl",
 						"description": "Extra images associated with this node."
 					}
+				},
+				"summary": {
+					"$ref": "#/definitions/MarkdownString",
+					"description": "The text that appears below the title on the card."
 				},
 				"features": {
 					"allOf": [
@@ -3412,10 +3420,6 @@
 						}
 					]
 				},
-				"description": {
-					"$ref": "#/definitions/MarkdownString",
-					"description": "The description text that appears below the title on the card."
-				},
 				"suggestions": {
 					"$ref": "#/definitions/Suggestions"
 				},
@@ -3428,6 +3432,10 @@
 				"_source": {
 					"$ref": "#/definitions/SourceInfo",
 					"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
+				},
+				"descriptipn": {
+					"$ref": "#/definitions/MarkdownString",
+					"description": "Optional extended description text."
 				}
 			}
 		},

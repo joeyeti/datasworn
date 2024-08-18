@@ -1760,13 +1760,13 @@ type DelveSiteDomain struct {
 
 	Dangers []DelveSiteDomainDanger `json:"dangers"`
 
-	// The description text that appears below the title on the card.
-	Description MarkdownString `json:"description"`
-
 	Features []DelveSiteDomainFeature `json:"features"`
 
 	// The primary name/label for this node.
 	Name Label `json:"name"`
+
+	// The text that appears below the title on the card.
+	Summary MarkdownString `json:"summary"`
 
 	Type DelveSiteDomainType `json:"type"`
 
@@ -1778,6 +1778,9 @@ type DelveSiteDomain struct {
 
 	// A thematic color associated with this node.
 	Color *CSSColor `json:"color,omitempty"`
+
+	// Optional extended description text.
+	Descriptipn *MarkdownString `json:"descriptipn,omitempty"`
 
 	// An SVG icon associated with this collection.
 	Icon *SvgImageURL `json:"icon,omitempty"`
@@ -1898,13 +1901,13 @@ type DelveSiteTheme struct {
 
 	Dangers []DelveSiteThemeDanger `json:"dangers"`
 
-	// The description text that appears below the title on the card.
-	Description MarkdownString `json:"description"`
-
 	Features []DelveSiteThemeFeature `json:"features"`
 
 	// The primary name/label for this node.
 	Name Label `json:"name"`
+
+	// The text that appears below the title on the card.
+	Summary MarkdownString `json:"summary"`
 
 	Type DelveSiteThemeType `json:"type"`
 
@@ -1916,6 +1919,9 @@ type DelveSiteTheme struct {
 
 	// A thematic color associated with this node.
 	Color *CSSColor `json:"color,omitempty"`
+
+	// Optional extended description text.
+	Descriptipn *MarkdownString `json:"descriptipn,omitempty"`
 
 	// An SVG icon associated with this collection.
 	Icon *SvgImageURL `json:"icon,omitempty"`

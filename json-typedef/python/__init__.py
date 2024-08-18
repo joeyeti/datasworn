@@ -3569,15 +3569,15 @@ class DelveSiteDomain:
     """
 
     dangers: 'List[DelveSiteDomainDanger]'
-    description: 'MarkdownString'
-    """
-    The description text that appears below the title on the card.
-    """
-
     features: 'List[DelveSiteDomainFeature]'
     name: 'Label'
     """
     The primary name/label for this node.
+    """
+
+    summary: 'MarkdownString'
+    """
+    The text that appears below the title on the card.
     """
 
     type: 'DelveSiteDomainType'
@@ -3591,6 +3591,11 @@ class DelveSiteDomain:
     color: 'Optional[CSSColor]'
     """
     A thematic color associated with this node.
+    """
+
+    descriptipn: 'Optional[MarkdownString]'
+    """
+    Optional extended description text.
     """
 
     icon: 'Optional[SvgImageURL]'
@@ -3624,13 +3629,14 @@ class DelveSiteDomain:
             _from_json_data(DelveSiteDomainID, data.get("_id")),
             _from_json_data(SourceInfo, data.get("_source")),
             _from_json_data(List[DelveSiteDomainDanger], data.get("dangers")),
-            _from_json_data(MarkdownString, data.get("description")),
             _from_json_data(List[DelveSiteDomainFeature], data.get("features")),
             _from_json_data(Label, data.get("name")),
+            _from_json_data(MarkdownString, data.get("summary")),
             _from_json_data(DelveSiteDomainType, data.get("type")),
             _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
+            _from_json_data(Optional[MarkdownString], data.get("descriptipn")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
             _from_json_data(Optional[List[WebpImageURL]], data.get("images")),
             _from_json_data(Optional[OracleRollableID], data.get("name_oracle")),
@@ -3644,9 +3650,9 @@ class DelveSiteDomain:
         data["_id"] = _to_json_data(self.id)
         data["_source"] = _to_json_data(self.source)
         data["dangers"] = _to_json_data(self.dangers)
-        data["description"] = _to_json_data(self.description)
         data["features"] = _to_json_data(self.features)
         data["name"] = _to_json_data(self.name)
+        data["summary"] = _to_json_data(self.summary)
         data["type"] = _to_json_data(self.type)
         if self.comment is not None:
              data["_comment"] = _to_json_data(self.comment)
@@ -3654,6 +3660,8 @@ class DelveSiteDomain:
              data["canonical_name"] = _to_json_data(self.canonical_name)
         if self.color is not None:
              data["color"] = _to_json_data(self.color)
+        if self.descriptipn is not None:
+             data["descriptipn"] = _to_json_data(self.descriptipn)
         if self.icon is not None:
              data["icon"] = _to_json_data(self.icon)
         if self.images is not None:
@@ -3949,15 +3957,15 @@ class DelveSiteTheme:
     """
 
     dangers: 'List[DelveSiteThemeDanger]'
-    description: 'MarkdownString'
-    """
-    The description text that appears below the title on the card.
-    """
-
     features: 'List[DelveSiteThemeFeature]'
     name: 'Label'
     """
     The primary name/label for this node.
+    """
+
+    summary: 'MarkdownString'
+    """
+    The text that appears below the title on the card.
     """
 
     type: 'DelveSiteThemeType'
@@ -3971,6 +3979,11 @@ class DelveSiteTheme:
     color: 'Optional[CSSColor]'
     """
     A thematic color associated with this node.
+    """
+
+    descriptipn: 'Optional[MarkdownString]'
+    """
+    Optional extended description text.
     """
 
     icon: 'Optional[SvgImageURL]'
@@ -3994,13 +4007,14 @@ class DelveSiteTheme:
             _from_json_data(DelveSiteThemeID, data.get("_id")),
             _from_json_data(SourceInfo, data.get("_source")),
             _from_json_data(List[DelveSiteThemeDanger], data.get("dangers")),
-            _from_json_data(MarkdownString, data.get("description")),
             _from_json_data(List[DelveSiteThemeFeature], data.get("features")),
             _from_json_data(Label, data.get("name")),
+            _from_json_data(MarkdownString, data.get("summary")),
             _from_json_data(DelveSiteThemeType, data.get("type")),
             _from_json_data(Optional[Documentation], data.get("_comment")),
             _from_json_data(Optional[Label], data.get("canonical_name")),
             _from_json_data(Optional[CSSColor], data.get("color")),
+            _from_json_data(Optional[MarkdownString], data.get("descriptipn")),
             _from_json_data(Optional[SvgImageURL], data.get("icon")),
             _from_json_data(Optional[List[WebpImageURL]], data.get("images")),
             _from_json_data(Optional[List[DelveSiteThemeIDWildcard]], data.get("replaces")),
@@ -4013,9 +4027,9 @@ class DelveSiteTheme:
         data["_id"] = _to_json_data(self.id)
         data["_source"] = _to_json_data(self.source)
         data["dangers"] = _to_json_data(self.dangers)
-        data["description"] = _to_json_data(self.description)
         data["features"] = _to_json_data(self.features)
         data["name"] = _to_json_data(self.name)
+        data["summary"] = _to_json_data(self.summary)
         data["type"] = _to_json_data(self.type)
         if self.comment is not None:
              data["_comment"] = _to_json_data(self.comment)
@@ -4023,6 +4037,8 @@ class DelveSiteTheme:
              data["canonical_name"] = _to_json_data(self.canonical_name)
         if self.color is not None:
              data["color"] = _to_json_data(self.color)
+        if self.descriptipn is not None:
+             data["descriptipn"] = _to_json_data(self.descriptipn)
         if self.icon is not None:
              data["icon"] = _to_json_data(self.icon)
         if self.images is not None:

@@ -21,14 +21,14 @@ public class DelveSiteTheme {
     @JsonProperty("dangers")
     private List<DelveSiteThemeDanger> dangers;
 
-    @JsonProperty("description")
-    private MarkdownString description;
-
     @JsonProperty("features")
     private List<DelveSiteThemeFeature> features;
 
     @JsonProperty("name")
     private Label name;
+
+    @JsonProperty("summary")
+    private MarkdownString summary;
 
     @JsonProperty("type")
     private DelveSiteThemeType type;
@@ -44,6 +44,10 @@ public class DelveSiteTheme {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty("color")
     private CssColor color;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @JsonProperty("descriptipn")
+    private MarkdownString descriptipn;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty("icon")
@@ -117,22 +121,6 @@ public class DelveSiteTheme {
     }
 
     /**
-     * Getter for description.<p>
-     * The description text that appears below the title on the card.
-     */
-    public MarkdownString getDescription() {
-        return description;
-    }
-
-    /**
-     * Setter for description.<p>
-     * The description text that appears below the title on the card.
-     */
-    public void setDescription(MarkdownString description) {
-        this.description = description;
-    }
-
-    /**
      * Getter for features.<p>
      */
     public List<DelveSiteThemeFeature> getFeatures() {
@@ -160,6 +148,22 @@ public class DelveSiteTheme {
      */
     public void setName(Label name) {
         this.name = name;
+    }
+
+    /**
+     * Getter for summary.<p>
+     * The text that appears below the title on the card.
+     */
+    public MarkdownString getSummary() {
+        return summary;
+    }
+
+    /**
+     * Setter for summary.<p>
+     * The text that appears below the title on the card.
+     */
+    public void setSummary(MarkdownString summary) {
+        this.summary = summary;
     }
 
     /**
@@ -222,6 +226,22 @@ public class DelveSiteTheme {
      */
     public void setColor(CssColor color) {
         this.color = color;
+    }
+
+    /**
+     * Getter for descriptipn.<p>
+     * Optional extended description text.
+     */
+    public MarkdownString getDescriptipn() {
+        return descriptipn;
+    }
+
+    /**
+     * Setter for descriptipn.<p>
+     * Optional extended description text.
+     */
+    public void setDescriptipn(MarkdownString descriptipn) {
+        this.descriptipn = descriptipn;
     }
 
     /**

@@ -35,10 +35,14 @@ const DelveSiteDomainDangers = Type.Array(Type.Ref(DelveSiteDomainDanger))
 export const DelveSiteDomain = setSourceDataSchema(
 	NonCollectableNode(
 		Type.Object({
-			description: Type.Ref(MarkdownString, {
-				description:
-					'The description text that appears below the title on the card.'
+			summary: Type.Ref(MarkdownString, {
+				description: 'The text that appears below the title on the card.'
 			}),
+			descriptipn: Type.Optional(
+				Type.Ref(MarkdownString, {
+					description: 'Optional extended description text.'
+				})
+			),
 			name_oracle: Type.Optional(
 				Type.Ref(Id.OracleRollableId, {
 					description:

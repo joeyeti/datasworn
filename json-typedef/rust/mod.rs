@@ -1954,16 +1954,16 @@ pub struct DelveSiteDomain {
     #[serde(rename = "dangers")]
     pub dangers: Vec<DelveSiteDomainDanger>,
 
-    /// The description text that appears below the title on the card.
-    #[serde(rename = "description")]
-    pub description: MarkdownString,
-
     #[serde(rename = "features")]
     pub features: Vec<DelveSiteDomainFeature>,
 
     /// The primary name/label for this node.
     #[serde(rename = "name")]
     pub name: Label,
+
+    /// The text that appears below the title on the card.
+    #[serde(rename = "summary")]
+    pub summary: MarkdownString,
 
     #[serde(rename = "type")]
     pub type_: DelveSiteDomainType,
@@ -1982,6 +1982,11 @@ pub struct DelveSiteDomain {
     #[serde(rename = "color")]
     #[serde(skip_serializing_if = "Option::is_none")]
     pub color: Option<Box<CssColor>>,
+
+    /// Optional extended description text.
+    #[serde(rename = "descriptipn")]
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub descriptipn: Option<Box<MarkdownString>>,
 
     /// An SVG icon associated with this collection.
     #[serde(rename = "icon")]
@@ -2157,16 +2162,16 @@ pub struct DelveSiteTheme {
     #[serde(rename = "dangers")]
     pub dangers: Vec<DelveSiteThemeDanger>,
 
-    /// The description text that appears below the title on the card.
-    #[serde(rename = "description")]
-    pub description: MarkdownString,
-
     #[serde(rename = "features")]
     pub features: Vec<DelveSiteThemeFeature>,
 
     /// The primary name/label for this node.
     #[serde(rename = "name")]
     pub name: Label,
+
+    /// The text that appears below the title on the card.
+    #[serde(rename = "summary")]
+    pub summary: MarkdownString,
 
     #[serde(rename = "type")]
     pub type_: DelveSiteThemeType,
@@ -2185,6 +2190,11 @@ pub struct DelveSiteTheme {
     #[serde(rename = "color")]
     #[serde(skip_serializing_if = "Option::is_none")]
     pub color: Option<Box<CssColor>>,
+
+    /// Optional extended description text.
+    #[serde(rename = "descriptipn")]
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub descriptipn: Option<Box<MarkdownString>>,
 
     /// An SVG icon associated with this collection.
     #[serde(rename = "icon")]

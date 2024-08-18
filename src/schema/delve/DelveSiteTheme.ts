@@ -35,10 +35,14 @@ const DelveSiteThemeDangers = Type.Array(Type.Ref(DelveSiteThemeDanger))
 export const DelveSiteTheme = setSourceDataSchema(
 	NonCollectableNode(
 		Type.Object({
-			description: Type.Ref(MarkdownString, {
-				description:
-					'The description text that appears below the title on the card.'
+			summary: Type.Ref(MarkdownString, {
+				description: 'The text that appears below the title on the card.'
 			}),
+			descriptipn: Type.Optional(
+				Type.Ref(MarkdownString, {
+					description: 'Optional extended description text.'
+				})
+			),
 			features: Type.Intersect(
 				[
 					DelveSiteThemeFeatures,

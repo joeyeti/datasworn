@@ -26,12 +26,6 @@ namespace Datasworn
         [JsonPropertyName("dangers")]
         public IList<DelveSiteDomainDanger> Dangers { get; set; }
 
-        /// <summary>
-        /// The description text that appears below the title on the card.
-        /// </summary>
-        [JsonPropertyName("description")]
-        public MarkdownString Description { get; set; }
-
         [JsonPropertyName("features")]
         public IList<DelveSiteDomainFeature> Features { get; set; }
 
@@ -40,6 +34,12 @@ namespace Datasworn
         /// </summary>
         [JsonPropertyName("name")]
         public Label Name { get; set; }
+
+        /// <summary>
+        /// The text that appears below the title on the card.
+        /// </summary>
+        [JsonPropertyName("summary")]
+        public MarkdownString Summary { get; set; }
 
         [JsonPropertyName("type")]
         public DelveSiteDomainType Type_ { get; set; }
@@ -62,6 +62,13 @@ namespace Datasworn
         [JsonPropertyName("color")]
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
         public CssColor? Color { get; set; }
+
+        /// <summary>
+        /// Optional extended description text.
+        /// </summary>
+        [JsonPropertyName("descriptipn")]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
+        public MarkdownString? Descriptipn { get; set; }
 
         /// <summary>
         /// An SVG icon associated with this collection.

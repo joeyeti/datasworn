@@ -15,7 +15,7 @@ site_domains:
       url: https://perchance.org/rsek-delve-themes-domains
       date: 2022-07-05
     icon: icons/delve_site_domain/dreamscape.svg
-    description: A place where dream-logic supplants natural law.
+    summary: A place where dream-logic supplants natural law.
     features:
       - roll: { min: 21, max: 43 }
         text: 'Metaphoric feature: walled heart, etc.'
@@ -67,7 +67,7 @@ site_domains:
     type: delve_site_domain
     _source: *Source
     icon: icons/delve_site_domain/infrastructure.svg
-    description: The substrate of public life or private enterprise.
+    summary: The substrate of public life or private enterprise.
     features:
       - roll: { min: 21, max: 43 }
         text: Dank tunnels or passages
@@ -106,7 +106,7 @@ site_domains:
     type: delve_site_domain
     _source: *Source
     icon: icons/delve_site_domain/plains.svg
-    description: A grassland, steppe, or other open country.
+    summary: A grassland, steppe, or other open country.
     features:
       - roll: { min: 21, max: 43 }
         text: Open plains
@@ -145,7 +145,7 @@ site_domains:
     type: delve_site_domain
     _source: *Source
     icon: icons/delve_site_domain/repository.svg
-    description: A place to store or display precious things.
+    summary: A place to store or display precious things.
     features:
       - roll: { min: 21, max: 43 }
         text: Items ordered or on display
@@ -184,7 +184,7 @@ site_domains:
     type: delve_site_domain
     _source: *Source
     icon: icons/delve_site_domain/revel.svg
-    description: Functions, festivities, and frolics.
+    summary: Functions, festivities, and frolics.
     features:
       - roll: { min: 21, max: 43 }
         text: Crowd of revellers
@@ -223,7 +223,7 @@ site_domains:
     type: delve_site_domain
     _source: *Source
     icon: icons/delve_site_domain/wastes.svg
-    description: A badland, desert, tundra, or other barren place.
+    summary: A badland, desert, tundra, or other barren place.
     features:
       - roll: { min: 21, max: 43 }
         text: Barren plain or dunes

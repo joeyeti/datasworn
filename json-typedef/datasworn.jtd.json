@@ -2419,10 +2419,10 @@
 						"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
 					}
 				},
-				"description": {
+				"summary": {
 					"ref": "MarkdownString",
 					"metadata": {
-						"description": "The description text that appears below the title on the card."
+						"description": "The text that appears below the title on the card."
 					}
 				},
 				"features": {
@@ -2481,6 +2481,12 @@
 					"ref": "SvgImageUrl",
 					"metadata": {
 						"description": "An SVG icon associated with this collection."
+					}
+				},
+				"descriptipn": {
+					"ref": "MarkdownString",
+					"metadata": {
+						"description": "Optional extended description text."
 					}
 				},
 				"name_oracle": {
@@ -2670,10 +2676,10 @@
 						"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
 					}
 				},
-				"description": {
+				"summary": {
 					"ref": "MarkdownString",
 					"metadata": {
-						"description": "The description text that appears below the title on the card."
+						"description": "The text that appears below the title on the card."
 					}
 				},
 				"features": {
@@ -2732,6 +2738,12 @@
 					"ref": "SvgImageUrl",
 					"metadata": {
 						"description": "An SVG icon associated with this collection."
+					}
+				},
+				"descriptipn": {
+					"ref": "MarkdownString",
+					"metadata": {
+						"description": "Optional extended description text."
 					}
 				}
 			},

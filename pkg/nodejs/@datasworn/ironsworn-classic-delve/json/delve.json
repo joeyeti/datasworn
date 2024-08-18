@@ -16890,6 +16890,7 @@
 			"type": "delve_site_domain",
 			"name": "Barrow",
 			"name_oracle": "oracle_rollable:delve/site_name/place/barrow",
+			"summary": "The dead are enshrined here.",
 			"features": [
 				{
 					"_id": "delve_site_domain.feature:delve/barrow.0",
@@ -17040,7 +17041,6 @@
 					"text": "Grave goods with hidden dangers"
 				}
 			],
-			"description": "The dead are enshrined here.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -17059,6 +17059,7 @@
 			"type": "delve_site_domain",
 			"name": "Cavern",
 			"name_oracle": "oracle_rollable:delve/site_name/place/cavern",
+			"summary": "A place of stone and darkness.",
 			"features": [
 				{
 					"_id": "delve_site_domain.feature:delve/cavern.0",
@@ -17205,7 +17206,6 @@
 					"text": "Fissure or sinkhole"
 				}
 			],
-			"description": "A place of stone and darkness.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -17224,6 +17224,7 @@
 			"type": "delve_site_domain",
 			"name": "Frozen cavern",
 			"name_oracle": "oracle_rollable:delve/site_name/place/frozen_cavern",
+			"summary": "A place of deep caves and enduring cold.",
 			"features": [
 				{
 					"_id": "delve_site_domain.feature:delve/frozen_cavern.0",
@@ -17370,7 +17371,6 @@
 					"text": "Disorienting reflections"
 				}
 			],
-			"description": "A place of deep caves and enduring cold.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -17389,6 +17389,7 @@
 			"type": "delve_site_domain",
 			"name": "Icereach",
 			"name_oracle": "oracle_rollable:delve/site_name/place/icereach",
+			"summary": "A frigid landscape formed of frozen seas.",
 			"features": [
 				{
 					"_id": "delve_site_domain.feature:delve/icereach.0",
@@ -17535,7 +17536,6 @@
 					"text": "Foul weather"
 				}
 			],
-			"description": "A frigid landscape formed of frozen seas.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -17554,6 +17554,7 @@
 			"type": "delve_site_domain",
 			"name": "Mine",
 			"name_oracle": "oracle_rollable:delve/site_name/place/mine",
+			"summary": "Tunnels dug greedily and deep.",
 			"features": [
 				{
 					"_id": "delve_site_domain.feature:delve/mine.0",
@@ -17700,7 +17701,6 @@
 					"text": "Weakened terrain"
 				}
 			],
-			"description": "Tunnels dug greedily and deep.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -17719,6 +17719,7 @@
 			"type": "delve_site_domain",
 			"name": "Pass",
 			"name_oracle": "oracle_rollable:delve/site_name/place/pass",
+			"summary": "Treacherous paths over high mountains.",
 			"features": [
 				{
 					"_id": "delve_site_domain.feature:delve/pass.0",
@@ -17865,7 +17866,6 @@
 					"text": "Foul weather"
 				}
 			],
-			"description": "Treacherous paths over high mountains.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -17884,6 +17884,7 @@
 			"type": "delve_site_domain",
 			"name": "Ruin",
 			"name_oracle": "oracle_rollable:delve/site_name/place/ruin",
+			"summary": "The crumbling legacy of a dead civilization.",
 			"features": [
 				{
 					"_id": "delve_site_domain.feature:delve/ruin.0",
@@ -18034,7 +18035,6 @@
 					"text": "Ancient secrets best left buried"
 				}
 			],
-			"description": "The crumbling legacy of a dead civilization.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -18053,6 +18053,7 @@
 			"type": "delve_site_domain",
 			"name": "Sea cave",
 			"name_oracle": "oracle_rollable:delve/site_name/place/sea_cave",
+			"summary": "Stone passages carved by ocean waves.",
 			"features": [
 				{
 					"_id": "delve_site_domain.feature:delve/sea_cave.0",
@@ -18199,7 +18200,6 @@
 					"text": "Claustrophobic squeeze"
 				}
 			],
-			"description": "Stone passages carved by ocean waves.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -18218,6 +18218,7 @@
 			"type": "delve_site_domain",
 			"name": "Shadowfen",
 			"name_oracle": "oracle_rollable:delve/site_name/place/shadowfen",
+			"summary": "A primeval marsh, cloaked in mist.",
 			"features": [
 				{
 					"_id": "delve_site_domain.feature:delve/shadowfen.0",
@@ -18364,7 +18365,6 @@
 					"text": "Hidden quagmire"
 				}
 			],
-			"description": "A primeval marsh, cloaked in mist.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -18383,6 +18383,7 @@
 			"type": "delve_site_domain",
 			"name": "Stronghold",
 			"name_oracle": "oracle_rollable:delve/site_name/place/stronghold",
+			"summary": "A fortress secured against trespassers.",
 			"features": [
 				{
 					"_id": "delve_site_domain.feature:delve/stronghold.0",
@@ -18533,7 +18534,6 @@
 					"text": "Alarm trigger"
 				}
 			],
-			"description": "A fortress secured against trespassers.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -18552,6 +18552,7 @@
 			"type": "delve_site_domain",
 			"name": "Tanglewood",
 			"name_oracle": "oracle_rollable:delve/site_name/place/tanglewood",
+			"summary": "A perilous forest of eternal shadow.",
 			"features": [
 				{
 					"_id": "delve_site_domain.feature:delve/tanglewood.0",
@@ -18702,7 +18703,6 @@
 					"text": "Entangling plant life"
 				}
 			],
-			"description": "A perilous forest of eternal shadow.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -18721,6 +18721,7 @@
 			"type": "delve_site_domain",
 			"name": "Underkeep",
 			"name_oracle": "oracle_rollable:delve/site_name/place/underkeep",
+			"summary": "An age-old subterranean dungeon.",
 			"features": [
 				{
 					"_id": "delve_site_domain.feature:delve/underkeep.0",
@@ -18871,7 +18872,6 @@
 					"text": "Denizen lurks in darkness"
 				}
 			],
-			"description": "An age-old subterranean dungeon.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -18891,6 +18891,7 @@
 			"_id": "delve_site_theme:delve/ancient",
 			"type": "delve_site_theme",
 			"name": "Ancient",
+			"summary": "This place holds the secrets of a bygone age.",
 			"features": [
 				{
 					"_id": "delve_site_theme.feature:delve/ancient.0",
@@ -19035,7 +19036,6 @@
 					"text": "Others seek power or knowledge"
 				}
 			],
-			"description": "This place holds the secrets of a bygone age.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -19053,6 +19053,7 @@
 			"_id": "delve_site_theme:delve/corrupted",
 			"type": "delve_site_theme",
 			"name": "Corrupted",
+			"summary": "This place is tainted by dark magic.",
 			"features": [
 				{
 					"_id": "delve_site_theme.feature:delve/corrupted.0",
@@ -19197,7 +19198,6 @@
 					"text": "Dread harbingers of a greater magic"
 				}
 			],
-			"description": "This place is tainted by dark magic.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -19215,6 +19215,7 @@
 			"_id": "delve_site_theme:delve/fortified",
 			"type": "delve_site_theme",
 			"name": "Fortified",
+			"summary": "Foes defend this place against intruders.",
 			"features": [
 				{
 					"_id": "delve_site_theme.feature:delve/fortified.0",
@@ -19363,7 +19364,6 @@
 					"text": "Alarm trigger"
 				}
 			],
-			"description": "Foes defend this place against intruders.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -19381,6 +19381,7 @@
 			"_id": "delve_site_theme:delve/hallowed",
 			"type": "delve_site_theme",
 			"name": "Hallowed",
+			"summary": "The faithful worship here.",
 			"features": [
 				{
 					"_id": "delve_site_theme.feature:delve/hallowed.0",
@@ -19521,7 +19522,6 @@
 					"text": "Prophecies reveal a dark fate"
 				}
 			],
-			"description": "The faithful worship here.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -19539,6 +19539,7 @@
 			"_id": "delve_site_theme:delve/haunted",
 			"type": "delve_site_theme",
 			"name": "Haunted",
+			"summary": "Restless spirits are bound to this place.",
 			"features": [
 				{
 					"_id": "delve_site_theme.feature:delve/haunted.0",
@@ -19679,7 +19680,6 @@
 					"text": "Sudden, shocking manifestation"
 				}
 			],
-			"description": "Restless spirits are bound to this place.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -19697,6 +19697,7 @@
 			"_id": "delve_site_theme:delve/infested",
 			"type": "delve_site_theme",
 			"name": "Infested",
+			"summary": "Foul creatures dwell here.",
 			"features": [
 				{
 					"_id": "delve_site_theme.feature:delve/infested.0",
@@ -19841,7 +19842,6 @@
 					"text": "Victim’s horrible fate is revealed"
 				}
 			],
-			"description": "Foul creatures dwell here.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -19859,6 +19859,7 @@
 			"_id": "delve_site_theme:delve/ravaged",
 			"type": "delve_site_theme",
 			"name": "Ravaged",
+			"summary": "Time, disaster, or strife have taken their toll.",
 			"features": [
 				{
 					"_id": "delve_site_theme.feature:delve/ravaged.0",
@@ -19999,7 +20000,6 @@
 					"text": "Ravages return anew"
 				}
 			],
-			"description": "Time, disaster, or strife have taken their toll.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -20017,6 +20017,7 @@
 			"_id": "delve_site_theme:delve/wild",
 			"type": "delve_site_theme",
 			"name": "Wild",
+			"summary": "Nature prevails in this place.",
 			"features": [
 				{
 					"_id": "delve_site_theme.feature:delve/wild.0",
@@ -20157,7 +20158,6 @@
 					"text": "Ill-fated victim in danger"
 				}
 			],
-			"description": "Nature prevails in this place.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [

@@ -2450,14 +2450,7 @@
 			"title": "DelveSiteDomain",
 			"type": "object",
 			"description": "A delve site Domain card.",
-			"required": [
-				"type",
-				"name",
-				"features",
-				"dangers",
-				"description",
-				"_source"
-			],
+			"required": ["type", "name", "summary", "features", "dangers", "_source"],
 			"properties": {
 				"_id": {
 					"$ref": "#/definitions/DelveSiteDomainId",
@@ -2500,6 +2493,10 @@
 						"$ref": "#/definitions/WebpImageUrl",
 						"description": "Extra images associated with this node."
 					}
+				},
+				"summary": {
+					"$ref": "#/definitions/MarkdownString",
+					"description": "The text that appears below the title on the card."
 				},
 				"features": {
 					"allOf": [
@@ -2911,10 +2908,6 @@
 						}
 					]
 				},
-				"description": {
-					"$ref": "#/definitions/MarkdownString",
-					"description": "The description text that appears below the title on the card."
-				},
 				"suggestions": {
 					"$ref": "#/definitions/Suggestions"
 				},
@@ -2927,6 +2920,10 @@
 				"_source": {
 					"$ref": "#/definitions/SourceInfo",
 					"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
+				},
+				"descriptipn": {
+					"$ref": "#/definitions/MarkdownString",
+					"description": "Optional extended description text."
 				}
 			},
 			"additionalProperties": {}
@@ -3097,14 +3094,7 @@
 			"title": "DelveSiteTheme",
 			"type": "object",
 			"description": "A delve site theme card.",
-			"required": [
-				"type",
-				"name",
-				"features",
-				"dangers",
-				"description",
-				"_source"
-			],
+			"required": ["type", "name", "summary", "features", "dangers", "_source"],
 			"properties": {
 				"_id": {
 					"$ref": "#/definitions/DelveSiteThemeId",
@@ -3143,6 +3133,10 @@
 						"$ref": "#/definitions/WebpImageUrl",
 						"description": "Extra images associated with this node."
 					}
+				},
+				"summary": {
+					"$ref": "#/definitions/MarkdownString",
+					"description": "The text that appears below the title on the card."
 				},
 				"features": {
 					"allOf": [
@@ -3554,10 +3548,6 @@
 						}
 					]
 				},
-				"description": {
-					"$ref": "#/definitions/MarkdownString",
-					"description": "The description text that appears below the title on the card."
-				},
 				"suggestions": {
 					"$ref": "#/definitions/Suggestions"
 				},
@@ -3570,6 +3560,10 @@
 				"_source": {
 					"$ref": "#/definitions/SourceInfo",
 					"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
+				},
+				"descriptipn": {
+					"$ref": "#/definitions/MarkdownString",
+					"description": "Optional extended description text."
 				}
 			},
 			"additionalProperties": {}
