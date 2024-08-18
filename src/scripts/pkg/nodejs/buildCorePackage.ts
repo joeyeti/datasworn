@@ -1,7 +1,7 @@
 import { Compiler } from '@swc/core'
 import path from 'node:path'
 import {
-	LEGACY_ID_PATH,
+	LEGACY_ID_DIR,
 	PKG_DIR_NODE,
 	PKG_SCOPE_OFFICIAL,
 	ROOT_HISTORY,
@@ -10,7 +10,7 @@ import {
 	VERSION
 } from '../../const.js'
 import Log from '../../utils/Log.js'
-import { copyFile, emptyDir } from '../../utils/readWrite.js'
+import { copyFile, emptyDir, writeJSON } from '../../utils/readWrite.js'
 import { Glob } from 'bun'
 
 new Compiler()
@@ -30,6 +30,26 @@ export const config = {
 	jsonDir,
 } as const
 
+async function buildLegacyDataforgedIdMap() {
+	const glob = new Bun.Glob('**/*.json')
+
+	const legacyIdRoot = 'src/legacy_ids/dataforged'
+
+	const loadOps: Promise<unknown>[] = []
+
+	for await (const file of glob.scan({ cwd: legacyIdRoot, absolute: true })) {
+		loadOps.push(Bun.file(file).json())
+	}
+
+	const objects = await Promise.all(loadOps)
+
+	const mergedObject: Record<string, string | null> = {}
+
+	for (const obj of objects) Object.assign(mergedObject, obj)
+
+	return mergedObject
+}
+
 /** Assembles the core package from built data, which contains types, schema, and documentation. */
 export async function buildCorePackage({
 	id,
@@ -41,17 +61,17 @@ export async function buildCorePackage({
 	await Promise.all([emptyDir(jsonDir), emptyDir(corePkgDist)])
 
   const writeOps: Promise<unknown>[] = [
-		copyFile(SCHEMA_PATH, path.join(jsonDir, 'datasworn.schema.json')),
-		copyFile(
-			SOURCE_SCHEMA_PATH,
-			path.join(jsonDir, 'datasworn-source.schema.json')
-		),
-		copyFile(
-			// TODO: script to build the legacy ID map?
-			LEGACY_ID_PATH,
-			path.join(jsonDir, path.basename(LEGACY_ID_PATH))
-		)
-	]
+			copyFile(SCHEMA_PATH, path.join(jsonDir, 'datasworn.schema.json')),
+			copyFile(
+				SOURCE_SCHEMA_PATH,
+				path.join(jsonDir, 'datasworn-source.schema.json')
+			),
+
+			writeJSON(
+				path.join(corePkgMigration, 'dataforged_legacy', 'id_map.json'),
+				await buildLegacyDataforgedIdMap()
+			)
+		]
 
 	const migrationFileGlob = new Glob('*/*_map.json')
 	/** Paths relative to ROOT_HISTORY which are to be evaluated for copying.

@@ -1269,6 +1269,10 @@ export interface DelveSiteDomain {
 	 */
 	icon?: SvgImageUrl
 	/**
+	 * The description text that appears below the title on the card.
+	 */
+	description: MarkdownString
+	/**
 	 * An oracle table ID containing place name elements. For examples, see oracle ID `oracle_rollable:delve/site_name/place/barrow`, and its siblings in oracle collection ID `oracle_collection:delve/site_name/place`. These oracles are used by the site name oracle from Ironsworn: Delve (`oracle_rollable:delve/site_name/format`) to create random names for delve sites.
 	 */
 	name_oracle?: OracleRollableId
@@ -1555,6 +1559,10 @@ export interface DelveSiteTheme {
 	 * An SVG icon associated with this collection.
 	 */
 	icon?: SvgImageUrl
+	/**
+	 * The description text that appears below the title on the card.
+	 */
+	description: MarkdownString
 	features: DelveSiteThemeFeature[] &
 		[
 			{

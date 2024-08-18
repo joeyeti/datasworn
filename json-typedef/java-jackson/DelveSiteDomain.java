@@ -21,6 +21,9 @@ public class DelveSiteDomain {
     @JsonProperty("dangers")
     private List<DelveSiteDomainDanger> dangers;
 
+    @JsonProperty("description")
+    private MarkdownString description;
+
     @JsonProperty("features")
     private List<DelveSiteDomainFeature> features;
 
@@ -115,6 +118,22 @@ public class DelveSiteDomain {
      */
     public void setDangers(List<DelveSiteDomainDanger> dangers) {
         this.dangers = dangers;
+    }
+
+    /**
+     * Getter for description.<p>
+     * The description text that appears below the title on the card.
+     */
+    public MarkdownString getDescription() {
+        return description;
+    }
+
+    /**
+     * Setter for description.<p>
+     * The description text that appears below the title on the card.
+     */
+    public void setDescription(MarkdownString description) {
+        this.description = description;
     }
 
     /**

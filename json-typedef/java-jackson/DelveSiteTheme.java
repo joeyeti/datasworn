@@ -21,6 +21,9 @@ public class DelveSiteTheme {
     @JsonProperty("dangers")
     private List<DelveSiteThemeDanger> dangers;
 
+    @JsonProperty("description")
+    private MarkdownString description;
+
     @JsonProperty("features")
     private List<DelveSiteThemeFeature> features;
 
@@ -111,6 +114,22 @@ public class DelveSiteTheme {
      */
     public void setDangers(List<DelveSiteThemeDanger> dangers) {
         this.dangers = dangers;
+    }
+
+    /**
+     * Getter for description.<p>
+     * The description text that appears below the title on the card.
+     */
+    public MarkdownString getDescription() {
+        return description;
+    }
+
+    /**
+     * Setter for description.<p>
+     * The description text that appears below the title on the card.
+     */
+    public void setDescription(MarkdownString description) {
+        this.description = description;
     }
 
     /**

@@ -2309,7 +2309,15 @@
 			"title": "DelveSiteDomain",
 			"type": "object",
 			"description": "A delve site Domain card.",
-			"required": ["_id", "type", "name", "features", "dangers", "_source"],
+			"required": [
+				"_id",
+				"type",
+				"name",
+				"features",
+				"dangers",
+				"description",
+				"_source"
+			],
 			"properties": {
 				"_id": {
 					"$ref": "#/definitions/DelveSiteDomainId",
@@ -2763,6 +2771,10 @@
 						}
 					]
 				},
+				"description": {
+					"$ref": "#/definitions/MarkdownString",
+					"description": "The description text that appears below the title on the card."
+				},
 				"suggestions": {
 					"$ref": "#/definitions/Suggestions"
 				},
@@ -2942,7 +2954,15 @@
 			"title": "DelveSiteTheme",
 			"type": "object",
 			"description": "A delve site theme card.",
-			"required": ["_id", "type", "name", "features", "dangers", "_source"],
+			"required": [
+				"_id",
+				"type",
+				"name",
+				"features",
+				"dangers",
+				"description",
+				"_source"
+			],
 			"properties": {
 				"_id": {
 					"$ref": "#/definitions/DelveSiteThemeId",
@@ -3391,6 +3411,10 @@
 							"additionalItems": {}
 						}
 					]
+				},
+				"description": {
+					"$ref": "#/definitions/MarkdownString",
+					"description": "The description text that appears below the title on the card."
 				},
 				"suggestions": {
 					"$ref": "#/definitions/Suggestions"

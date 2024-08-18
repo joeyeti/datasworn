@@ -6,6 +6,7 @@ import Id from '../common/Id.js'
 import { NonCollectableNode } from '../generic/NonCollectableNode.js'
 import { OracleRollableRowText, StaticRowPartial } from '../oracles/TableRow.js'
 import { EmbeddedType } from './common.js'
+import { MarkdownString } from '../common/Text.js'
 
 export const DelveSiteDomainFeature = EmbeddedType(
 	OracleRollableRowText,
@@ -34,6 +35,10 @@ const DelveSiteDomainDangers = Type.Array(Type.Ref(DelveSiteDomainDanger))
 export const DelveSiteDomain = setSourceDataSchema(
 	NonCollectableNode(
 		Type.Object({
+			description: Type.Ref(MarkdownString, {
+				description:
+					'The description text that appears below the title on the card.'
+			}),
 			name_oracle: Type.Optional(
 				Type.Ref(Id.OracleRollableId, {
 					description:
@@ -120,7 +125,7 @@ export const DelveSiteDomain = setSourceDataSchema(
 			description: 'A delve site Domain card.'
 		}
 	),
-	(schema) => ({ ...schema, additionalProperties: true })
+	(schema) => ({ ...schema, additionalProperties: false })
 )
 
 export type DelveSiteDomain = Static<typeof DelveSiteDomain>

@@ -3079,6 +3079,9 @@ module Datasworn
     # node, including the author and licensing information.
     attr_accessor :source
     attr_accessor :dangers
+
+    # The description text that appears below the title on the card.
+    attr_accessor :description
     attr_accessor :features
 
     # The primary name/label for this node.
@@ -3116,6 +3119,7 @@ module Datasworn
       out.id = Datasworn::from_json_data(DelveSiteDomainID, data["_id"])
       out.source = Datasworn::from_json_data(SourceInfo, data["_source"])
       out.dangers = Datasworn::from_json_data(Array[DelveSiteDomainDanger], data["dangers"])
+      out.description = Datasworn::from_json_data(MarkdownString, data["description"])
       out.features = Datasworn::from_json_data(Array[DelveSiteDomainFeature], data["features"])
       out.name = Datasworn::from_json_data(Label, data["name"])
       out.type = Datasworn::from_json_data(DelveSiteDomainType, data["type"])
@@ -3136,6 +3140,7 @@ module Datasworn
       data["_id"] = Datasworn::to_json_data(id)
       data["_source"] = Datasworn::to_json_data(source)
       data["dangers"] = Datasworn::to_json_data(dangers)
+      data["description"] = Datasworn::to_json_data(description)
       data["features"] = Datasworn::to_json_data(features)
       data["name"] = Datasworn::to_json_data(name)
       data["type"] = Datasworn::to_json_data(type)
@@ -3407,6 +3412,9 @@ module Datasworn
     # node, including the author and licensing information.
     attr_accessor :source
     attr_accessor :dangers
+
+    # The description text that appears below the title on the card.
+    attr_accessor :description
     attr_accessor :features
 
     # The primary name/label for this node.
@@ -3436,6 +3444,7 @@ module Datasworn
       out.id = Datasworn::from_json_data(DelveSiteThemeID, data["_id"])
       out.source = Datasworn::from_json_data(SourceInfo, data["_source"])
       out.dangers = Datasworn::from_json_data(Array[DelveSiteThemeDanger], data["dangers"])
+      out.description = Datasworn::from_json_data(MarkdownString, data["description"])
       out.features = Datasworn::from_json_data(Array[DelveSiteThemeFeature], data["features"])
       out.name = Datasworn::from_json_data(Label, data["name"])
       out.type = Datasworn::from_json_data(DelveSiteThemeType, data["type"])
@@ -3455,6 +3464,7 @@ module Datasworn
       data["_id"] = Datasworn::to_json_data(id)
       data["_source"] = Datasworn::to_json_data(source)
       data["dangers"] = Datasworn::to_json_data(dangers)
+      data["description"] = Datasworn::to_json_data(description)
       data["features"] = Datasworn::to_json_data(features)
       data["name"] = Datasworn::to_json_data(name)
       data["type"] = Datasworn::to_json_data(type)

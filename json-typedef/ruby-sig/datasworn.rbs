@@ -1109,6 +1109,7 @@ module Datasworn
     attr_accessor id: DelveSiteDomainID
     attr_accessor source: SourceInfo
     attr_accessor dangers: Array[DelveSiteDomainDanger]
+    attr_accessor description: MarkdownString
     attr_accessor features: Array[DelveSiteDomainFeature]
     attr_accessor name: Label
     attr_accessor type: DelveSiteDomainType
@@ -1227,6 +1228,7 @@ module Datasworn
     attr_accessor id: DelveSiteThemeID
     attr_accessor source: SourceInfo
     attr_accessor dangers: Array[DelveSiteThemeDanger]
+    attr_accessor description: MarkdownString
     attr_accessor features: Array[DelveSiteThemeFeature]
     attr_accessor name: Label
     attr_accessor type: DelveSiteThemeType

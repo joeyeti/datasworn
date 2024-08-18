@@ -16890,7 +16890,6 @@
 			"type": "delve_site_domain",
 			"name": "Barrow",
 			"name_oracle": "oracle_rollable:delve/site_name/place/barrow",
-			"summary": "The dead are enshrined here.",
 			"features": [
 				{
 					"_id": "delve_site_domain.feature:delve/barrow.0",
@@ -17041,7 +17040,7 @@
 					"text": "Grave goods with hidden dangers"
 				}
 			],
-			"description": "In this cruel land, there is no shortage of dead to be put to rest. Some barrows are simple crypts for a family or steading. Others are more elaborate or extensive, plunging well into the depths of the earth. A few inconspicuous mounds, their rock and earth worn by time, mark an entryway into impossibly labyrinthine tombs built by long-forgotten people.\n\nEven the most ancient of these sites still echo with the memory and power of lives once lived, battles once fought, loves gained or lost, and vows unfulfilled.",
+			"description": "The dead are enshrined here.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -17060,7 +17059,6 @@
 			"type": "delve_site_domain",
 			"name": "Cavern",
 			"name_oracle": "oracle_rollable:delve/site_name/place/cavern",
-			"summary": "A place of stone and darkness.",
 			"features": [
 				{
 					"_id": "delve_site_domain.feature:delve/cavern.0",
@@ -17207,7 +17205,7 @@
 					"text": "Fissure or sinkhole"
 				}
 			],
-			"description": "Another world lies beneath our feet. Caverns vein the Ironlands with meandering tunnels, plunging pits, soaring chambers, and absolute darkness. Claustrophobic crawlspaces and crevices may lead to miles-long cave complexes. Underground waterways carve a relentless path through stone.\n\nWhen you enter these sites, you are a trespasser in a hostile domain. What unseen things dwell here, watching and waiting, amidst the depths?",
+			"description": "A place of stone and darkness.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -17226,7 +17224,6 @@
 			"type": "delve_site_domain",
 			"name": "Frozen cavern",
 			"name_oracle": "oracle_rollable:delve/site_name/place/frozen_cavern",
-			"summary": "A place of deep caves and enduring cold.",
 			"features": [
 				{
 					"_id": "delve_site_domain.feature:delve/frozen_cavern.0",
@@ -17373,7 +17370,7 @@
 					"text": "Disorienting reflections"
 				}
 			],
-			"description": "These maze-like tunnels are found in the most inhospitable northern reaches of the Ironlands—carved through glacier, mountain, and hill—or in places of supernatural cold. Their icy depths are a perilous environment of fracturing terrain, shadowy reflections, hollow echoes, and lurking predators.\n\nEntering a frozen cavern is like delving into another world. There is a stark beauty in the icebound passages and glistening chambers. Amazing discoveries, locked in the ice, lie unseen for millennia. But do not be distracted by those enticements. The hazards of this site have no sympathy for the unwary and ill-prepared.",
+			"description": "A place of deep caves and enduring cold.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -17392,7 +17389,6 @@
 			"type": "delve_site_domain",
 			"name": "Icereach",
 			"name_oracle": "oracle_rollable:delve/site_name/place/icereach",
-			"summary": "A frigid landscape formed of frozen seas.",
 			"features": [
 				{
 					"_id": "delve_site_domain.feature:delve/icereach.0",
@@ -17539,7 +17535,7 @@
 					"text": "Foul weather"
 				}
 			],
-			"description": "An Icereach is an expanse of frozen sea, blue-white and sprawling in all directions. These sites are typically found in the northernmost waters. However, a few vast icereaches—kept perpetually frozen by forces we do not understand—clog the seas in southern regions.\n\nOnly the cruelest, most powerful creatures can survive here. The terrain is rugged and cut-through with unstable ice and frigid waterways. Food is scarce. Bitter winds blast the landscape. The remains of ships, locked within the ice, stand as monuments to those who braved these places and were forever lost.",
+			"description": "A frigid landscape formed of frozen seas.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -17558,7 +17554,6 @@
 			"type": "delve_site_domain",
 			"name": "Mine",
 			"name_oracle": "oracle_rollable:delve/site_name/place/mine",
-			"summary": "Tunnels dug greedily and deep.",
 			"features": [
 				{
 					"_id": "delve_site_domain.feature:delve/mine.0",
@@ -17705,7 +17700,7 @@
 					"text": "Weakened terrain"
 				}
 			],
-			"description": "Within the earth, riches await the bold. Some mines are shallow pits worked by pick and shovel. Others are offshoots of existing caverns which pierce deep into hills and mountains. A few are the remains of vast underground complexes built by forgotten cultures.\n\nThe iron and other metals claimed from these sites feed our furnaces. From those fires, we craft tools, armor, weapons, and other precious goods. Our hunger for these resources is never satiated, and we often dig into places best left undisturbed.",
+			"description": "Tunnels dug greedily and deep.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -17724,7 +17719,6 @@
 			"type": "delve_site_domain",
 			"name": "Pass",
 			"name_oracle": "oracle_rollable:delve/site_name/place/pass",
-			"summary": "Treacherous paths over high mountains.",
 			"features": [
 				{
 					"_id": "delve_site_domain.feature:delve/pass.0",
@@ -17871,7 +17865,7 @@
 					"text": "Foul weather"
 				}
 			],
-			"description": "Winding through highlands and mountain ranges, these sites offer a tempting route over otherwise impassable terrain. But treacherous landscapes, foul weather, and a host of mountain predators offer their own dangers. Raiders and others take advantage of these natural chokepoints to ambush the unwary.\n\nLonely cairns mark the resting places of those who walked these routes undefended or unprepared. Pray that your path here does not end under a pile of mountain stones.",
+			"description": "Treacherous paths over high mountains.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -17890,7 +17884,6 @@
 			"type": "delve_site_domain",
 			"name": "Ruin",
 			"name_oracle": "oracle_rollable:delve/site_name/place/ruin",
-			"summary": "The crumbling legacy of a dead civilization.",
 			"features": [
 				{
 					"_id": "delve_site_domain.feature:delve/ruin.0",
@@ -18041,7 +18034,7 @@
 					"text": "Ancient secrets best left buried"
 				}
 			],
-			"description": "These decaying edifices, skeletal and shadowed, mark the remains of once-great communities and civilizations. Some of these sites have been newly adapted by [Ironlanders](datasworn:npc_collection:classic/ironlanders) as shelter, temple, or citadel. Others are home only to dangerous creatures and dark forces.\n\nNewly discovered ruins tempt bold explorers with the promise of powerful legacies and forgotten secrets. But most see these places as a portent of our inescapable, grim fate in these lands. Someday, another people may delve into the ruins of what we leave behind.",
+			"description": "The crumbling legacy of a dead civilization.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -18060,7 +18053,6 @@
 			"type": "delve_site_domain",
 			"name": "Sea cave",
 			"name_oracle": "oracle_rollable:delve/site_name/place/sea_cave",
-			"summary": "Stone passages carved by ocean waves.",
 			"features": [
 				{
 					"_id": "delve_site_domain.feature:delve/sea_cave.0",
@@ -18207,7 +18199,7 @@
 					"text": "Claustrophobic squeeze"
 				}
 			],
-			"description": "Carved by ocean waves and unyielding currents, the sea caves pockmarking the coasts plunge deep into the land’s dark heart. Deadly creatures or determined foes often lair within, but it is the water that is your ever-present enemy. The chill and damp seep into your bones. The tides and upland flooding can bring a torrent of water with little warning. You plunge desperately through submerged passages, praying that an opening will provide a pocket of air.\n\nThis is a realm of water and stone, cold and darkness. You are not welcome here.",
+			"description": "Stone passages carved by ocean waves.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -18226,7 +18218,6 @@
 			"type": "delve_site_domain",
 			"name": "Shadowfen",
 			"name_oracle": "oracle_rollable:delve/site_name/place/shadowfen",
-			"summary": "A primeval marsh, cloaked in mist.",
 			"features": [
 				{
 					"_id": "delve_site_domain.feature:delve/shadowfen.0",
@@ -18373,7 +18364,7 @@
 					"text": "Hidden quagmire"
 				}
 			],
-			"description": "These foul sites are cloaked in mist, clogged with muddy peat, and drenched in fetid water. Thickets of gray, skeletal trees conceal stalking creatures. Strange shapes move in the fog and beneath dark, placid water. Narrow trails tease with the promise of passage, but instead lead to hidden quagmires.\n\nBe wary. When you enter a shadowfen, the specter of death is your constant companion.",
+			"description": "A primeval marsh, cloaked in mist.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -18392,7 +18383,6 @@
 			"type": "delve_site_domain",
 			"name": "Stronghold",
 			"name_oracle": "oracle_rollable:delve/site_name/place/stronghold",
-			"summary": "A fortress secured against trespassers.",
 			"features": [
 				{
 					"_id": "delve_site_domain.feature:delve/stronghold.0",
@@ -18543,7 +18533,7 @@
 					"text": "Alarm trigger"
 				}
 			],
-			"description": "These sites weather storms and sieges alike. Their walls stand firm against the forces of this dark land. They are fortified against attack and rife with guards, traps, and other defenses. For those who dwell within, strongholds provide the comfort of wood and stone, axe and bow. For those who seek to breach the walls, they can be as unyielding and unforgiving as the most stalwart ironbound shield.",
+			"description": "A fortress secured against trespassers.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -18562,7 +18552,6 @@
 			"type": "delve_site_domain",
 			"name": "Tanglewood",
 			"name_oracle": "oracle_rollable:delve/site_name/place/tanglewood",
-			"summary": "A perilous forest of eternal shadow.",
 			"features": [
 				{
 					"_id": "delve_site_domain.feature:delve/tanglewood.0",
@@ -18713,7 +18702,7 @@
 					"text": "Entangling plant life"
 				}
 			],
-			"description": "A tanglewood is a thick wilderness, shrouded in mist. Overhanging, twisted boughs obscure the sky. The ground is snarled with exposed roots. The wind carries foreboding whispers, and branches rattle like old bones.\n\nMany refuse to harvest wood from these places, believing the spirits who reside within will bring a curse upon them and their families. Others fear the creatures and beings which lurk within. For these reasons, even near settled areas, the tangles still stand.",
+			"description": "A perilous forest of eternal shadow.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -18732,7 +18721,6 @@
 			"type": "delve_site_domain",
 			"name": "Underkeep",
 			"name_oracle": "oracle_rollable:delve/site_name/place/underkeep",
-			"summary": "An age-old subterranean dungeon.",
 			"features": [
 				{
 					"_id": "delve_site_domain.feature:delve/underkeep.0",
@@ -18883,7 +18871,7 @@
 					"text": "Denizen lurks in darkness"
 				}
 			],
-			"description": "These subterranean structures are a mystery. They are inexplicably ancient, older perhaps than even the [Firstborn](datasworn:npc_collection:classic/firstborn). Their passages and halls hide dangers within unfathomable darkness.\n\nMost [Ironlanders](datasworn:npc_collection:classic/ironlanders) stay well clear of these places. But some stumble upon the entrance to an underkeep and delve inside, drawn by its secrets or the alluring promise of forgotten power. Others, desperate for protection from the perils of the surface world, foolishly try to use the depths of an underkeep as a sanctum for their kin or clan. They soon discover that the greatest threats lie beneath.",
+			"description": "An age-old subterranean dungeon.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -18903,7 +18891,6 @@
 			"_id": "delve_site_theme:delve/ancient",
 			"type": "delve_site_theme",
 			"name": "Ancient",
-			"summary": "This place holds the secrets of a bygone age.",
 			"features": [
 				{
 					"_id": "delve_site_theme.feature:delve/ancient.0",
@@ -19048,7 +19035,7 @@
 					"text": "Others seek power or knowledge"
 				}
 			],
-			"description": "An ancient site contains the mysteries, legacies, and dangers of another age.\n\nWalking the paths of this place is like stepping through time. Ruins and relics provide glimpses of long-forgotten people and events. The knowledge and power hidden here are a tempting lure, but those treasures may come with a dire cost. Some secrets are best left buried.",
+			"description": "This place holds the secrets of a bygone age.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -19066,7 +19053,6 @@
 			"_id": "delve_site_theme:delve/corrupted",
 			"type": "delve_site_theme",
 			"name": "Corrupted",
-			"summary": "This place is tainted by dark magic.",
 			"features": [
 				{
 					"_id": "delve_site_theme.feature:delve/corrupted.0",
@@ -19211,7 +19197,7 @@
 					"text": "Dread harbingers of a greater magic"
 				}
 			],
-			"description": "A corrupted site is befouled by dark forces. It might be the ancient magic of the Ironlands, or the residue of ancient evils, concentrated here like poisoned water soaked into a sponge. Perhaps a powerful mystic dwells in this place, one who walks a sinister path in search of power.\n\nWhen you enter a corrupted site, you can feel the wrongness of it down to your bones. The air is tainted with foul smells, or tinged with strange energies. You hear unintelligible whispers. Shadows lurk at the edge of your vision. The creatures of this place are twisted by corruption, and the people are in thrall to a dark influence.",
+			"description": "This place is tainted by dark magic.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -19229,7 +19215,6 @@
 			"_id": "delve_site_theme:delve/fortified",
 			"type": "delve_site_theme",
 			"name": "Fortified",
-			"summary": "Foes defend this place against intruders.",
 			"features": [
 				{
 					"_id": "delve_site_theme.feature:delve/fortified.0",
@@ -19378,7 +19363,7 @@
 					"text": "Alarm trigger"
 				}
 			],
-			"description": "A fortified site is held and defended by an enemy force. It might be an enemy camp, an outpost, a fortress, or a closely-guarded territory.\n\nInfiltrating this place requires caution and cunning. You may be forced to avoid inhabitants, sentries, and patrols. Revealing yourself or causing a disturbance will catch the attention of the denizens, perhaps forcing you to fight your way to your objective.",
+			"description": "Foes defend this place against intruders.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -19396,7 +19381,6 @@
 			"_id": "delve_site_theme:delve/hallowed",
 			"type": "delve_site_theme",
 			"name": "Hallowed",
-			"summary": "The faithful worship here.",
 			"features": [
 				{
 					"_id": "delve_site_theme.feature:delve/hallowed.0",
@@ -19537,7 +19521,7 @@
 					"text": "Prophecies reveal a dark fate"
 				}
 			],
-			"description": "A hallowed site is a place of great reverence, suffused with the power of old gods or the fervency of belief. It might be a location of religious significance, the resting place of legendary relics or figures, or the haven of a religious leader.\n\nHallowed places may be warded by ancient rituals, or imbued with divine energy. But it is the faithful and the zealous who will sacrifice everything to defend this place.",
+			"description": "The faithful worship here.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -19555,7 +19539,6 @@
 			"_id": "delve_site_theme:delve/haunted",
 			"type": "delve_site_theme",
 			"name": "Haunted",
-			"summary": "Restless spirits are bound to this place.",
 			"features": [
 				{
 					"_id": "delve_site_theme.feature:delve/haunted.0",
@@ -19696,7 +19679,7 @@
 					"text": "Sudden, shocking manifestation"
 				}
 			],
-			"description": "Within a haunted site, dread, sadness, and fear are palpable. Disturbing sounds and visions lure the unwary and terrorize the vulnerable. Gird your will when you enter this place, for you walk at the boundary of life and death.\n\nSome lost souls, unaware they have passed, wander the site in search of answers. Others, stricken by eternal grief, seek to set right what caused their death or see their vows fulfilled. But all too often, the denizens of this place are undone by their deaths. They are rage and terror made incarnate, feeling nothing but hate for the living and a hunger for warmth which will never be sated.",
+			"description": "Restless spirits are bound to this place.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -19714,7 +19697,6 @@
 			"_id": "delve_site_theme:delve/infested",
 			"type": "delve_site_theme",
 			"name": "Infested",
-			"summary": "Foul creatures dwell here.",
 			"features": [
 				{
 					"_id": "delve_site_theme.feature:delve/infested.0",
@@ -19859,7 +19841,7 @@
 					"text": "Victim’s horrible fate is revealed"
 				}
 			],
-			"description": "Foul creatures swarm these sites, overwhelming trespassers with sheer numbers and unchecked ferocity. The denizens do little beyond multiplying, feeding, and expanding, ravenous for fresh kills to feed the swarm.\n\nNavigation through this place, across paths undermined by the hordes, may be perilous. The sights and smells may test your fortitude. But it is the creatures which pose the greatest threat, as they ambush and cut off your escape with unforeseen cunning.",
+			"description": "Foul creatures dwell here.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -19877,7 +19859,6 @@
 			"_id": "delve_site_theme:delve/ravaged",
 			"type": "delve_site_theme",
 			"name": "Ravaged",
-			"summary": "Time, disaster, or strife have taken their toll.",
 			"features": [
 				{
 					"_id": "delve_site_theme.feature:delve/ravaged.0",
@@ -20018,7 +19999,7 @@
 					"text": "Ravages return anew"
 				}
 			],
-			"description": "Time, weather, war, or calamity have laid waste to a ravaged site. The terrain is precarious. Hazards lurk around every corner. You may face glimpses of a former greatness, but this place is a ruined shadow of what it once was.\n\nTraversing a ravaged site requires care, cunning, and quick wits to react to sudden perils. The environment here is your greatest enemy. It is a force, as willful as any intelligent adversary, which will see your quest undone.",
+			"description": "Time, disaster, or strife have taken their toll.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [
@@ -20036,7 +20017,6 @@
 			"_id": "delve_site_theme:delve/wild",
 			"type": "delve_site_theme",
 			"name": "Wild",
-			"summary": "Nature prevails in this place.",
 			"features": [
 				{
 					"_id": "delve_site_theme.feature:delve/wild.0",
@@ -20177,7 +20157,7 @@
 					"text": "Ill-fated victim in danger"
 				}
 			],
-			"description": "Despite our attempts to extend our control into untracked reaches, the primal forces of nature still hold sway across the Ironlands. In those wild places, we must test our shields against tooth and claw, our wits against insidious creatures, and our resolve against dangerous terrain and harsh environments.\n\nBe wary when you enter the wild places of this world. Beyond the comforting walls of your village, you are not the hunter. You are the prey.",
+			"description": "Nature prevails in this place.",
 			"_source": {
 				"title": "Ironsworn: Delve",
 				"authors": [

@@ -17,7 +17,7 @@ export const CORE_COMMON = path.join(src, 'pkg-core')
 
 export const PKG_DIR_NODE = path.join(PKG_ROOT, 'nodejs')
 
-export const LEGACY_ID_PATH = path.join(src, 'legacy_id_map.json')
+export const LEGACY_ID_DIR = path.join(src, 'legacy_id_map.json')
 
 export const ROOT_SOURCE_DATA = path.join(process.cwd(), 'source_data')
 export const ROOT_OUTPUT = path.join(process.cwd(), 'datasworn')

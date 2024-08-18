@@ -1760,6 +1760,9 @@ type DelveSiteDomain struct {
 
 	Dangers []DelveSiteDomainDanger `json:"dangers"`
 
+	// The description text that appears below the title on the card.
+	Description MarkdownString `json:"description"`
+
 	Features []DelveSiteDomainFeature `json:"features"`
 
 	// The primary name/label for this node.
@@ -1894,6 +1897,9 @@ type DelveSiteTheme struct {
 	Source SourceInfo `json:"_source"`
 
 	Dangers []DelveSiteThemeDanger `json:"dangers"`
+
+	// The description text that appears below the title on the card.
+	Description MarkdownString `json:"description"`
 
 	Features []DelveSiteThemeFeature `json:"features"`
 

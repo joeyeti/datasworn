@@ -2419,6 +2419,12 @@
 						"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
 					}
 				},
+				"description": {
+					"ref": "MarkdownString",
+					"metadata": {
+						"description": "The description text that appears below the title on the card."
+					}
+				},
 				"features": {
 					"elements": {
 						"ref": "DelveSiteDomainFeature"
@@ -2662,6 +2668,12 @@
 					"ref": "SourceInfo",
 					"metadata": {
 						"description": "Attribution for the original source (such as a book or website) of this node, including the author and licensing information."
+					}
+				},
+				"description": {
+					"ref": "MarkdownString",
+					"metadata": {
+						"description": "The description text that appears below the title on the card."
 					}
 				},
 				"features": {

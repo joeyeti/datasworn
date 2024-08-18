@@ -5,6 +5,7 @@ import { setSourceDataSchema } from '../Utils.js'
 import { NonCollectableNode } from '../generic/NonCollectableNode.js'
 import { OracleRollableRowText, StaticRowPartial } from '../oracles/TableRow.js'
 import { EmbeddedType } from './common.js'
+import { MarkdownString } from '../common/Text.js'
 
 export const DelveSiteThemeFeature = EmbeddedType(
 	OracleRollableRowText,
@@ -34,6 +35,10 @@ const DelveSiteThemeDangers = Type.Array(Type.Ref(DelveSiteThemeDanger))
 export const DelveSiteTheme = setSourceDataSchema(
 	NonCollectableNode(
 		Type.Object({
+			description: Type.Ref(MarkdownString, {
+				description:
+					'The description text that appears below the title on the card.'
+			}),
 			features: Type.Intersect(
 				[
 					DelveSiteThemeFeatures,
@@ -82,7 +87,7 @@ export const DelveSiteTheme = setSourceDataSchema(
 			$id: 'DelveSiteTheme'
 		}
 	),
-	(schema) => ({ ...schema, additionalProperties: true })
+	(schema) => ({ ...schema, additionalProperties: false })
 )
 export type DelveSiteTheme = Static<typeof DelveSiteTheme>
 export type TDelveSiteTheme = typeof DelveSiteTheme

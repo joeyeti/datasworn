@@ -1954,6 +1954,10 @@ pub struct DelveSiteDomain {
     #[serde(rename = "dangers")]
     pub dangers: Vec<DelveSiteDomainDanger>,
 
+    /// The description text that appears below the title on the card.
+    #[serde(rename = "description")]
+    pub description: MarkdownString,
+
     #[serde(rename = "features")]
     pub features: Vec<DelveSiteDomainFeature>,
 
@@ -2152,6 +2156,10 @@ pub struct DelveSiteTheme {
 
     #[serde(rename = "dangers")]
     pub dangers: Vec<DelveSiteThemeDanger>,
+
+    /// The description text that appears below the title on the card.
+    #[serde(rename = "description")]
+    pub description: MarkdownString,
 
     #[serde(rename = "features")]
     pub features: Vec<DelveSiteThemeFeature>,

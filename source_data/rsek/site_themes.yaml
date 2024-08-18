@@ -15,7 +15,7 @@ site_themes:
       title: Themes & Domains by rsek
       url: https://perchance.org/rsek-delve-themes-domains
       date: 2022-07-05
-    summary: This place reflects a delver's psyche back at them.
+    description: This place reflects a delver's psyche back at them.
     features:
       - roll: { min: 1, max: 4 }
         text: Echoes of a formative memory
@@ -57,7 +57,7 @@ site_themes:
     type: delve_site_theme
     icon: icons/delve_site_theme/protean.svg
     _source: *Source
-    summary: A place of primordial chaos, in constant flux.
+    description: A place of primordial chaos, in constant flux.
     features:
       - roll: { min: 1, max: 4 }
         text: New domain via gradual transition
@@ -99,7 +99,7 @@ site_themes:
     type: delve_site_theme
     icon: icons/delve_site_theme/skyborne.svg
     _source: *Source
-    summary: A place that soars high above the world below.
+    description: A place that soars high above the world below.
     features:
       - roll: { min: 1, max: 4 }
         text: Splendid view of the lands below
@@ -142,7 +142,7 @@ site_themes:
     type: delve_site_theme
     icon: icons/delve_site_theme/threatened.svg
     _source: *Source
-    summary: This place is on the verge of calamity.
+    description: This place is on the verge of calamity.
     features:
       - roll: { min: 1, max: 4 }
         text: Area left unnervingly empty

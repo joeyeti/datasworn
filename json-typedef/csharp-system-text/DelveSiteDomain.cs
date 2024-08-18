@@ -26,6 +26,12 @@ namespace Datasworn
         [JsonPropertyName("dangers")]
         public IList<DelveSiteDomainDanger> Dangers { get; set; }
 
+        /// <summary>
+        /// The description text that appears below the title on the card.
+        /// </summary>
+        [JsonPropertyName("description")]
+        public MarkdownString Description { get; set; }
+
         [JsonPropertyName("features")]
         public IList<DelveSiteDomainFeature> Features { get; set; }
 

@@ -3569,6 +3569,11 @@ class DelveSiteDomain:
     """
 
     dangers: 'List[DelveSiteDomainDanger]'
+    description: 'MarkdownString'
+    """
+    The description text that appears below the title on the card.
+    """
+
     features: 'List[DelveSiteDomainFeature]'
     name: 'Label'
     """
@@ -3619,6 +3624,7 @@ class DelveSiteDomain:
             _from_json_data(DelveSiteDomainID, data.get("_id")),
             _from_json_data(SourceInfo, data.get("_source")),
             _from_json_data(List[DelveSiteDomainDanger], data.get("dangers")),
+            _from_json_data(MarkdownString, data.get("description")),
             _from_json_data(List[DelveSiteDomainFeature], data.get("features")),
             _from_json_data(Label, data.get("name")),
             _from_json_data(DelveSiteDomainType, data.get("type")),
@@ -3638,6 +3644,7 @@ class DelveSiteDomain:
         data["_id"] = _to_json_data(self.id)
         data["_source"] = _to_json_data(self.source)
         data["dangers"] = _to_json_data(self.dangers)
+        data["description"] = _to_json_data(self.description)
         data["features"] = _to_json_data(self.features)
         data["name"] = _to_json_data(self.name)
         data["type"] = _to_json_data(self.type)
@@ -3942,6 +3949,11 @@ class DelveSiteTheme:
     """
 
     dangers: 'List[DelveSiteThemeDanger]'
+    description: 'MarkdownString'
+    """
+    The description text that appears below the title on the card.
+    """
+
     features: 'List[DelveSiteThemeFeature]'
     name: 'Label'
     """
@@ -3982,6 +3994,7 @@ class DelveSiteTheme:
             _from_json_data(DelveSiteThemeID, data.get("_id")),
             _from_json_data(SourceInfo, data.get("_source")),
             _from_json_data(List[DelveSiteThemeDanger], data.get("dangers")),
+            _from_json_data(MarkdownString, data.get("description")),
             _from_json_data(List[DelveSiteThemeFeature], data.get("features")),
             _from_json_data(Label, data.get("name")),
             _from_json_data(DelveSiteThemeType, data.get("type")),
@@ -4000,6 +4013,7 @@ class DelveSiteTheme:
         data["_id"] = _to_json_data(self.id)
         data["_source"] = _to_json_data(self.source)
         data["dangers"] = _to_json_data(self.dangers)
+        data["description"] = _to_json_data(self.description)
         data["features"] = _to_json_data(self.features)
         data["name"] = _to_json_data(self.name)
         data["type"] = _to_json_data(self.type)
