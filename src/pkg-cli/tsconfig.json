@@ -6,7 +6,7 @@
 		"lib": ["es2022"],
 		"skipLibCheck": true,
 		"declaration": true,
-		"outDir": "../../pkg/nodejs/@datasworn/core/dist",
+		"outDir": "../../pkg/nodejs/@datasworn/cli/dist",
 		"esModuleInterop": true,
 		"declarationMap": false
 	}
