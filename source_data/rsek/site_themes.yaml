@@ -6,7 +6,7 @@ site_themes:
   morphic:
     name: Morphic
     type: delve_site_theme
-    icon: icons/delve_site_theme/morphic.svg
+    icon: icons/site_themes/morphic.svg
     _source: &Source
       authors:
         - name: rsek
@@ -55,7 +55,7 @@ site_themes:
   protean:
     name: Protean
     type: delve_site_theme
-    icon: icons/delve_site_theme/protean.svg
+    icon: icons/site_themes/protean.svg
     _source: *Source
     summary: A place of primordial chaos, in constant flux.
     features:
@@ -97,7 +97,7 @@ site_themes:
   skyborne:
     name: Skyborne
     type: delve_site_theme
-    icon: icons/delve_site_theme/skyborne.svg
+    icon: icons/site_themes/skyborne.svg
     _source: *Source
     summary: A place that soars high above the world below.
     features:
@@ -140,7 +140,7 @@ site_themes:
   threatened:
     name: Threatened
     type: delve_site_theme
-    icon: icons/delve_site_theme/threatened.svg
+    icon: icons/site_themes/threatened.svg
     _source: *Source
     summary: This place is on the verge of calamity.
     features:
