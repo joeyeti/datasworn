@@ -2,6 +2,7 @@ import { IdKey, PathKeySep, ROOT_HISTORY, VERSION } from '../scripts/const.js'
 import type { Datasworn } from '../pkg-core/index.js'
 import type { IdNode } from '../schema/Generic.js'
 import path from 'node:path'
+import { Glob } from 'bun'
 
 export async function loadDatasworn(
 	version: string = VERSION,
@@ -50,3 +51,21 @@ export async function loadDatasworn(
 	return { tree, index }
 }
 
+export async function loadIdMap(version: string = VERSION) {
+	const files = new Glob('**/*/id_map.json')
+	const cwd = path.join(ROOT_HISTORY, version)
+	const mergedMap: Record<string, null> = {}
+
+	const ops: Promise<unknown>[] = []
+
+	for await (const file of files.scan({ cwd, absolute: true }))
+		ops.push(
+			Bun.file(file)
+				.json()
+				.then((json) => Object.assign(mergedMap, json))
+		)
+
+	await Promise.all(ops)
+
+	return mergedMap
+}
