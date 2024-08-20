@@ -192,7 +192,7 @@ site_domains:
       - roll: { min: 81, max: 84 }
         text: Frozen carcass
       - roll: { min: 85, max: 88 }
-        text: Camp or
+        text: &Camp_or_outpost Camp or outpost
       - *Row.UnusualOrUnexpected
       - *Row.NewTheme
       - *Row.NewDomain
@@ -283,7 +283,7 @@ site_domains:
       - roll: { min: 81, max: 84 }
         text: Overlook
       - roll: { min: 85, max: 88 }
-        text: Camp or outpost
+        text: *Camp_or_outpost
       - *Row.UnusualOrUnexpected
       - *Row.NewTheme
       - *Row.NewDomain
@@ -420,7 +420,7 @@ site_domains:
       - roll: { min: 81, max: 84 }
         text: Tall reeds
       - roll: { min: 85, max: 88 }
-        text: Camp or outpost
+        text: *Camp_or_outpost
       - *Row.UnusualOrUnexpected
       - *Row.NewTheme
       - *Row.NewDomain
@@ -509,7 +509,7 @@ site_domains:
       - roll: { min: 81, max: 84 }
         text: Rocky outcrop
       - roll: { min: 85, max: 88 }
-        text: Camp or outpost
+        text: *Camp_or_outpost
       - *Row.UnusualOrUnexpected
       - *Row.NewTheme
       - *Row.NewDomain
