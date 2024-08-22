@@ -64286,7 +64286,15 @@
 							"min": 0,
 							"max": 4,
 							"value": 2,
-							"controls": {}
+							"controls": {
+								"commandless": {
+									"label": "commandless",
+									"field_type": "checkbox",
+									"value": false,
+									"is_impact": true,
+									"disables_asset": false
+								}
+							}
 						}
 					},
 					"tags": {

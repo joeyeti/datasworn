@@ -147,6 +147,11 @@ assets:
             field_type: condition_meter
             max: 4
             value: 2
+            controls:
+              commandless:
+                is_impact: true
+                label: commandless
+                field_type: checkbox
       cutthroat:
         name: Cutthroat
         type: asset
