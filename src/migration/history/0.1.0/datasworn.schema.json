@@ -1713,6 +1713,10 @@
 				"description": {
 					"$ref": "#/definitions/MarkdownString",
 					"description": "A description of this condition meter."
+				},
+				"tags": {
+					"$ref": "#/definitions/Tags",
+					"releaseStage": "experimental"
 				}
 			}
 		},
@@ -5051,6 +5055,10 @@
 				"description": {
 					"$ref": "#/definitions/MarkdownString",
 					"description": "A description of this impact."
+				},
+				"tags": {
+					"$ref": "#/definitions/Tags",
+					"releaseStage": "experimental"
 				}
 			}
 		},
@@ -8654,6 +8662,10 @@
 				}
 			]
 		},
+		"RuleType": {
+			"title": "RuleType",
+			"enum": ["impact", "condition_meter", "special_track", "stat"]
+		},
 		"SelectEnhancementField": {
 			"title": "SelectEnhancementField",
 			"type": "object",
@@ -9215,6 +9227,10 @@
 				"description": {
 					"$ref": "#/definitions/MarkdownString",
 					"description": "A description of this special track."
+				},
+				"tags": {
+					"$ref": "#/definitions/Tags",
+					"releaseStage": "experimental"
 				}
 			}
 		},
@@ -9253,6 +9269,10 @@
 					"examples": [
 						"Quickness, agility, and prowess when fighting at a distance."
 					]
+				},
+				"tags": {
+					"$ref": "#/definitions/Tags",
+					"releaseStage": "experimental"
 				}
 			}
 		},
@@ -9415,6 +9435,9 @@
 				},
 				{
 					"$ref": "#/definitions/EmbedOnlyType"
+				},
+				{
+					"$ref": "#/definitions/RuleType"
 				}
 			]
 		},
@@ -9584,6 +9607,7 @@
 										"#/definitions/RarityIdWildcard",
 										"#/definitions/RulesetId",
 										"#/definitions/RulesPackageId",
+										"#/definitions/RuleType",
 										"#/definitions/SemanticVersion",
 										"#/definitions/SpecialTrackRollMethod",
 										"#/definitions/SvgImageUrl",

@@ -20,5 +20,9 @@ namespace Datasworn
         /// </summary>
         [JsonPropertyName("label")]
         public Label Label { get; set; }
+
+        [JsonPropertyName("tags")]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
+        public Tags? Tags { get; set; }
     }
 }

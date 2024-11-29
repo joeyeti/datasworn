@@ -1563,6 +1563,8 @@ type ConditionMeterRule struct {
 
 	// The current value of this meter.
 	Value int8 `json:"value"`
+
+	Tags *Tags `json:"tags,omitempty"`
 }
 
 // A reference to the value of a standard player condition meter.
@@ -3428,6 +3430,8 @@ type ImpactRule struct {
 
 	// Is this impact applied to all players at once?
 	Shared bool `json:"shared"`
+
+	Tags *Tags `json:"tags,omitempty"`
 }
 
 // A localized, player-facing name or label, formatted as plain text. In some
@@ -6819,6 +6823,18 @@ type RollableValueStat struct {
 	Stat StatKey `json:"stat"`
 }
 
+type RuleType string
+
+const (
+	RuleTypeConditionMeter RuleType = "condition_meter"
+
+	RuleTypeImpact RuleType = "impact"
+
+	RuleTypeSpecialTrack RuleType = "special_track"
+
+	RuleTypeStat RuleType = "stat"
+)
+
 // Describes rules for player characters in this ruleset, such as stats and
 // condition meters.
 type Rules struct {
@@ -7325,6 +7341,8 @@ type SpecialTrackRule struct {
 
 	// Is this track shared by all players?
 	Shared bool `json:"shared"`
+
+	Tags *Tags `json:"tags,omitempty"`
 }
 
 // Special, ruleset-specific progress tracks. Usually, one exists per player
@@ -7348,6 +7366,8 @@ type StatRule struct {
 
 	// A label for this stat.
 	Label Label `json:"label"`
+
+	Tags *Tags `json:"tags,omitempty"`
 }
 
 // A reference to the value of a standard player character stat.

@@ -2,6 +2,7 @@
 
 package Datasworn;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
@@ -30,6 +31,10 @@ public class ConditionMeterRule {
 
     @JsonProperty("value")
     private Byte value;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @JsonProperty("tags")
+    private Tags tags;
 
     public ConditionMeterRule() {
     }
@@ -142,5 +147,19 @@ public class ConditionMeterRule {
      */
     public void setValue(Byte value) {
         this.value = value;
+    }
+
+    /**
+     * Getter for tags.<p>
+     */
+    public Tags getTags() {
+        return tags;
+    }
+
+    /**
+     * Setter for tags.<p>
+     */
+    public void setTags(Tags tags) {
+        this.tags = tags;
     }
 }

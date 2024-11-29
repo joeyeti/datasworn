@@ -926,6 +926,10 @@ export interface ConditionMeterRule {
 	 * @default false
 	 */
 	shared: boolean
+	/**
+	 * @experimental
+	 */
+	tags?: Tags
 	label: Label
 	/**
 	 * The current value of this meter.
@@ -2559,6 +2563,10 @@ export interface ImpactRule {
 	 * @default false
 	 */
 	permanent: boolean
+	/**
+	 * @experimental
+	 */
+	tags?: Tags
 }
 
 /**
@@ -4616,6 +4624,8 @@ export type RulesPackage = Ruleset | Expansion
 
 export type RulesPackageId = RulesetId | ExpansionId
 
+export type RuleType = 'impact' | 'condition_meter' | 'special_track' | 'stat'
+
 /**
  * Select from player and/or asset enhancements. Use it to describe modal abilities. For examples, see Ironclad (classic Ironsworn) and Windbinder (Sundered Isles).
  * @remarks Semantics are similar to the HTML `<select>` element
@@ -4879,6 +4889,10 @@ export interface SpecialTrackRule {
 	 * @default false
 	 */
 	optional: boolean
+	/**
+	 * @experimental
+	 */
+	tags?: Tags
 }
 
 /**
@@ -4921,6 +4935,10 @@ export interface StatRule {
 	 * @example "Quickness, agility, and prowess when fighting at a distance."
 	 */
 	description: MarkdownString
+	/**
+	 * @experimental
+	 */
+	tags?: Tags
 }
 
 /**
@@ -4990,6 +5008,7 @@ export type TaggableNodeType =
 	| NonCollectableType
 	| CollectionType
 	| EmbedOnlyType
+	| RuleType
 
 export interface TagRule {
 	/**

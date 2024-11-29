@@ -47,5 +47,9 @@ namespace Datasworn
         /// </summary>
         [JsonPropertyName("value")]
         public sbyte Value { get; set; }
+
+        [JsonPropertyName("tags")]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
+        public Tags? Tags { get; set; }
     }
 }

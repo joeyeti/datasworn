@@ -2603,6 +2603,7 @@ module Datasworn
 
     # The current value of this meter.
     attr_accessor :value
+    attr_accessor :tags
 
     def self.from_json_data(data)
       out = ConditionMeterRule.new
@@ -2613,6 +2614,7 @@ module Datasworn
       out.rollable = Datasworn::from_json_data(TrueClass, data["rollable"])
       out.shared = Datasworn::from_json_data(TrueClass, data["shared"])
       out.value = Datasworn::from_json_data(Integer, data["value"])
+      out.tags = Datasworn::from_json_data(Tags, data["tags"])
       out
     end
 
@@ -2625,6 +2627,7 @@ module Datasworn
       data["rollable"] = Datasworn::to_json_data(rollable)
       data["shared"] = Datasworn::to_json_data(shared)
       data["value"] = Datasworn::to_json_data(value)
+      data["tags"] = Datasworn::to_json_data(tags) unless tags.nil?
       data
     end
   end
@@ -6525,6 +6528,7 @@ module Datasworn
 
     # Is this impact applied to all players at once?
     attr_accessor :shared
+    attr_accessor :tags
 
     def self.from_json_data(data)
       out = ImpactRule.new
@@ -6533,6 +6537,7 @@ module Datasworn
       out.permanent = Datasworn::from_json_data(TrueClass, data["permanent"])
       out.prevents_recovery = Datasworn::from_json_data(Array[ConditionMeterKey], data["prevents_recovery"])
       out.shared = Datasworn::from_json_data(TrueClass, data["shared"])
+      out.tags = Datasworn::from_json_data(Tags, data["tags"])
       out
     end
 
@@ -6543,6 +6548,7 @@ module Datasworn
       data["permanent"] = Datasworn::to_json_data(permanent)
       data["prevents_recovery"] = Datasworn::to_json_data(prevents_recovery)
       data["shared"] = Datasworn::to_json_data(shared)
+      data["tags"] = Datasworn::to_json_data(tags) unless tags.nil?
       data
     end
   end
@@ -12786,6 +12792,34 @@ module Datasworn
     end
   end
 
+  class RuleType
+    attr_accessor :value
+
+    def initialize(value)
+      self.value = value
+    end
+
+    private_class_method :new
+
+    CONDITION_METER = new("condition_meter")
+    IMPACT = new("impact")
+    SPECIAL_TRACK = new("special_track")
+    STAT = new("stat")
+
+    def self.from_json_data(data)
+      {
+        "condition_meter" => CONDITION_METER,
+        "impact" => IMPACT,
+        "special_track" => SPECIAL_TRACK,
+        "stat" => STAT,
+      }[data]
+    end
+
+    def to_json_data
+      value
+    end
+  end
+
   # Describes rules for player characters in this ruleset, such as stats and
   # condition meters.
   class Rules
@@ -13769,6 +13803,7 @@ module Datasworn
 
     # Is this track shared by all players?
     attr_accessor :shared
+    attr_accessor :tags
 
     def self.from_json_data(data)
       out = SpecialTrackRule.new
@@ -13776,6 +13811,7 @@ module Datasworn
       out.label = Datasworn::from_json_data(Label, data["label"])
       out.optional = Datasworn::from_json_data(TrueClass, data["optional"])
       out.shared = Datasworn::from_json_data(TrueClass, data["shared"])
+      out.tags = Datasworn::from_json_data(Tags, data["tags"])
       out
     end
 
@@ -13785,6 +13821,7 @@ module Datasworn
       data["label"] = Datasworn::to_json_data(label)
       data["optional"] = Datasworn::to_json_data(optional)
       data["shared"] = Datasworn::to_json_data(shared)
+      data["tags"] = Datasworn::to_json_data(tags) unless tags.nil?
       data
     end
   end
@@ -13834,11 +13871,13 @@ module Datasworn
 
     # A label for this stat.
     attr_accessor :label
+    attr_accessor :tags
 
     def self.from_json_data(data)
       out = StatRule.new
       out.description = Datasworn::from_json_data(MarkdownString, data["description"])
       out.label = Datasworn::from_json_data(Label, data["label"])
+      out.tags = Datasworn::from_json_data(Tags, data["tags"])
       out
     end
 
@@ -13846,6 +13885,7 @@ module Datasworn
       data = {}
       data["description"] = Datasworn::to_json_data(description)
       data["label"] = Datasworn::to_json_data(label)
+      data["tags"] = Datasworn::to_json_data(tags) unless tags.nil?
       data
     end
   end

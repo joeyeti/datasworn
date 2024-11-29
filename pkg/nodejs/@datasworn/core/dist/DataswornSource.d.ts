@@ -776,6 +776,10 @@ export interface ConditionMeterRule {
      * @default false
      */
     shared?: boolean;
+    /**
+     * @experimental
+     */
+    tags?: Tags;
     label: Label;
     /**
      * The current value of this meter.
@@ -2317,6 +2321,10 @@ export interface ImpactRule {
      * @default false
      */
     permanent?: boolean;
+    /**
+     * @experimental
+     */
+    tags?: Tags;
 }
 /**
  * A localized, player-facing name or label, formatted as plain text. In some contexts it may be undesirable to render this text, but it should always be exposed to assistive technology (e.g. with `aria-label` in HTML).
@@ -4239,6 +4247,7 @@ export interface RulesExpansion {
  */
 export type RulesPackage = Ruleset | Expansion;
 export type RulesPackageId = RulesetId | ExpansionId;
+export type RuleType = 'impact' | 'condition_meter' | 'special_track' | 'stat';
 /**
  * Select from player and/or asset enhancements. Use it to describe modal abilities. For examples, see Ironclad (classic Ironsworn) and Windbinder (Sundered Isles).
  * @remarks Semantics are similar to the HTML `<select>` element
@@ -4477,6 +4486,10 @@ export interface SpecialTrackRule {
      * @default false
      */
     optional?: boolean;
+    /**
+     * @experimental
+     */
+    tags?: Tags;
 }
 /**
  * Special, ruleset-specific progress tracks. Usually, one exists per player character, and they persist through the life of the player character.
@@ -4516,6 +4529,10 @@ export interface StatRule {
      * @example "Quickness, agility, and prowess when fighting at a distance."
      */
     description: MarkdownString;
+    /**
+     * @experimental
+     */
+    tags?: Tags;
 }
 /**
  * A reference to the value of a standard player character stat.
@@ -4539,7 +4556,7 @@ export type Suggestions = AnyIdWildcard[];
  */
 export type SvgImageUrl = string;
 export type Tag = boolean | number | DictKey | DiceExpression | AtlasEntryId | NpcId | OracleRollableId | AssetId | MoveId | AtlasCollectionId | NpcCollectionId | OracleCollectionId | AssetCollectionId | MoveCategoryId | DelveSiteId | DelveSiteDomainId | DelveSiteThemeId | RarityId | TruthId | Array<AtlasEntryIdWildcard | NpcIdWildcard | OracleRollableIdWildcard | AssetIdWildcard | MoveIdWildcard | AtlasCollectionIdWildcard | NpcCollectionIdWildcard | OracleCollectionIdWildcard | AssetCollectionIdWildcard | MoveCategoryIdWildcard | DelveSiteIdWildcard | DelveSiteDomainIdWildcard | DelveSiteThemeIdWildcard | RarityIdWildcard | TruthIdWildcard>;
-export type TaggableNodeType = CollectableType | NonCollectableType | CollectionType | EmbedOnlyType;
+export type TaggableNodeType = CollectableType | NonCollectableType | CollectionType | EmbedOnlyType | RuleType;
 export interface TagRule {
     /**
      * Types of object that can receive this tag, or `null` if any type of object accepts it.

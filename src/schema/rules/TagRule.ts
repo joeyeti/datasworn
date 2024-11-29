@@ -61,12 +61,19 @@ export const EmbedOnlyType = UnionEnum(TypeId.EmbedOnly, {
 })
 export type EmbedOnlyType = Static<typeof EmbedOnlyType>
 
+export const RuleType = UnionEnum(
+	['impact', 'condition_meter', 'special_track', 'stat'],
+	{ $id: 'RuleType' }
+)
+export type RuleType = Static<typeof RuleType>
+
 export const TaggableNodeType = Type.Union(
 	[
 		Type.Ref(CollectableType),
 		Type.Ref(NonCollectableType),
 		Type.Ref(CollectionType),
-		Type.Ref(EmbedOnlyType)
+		Type.Ref(EmbedOnlyType),
+		Type.Ref(RuleType)
 	],
 	{
 		[JsonTypeDef]: {

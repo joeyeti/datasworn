@@ -2,6 +2,7 @@
 
 package Datasworn;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import java.util.List;
@@ -25,6 +26,10 @@ public class ImpactRule {
 
     @JsonProperty("shared")
     private Boolean shared;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @JsonProperty("tags")
+    private Tags tags;
 
     public ImpactRule() {
     }
@@ -109,5 +114,19 @@ public class ImpactRule {
      */
     public void setShared(Boolean shared) {
         this.shared = shared;
+    }
+
+    /**
+     * Getter for tags.<p>
+     */
+    public Tags getTags() {
+        return tags;
+    }
+
+    /**
+     * Setter for tags.<p>
+     */
+    public void setTags(Tags tags) {
+        this.tags = tags;
     }
 }

@@ -3091,6 +3091,7 @@ class ConditionMeterRule:
     The current value of this meter.
     """
 
+    tags: 'Optional[Tags]'
 
     @classmethod
     def from_json_data(cls, data: Any) -> 'ConditionMeterRule':
@@ -3102,6 +3103,7 @@ class ConditionMeterRule:
             _from_json_data(bool, data.get("rollable")),
             _from_json_data(bool, data.get("shared")),
             _from_json_data(int, data.get("value")),
+            _from_json_data(Optional[Tags], data.get("tags")),
         )
 
     def to_json_data(self) -> Any:
@@ -3113,6 +3115,8 @@ class ConditionMeterRule:
         data["rollable"] = _to_json_data(self.rollable)
         data["shared"] = _to_json_data(self.shared)
         data["value"] = _to_json_data(self.value)
+        if self.tags is not None:
+             data["tags"] = _to_json_data(self.tags)
         return data
 
 class ConditionMeterValueRefUsing(Enum):
@@ -7333,6 +7337,7 @@ class ImpactRule:
     Is this impact applied to all players at once?
     """
 
+    tags: 'Optional[Tags]'
 
     @classmethod
     def from_json_data(cls, data: Any) -> 'ImpactRule':
@@ -7342,6 +7347,7 @@ class ImpactRule:
             _from_json_data(bool, data.get("permanent")),
             _from_json_data(List[ConditionMeterKey], data.get("prevents_recovery")),
             _from_json_data(bool, data.get("shared")),
+            _from_json_data(Optional[Tags], data.get("tags")),
         )
 
     def to_json_data(self) -> Any:
@@ -7351,6 +7357,8 @@ class ImpactRule:
         data["permanent"] = _to_json_data(self.permanent)
         data["prevents_recovery"] = _to_json_data(self.prevents_recovery)
         data["shared"] = _to_json_data(self.shared)
+        if self.tags is not None:
+             data["tags"] = _to_json_data(self.tags)
         return data
 
 @dataclass
@@ -14581,6 +14589,18 @@ class RollableValueStat(RollableValue):
         data["stat"] = _to_json_data(self.stat)
         return data
 
+class RuleType(Enum):
+    CONDITION_METER = "condition_meter"
+    IMPACT = "impact"
+    SPECIAL_TRACK = "special_track"
+    STAT = "stat"
+    @classmethod
+    def from_json_data(cls, data: Any) -> 'RuleType':
+        return cls(data)
+
+    def to_json_data(self) -> Any:
+        return self.value
+
 @dataclass
 class Rules:
     """
@@ -15550,6 +15570,7 @@ class SpecialTrackRule:
     Is this track shared by all players?
     """
 
+    tags: 'Optional[Tags]'
 
     @classmethod
     def from_json_data(cls, data: Any) -> 'SpecialTrackRule':
@@ -15558,6 +15579,7 @@ class SpecialTrackRule:
             _from_json_data(Label, data.get("label")),
             _from_json_data(bool, data.get("optional")),
             _from_json_data(bool, data.get("shared")),
+            _from_json_data(Optional[Tags], data.get("tags")),
         )
 
     def to_json_data(self) -> Any:
@@ -15566,6 +15588,8 @@ class SpecialTrackRule:
         data["label"] = _to_json_data(self.label)
         data["optional"] = _to_json_data(self.optional)
         data["shared"] = _to_json_data(self.shared)
+        if self.tags is not None:
+             data["tags"] = _to_json_data(self.tags)
         return data
 
 @dataclass
@@ -15622,18 +15646,22 @@ class StatRule:
     A label for this stat.
     """
 
+    tags: 'Optional[Tags]'
 
     @classmethod
     def from_json_data(cls, data: Any) -> 'StatRule':
         return cls(
             _from_json_data(MarkdownString, data.get("description")),
             _from_json_data(Label, data.get("label")),
+            _from_json_data(Optional[Tags], data.get("tags")),
         )
 
     def to_json_data(self) -> Any:
         data: Dict[str, Any] = {}
         data["description"] = _to_json_data(self.description)
         data["label"] = _to_json_data(self.label)
+        if self.tags is not None:
+             data["tags"] = _to_json_data(self.tags)
         return data
 
 class StatValueRefUsing(Enum):

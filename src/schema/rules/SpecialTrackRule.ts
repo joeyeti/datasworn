@@ -1,12 +1,13 @@
 import { type Static, Type } from '@sinclair/typebox'
-import * as Text from '../common/Text.js'
+import { Label, MarkdownString } from '../common/Text.js'
+import { Tags } from './TagRule.js'
 
 export const SpecialTrackRule = Type.Object(
 	{
-		label: Type.Ref(Text.Label, {
+		label: Type.Ref(Label, {
 			description: 'A label for this special track.'
 		}),
-		description: Type.Ref(Text.MarkdownString, {
+		description: Type.Ref(MarkdownString, {
 			description: 'A description of this special track.'
 		}),
 		shared: Type.Boolean({
@@ -16,7 +17,8 @@ export const SpecialTrackRule = Type.Object(
 		optional: Type.Boolean({
 			default: false,
 			description: 'Is this track an optional rule?'
-		})
+		}),
+		tags: Type.Optional(Type.Ref(Tags, { releaseStage: 'experimental' }))
 	},
 	{
 		$id: 'SpecialTrackRule',

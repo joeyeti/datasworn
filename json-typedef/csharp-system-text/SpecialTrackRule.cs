@@ -33,5 +33,9 @@ namespace Datasworn
         /// </summary>
         [JsonPropertyName("shared")]
         public bool Shared { get; set; }
+
+        [JsonPropertyName("tags")]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
+        public Tags? Tags { get; set; }
     }
 }

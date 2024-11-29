@@ -1688,6 +1688,10 @@ pub struct ConditionMeterRule {
     /// The current value of this meter.
     #[serde(rename = "value")]
     pub value: i8,
+
+    #[serde(rename = "tags")]
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub tags: Option<Box<Tags>>,
 }
 
 /// A reference to the value of a standard player condition meter.
@@ -4279,6 +4283,10 @@ pub struct ImpactRule {
     /// Is this impact applied to all players at once?
     #[serde(rename = "shared")]
     pub shared: bool,
+
+    #[serde(rename = "tags")]
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub tags: Option<Box<Tags>>,
 }
 
 /// A localized, player-facing name or label, formatted as plain text. In some
@@ -8759,6 +8767,21 @@ pub struct RollableValueStat {
     pub stat: StatKey,
 }
 
+#[derive(Serialize, Deserialize)]
+pub enum RuleType {
+    #[serde(rename = "condition_meter")]
+    ConditionMeter,
+
+    #[serde(rename = "impact")]
+    Impact,
+
+    #[serde(rename = "special_track")]
+    SpecialTrack,
+
+    #[serde(rename = "stat")]
+    Stat,
+}
+
 /// Describes rules for player characters in this ruleset, such as stats and
 /// condition meters.
 #[derive(Serialize, Deserialize)]
@@ -9315,6 +9338,10 @@ pub struct SpecialTrackRule {
     /// Is this track shared by all players?
     #[serde(rename = "shared")]
     pub shared: bool,
+
+    #[serde(rename = "tags")]
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub tags: Option<Box<Tags>>,
 }
 
 /// Special, ruleset-specific progress tracks. Usually, one exists per player
@@ -9341,6 +9368,10 @@ pub struct StatRule {
     /// A label for this stat.
     #[serde(rename = "label")]
     pub label: Label,
+
+    #[serde(rename = "tags")]
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub tags: Option<Box<Tags>>,
 }
 
 /// A reference to the value of a standard player character stat.

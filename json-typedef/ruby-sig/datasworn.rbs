@@ -946,6 +946,7 @@ module Datasworn
     attr_accessor rollable: bool
     attr_accessor shared: bool
     attr_accessor value: Integer
+    attr_accessor tags: Tags?
 
     def self.from_json_data: (untyped) -> ConditionMeterRule
     def to_json_data: () -> untyped
@@ -2350,6 +2351,7 @@ module Datasworn
     attr_accessor permanent: bool
     attr_accessor prevents_recovery: Array[ConditionMeterKey]
     attr_accessor shared: bool
+    attr_accessor tags: Tags?
 
     def self.from_json_data: (untyped) -> ImpactRule
     def to_json_data: () -> untyped
@@ -4527,6 +4529,18 @@ module Datasworn
     def to_json_data: () -> untyped
   end
 
+  class RuleType
+    attr_accessor value: String
+
+    CONDITION_METER: RuleType
+    IMPACT: RuleType
+    SPECIAL_TRACK: RuleType
+    STAT: RuleType
+
+    def self.from_json_data: (untyped) -> RuleType
+    def to_json_data: () -> untyped
+  end
+
   class Rules
     attr_accessor condition_meters: Hash[String, ConditionMeterRule]
     attr_accessor impacts: Hash[String, ImpactCategory]
@@ -4882,6 +4896,7 @@ module Datasworn
     attr_accessor label: Label
     attr_accessor optional: bool
     attr_accessor shared: bool
+    attr_accessor tags: Tags?
 
     def self.from_json_data: (untyped) -> SpecialTrackRule
     def to_json_data: () -> untyped
@@ -4904,6 +4919,7 @@ module Datasworn
   class StatRule
     attr_accessor description: MarkdownString
     attr_accessor label: Label
+    attr_accessor tags: Tags?
 
     def self.from_json_data: (untyped) -> StatRule
     def to_json_data: () -> untyped

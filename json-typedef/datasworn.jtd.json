@@ -2135,6 +2135,11 @@
 					}
 				}
 			},
+			"optionalProperties": {
+				"tags": {
+					"ref": "Tags"
+				}
+			},
 			"metadata": {
 				"description": "Describes a standard player character condition meter."
 			}
@@ -4954,6 +4959,11 @@
 					"metadata": {
 						"description": "Is this impact permanent?"
 					}
+				}
+			},
+			"optionalProperties": {
+				"tags": {
+					"ref": "Tags"
 				}
 			},
 			"metadata": {
@@ -10113,6 +10123,9 @@
 		"RulesPackageId": {
 			"type": "string"
 		},
+		"RuleType": {
+			"enum": ["impact", "condition_meter", "special_track", "stat"]
+		},
 		"SelectEnhancementField": {
 			"properties": {
 				"label": {
@@ -10518,6 +10531,11 @@
 					}
 				}
 			},
+			"optionalProperties": {
+				"tags": {
+					"ref": "Tags"
+				}
+			},
 			"metadata": {
 				"description": "Describes a special track like Bonds (classic Ironsworn), Failure (Delve), or Legacies (Starforged)."
 			}
@@ -10559,6 +10577,11 @@
 							"Quickness, agility, and prowess when fighting at a distance."
 						]
 					}
+				}
+			},
+			"optionalProperties": {
+				"tags": {
+					"ref": "Tags"
 				}
 			},
 			"metadata": {

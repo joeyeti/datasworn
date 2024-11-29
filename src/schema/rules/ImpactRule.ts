@@ -1,21 +1,22 @@
 import { Type, type Static } from '@sinclair/typebox'
-import * as Generic from '../Generic.js'
-import * as Text from '../common/Text.js'
-import * as Player from '../common/Player.js'
+import { Label, MarkdownString } from '../common/Text.js'
+import { ConditionMeterKey } from '../common/Player.js'
+import { Tags } from './TagRule.js'
+import { Dictionary } from '../generic/Dictionary.js'
 
 export const ImpactRule = Type.Object(
 	{
-		label: Type.Ref(Text.Label, {
+		label: Type.Ref(Label, {
 			description: 'The label for this impact.'
 		}),
-		description: Type.Ref(Text.MarkdownString, {
+		description: Type.Ref(MarkdownString, {
 			description: 'A description of this impact.'
 		}),
 		shared: Type.Boolean({
 			default: false,
 			description: 'Is this impact applied to all players at once?'
 		}),
-		prevents_recovery: Type.Array(Type.Ref(Player.ConditionMeterKey), {
+		prevents_recovery: Type.Array(Type.Ref(ConditionMeterKey), {
 			default: [],
 			description:
 				"Any ruleset condition meters that can't recover when this impact is active."
@@ -23,7 +24,8 @@ export const ImpactRule = Type.Object(
 		permanent: Type.Boolean({
 			default: false,
 			description: 'Is this impact permanent?'
-		})
+		}),
+		tags: Type.Optional(Type.Ref(Tags, { releaseStage: 'experimental' }))
 	},
 	{
 		$id: 'ImpactRule',
@@ -34,13 +36,13 @@ export type ImpactRule = Static<typeof ImpactRule>
 
 export const ImpactCategory = Type.Object(
 	{
-		label: Type.Ref(Text.Label, {
+		label: Type.Ref(Label, {
 			description: 'A label for this impact category.'
 		}),
-		description: Type.Ref(Text.MarkdownString, {
+		description: Type.Ref(MarkdownString, {
 			description: 'A description of this impact category.'
 		}),
-		contents: Generic.Dictionary(Type.Ref(ImpactRule), {
+		contents: Dictionary(Type.Ref(ImpactRule), {
 			description: 'A dictionary object of the Impacts in this category.'
 		})
 	},
