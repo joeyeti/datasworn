@@ -164,19 +164,34 @@
 				"label": "bonds",
 				"optional": false,
 				"shared": false,
-				"description": "Create connections and build relationships."
+				"description": "Create connections and build relationships.",
+				"tags": {
+					"starforged": {
+						"legacy_track_xp": true
+					}
+				}
 			},
 			"discoveries_legacy": {
 				"label": "discoveries",
 				"optional": false,
 				"shared": false,
-				"description": "Explore the Forge and unlock its mysteries."
+				"description": "Explore the Forge and unlock its mysteries.",
+				"tags": {
+					"starforged": {
+						"legacy_track_xp": true
+					}
+				}
 			},
 			"quests_legacy": {
 				"label": "quests",
 				"optional": false,
 				"shared": false,
-				"description": "Swear vows and do what you must to see them fulfilled."
+				"description": "Swear vows and do what you must to see them fulfilled.",
+				"tags": {
+					"starforged": {
+						"legacy_track_xp": true
+					}
+				}
 			}
 		},
 		"tags": {
@@ -200,6 +215,13 @@
 					"enum": ["dominion", "guild", "fringe_group"]
 				},
 				"node_types": ["oracle_rollable", "row"]
+			},
+			"legacy_track_xp": {
+				"$schema": {
+					"type": "boolean",
+					"description": "This special track uses Starforged-style legacy track XP."
+				},
+				"node_types": ["special_track"]
 			},
 			"life": {
 				"$schema": {

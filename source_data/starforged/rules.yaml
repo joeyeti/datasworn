@@ -86,12 +86,21 @@ rules:
     quests_legacy:
       label: quests
       description: Swear vows and do what you must to see them fulfilled.
+      tags:
+        starforged:
+          legacy_track_xp: true
     bonds_legacy:
       label: bonds
       description: Create connections and build relationships.
+      tags:
+        starforged:
+          legacy_track_xp: true
     discoveries_legacy:
       label: discoveries
       description: Explore the Forge and unlock its mysteries.
+      tags:
+        starforged:
+          legacy_track_xp: true
   stats:
     edge:
       label: edge
@@ -109,6 +118,11 @@ rules:
       label: wits
       description: Expertise, knowledge, and observation.
   tags:
+    legacy_track_xp:
+      node_types: [special_track]
+      $schema:
+        description: This special track uses Starforged-style legacy track XP.
+        type: boolean
     region:
       node_types: [oracle_rollable, row]
       $schema:
