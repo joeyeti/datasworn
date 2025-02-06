@@ -10,7 +10,7 @@ Unlike most other moves, these session moves function primarily from the perspec
 
 **When you begin a significant session or chapter of play**, do all of the following.
 
-  * Identify or adjust flagged content and [Set a Flag](Starforged/Moves/Session/Set_a_Flag).
+  * Identify or adjust flagged content and [Set a Flag](Starforged/Moves/Session/Set-a-Flag).
   * Review or recap what happened last session.
   * Set the scene by envisioning your character’s current situation and intent.
 
@@ -33,7 +33,7 @@ Roll   | Result
 
 **When you identify situations or topics you don’t want to include, don’t want to envision in detail, or otherwise may need mindfulness when approaching**, that content is now flagged.
 
-When you encounter content flagged as something to approach mindfully, pause to consider or discuss its role in your story. When you come across flagged content that you would rather adjust or omit, [Change Your Fate](Starforged/Moves/Session/Change_Your_Fate).
+When you encounter content flagged as something to approach mindfully, pause to consider or discuss its role in your story. When you come across flagged content that you would rather adjust or omit, [Change Your Fate](Starforged/Moves/Session/Change-Your-Fate).
 
 ### Change Your Fate
 
